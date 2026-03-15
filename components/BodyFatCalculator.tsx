@@ -161,7 +161,8 @@ export default function BodyFatCalculator() {
       setError('Waist must be larger than neck for the Navy formula.');
       return;
     }
-    if (gender === 'female' && waistCm + hipCm <= neckCm) {
+    const hipVal = hipCm ?? 0;
+    if (gender === 'female' && waistCm + hipVal <= neckCm) {
       setError('Waist + hip must be larger than neck for the Navy formula.');
       return;
     }
@@ -170,7 +171,7 @@ export default function BodyFatCalculator() {
     if (gender === 'male') {
       bf = navyBodyFatMale(waistCm, neckCm, height);
     } else {
-      bf = navyBodyFatFemale(waistCm, neckCm, hipCm!, height);
+      bf = navyBodyFatFemale(waistCm, neckCm, hipVal, height);
     }
 
     // Clamp to reasonable display range (formula can occasionally produce edge values)
