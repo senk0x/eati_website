@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Roboto_Flex, Rubik, Bowlby_One } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -94,6 +95,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
