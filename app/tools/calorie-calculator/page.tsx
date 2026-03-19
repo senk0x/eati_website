@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import CalorieCalculator from '@/components/CalorieCalculator';
 import { SeoFaqSection } from '@/components/SeoFaqSection';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eati.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
 const canonical = `${siteUrl}/tools/calorie-calculator`;
 
 export const metadata: Metadata = {

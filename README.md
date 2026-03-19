@@ -1,6 +1,6 @@
 # Eati Website
 
-Landing site for [Eati](https://eati.app) – AI Calorie Tracker. Built with Next.js (App Router).
+Landing site for [Eati](https://eatiapp.com) – AI Calorie Tracker. Built with Next.js (App Router).
 
 ## Getting Started
 

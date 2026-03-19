@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import MacroGoalCalculator from '@/components/MacroGoalCalculator';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eati.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
 const canonical = `${siteUrl}/tools/macro-goal-calculator`;
 
 export const metadata: Metadata = {

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import IBWCalculator from '@/components/IBWCalculator';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eati.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
 const canonical = `${siteUrl}/tools/ideal-body-weight-calculator`;
 
 export const metadata: Metadata = {

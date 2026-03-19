@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eati.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
 const canonical = `${siteUrl}/tools`;
 
 export const metadata: Metadata = {

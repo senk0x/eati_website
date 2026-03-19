@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import TDEECalculator from '@/components/TDEECalculator';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eati.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
 const canonical = `${siteUrl}/tools/tdee-calculator`;
 
 export const metadata: Metadata = {

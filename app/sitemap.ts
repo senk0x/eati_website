@@ -5,7 +5,7 @@ import { getAllFoodSlugs } from '@/lib/foods';
 export const dynamic = 'force-dynamic';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eati.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
   const articles = getPublishedArticles();
 
   const staticPages: MetadataRoute.Sitemap = [

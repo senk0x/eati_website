@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   return getAllFoodSlugs().map((slug) => ({ slug }));
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eati.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

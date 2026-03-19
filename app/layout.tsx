@@ -35,7 +35,7 @@ const bowlbyOne = Bowlby_One({
   weight: "400",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://eati.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://eatiapp.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
