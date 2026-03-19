@@ -245,7 +245,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                   {article.midArticleCta}
                 </p>
                 <a
-                  href="#"
+                  href="https://apps.apple.com/app/apple-store/id6758241088?pt=127995771&ct=Official%20Website&mt=8"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[#364052] transition-colors hover:bg-gray-100"
                   style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
                 >

@@ -95,7 +95,7 @@ export default function Navbar() {
 
           {/* App Store button - min 44px touch target on mobile */}
           <a
-            href="https://apps.apple.com/ua/app/eati-ai-calorie-tracker/id6758241088?l=uk"
+            href="https://apps.apple.com/app/apple-store/id6758241088?pt=127995771&ct=Official%20Website&mt=8"
             target="_blank"
             rel="noopener noreferrer"
             className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center gap-2 rounded-full border-2 border-[#364052] bg-[#364052] px-4 py-2.5 text-white transition-all hover:bg-white hover:text-[#364052] md:h-11 md:min-h-0 md:min-w-0 md:px-5"
