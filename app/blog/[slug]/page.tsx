@@ -225,15 +225,40 @@ export default async function BlogPostPage({ params }: PageProps) {
             style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
           >
             {article.sections.map((section, index) => (
-              <section key={index} id={`section-${index}`}>
-                <h2 className="mb-3 text-xl font-semibold md:text-2xl">{section.heading}</h2>
-                <p
-                  className="text-base leading-relaxed text-gray-700"
-                  style={{ whiteSpace: 'pre-line' }}
-                >
-                  <LinkedText text={section.content} />
-                </p>
-              </section>
+              (() => {
+                const lines = section.content.split('\n');
+                const firstLine = (lines[0] ?? '').trim();
+                const isPhoto = firstLine.toLowerCase().startsWith('photo:');
+                const photoUrl = isPhoto ? firstLine.slice('photo:'.length).trim() : null;
+                const contentWithoutPhoto = photoUrl ? lines.slice(1).join('\n').trimStart() : section.content;
+
+                return (
+                  <section key={index} id={`section-${index}`}>
+                    <h2 className="mb-3 text-xl font-semibold md:text-2xl">
+                      <LinkedText text={section.heading} />
+                    </h2>
+
+                    {photoUrl && (
+                      <div className="relative mb-5 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#E7F0FF]">
+                        <Image
+                          src={photoUrl}
+                          alt={section.heading}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 768px"
+                        />
+                      </div>
+                    )}
+
+                    <p
+                      className="text-base leading-relaxed text-gray-700"
+                      style={{ whiteSpace: 'pre-line' }}
+                    >
+                      <LinkedText text={contentWithoutPhoto} />
+                    </p>
+                  </section>
+                );
+              })()
             ))}
 
             {/* Mid-Article CTA */}
