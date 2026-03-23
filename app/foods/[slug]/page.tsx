@@ -277,7 +277,7 @@ export default async function FoodPage({ params }: Props) {
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-lg"
                     aria-hidden
                   >
-                    🍽️
+                    {related.emoji}
                   </div>
                   <div className="flex-1 overflow-hidden">
                     <p className="truncate text-sm font-semibold text-[#364052] transition-colors group-hover:text-[#85BEFF]">

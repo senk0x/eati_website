@@ -62,7 +62,7 @@ export default function FoodsPage() {
                   className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#E7F0FF] text-2xl transition-colors group-hover:bg-[#85BEFF]/20"
                   aria-hidden
                 >
-                  🍽️
+                  {food.emoji}
                 </div>
                 <div className="flex-1 overflow-hidden">
                   <h2
