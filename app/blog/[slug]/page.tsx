@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
@@ -181,12 +180,11 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Cover Image */}
           {article.coverImage && (
             <div className="relative mb-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#E7F0FF]">
-              <Image
+              <img
                 src={article.coverImage}
                 alt={article.title}
-                fill
-                className="object-cover"
-                priority
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="eager"
               />
             </div>
           )}
@@ -352,11 +350,11 @@ export default async function BlogPostPage({ params }: PageProps) {
                 >
                   <div className="relative aspect-[16/9] w-full bg-[#E7F0FF]">
                     {related.coverImage ? (
-                      <Image
+                      <img
                         src={related.coverImage}
                         alt={related.title}
-                        fill
-                        className="object-cover"
+                        className="absolute inset-0 h-full w-full object-cover"
+                        loading="lazy"
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center text-3xl text-[#85BEFF]">
