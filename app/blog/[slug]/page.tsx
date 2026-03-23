@@ -240,13 +240,8 @@ export default async function BlogPostPage({ params }: PageProps) {
 
                     {photoUrl && (
                       <div className="relative mb-5 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#E7F0FF]">
-                        <Image
-                          src={photoUrl}
-                          alt={section.heading}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, 768px"
-                        />
+                        {/* Use plain <img> so externally hosted photos (including redirecting URLs) always display */}
+                        <img src={photoUrl} alt={section.heading} className="h-full w-full object-cover" loading="lazy" />
                       </div>
                     )}
 

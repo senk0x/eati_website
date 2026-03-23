@@ -118,8 +118,15 @@ export function getRelatedArticles(currentSlug: string, limit = 3): BlogArticle[
 }
 
 export function generateTableOfContents(sections: BlogSection[]): { id: string; title: string }[] {
+  const stripMarkdownLink = (value: string): string => {
+    // Convert: [Dish Name](/blog/dish-slug) -> Dish Name
+    const match = value.match(/^\[([^\]]+?)\]\((?:https?:\/\/)?\/blog\/[a-z0-9-]+\)$/i);
+    if (match) return match[1];
+    return value;
+  };
+
   return sections.map((section, index) => ({
     id: `section-${index}`,
-    title: section.heading,
+    title: stripMarkdownLink(section.heading),
   }));
 }
