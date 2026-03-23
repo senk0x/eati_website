@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Sweet peppers\n- Cajun spices\n- Garlic\n- Onion\n- Optional: yogurt-based sauce\n- Salt and pepper"
+      "content": "- Chicken\n- Sweet peppers\n- Cajun spices\n- Garlic\n- Onion\n- Optional: yogurt-based sauce\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Season chicken with cajun spices, garlic, salt, and pepper.\n2. Sear chicken in a pan until browned.\n3. Add onion and sweet peppers; saute until tender-crisp.\n4. If using, stir in a light yogurt-based sauce to balance spice.\n5. Serve and log your portion in Eati."
+      "content": "1. Season chicken with cajun spices, garlic, salt, and pepper.\n2. Sear chicken in a pan until browned.\n3. Add onion and sweet peppers; saute until tender-crisp.\n4. If using, stir in a light yogurt-based sauce to balance spice.\n5. Serve and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 521 kcal per serving (estimated)\nFat: 30g\nProtein: 51g\n\nTip: use a smaller sauce portion if you are watching fat."
+      "content": "Calories: 521 kcal per serving (estimated)\nFat: 30g\nProtein: 51g\n\nTip: use a smaller sauce portion if you are watching fat.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "This dish is ideal for keeping meals fun while staying protein-forward. Track it in Eati to stay aligned with your calorie deficit.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272260105-ntnfzg.jpg",
   "metaTitle": "Cajun Chicken With Sweet Peppers Recipe | Eati",
   "metaDescription": "Cajun Chicken With Sweet Peppers recipe with estimated calories, fat, and protein. Includes ingredients and instructions plus Eati logging tips.",
   "targetKeyword": "cajun chicken with sweet peppers high protein",

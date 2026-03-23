@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Bell peppers\n- Onion\n- Fajita spices (cumin, chili powder, paprika)\n- Garlic (optional)\n- Mozzarella (or a similar cheese)\n- Optional: black beans\n- Salt, pepper, and olive oil"
+      "content": "- Chicken\n- Bell peppers\n- Onion\n- Fajita spices (cumin, chili powder, paprika)\n- Garlic (optional)\n- Mozzarella (or a similar cheese)\n- Optional: black beans\n- Salt, pepper, and olive oil",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Preheat oven to 375F (190C).\n2. Season and cook chicken briefly in a skillet to develop flavor.\n3. Saute peppers and onion until slightly tender.\n4. Layer chicken, peppers/onion, and cheese in a baking dish; bake until bubbly.\n5. Serve and log your serving size in Eati for accurate macros."
+      "content": "1. Preheat oven to 375F (190C).\n2. Season and cook chicken briefly in a skillet to develop flavor.\n3. Saute peppers and onion until slightly tender.\n4. Layer chicken, peppers/onion, and cheese in a baking dish; bake until bubbly.\n5. Serve and log your serving size in Eati for accurate macros.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 363 kcal per serving (estimated)\nFat: 13g\nProtein: 49g\n\nTip: keep toppings light to preserve a lower-fat macro profile."
+      "content": "Calories: 363 kcal per serving (estimated)\nFat: 13g\nProtein: 49g\n\nTip: keep toppings light to preserve a lower-fat macro profile.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "A simple casserole that makes it easy to eat more protein without feeling like you are sacrificing flavor. Track it in Eati and repeat what works.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272118799-1i0xry.jpg",
   "metaTitle": "Fajita Chicken Casserole Recipe | Eati",
   "metaDescription": "Fajita Chicken Casserole recipe with estimated calories, fat, and protein plus ingredients and instructions.",
   "targetKeyword": "fajita chicken casserole high protein",

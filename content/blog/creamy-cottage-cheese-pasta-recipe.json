@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Pasta\n- Cottage cheese\n- Garlic\n- Parmesan\n- Spinach\n- Herbs\n- Salt and pepper"
+      "content": "- Pasta\n- Cottage cheese\n- Garlic\n- Parmesan\n- Spinach\n- Herbs\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Cook pasta until al dente; reserve a splash of pasta water.\n2. Blend or warm cottage cheese with garlic until smooth.\n3. Stir in parmesan, herbs, and a little pasta water to create a creamy sauce.\n4. Add spinach and cook until wilted.\n5. Combine pasta with sauce, adjust seasoning, and serve; log in Eati."
+      "content": "1. Cook pasta until al dente; reserve a splash of pasta water.\n2. Blend or warm cottage cheese with garlic until smooth.\n3. Stir in parmesan, herbs, and a little pasta water to create a creamy sauce.\n4. Add spinach and cook until wilted.\n5. Combine pasta with sauce, adjust seasoning, and serve; log in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 722 kcal per serving (estimated)\nFat: 19g\nProtein: 40g\n\nTip: portion your pasta carefully to keep calories predictable."
+      "content": "Calories: 722 kcal per serving (estimated)\nFat: 19g\nProtein: 40g\n\nTip: portion your pasta carefully to keep calories predictable.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "This pasta helps you enjoy creamy comfort while still hitting a high-protein goal. Track it in Eati for accurate macros.",
-  "coverImage": "https://images.unsplash.com/photo-1727782922183-04a82768b2b6?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272247690-hcv4iw.jpeg",
   "metaTitle": "Creamy Cottage Cheese Pasta Recipe | Eati",
   "metaDescription": "Creamy Cottage Cheese Pasta recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "creamy cottage cheese pasta high protein",

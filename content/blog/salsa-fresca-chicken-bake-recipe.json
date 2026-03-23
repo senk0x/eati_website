@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Fresh salsa\n- Lime\n- Garlic\n- Peppers\n- Optional: cheese\n- Spices (cumin, chili powder, or your favorites)\n- Salt and pepper"
+      "content": "- Chicken\n- Fresh salsa\n- Lime\n- Garlic\n- Peppers\n- Optional: cheese\n- Spices (cumin, chili powder, or your favorites)\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Season chicken with salt, pepper, and spices.\n2. Spread salsa over or under the chicken in a baking dish.\n3. Add garlic and peppers; bake until chicken is cooked through.\n4. Stir or spoon juices over the chicken once or twice.\n5. Finish with lime juice and optional cheese; bake until cheese is melted."
+      "content": "1. Season chicken with salt, pepper, and spices.\n2. Spread salsa over or under the chicken in a baking dish.\n3. Add garlic and peppers; bake until chicken is cooked through.\n4. Stir or spoon juices over the chicken once or twice.\n5. Finish with lime juice and optional cheese; bake until cheese is melted.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 377 kcal per serving (estimated)\nFat: 11g\nProtein: 58g\n\nTip: adjust cheese quantity to keep fat aligned with your target."
+      "content": "Calories: 377 kcal per serving (estimated)\nFat: 11g\nProtein: 58g\n\nTip: adjust cheese quantity to keep fat aligned with your target.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "This bake keeps dinner bright and satisfying while delivering strong protein. Use Eati to verify your servings match your goals.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272107933-2zfyxd.webp",
   "metaTitle": "Salsa Fresca Chicken Bake Recipe | Eati",
   "metaDescription": "Salsa Fresca Chicken Bake recipe with estimated calories, fat, and protein. Includes ingredients, cooking steps, and Eati tracking tips.",
   "targetKeyword": "salsa fresca chicken bake high protein",

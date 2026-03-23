@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Orzo\n- Sun-dried tomatoes\n- Parmesan\n- Garlic\n- Chicken broth\n- Herbs (basil or thyme)\n- Salt and pepper"
+      "content": "- Chicken\n- Orzo\n- Sun-dried tomatoes\n- Parmesan\n- Garlic\n- Chicken broth\n- Herbs (basil or thyme)\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Cook orzo in broth until tender.\n2. Sear or cook chicken until done, then set aside.\n3. Saute garlic and sun-dried tomatoes briefly.\n4. Stir in parmesan and herbs; adjust seasonings.\n5. Fold in chicken and combine with orzo; serve and log in Eati."
+      "content": "1. Cook orzo in broth until tender.\n2. Sear or cook chicken until done, then set aside.\n3. Saute garlic and sun-dried tomatoes briefly.\n4. Stir in parmesan and herbs; adjust seasonings.\n5. Fold in chicken and combine with orzo; serve and log in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 618 kcal per serving (estimated)\nFat: 27g\nProtein: 40g\n\nTip: if you need lower calories, reduce cheese slightly and increase herbs/vegetables."
+      "content": "Calories: 618 kcal per serving (estimated)\nFat: 27g\nProtein: 40g\n\nTip: if you need lower calories, reduce cheese slightly and increase herbs/vegetables.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "This orzo meal is great for protein-focused meal prep. Use Eati to match your serving size to your calorie deficit.",
-  "coverImage": "https://images.unsplash.com/photo-1727782922183-04a82768b2b6?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272310637-o810cc.webp",
   "metaTitle": "Creamy Sun-Dried Tomato Chicken Orzo Recipe | Eati",
   "metaDescription": "Creamy Sun-Dried Tomato Chicken Orzo recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati logging tips.",
   "targetKeyword": "sun-dried tomato chicken orzo high protein",

@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Cooked chicken\n- Lettuce\n- Greek yogurt or light dressing\n- Celery\n- Onion\n- Herbs\n- Wraps (tortillas or lettuce wraps)\n- Salt and pepper"
+      "content": "- Cooked chicken\n- Lettuce\n- Greek yogurt or light dressing\n- Celery\n- Onion\n- Herbs\n- Wraps (tortillas or lettuce wraps)\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Chop celery and onion finely.\n2. Mix chicken with Greek yogurt (or light dressing), herbs, salt, and pepper.\n3. Fold in chopped celery and adjust seasoning.\n4. Add lettuce to wraps and spoon in the chicken salad.\n5. Roll up, portion as desired, and log your serving in Eati."
+      "content": "1. Chop celery and onion finely.\n2. Mix chicken with Greek yogurt (or light dressing), herbs, salt, and pepper.\n3. Fold in chopped celery and adjust seasoning.\n4. Add lettuce to wraps and spoon in the chicken salad.\n5. Roll up, portion as desired, and log your serving in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 350 kcal per serving (estimated)\nFat: 15.6g\nProtein: 29g\n\nTip: choose lighter wraps or lettuce wraps to keep calories controlled."
+      "content": "Calories: 350 kcal per serving (estimated)\nFat: 15.6g\nProtein: 29g\n\nTip: choose lighter wraps or lettuce wraps to keep calories controlled.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "This lunch-friendly wrap keeps protein high and calories reasonable. Track it in Eati to stay consistent.",
-  "coverImage": "https://images.unsplash.com/photo-1723476688421-8321e7ee8c1f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774271734947-ob5fpw.jpeg",
   "metaTitle": "Chicken Salad Wraps Recipe | Eati",
   "metaDescription": "Chicken Salad Wraps recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "chicken salad wraps high protein",

@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Pesto\n- Roasted tomatoes\n- Garlic\n- Parmesan\n- Herbs\n- Creamy sauce base\n- Salt and pepper"
+      "content": "- Chicken\n- Pesto\n- Roasted tomatoes\n- Garlic\n- Parmesan\n- Herbs\n- Creamy sauce base\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Season chicken and cook until browned and cooked through.\n2. Add garlic and herbs; stir to develop aroma.\n3. Warm pesto and mix into the sauce base.\n4. Stir in roasted tomatoes and parmesan.\n5. Combine with chicken, simmer briefly, then serve and log in Eati."
+      "content": "1. Season chicken and cook until browned and cooked through.\n2. Add garlic and herbs; stir to develop aroma.\n3. Warm pesto and mix into the sauce base.\n4. Stir in roasted tomatoes and parmesan.\n5. Combine with chicken, simmer briefly, then serve and log in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 642 kcal per serving (estimated)\nFat: 43g\nProtein: 50g\n\nTip: parmesan and cream drive fat calories; portion carefully."
+      "content": "Calories: 642 kcal per serving (estimated)\nFat: 43g\nProtein: 50g\n\nTip: parmesan and cream drive fat calories; portion carefully.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "This dish is big on flavor and protein, making it a strong choice for building consistent macros. Track it in Eati.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272183462-hxwtkr.jpg",
   "metaTitle": "Creamy Pesto Chicken with Roasted Tomatoes Recipe | Eati",
   "metaDescription": "Creamy Pesto Chicken with Roasted Tomatoes recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "creamy pesto chicken roasted tomatoes high protein",

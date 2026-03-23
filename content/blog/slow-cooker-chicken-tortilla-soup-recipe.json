@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Onion\n- Garlic\n- Chicken broth\n- Diced tomatoes\n- Black beans\n- Tortilla strips (optional)\n- Lime\n- Spices\n- Salt and pepper"
+      "content": "- Chicken\n- Onion\n- Garlic\n- Chicken broth\n- Diced tomatoes\n- Black beans\n- Tortilla strips (optional)\n- Lime\n- Spices\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Add chicken, onion, garlic, broth, tomatoes, and spices to the slow cooker.\n2. Cook on low until chicken is tender.\n3. Shred chicken in the pot, then stir in beans.\n4. Simmer a bit longer to blend flavors.\n5. Finish with lime juice and serve. Add tortilla strips if desired and log your portion in Eati."
+      "content": "1. Add chicken, onion, garlic, broth, tomatoes, and spices to the slow cooker.\n2. Cook on low until chicken is tender.\n3. Shred chicken in the pot, then stir in beans.\n4. Simmer a bit longer to blend flavors.\n5. Finish with lime juice and serve. Add tortilla strips if desired and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 259 kcal per serving (estimated)\nFat: 10.1g\nProtein: 27g\n\nTip: choose toppings wisely to keep calories and fat predictable."
+      "content": "Calories: 259 kcal per serving (estimated)\nFat: 10.1g\nProtein: 27g\n\nTip: choose toppings wisely to keep calories and fat predictable.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "A great meal prep soup that helps you hit protein goals without long cooking time. Track it in Eati.",
-  "coverImage": "https://images.unsplash.com/photo-1615444814527-f5ebbea2cadb?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774271977218-q910fd.png",
   "metaTitle": "Slow Cooker Chicken Tortilla Soup Recipe | Eati",
   "metaDescription": "Slow Cooker Chicken Tortilla Soup recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tips.",
   "targetKeyword": "slow cooker chicken tortilla soup high protein",

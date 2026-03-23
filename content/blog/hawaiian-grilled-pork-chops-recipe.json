@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Pork chops\n- Pineapple\n- Soy sauce\n- Garlic\n- Ginger\n- Sweetener (honey or brown sugar)\n- Bell peppers\n- Salt and pepper"
+      "content": "- Pork chops\n- Pineapple\n- Soy sauce\n- Garlic\n- Ginger\n- Sweetener (honey or brown sugar)\n- Bell peppers\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Make a quick marinade with soy sauce, garlic, ginger, and sweetener.\n2. Marinate pork chops for at least 15 minutes (or longer if you have time).\n3. Grill pork chops until cooked through.\n4. Grill or saute bell peppers; add pineapple for a warm sweet element.\n5. Serve and log your portion in Eati."
+      "content": "1. Make a quick marinade with soy sauce, garlic, ginger, and sweetener.\n2. Marinate pork chops for at least 15 minutes (or longer if you have time).\n3. Grill pork chops until cooked through.\n4. Grill or saute bell peppers; add pineapple for a warm sweet element.\n5. Serve and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 237 kcal per serving (estimated)\nFat: 8.6g\nProtein: 27g\n\nTip: keep the marinade portion consistent for predictable macros."
+      "content": "Calories: 237 kcal per serving (estimated)\nFat: 8.6g\nProtein: 27g\n\nTip: keep the marinade portion consistent for predictable macros.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "A tropical twist on a protein staple. Use Eati to verify serving size and stay on target.",
-  "coverImage": "https://images.unsplash.com/photo-1762305193367-91e072e47c3f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774271966467-wfqmdg.jpg",
   "metaTitle": "Hawaiian Grilled Pork Chops Recipe | Eati",
   "metaDescription": "Hawaiian Grilled Pork Chops recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "hawaiian grilled pork chops high protein",

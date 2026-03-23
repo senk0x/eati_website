@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Marinara (tomato sauce)\n- Mozzarella\n- Garlic\n- Italian seasoning\n- Herbs\n- Salt and pepper"
+      "content": "- Chicken\n- Marinara (tomato sauce)\n- Mozzarella\n- Garlic\n- Italian seasoning\n- Herbs\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Preheat oven to 400F (200C).\n2. Season chicken and place in a baking dish.\n3. Add marinara and mix with garlic and Italian seasoning.\n4. Top with mozzarella and herbs.\n5. Bake until chicken is cooked and cheese melts; serve and log in Eati."
+      "content": "1. Preheat oven to 400F (200C).\n2. Season chicken and place in a baking dish.\n3. Add marinara and mix with garlic and Italian seasoning.\n4. Top with mozzarella and herbs.\n5. Bake until chicken is cooked and cheese melts; serve and log in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 395 kcal per serving (estimated)\nFat: 18g\nProtein: 50g\n\nTip: portion cheese carefully if you are watching fat calories."
+      "content": "Calories: 395 kcal per serving (estimated)\nFat: 18g\nProtein: 50g\n\nTip: portion cheese carefully if you are watching fat calories.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "A comfort-style bake that still supports a high-protein fat loss routine. Use Eati to confirm your serving size and macros.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272218277-pt89et.webp",
   "metaTitle": "Chicken Mozzarella Bake Recipe | Eati",
   "metaDescription": "Chicken Mozzarella Bake recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "chicken mozzarella bake high protein",

@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Ground turkey\n- Cabbage\n- Carrots\n- Soy sauce\n- Ginger\n- Garlic\n- Sesame oil (optional)\n- Salt and pepper"
+      "content": "- Ground turkey\n- Cabbage\n- Carrots\n- Soy sauce\n- Ginger\n- Garlic\n- Sesame oil (optional)\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Brown ground turkey in a pan with garlic and a pinch of salt.\n2. Add ginger and stir until fragrant.\n3. Saute cabbage and carrots until slightly tender.\n4. Add soy sauce and combine; cook until flavors blend.\n5. Finish with optional sesame oil, serve warm, and log your portion in Eati."
+      "content": "1. Brown ground turkey in a pan with garlic and a pinch of salt.\n2. Add ginger and stir until fragrant.\n3. Saute cabbage and carrots until slightly tender.\n4. Add soy sauce and combine; cook until flavors blend.\n5. Finish with optional sesame oil, serve warm, and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 243 kcal per serving (estimated)\nFat: 8.2g\nProtein: 30g\n\nTip: reduce oil to keep fat lower while keeping flavor through seasonings."
+      "content": "Calories: 243 kcal per serving (estimated)\nFat: 8.2g\nProtein: 30g\n\nTip: reduce oil to keep fat lower while keeping flavor through seasonings.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "This bowl is a convenient way to stay high-protein and consistent. Track it in Eati and adjust your portion size as needed.",
-  "coverImage": "https://images.unsplash.com/photo-1723476688421-8321e7ee8c1f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774271753372-nxpi0e.jpg",
   "metaTitle": "Ground Turkey Egg Roll in a Bowl Recipe | Eati",
   "metaDescription": "Ground Turkey Egg Roll in a Bowl recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "ground turkey egg roll in a bowl high protein",

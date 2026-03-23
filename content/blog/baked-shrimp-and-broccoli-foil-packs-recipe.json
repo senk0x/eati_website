@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Shrimp\n- Broccoli\n- Garlic\n- Lemon\n- Olive oil\n- Spices and herbs\n- Salt and pepper"
+      "content": "- Shrimp\n- Broccoli\n- Garlic\n- Lemon\n- Olive oil\n- Spices and herbs\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Preheat oven to 425F (220C).\n2. Toss shrimp and broccoli with garlic, olive oil, lemon, and seasonings.\n3. Divide onto foil sheets and fold into packets.\n4. Bake until shrimp is cooked and broccoli is tender.\n5. Carefully open packets, serve, and log your portion in Eati."
+      "content": "1. Preheat oven to 425F (220C).\n2. Toss shrimp and broccoli with garlic, olive oil, lemon, and seasonings.\n3. Divide onto foil sheets and fold into packets.\n4. Bake until shrimp is cooked and broccoli is tender.\n5. Carefully open packets, serve, and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 385 kcal per serving (estimated)\nFat: 15g\nProtein: 40g\n\nTip: use a measured amount of oil to keep fat predictable."
+      "content": "Calories: 385 kcal per serving (estimated)\nFat: 15g\nProtein: 40g\n\nTip: use a measured amount of oil to keep fat predictable.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "Foil packs make it easy to stay on-plan: less mess, big flavor, and strong protein. Track it in Eati to match your macros.",
-  "coverImage": "https://images.unsplash.com/photo-1627841825438-ee3e7d8febd4?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272272211-39cuwc.jpg",
   "metaTitle": "Baked Shrimp and Broccoli Foil Packs Recipe | Eati",
   "metaDescription": "Baked Shrimp and Broccoli Foil Packs recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati logging tips.",
   "targetKeyword": "baked shrimp and broccoli foil packs high protein",

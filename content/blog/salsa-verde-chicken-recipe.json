@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Salsa verde\n- Onion\n- Garlic\n- Broth or water\n- Spices\n- Optional lime\n- Salt and pepper"
+      "content": "- Chicken\n- Salsa verde\n- Onion\n- Garlic\n- Broth or water\n- Spices\n- Optional lime\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Saute onion and garlic until fragrant.\n2. Add chicken and seasonings, then cook until the chicken starts to brown.\n3. Pour in salsa verde and a splash of broth or water.\n4. Simmer until chicken is cooked and flavors meld.\n5. Finish with lime if desired; serve and log your portion in Eati."
+      "content": "1. Saute onion and garlic until fragrant.\n2. Add chicken and seasonings, then cook until the chicken starts to brown.\n3. Pour in salsa verde and a splash of broth or water.\n4. Simmer until chicken is cooked and flavors meld.\n5. Finish with lime if desired; serve and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 211 kcal per serving (estimated)\nFat: 5.5g\nProtein: 32g\n\nTip: keep salsa verde servings steady for consistent macros."
+      "content": "Calories: 211 kcal per serving (estimated)\nFat: 5.5g\nProtein: 32g\n\nTip: keep salsa verde servings steady for consistent macros.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "Tangy salsa verde keeps the meal exciting while staying macro-friendly. Track it in Eati to match your target.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774271828740-pat0ox.jpg",
   "metaTitle": "Salsa Verde Chicken Recipe | Eati",
   "metaDescription": "Salsa Verde Chicken recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati logging tips.",
   "targetKeyword": "salsa verde chicken high protein",

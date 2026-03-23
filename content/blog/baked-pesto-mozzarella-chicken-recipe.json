@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken breast\n- Pesto\n- Mozzarella\n- Garlic\n- Cherry tomatoes\n- Herbs\n- Salt and pepper"
+      "content": "- Chicken breast\n- Pesto\n- Mozzarella\n- Garlic\n- Cherry tomatoes\n- Herbs\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Preheat oven to 400F (200C).\n2. Season chicken and place in a baking dish.\n3. Spread pesto over chicken; add garlic and cherry tomatoes.\n4. Top with mozzarella and herbs.\n5. Bake until chicken is cooked and cheese is melted; serve and log in Eati."
+      "content": "1. Preheat oven to 400F (200C).\n2. Season chicken and place in a baking dish.\n3. Spread pesto over chicken; add garlic and cherry tomatoes.\n4. Top with mozzarella and herbs.\n5. Bake until chicken is cooked and cheese is melted; serve and log in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 549 kcal per serving (estimated)\nFat: 31g\nProtein: 57g\n\nTip: pesto and cheese vary by brand; adjust in Eati to stay accurate."
+      "content": "Calories: 549 kcal per serving (estimated)\nFat: 31g\nProtein: 57g\n\nTip: pesto and cheese vary by brand; adjust in Eati to stay accurate.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "A satisfying baked dinner that makes high-protein eating feel effortless. Log it in Eati to keep your macros on track.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272299226-w5dsnf.jpg",
   "metaTitle": "Baked Pesto Mozzarella Chicken Recipe | Eati",
   "metaDescription": "Baked Pesto Mozzarella Chicken recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "baked pesto mozzarella chicken high protein",

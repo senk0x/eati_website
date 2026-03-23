@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken breast\n- Jalapenos\n- Cheese\n- Garlic\n- Onion\n- Spices\n- Salt and pepper"
+      "content": "- Chicken breast\n- Jalapenos\n- Cheese\n- Garlic\n- Onion\n- Spices\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Season chicken and sear in a hot pan until browned.\n2. Add onion and garlic; saute briefly.\n3. Add jalapenos and spices; cook until fragrant.\n4. Stir in cheese (and a splash of water or broth if needed) until melted.\n5. Simmer until chicken is fully cooked, then serve and log your portion in Eati."
+      "content": "1. Season chicken and sear in a hot pan until browned.\n2. Add onion and garlic; saute briefly.\n3. Add jalapenos and spices; cook until fragrant.\n4. Stir in cheese (and a splash of water or broth if needed) until melted.\n5. Simmer until chicken is fully cooked, then serve and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 521 kcal per serving (estimated)\nFat: 31g\nProtein: 52g\n\nTip: adjust cheese to manage fat while keeping the spicy flavor."
+      "content": "Calories: 521 kcal per serving (estimated)\nFat: 31g\nProtein: 52g\n\nTip: adjust cheese to manage fat while keeping the spicy flavor.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "Spice plus protein equals consistency. Track this one-pan dinner in Eati and repeat it whenever you need a fast high-protein meal.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272169834-ad8nd1.jpg",
   "metaTitle": "One Pan Cheesy Jalapeno Chicken Recipe | Eati",
   "metaDescription": "One Pan Cheesy Jalapeno Chicken recipe with estimated calories, fat, and protein. Includes ingredients, step-by-step instructions, and Eati tips.",
   "targetKeyword": "one pan cheesy jalapeno chicken high protein",

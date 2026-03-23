@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Pineapple\n- BBQ sauce\n- Bacon\n- Onion\n- Garlic\n- Peppers\n- Salt and pepper"
+      "content": "- Chicken\n- Pineapple\n- BBQ sauce\n- Bacon\n- Onion\n- Garlic\n- Peppers\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Season chicken and prepare a baking dish.\n2. Cook bacon until partially crisp, then add onion and garlic for flavor.\n3. Add peppers and pineapple; pour in BBQ sauce.\n4. Bake until chicken is cooked and sauce is bubbling.\n5. Serve and log your portion in Eati."
+      "content": "1. Season chicken and prepare a baking dish.\n2. Cook bacon until partially crisp, then add onion and garlic for flavor.\n3. Add peppers and pineapple; pour in BBQ sauce.\n4. Bake until chicken is cooked and sauce is bubbling.\n5. Serve and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 465 kcal per serving (estimated)\nFat: 15g\nProtein: 45g\n\nTip: if you want lower calories, reduce bacon and choose a lighter BBQ sauce."
+      "content": "Calories: 465 kcal per serving (estimated)\nFat: 15g\nProtein: 45g\n\nTip: if you want lower calories, reduce bacon and choose a lighter BBQ sauce.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "Sweet, smoky, and filling, this recipe helps you hit high protein without boring meals. Track it in Eati to keep your macros consistent.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272231539-h7eq22.jpg",
   "metaTitle": "Pineapple BBQ Chicken with Bacon Recipe | Eati",
   "metaDescription": "Pineapple BBQ Chicken with Bacon recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tips.",
   "targetKeyword": "pineapple bbq chicken with bacon high protein",

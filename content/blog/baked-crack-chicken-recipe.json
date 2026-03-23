@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Spices (garlic powder, onion powder, paprika, etc.)\n- Cream cheese or similar\n- Seasonings (salt and pepper)\n- Optional: ranch-style flavors\n- Salt and pepper"
+      "content": "- Chicken\n- Spices (garlic powder, onion powder, paprika, etc.)\n- Cream cheese or similar\n- Seasonings (salt and pepper)\n- Optional: ranch-style flavors\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Season chicken well and place in a baking dish.\n2. Spread or dollop cream cheese over the chicken.\n3. Add seasonings and optional ranch-style flavors.\n4. Bake until chicken is cooked and the sauce is bubbly.\n5. Serve and log your portion in Eati to keep macros accurate."
+      "content": "1. Season chicken well and place in a baking dish.\n2. Spread or dollop cream cheese over the chicken.\n3. Add seasonings and optional ranch-style flavors.\n4. Bake until chicken is cooked and the sauce is bubbly.\n5. Serve and log your portion in Eati to keep macros accurate.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 445 kcal per serving (estimated)\nFat: 25g\nProtein: 48g\n\nTip: the cheese amount is a major driver of fat. Portion it."
+      "content": "Calories: 445 kcal per serving (estimated)\nFat: 25g\nProtein: 48g\n\nTip: the cheese amount is a major driver of fat. Portion it.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "If you want a high-protein meal that feels indulgent, this bake fits the bill. Use Eati to track servings and stay on target.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272021718-wcpk5c.jpg",
   "metaTitle": "Baked Crack Chicken Recipe | Eati",
   "metaDescription": "Baked Crack Chicken recipe with estimated calories, fat, and protein. Includes ingredients, cooking steps, and Eati tracking tips.",
   "targetKeyword": "baked crack chicken high protein",

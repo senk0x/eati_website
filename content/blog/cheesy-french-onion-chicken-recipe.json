@@ -5,19 +5,22 @@
   "sections": [
     {
       "heading": "Ingredients",
-      "content": "- Chicken\n- Caramelized onions\n- Garlic\n- Chicken broth\n- Mozzarella\n- Thyme\n- Salt and pepper"
+      "content": "- Chicken\n- Caramelized onions\n- Garlic\n- Chicken broth\n- Mozzarella\n- Thyme\n- Salt and pepper",
+      "imageUrl": ""
     },
     {
       "heading": "Instructions",
-      "content": "1. Caramelize onions slowly until deep and sweet.\n2. Season chicken and cook briefly so it starts to brown.\n3. Add garlic, broth, and thyme; simmer until the sauce develops flavor.\n4. Combine sauce and chicken, then add mozzarella.\n5. Broil or bake until cheese melts; serve and log your portion in Eati."
+      "content": "1. Caramelize onions slowly until deep and sweet.\n2. Season chicken and cook briefly so it starts to brown.\n3. Add garlic, broth, and thyme; simmer until the sauce develops flavor.\n4. Combine sauce and chicken, then add mozzarella.\n5. Broil or bake until cheese melts; serve and log your portion in Eati.",
+      "imageUrl": ""
     },
     {
       "heading": "Calories, Fat, and Protein (Estimated)",
-      "content": "Calories: 534 kcal per serving (estimated)\nFat: 21g\nProtein: 55g\n\nTip: use portioned cheese to keep fat within your target range."
+      "content": "Calories: 534 kcal per serving (estimated)\nFat: 21g\nProtein: 55g\n\nTip: use portioned cheese to keep fat within your target range.",
+      "imageUrl": ""
     }
   ],
   "conclusion": "If you love classic French onion flavor, this version makes it easy to keep dinner high-protein. Use Eati to verify your macros.",
-  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "coverImage": "/images/blog/1774272076761-bkpjqi.jpg",
   "metaTitle": "Cheesy French Onion Chicken Recipe | Eati",
   "metaDescription": "Cheesy French Onion Chicken recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "cheesy french onion chicken high protein",
