@@ -17,12 +17,13 @@
     }
   ],
   "conclusion": "This taco soup is an effortless way to get a high-protein dinner that still feels comforting. Use Eati to track servings and keep your calorie deficit working.",
-  "coverImage": "https://source.unsplash.com/featured/1600x900?taco,soup,high-protein&sig=102",
+  "coverImage": "https://images.unsplash.com/photo-1615444814527-f5ebbea2cadb?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "metaTitle": "High Protein Chicken Taco Soup Recipe | Eati",
   "metaDescription": "High Protein Chicken Taco Soup recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and tips for tracking in Eati.",
   "targetKeyword": "high protein chicken taco soup",
   "publishedAt": "2026-03-23T10:27:00Z",
   "published": true,
-  "relatedSlugs": ["30-best-high-protein-recipes"]
+  "relatedSlugs": [
+    "30-best-high-protein-recipes"
+  ]
 }
-

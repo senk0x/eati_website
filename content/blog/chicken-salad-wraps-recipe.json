@@ -17,12 +17,13 @@
     }
   ],
   "conclusion": "This lunch-friendly wrap keeps protein high and calories reasonable. Track it in Eati to stay consistent.",
-  "coverImage": "https://source.unsplash.com/featured/1600x900?chicken,salad,wraps,high-protein&sig=130",
+  "coverImage": "https://images.unsplash.com/photo-1723476688421-8321e7ee8c1f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "metaTitle": "Chicken Salad Wraps Recipe | Eati",
   "metaDescription": "Chicken Salad Wraps recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "chicken salad wraps high protein",
   "publishedAt": "2026-03-23T10:55:00Z",
   "published": true,
-  "relatedSlugs": ["30-best-high-protein-recipes"]
+  "relatedSlugs": [
+    "30-best-high-protein-recipes"
+  ]
 }
-
