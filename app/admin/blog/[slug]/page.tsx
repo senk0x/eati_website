@@ -8,6 +8,7 @@ import ImageUpload from '@/components/ImageUpload';
 interface BlogSection {
   heading: string;
   content: string;
+  imageUrl: string;
 }
 
 interface BlogArticle {
@@ -42,7 +43,14 @@ export default function EditArticlePage() {
         return res.json();
       })
       .then((data) => {
-        setForm(data);
+        setForm({
+          ...data,
+          sections: (data.sections || []).map((section: Partial<BlogSection>) => ({
+            heading: section.heading || '',
+            content: section.content || '',
+            imageUrl: section.imageUrl || '',
+          })),
+        });
         setLoading(false);
       })
       .catch((err) => {
@@ -55,7 +63,7 @@ export default function EditArticlePage() {
     if (!form) return;
     setForm({
       ...form,
-      sections: [...form.sections, { heading: '', content: '' }],
+      sections: [...form.sections, { heading: '', content: '', imageUrl: '' }],
     });
   };
 
@@ -67,7 +75,11 @@ export default function EditArticlePage() {
     });
   };
 
-  const handleSectionChange = (index: number, field: 'heading' | 'content', value: string) => {
+  const handleSectionChange = (
+    index: number,
+    field: 'heading' | 'content' | 'imageUrl',
+    value: string
+  ) => {
     if (!form) return;
     setForm({
       ...form,
@@ -247,6 +259,13 @@ export default function EditArticlePage() {
                     onChange={(e) => handleSectionChange(index, 'content', e.target.value)}
                     className={inputClass}
                   />
+                  <div className="mt-3">
+                    <ImageUpload
+                      value={section.imageUrl}
+                      onChange={(url) => handleSectionChange(index, 'imageUrl', url)}
+                      label="Section Image"
+                    />
+                  </div>
                 </div>
               ))}
             </div>

@@ -227,8 +227,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                 const lines = section.content.split('\n');
                 const firstLine = (lines[0] ?? '').trim();
                 const isPhoto = firstLine.toLowerCase().startsWith('photo:');
-                const photoUrl = isPhoto ? firstLine.slice('photo:'.length).trim() : null;
-                const contentWithoutPhoto = photoUrl ? lines.slice(1).join('\n').trimStart() : section.content;
+                const parsedPhotoUrl = isPhoto ? firstLine.slice('photo:'.length).trim() : null;
+                const photoUrl = section.imageUrl?.trim() || parsedPhotoUrl;
+                const contentWithoutPhoto = isPhoto ? lines.slice(1).join('\n').trimStart() : section.content;
 
                 return (
                   <section key={index} id={`section-${index}`}>

@@ -4,6 +4,8 @@ import path from 'path';
 export interface BlogSection {
   heading: string;
   content: string;
+  /** Optional image shown under section heading */
+  imageUrl?: string;
 }
 
 export interface BlogFAQ {

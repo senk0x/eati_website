@@ -6,9 +6,10 @@ import Image from 'next/image';
 interface ImageUploadProps {
   value: string;
   onChange: (url: string) => void;
+  label?: string;
 }
 
-export default function ImageUpload({ value, onChange }: ImageUploadProps) {
+export default function ImageUpload({ value, onChange, label = 'Cover Image' }: ImageUploadProps) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -52,7 +53,7 @@ export default function ImageUpload({ value, onChange }: ImageUploadProps) {
 
   return (
     <div style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
-      <label className="mb-1 block text-sm font-medium text-gray-700">Cover Image</label>
+      <label className="mb-1 block text-sm font-medium text-gray-700">{label}</label>
 
       {value ? (
         <div className="relative">

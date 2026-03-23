@@ -8,6 +8,7 @@ import ImageUpload from '@/components/ImageUpload';
 interface BlogSection {
   heading: string;
   content: string;
+  imageUrl: string;
 }
 
 export default function NewArticlePage() {
@@ -18,7 +19,7 @@ export default function NewArticlePage() {
     slug: '',
     title: '',
     introduction: '',
-    sections: [{ heading: '', content: '' }] as BlogSection[],
+    sections: [{ heading: '', content: '', imageUrl: '' }] as BlogSection[],
     midArticleCta: '',
     conclusion: '',
     coverImage: '',
@@ -32,7 +33,7 @@ export default function NewArticlePage() {
   const handleAddSection = () => {
     setForm((prev) => ({
       ...prev,
-      sections: [...prev.sections, { heading: '', content: '' }],
+      sections: [...prev.sections, { heading: '', content: '', imageUrl: '' }],
     }));
   };
 
@@ -43,7 +44,11 @@ export default function NewArticlePage() {
     }));
   };
 
-  const handleSectionChange = (index: number, field: 'heading' | 'content', value: string) => {
+  const handleSectionChange = (
+    index: number,
+    field: 'heading' | 'content' | 'imageUrl',
+    value: string
+  ) => {
     setForm((prev) => ({
       ...prev,
       sections: prev.sections.map((s, i) => (i === index ? { ...s, [field]: value } : s)),
@@ -184,6 +189,13 @@ export default function NewArticlePage() {
                     onChange={(e) => handleSectionChange(index, 'content', e.target.value)}
                     className={inputClass}
                   />
+                  <div className="mt-3">
+                    <ImageUpload
+                      value={section.imageUrl}
+                      onChange={(url) => handleSectionChange(index, 'imageUrl', url)}
+                      label="Section Image"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
