@@ -8,6 +8,7 @@ const LOGO_INTERVAL_MS = 4000;
 
 const navLinks = [
   { href: "/tools", label: "Tools" },
+  { href: "/foods", label: "Foods" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];

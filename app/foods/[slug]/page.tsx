@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
 import FoodPortionCalculator from '@/components/FoodPortionCalculator';
-import { getFoodBySlug, getAllFoodSlugs } from '@/lib/foods';
+import { getFoodBySlug, getAllFoodSlugs, getRelatedFoods } from '@/lib/foods';
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';
@@ -76,7 +76,7 @@ export default async function FoodPage({ params }: Props) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Meal Log Calculator', item: `${siteUrl}/tools/meal-log-calculator` },
+      { '@type': 'ListItem', position: 2, name: 'Foods', item: `${siteUrl}/foods` },
       { '@type': 'ListItem', position: 3, name, item: canonicalUrl },
     ],
   };
@@ -101,8 +101,8 @@ export default async function FoodPage({ params }: Props) {
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools/meal-log-calculator" className="hover:text-[#85BEFF]">
-                  Meal Log Calculator
+                <Link href="/foods" className="hover:text-[#85BEFF]">
+                  Foods
                 </Link>
               </li>
               <li>/</li>
@@ -255,6 +255,45 @@ export default async function FoodPage({ params }: Props) {
               <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
                 macro calculator
               </Link>.
+            </p>
+          </section>
+
+          {/* Related Products */}
+          <section className={sectionClass}>
+            <h2 className={h2Class} style={{ color: '#364052' }}>
+              Related Products
+            </h2>
+            <p className="mb-4 text-gray-600">
+              Similar foods you might want to compare or add to your meals:
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {getRelatedFoods(slug, 4).map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`/foods/${related.slug}`}
+                  className="group flex items-center gap-3 rounded-xl border border-[#E3ECF7] bg-[#F7FAFF] p-3 transition-all hover:border-[#85BEFF] hover:shadow-md"
+                >
+                  <div
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-lg"
+                    aria-hidden
+                  >
+                    🍽️
+                  </div>
+                  <div className="flex-1 overflow-hidden">
+                    <p className="truncate text-sm font-semibold text-[#364052] transition-colors group-hover:text-[#85BEFF]">
+                      {related.name}
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      {related.caloriesPer100g} kcal · {related.proteinPer100g}g protein
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <p className="mt-4 text-sm text-gray-500">
+              <Link href="/foods" className="text-[#85BEFF] hover:underline">
+                Browse all foods →
+              </Link>
             </p>
           </section>
         </div>

@@ -9,6 +9,7 @@ import {
   getRelatedArticles,
   generateTableOfContents,
 } from '@/lib/blog';
+import LinkedText from '@/components/LinkedText';
 
 export const dynamic = 'force-dynamic';
 
@@ -173,7 +174,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               className="text-lg text-gray-700"
               style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
             >
-              {article.introduction}
+              <LinkedText text={article.introduction} />
             </p>
           </header>
 
@@ -230,7 +231,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   className="text-base leading-relaxed text-gray-700"
                   style={{ whiteSpace: 'pre-line' }}
                 >
-                  {section.content}
+                  <LinkedText text={section.content} />
                 </p>
               </section>
             ))}
@@ -262,7 +263,9 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Conclusion */}
             <section>
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">Conclusion</h2>
-              <p className="text-base leading-relaxed text-gray-700">{article.conclusion}</p>
+              <p className="text-base leading-relaxed text-gray-700">
+                <LinkedText text={article.conclusion} />
+              </p>
             </section>
 
             {/* FAQ section (optional, for long-tail + FAQ schema) */}
@@ -275,7 +278,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                   {article.faqs.map((faq, i) => (
                     <li key={i}>
                       <h3 className="mb-2 text-base font-semibold text-[#364052]">{faq.question}</h3>
-                      <p className="text-base leading-relaxed text-gray-700">{faq.answer}</p>
+                      <p className="text-base leading-relaxed text-gray-700">
+                        <LinkedText text={faq.answer} />
+                      </p>
                     </li>
                   ))}
                 </ul>

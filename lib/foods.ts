@@ -197,3 +197,64 @@ export function getAllFoodSlugs(): string[] {
 export function getFrequentlySearchedFoods(): Food[] {
   return FOODS;
 }
+
+/** Food categories for finding related products */
+const FOOD_CATEGORIES: Record<string, string[]> = {
+  protein: ['chicken-breast', 'chicken-thigh', 'grilled-chicken', 'turkey-breast', 'ground-turkey', 'salmon', 'tuna', 'shrimp', 'eggs', 'scrambled-eggs', 'omelette', 'ground-beef', 'beef-steak', 'pork-chop', 'tofu', 'protein-powder', 'protein-bar'],
+  dairy: ['greek-yogurt', 'greek-yogurt-0', 'cottage-cheese', 'cheese-cheddar', 'mozzarella', 'milk-whole', 'milk-low-fat'],
+  grains: ['white-rice', 'brown-rice', 'rice-cooked-white', 'rice-cooked-brown', 'quinoa', 'oatmeal', 'pasta-cooked', 'white-bread', 'whole-wheat-bread', 'granola'],
+  vegetables: ['broccoli', 'spinach', 'carrots', 'potatoes', 'sweet-potatoes'],
+  fruits: ['banana', 'apple', 'avocado'],
+  legumes: ['lentils', 'black-beans', 'chickpeas'],
+  nutsAndFats: ['almonds', 'peanut-butter', 'olive-oil', 'dark-chocolate'],
+};
+
+function getFoodCategory(slug: string): string | null {
+  for (const [category, slugs] of Object.entries(FOOD_CATEGORIES)) {
+    if (slugs.includes(slug)) return category;
+  }
+  return null;
+}
+
+/** Get related foods for a given food slug */
+export function getRelatedFoods(slug: string, limit = 4): Food[] {
+  const category = getFoodCategory(slug);
+  const currentFood = getFoodBySlug(slug);
+  if (!currentFood) return [];
+
+  const related: Food[] = [];
+
+  if (category) {
+    const sameCategorySlugs = FOOD_CATEGORIES[category].filter((s) => s !== slug);
+    for (const s of sameCategorySlugs) {
+      const food = getFoodBySlug(s);
+      if (food) related.push(food);
+      if (related.length >= limit) break;
+    }
+  }
+
+  if (related.length < limit) {
+    const calorieRange = 50;
+    const similarCalorieFoods = FOODS.filter(
+      (f) =>
+        f.slug !== slug &&
+        !related.some((r) => r.slug === f.slug) &&
+        Math.abs(f.caloriesPer100g - currentFood.caloriesPer100g) <= calorieRange
+    );
+    for (const food of similarCalorieFoods) {
+      related.push(food);
+      if (related.length >= limit) break;
+    }
+  }
+
+  if (related.length < limit) {
+    for (const food of FOODS) {
+      if (food.slug !== slug && !related.some((r) => r.slug === food.slug)) {
+        related.push(food);
+        if (related.length >= limit) break;
+      }
+    }
+  }
+
+  return related.slice(0, limit);
+}
