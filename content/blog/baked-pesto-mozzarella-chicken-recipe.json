@@ -17,12 +17,13 @@
     }
   ],
   "conclusion": "A satisfying baked dinner that makes high-protein eating feel effortless. Log it in Eati to keep your macros on track.",
-  "coverImage": "https://source.unsplash.com/featured/1600x900?baked%20chicken,pesto,mozzarella,high-protein&sig=109",
+  "coverImage": "https://images.unsplash.com/photo-1757715377796-2a368ec7499e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "metaTitle": "Baked Pesto Mozzarella Chicken Recipe | Eati",
   "metaDescription": "Baked Pesto Mozzarella Chicken recipe with estimated calories, fat, and protein. Includes ingredients, instructions, and Eati tracking tips.",
   "targetKeyword": "baked pesto mozzarella chicken high protein",
   "publishedAt": "2026-03-23T10:34:00Z",
   "published": true,
-  "relatedSlugs": ["30-best-high-protein-recipes"]
+  "relatedSlugs": [
+    "30-best-high-protein-recipes"
+  ]
 }
-
