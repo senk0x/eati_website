@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Match Vercel trailing-slash normalization: /path/ → /path with 308 (see Vercel docs)
+  trailingSlash: false,
   images: {
     remotePatterns: [
       {
