@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const LOGO_INTERVAL_MS = 4000;
@@ -14,6 +15,11 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  // Admin pages already have their own UI; avoid the fixed header overlaying buttons.
+  if (pathname?.startsWith("/admin")) return null;
+
   const [showMascot, setShowMascot] = useState(true);
   const [useAnimatedSwap, setUseAnimatedSwap] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

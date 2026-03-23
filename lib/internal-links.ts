@@ -43,9 +43,25 @@ export function parseContentWithLinks(text: string): TextSegment[] {
     end: number;
     href: string;
     matchedText: string;
+    displayText?: string;
   }
 
   const matches: Match[] = [];
+
+  // Priority: explicit markdown links we author in content, like:
+  //   [View detailed recipe](/blog/some-recipe-slug)
+  //   [View full recipe](https://example.com/some-recipe)
+  const markdownLinkRegex = /\[([^\]]+?)\]\((https?:\/\/[^\s)]+|\/blog\/[a-z0-9-]+)\)/gi;
+  let markdownLinkMatch: RegExpExecArray | null;
+  while ((markdownLinkMatch = markdownLinkRegex.exec(text)) !== null) {
+    matches.push({
+      start: markdownLinkMatch.index,
+      end: markdownLinkMatch.index + markdownLinkMatch[0].length,
+      href: markdownLinkMatch[2],
+      matchedText: markdownLinkMatch[0],
+      displayText: markdownLinkMatch[1],
+    });
+  }
 
   for (const link of ALL_LINKS) {
     let match: RegExpExecArray | null;
@@ -77,7 +93,11 @@ export function parseContentWithLinks(text: string): TextSegment[] {
     if (match.start > lastIndex) {
       segments.push({ type: 'text', content: text.slice(lastIndex, match.start) });
     }
-    segments.push({ type: 'link', content: match.matchedText, href: match.href });
+    segments.push({
+      type: 'link',
+      content: match.displayText ?? match.matchedText,
+      href: match.href,
+    });
     lastIndex = match.end;
   }
 
