@@ -225,11 +225,17 @@ export default async function BlogPostPage({ params }: PageProps) {
             {article.sections.map((section, index) => (
               (() => {
                 const lines = section.content.split('\n');
-                const firstLine = (lines[0] ?? '').trim();
-                const isPhoto = firstLine.toLowerCase().startsWith('photo:');
-                const parsedPhotoUrl = isPhoto ? firstLine.slice('photo:'.length).trim() : null;
+                const photoLineIndex = lines.findIndex((l) => l.trim().toLowerCase().startsWith('photo:'));
+                const parsedPhotoUrl =
+                  photoLineIndex >= 0 ? lines[photoLineIndex].trim().slice('photo:'.length).trim() : null;
+
                 const photoUrl = section.imageUrl?.trim() || parsedPhotoUrl;
-                const contentWithoutPhoto = isPhoto ? lines.slice(1).join('\n').trimStart() : section.content;
+
+                // Remove the `Photo:` line wherever it appears, so content renders cleanly.
+                const contentWithoutPhoto =
+                  photoLineIndex >= 0
+                    ? [...lines.slice(0, photoLineIndex), ...lines.slice(photoLineIndex + 1)].join('\n')
+                    : section.content;
 
                 return (
                   <section key={index} id={`section-${index}`}>

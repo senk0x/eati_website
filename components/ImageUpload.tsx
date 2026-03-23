@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import Image from 'next/image';
 
 interface ImageUploadProps {
   value: string;
@@ -58,11 +57,11 @@ export default function ImageUpload({ value, onChange, label = 'Cover Image' }: 
       {value ? (
         <div className="relative">
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-100">
-            <Image
+            <img
               src={value}
               alt="Cover preview"
-              fill
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="eager"
             />
           </div>
           <div className="mt-2 flex items-center gap-3">
