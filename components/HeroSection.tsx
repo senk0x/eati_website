@@ -195,7 +195,7 @@ export default function HeroSection() {
     <section className="px-4 sm:px-5 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative flex min-h-[680px] flex-col overflow-hidden rounded-[2rem] md:min-h-[500px] md:flex-none md:rounded-[3rem] lg:min-h-[540px]"
+          className="relative flex min-h-[min(680px,100svh)] flex-col overflow-hidden rounded-[2rem] md:min-h-[500px] md:flex-none md:rounded-[3rem] lg:min-h-[540px]"
           style={{ backgroundColor: "#85BEFF" }}
         >
           {/* Sunburst rays background */}
@@ -230,6 +230,13 @@ export default function HeroSection() {
               <br />
               IN SECONDS
             </h1>
+            <p
+              className="mx-auto mt-4 max-w-xl text-pretty text-base font-medium leading-snug text-white/95 sm:text-lg md:mx-0 md:text-left md:text-xl"
+              style={{ fontFamily: "var(--font-rubik), sans-serif" }}
+            >
+              AI calorie tracker and meal planner — log by text, photo, barcode, or voice. Built for
+              fat loss, macro goals, and everyday consistency.
+            </p>
 
             {/* Input field and send button */}
             <div className="mt-6 flex flex-col items-center md:mt-8 md:items-start md:text-left lg:mt-12">

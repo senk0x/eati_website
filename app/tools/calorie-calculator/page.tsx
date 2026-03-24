@@ -3,14 +3,15 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import CalorieCalculator from '@/components/CalorieCalculator';
 import { SeoFaqSection } from '@/components/SeoFaqSection';
+import { SITE_URL, absoluteUrl, buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/calorie-calculator`;
+const canonical = absoluteUrl('/tools/calorie-calculator');
 
-export const metadata: Metadata = {
-  title: 'Calorie Calculator | Daily Calorie Goal for Weight Loss or Gain',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Calorie Calculator | Daily Goal for Weight Loss or Muscle Gain',
   description:
-    'Free calorie calculator: find your daily calorie target for weight maintenance, loss, or gain. Uses BMR and TDEE (Mifflin-St Jeor). Metric and imperial units.',
+    'Free calorie calculator using BMR and TDEE (Mifflin–St Jeor). Get a daily calorie target for fat loss, maintenance, or bulking — switch metric or imperial in one tap.',
+  path: '/tools/calorie-calculator',
   keywords: [
     'calorie calculator',
     'daily calorie goal',
@@ -20,15 +21,7 @@ export const metadata: Metadata = {
     'BMR calculator',
     'TDEE',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Calorie Calculator | Eati',
-    description:
-      'Calculate your daily calorie target for maintaining, losing, or gaining weight. Free BMR and TDEE-based calculator.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const CALORIE_FAQS = [
   {
@@ -58,8 +51,8 @@ export default function CalorieCalculatorPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteUrl}/tools` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: `${SITE_URL}/tools` },
       { '@type': 'ListItem', position: 3, name: 'Calorie Calculator', item: canonical },
     ],
   };

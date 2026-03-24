@@ -2,15 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import CalorieBurnCalculator from '@/components/CalorieBurnCalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/calorie-burn-calculator`;
-
-export const metadata: Metadata = {
-  title:
-    'Calorie Burn Calculator | Calories Burned by Activity | Exercise Calorie Calculator',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Calorie Burn Calculator | MET Exercise & Activity Estimates',
   description:
-    'Free calorie burn calculator. Estimate calories burned by activity using MET values. Weight, duration, and activity type. Calories per hour, kJ, and fat loss equivalent. No sign-up.',
+    'Free calories burned calculator using MET values: walking, running, cycling, weights, and more. Enter weight and duration — kcal, kJ, and fat-loss context. No sign-up on Eati.',
+  path: '/tools/calorie-burn-calculator',
   keywords: [
     'calorie burn calculator',
     'calories burned calculator',
@@ -21,15 +19,7 @@ export const metadata: Metadata = {
     'weight loss calorie burn',
     'exercise calorie calculator',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Calorie Burn Calculator | Eati',
-    description:
-      'Calculate calories burned by exercise. MET-based formula for walking, running, cycling, strength training, and more.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';

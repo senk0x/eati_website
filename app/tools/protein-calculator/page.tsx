@@ -2,14 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import ProteinCalculator from '@/components/ProteinCalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/protein-calculator`;
-
-export const metadata: Metadata = {
-  title: 'Protein Calculator | How Much Protein Do I Need Per Day',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Protein Calculator | Daily Grams for Muscle, Fat Loss & Health',
   description:
-    'Free protein calculator. Find your daily protein intake by weight and goal. Protein for muscle gain, weight loss, and general health. Grams per day and per meal.',
+    'Free protein calculator: daily grams from body weight and goal — cutting, bulking, or maintenance. Split per meal and protect muscle on a calorie deficit with Eati’s macro tools.',
+  path: '/tools/protein-calculator',
   keywords: [
     'protein calculator',
     'how much protein do I need',
@@ -20,14 +19,7 @@ export const metadata: Metadata = {
     'protein for weight loss',
     'grams of protein per day',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Protein Calculator | Eati',
-    description: 'Calculate your daily protein needs by weight and goal. Muscle gain, fat loss, and general health.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';

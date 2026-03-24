@@ -2,14 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import CalorieDeficitCalculator from '@/components/CalorieDeficitCalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/calorie-deficit-calculator`;
-
-export const metadata: Metadata = {
-  title: 'Calorie Deficit Calculator | Safe Weight Loss Planning',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Calorie Deficit Calculator | Safe Fat Loss & Weekly Pace',
   description:
-    'Calculate your calorie deficit for weight loss. Get your TDEE, choose a deficit (mild, standard, or aggressive), and see your target calories and estimated weekly loss.',
+    'Plan a sustainable calorie deficit from your TDEE: pick mild, standard, or aggressive targets and see estimated weekly weight change. Free fat loss calculator by Eati.',
+  path: '/tools/calorie-deficit-calculator',
   keywords: [
     'calorie deficit calculator',
     'weight loss calculator',
@@ -17,14 +16,7 @@ export const metadata: Metadata = {
     'TDEE',
     'weekly weight loss',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Calorie Deficit Calculator | Eati',
-    description: 'Plan a safe calorie deficit. See your maintenance calories, target intake, and estimated weekly weight loss.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 export default function CalorieDeficitCalculatorPage() {
   return (

@@ -2,14 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import IBWCalculator from '@/components/IBWCalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/ideal-body-weight-calculator`;
-
-export const metadata: Metadata = {
-  title: 'Ideal Body Weight Calculator | What Is My Ideal Weight by Height',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Ideal Body Weight Calculator | Healthy Range by Height',
   description:
-    'Free ideal body weight calculator. Find your ideal weight by height using Devine and Robinson formulas. Healthy weight range, frame size, and comparison to current weight.',
+    'Free ideal weight calculator using Devine and Robinson formulas: healthy range by height, frame size, and how your current weight compares — reference tool for goals, not medical advice.',
+  path: '/tools/ideal-body-weight-calculator',
   keywords: [
     'ideal body weight calculator',
     'what is my ideal weight',
@@ -19,14 +18,7 @@ export const metadata: Metadata = {
     'ideal weight calculator female',
     'how much should I weigh',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Ideal Body Weight Calculator | Eati',
-    description: 'Calculate your ideal body weight by height. Devine and Robinson formulas, healthy range, frame size.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';

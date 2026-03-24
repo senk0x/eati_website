@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="h-8 w-[72px] shrink-0 md:h-9 md:w-[84px]">
               <Image
                 src="/images/logo-footer.svg"
-                alt="Eati"
+                alt="Eati — AI calorie tracker and nutrition app logo"
                 width={84}
                 height={36}
                 className="h-full w-auto object-contain object-left"

@@ -2,14 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import { FOODS } from '@/lib/foods';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/foods`;
-
-export const metadata: Metadata = {
-  title: 'Food Nutrition Database | Calories & Macros per 100g',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Food Calories & Macros Database | High-Protein Foods List',
   description:
-    'Browse our food nutrition database with calories, protein, carbs, and fat per 100g. Chicken, rice, eggs, salmon, and 40+ foods with detailed nutrition facts.',
+    'Browse calories, protein, carbs, and fat per 100g for 40+ foods — chicken, rice, eggs, salmon, and more. Handy for meal planning, macro tracking, and fat loss on Eati.',
+  path: '/foods',
   keywords: [
     'food nutrition database',
     'calories per 100g',
@@ -19,15 +18,7 @@ export const metadata: Metadata = {
     'macros database',
     'food calories chart',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Food Nutrition Database | Eati',
-    description:
-      'Browse 40+ foods with calories, protein, carbs, and fat per 100g. Find nutrition facts for meal planning.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 export default function FoodsPage() {
   return (

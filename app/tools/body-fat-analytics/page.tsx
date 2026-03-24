@@ -2,15 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import BodyFatAnalytics from '@/components/BodyFatAnalytics';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/body-fat-analytics`;
-
-export const metadata: Metadata = {
-  title:
-    'Body Fat % Analytics | Estimate Body Fat From Photo | AI Body Fat Calculator',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Body Fat From Photo | AI Visual Estimate (Front & Side)',
   description:
-    'Estimate body fat percentage from photos with AI. Upload front and side view for a visual body fat estimate. Body fat photo calculator and analyzer. For tracking only — not a substitute for professional testing.',
+    'Upload front and optional side photos for an AI-assisted body fat percentage estimate — a visual companion to tape measurements, not a medical DEXA replacement. Free on Eati.',
+  path: '/tools/body-fat-analytics',
   keywords: [
     'body fat photo calculator',
     'body fat analyzer from photo',
@@ -19,15 +17,7 @@ export const metadata: Metadata = {
     'body fat percentage from image',
     'visual body fat estimator',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Body Fat % Analytics | AI Photo-Based Estimate | Eati',
-    description:
-      'Estimate body fat percentage from your photos. Upload front and side views for an AI-powered visual estimate.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';

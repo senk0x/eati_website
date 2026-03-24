@@ -2,14 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import MacroGoalCalculator from '@/components/MacroGoalCalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/macro-goal-calculator`;
-
-export const metadata: Metadata = {
-  title: 'Macro Goal Calculator | Protein, Carbs & Fat Targets',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Macro Calculator | Protein, Carbs & Fat Targets by Goal',
   description:
-    'Free macro calculator: get daily protein, carbohydrate, and fat goals based on your weight, activity, and goal. Uses evidence-based ratios and TDEE.',
+    'Free macro goal calculator from TDEE: split protein, carbs, and fats for fat loss, maintenance, or muscle gain. Evidence-based ratios — pair with Eati’s AI calorie tracker.',
+  path: '/tools/macro-goal-calculator',
   keywords: [
     'macro calculator',
     'protein calculator',
@@ -17,14 +16,7 @@ export const metadata: Metadata = {
     'macronutrient calculator',
     'protein carbs fat',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Macro Goal Calculator | Eati',
-    description: 'Calculate your daily protein, carbs, and fat targets for fat loss, maintenance, or muscle gain.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 export default function MacroGoalCalculatorPage() {
   return (

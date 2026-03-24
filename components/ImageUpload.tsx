@@ -59,7 +59,7 @@ export default function ImageUpload({ value, onChange, label = 'Cover Image' }: 
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-100">
             <img
               src={value}
-              alt="Cover preview"
+              alt="Blog article cover image preview for the Eati content editor"
               className="absolute inset-0 h-full w-full object-cover"
               loading="eager"
             />

@@ -2,15 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import BodyFatCalculator from '@/components/BodyFatCalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/body-fat-calculator`;
-
-export const metadata: Metadata = {
-  title:
-    'Body Fat Calculator | Body Fat Percentage Calculator | Navy Method',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Body Fat Calculator | Navy Method % & Lean Mass (Free)',
   description:
-    'Free body fat calculator using the U.S. Navy method. Calculate body fat percentage at home from waist, neck, and height (plus hip for women). Fat mass and lean body mass in kg and lbs. No photos or AI.',
+    'Free U.S. Navy body fat calculator: estimate body fat % from waist, neck, and height (hip for women). See fat mass and lean mass in kg or lbs — no photos required, private at home.',
+  path: '/tools/body-fat-calculator',
   keywords: [
     'body fat calculator',
     'body fat percentage calculator',
@@ -21,15 +19,7 @@ export const metadata: Metadata = {
     'calculate body fat at home',
     'body fat percentage formula',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Body Fat Calculator | Navy Method | Eati',
-    description:
-      'Calculate body fat percentage from measurements using the U.S. Navy formula. Fat mass and lean body mass. No photos or AI.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';

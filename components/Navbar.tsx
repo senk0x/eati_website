@@ -16,10 +16,6 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
-
-  // Admin pages already have their own UI; avoid the fixed header overlaying buttons.
-  if (pathname?.startsWith("/admin")) return null;
-
   const [showMascot, setShowMascot] = useState(true);
   const [useAnimatedSwap, setUseAnimatedSwap] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,10 +42,13 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  // Admin pages already have their own UI; avoid the fixed header overlaying buttons.
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4 md:px-6 md:pt-5">
-      <nav className="mx-auto max-w-7xl rounded-2xl bg-white px-4 py-3 sm:rounded-2xl sm:px-6 sm:py-4 md:rounded-3xl md:px-8 md:py-5">
-        <div className="flex items-center justify-between gap-4">
+    <header className="fixed left-0 right-0 top-0 z-50 max-w-[100vw] px-3 pt-3 sm:px-4 sm:pt-4 md:px-6 md:pt-5">
+      <nav className="mx-auto max-w-7xl min-w-0 rounded-2xl bg-white px-4 py-3 sm:rounded-2xl sm:px-6 sm:py-4 md:rounded-3xl md:px-8 md:py-5">
+        <div className="flex min-w-0 items-center justify-between gap-2 sm:gap-4">
           {/* Logo - animated swap between mascot and text */}
           <Link
             href="/"
@@ -62,7 +61,7 @@ export default function Navbar() {
             >
               <Image
                 src="/images/logo-mascot.png"
-                alt="Eati"
+                alt="Eati mascot logo — AI calorie tracker app for iOS"
                 width={84}
                 height={40}
                 className="h-9 w-auto object-contain object-left md:h-10"
@@ -75,7 +74,7 @@ export default function Navbar() {
             >
               <Image
                 src="/images/logo-text.svg"
-                alt="Eati"
+                alt="Eati wordmark — meal planner and macro tracker"
                 width={84}
                 height={40}
                 className="h-9 w-auto object-contain object-left md:h-10"
@@ -105,7 +104,7 @@ export default function Navbar() {
             href="https://apps.apple.com/app/apple-store/id6758241088?pt=127995771&ct=Official%20Website&mt=8"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center gap-2 rounded-full border-2 border-[#364052] bg-[#364052] px-4 py-2.5 text-white transition-all hover:bg-white hover:text-[#364052] md:h-11 md:min-h-0 md:min-w-0 md:px-5"
+            className="flex min-h-[44px] min-w-0 shrink-0 items-center justify-center gap-1.5 rounded-full border-2 border-[#364052] bg-[#364052] px-3 py-2.5 text-white transition-all hover:bg-white hover:text-[#364052] sm:gap-2 sm:px-4 md:h-11 md:min-h-0 md:min-w-0 md:px-5"
             style={{ fontFamily: "var(--font-rubik), sans-serif" }}
           >
             <svg className="h-5 w-5 shrink-0 md:h-6 md:w-6" viewBox="0 0 24 24" fill="currentColor">

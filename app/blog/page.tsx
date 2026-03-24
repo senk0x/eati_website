@@ -1,21 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import { getPublishedArticles } from '@/lib/blog';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-
-export const metadata = {
-  title: 'Blog | Eati - AI Calorie Tracker',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Nutrition Blog | AI Calorie Tracker Tips & Weight Loss Guides',
   description:
-    'Tips, guides, and insights on nutrition, calorie tracking, and healthy eating from the Eati team. Learn how to lose weight, count calories, and hit your macro goals.',
-  alternates: { canonical: `${siteUrl}/blog` },
-  openGraph: {
-    title: 'Blog | Eati - Nutrition & Weight Loss Tips',
-    description: 'Guides on calorie tracking, macros, and healthy eating.',
-    url: `${siteUrl}/blog`,
-  },
-};
+    'Practical guides on calorie tracking, high-protein meals, macro splits, and sustainable fat loss from Eati — plus links to free TDEE, macro, and calorie calculators.',
+  path: '/blog',
+  keywords: [
+    'nutrition blog',
+    'calorie tracking tips',
+    'weight loss guides',
+    'macro planning',
+    'AI food log',
+    'healthy eating',
+  ],
+});
 
 export const dynamic = 'force-dynamic';
 
@@ -61,9 +64,10 @@ export default function BlogPage() {
                     {article.coverImage ? (
                       <Image
                         src={article.coverImage}
-                        alt={article.title}
+                        alt={`${article.title} — blog cover: nutrition, calories, and healthy eating tips`}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center text-4xl text-[#85BEFF]">

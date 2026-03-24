@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { Geist, Geist_Mono, Roboto_Flex, Rubik, Bowlby_One } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import JsonLdDefaults from "@/components/JsonLdDefaults";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
+import { SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,28 +37,36 @@ const bowlbyOne = Bowlby_One({
   weight: "400",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://eatiapp.com";
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Eati - AI Calorie Tracker | Track Calories & Macros in Seconds",
+    default: "Eati — AI Calorie Tracker App | Fat Loss & Macro Logging",
     template: "%s | Eati",
   },
   description:
-    "Track calories & macros without the hassle. Just snap a photo and let the app do the work. Free calorie calculator, TDEE, macro calculator, and nutrition tools.",
+    "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. The fat loss and meal-planning app for iOS — stay consistent without tedious logging.",
   keywords: [
-    "calorie tracker",
-    "AI calorie counter",
-    "macro calculator",
+    "AI calorie tracker",
+    "fat loss app",
+    "meal planner",
+    "macro tracker",
+    "calorie counter",
     "TDEE calculator",
     "weight loss app",
-    "calorie calculator",
+    "nutrition app",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Eati",
+    url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
@@ -80,11 +90,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${robotoFlex.variable} ${rubik.variable} ${bowlbyOne.variable} antialiased`}
       >
+        <JsonLdDefaults />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

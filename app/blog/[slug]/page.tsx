@@ -9,14 +9,13 @@ import {
   generateTableOfContents,
 } from '@/lib/blog';
 import LinkedText from '@/components/LinkedText';
+import { SITE_URL, buildPageMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -28,27 +27,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = article.metaTitle || article.title;
   const description = article.metaDescription || article.introduction;
+  const kw = article.targetKeyword ? [article.targetKeyword] : undefined;
 
-  return {
+  return buildPageMetadata({
     title,
     description,
-    keywords: article.targetKeyword,
-    alternates: { canonical: `${siteUrl}/blog/${slug}` },
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime: article.publishedAt,
-      url: `${siteUrl}/blog/${slug}`,
-      images: article.coverImage ? [article.coverImage] : [],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: article.coverImage ? [article.coverImage] : [],
-    },
-  };
+    path: `/blog/${slug}`,
+    type: 'article',
+    keywords: kw,
+    publishedTime: article.publishedAt,
+    modifiedTime: article.publishedAt,
+  });
 }
 
 export async function generateStaticParams() {
@@ -66,10 +55,10 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const toc = generateTableOfContents(article.sections);
   const relatedArticles = getRelatedArticles(slug, 3);
-  const canonicalUrl = `${siteUrl}/blog/${slug}`;
+  const canonicalUrl = `${SITE_URL}/blog/${slug}`;
 
   const imageUrl = article.coverImage
-    ? (article.coverImage.startsWith('http') ? article.coverImage : `${siteUrl}${article.coverImage}`)
+    ? (article.coverImage.startsWith('http') ? article.coverImage : `${SITE_URL}${article.coverImage}`)
     : undefined;
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -79,8 +68,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     image: imageUrl ? [imageUrl] : undefined,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
-    author: { '@type': 'Organization', name: 'Eati', url: siteUrl },
-    publisher: { '@type': 'Organization', name: 'Eati', url: siteUrl },
+    author: { '@type': 'Organization', name: 'Eati', url: SITE_URL },
+    publisher: { '@type': 'Organization', name: 'Eati', url: SITE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
   };
 
@@ -101,8 +90,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
       { '@type': 'ListItem', position: 3, name: article.title, item: canonicalUrl },
     ],
   };
@@ -182,7 +171,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div className="relative mb-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#E7F0FF]">
               <img
                 src={article.coverImage}
-                alt={article.title}
+                alt={`${article.title} — featured image for this nutrition and weight loss article on Eati`}
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="eager"
               />
@@ -246,7 +235,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                     {photoUrl && (
                       <div className="relative mb-5 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#E7F0FF]">
                         {/* Use plain <img> so externally hosted photos (including redirecting URLs) always display */}
-                        <img src={photoUrl} alt={section.heading} className="h-full w-full object-cover" loading="lazy" />
+                        <img
+                          src={photoUrl}
+                          alt={`${article.title}: ${section.heading} — illustration for this section`}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                        />
                       </div>
                     )}
 
@@ -359,7 +353,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     {related.coverImage ? (
                       <img
                         src={related.coverImage}
-                        alt={related.title}
+                        alt={`${related.title} — related nutrition article on Eati`}
                         className="absolute inset-0 h-full w-full object-cover"
                         loading="lazy"
                       />

@@ -2,8 +2,14 @@ import Image from "next/image";
 
 export default function FeaturesSection() {
   return (
-    <section className="px-4 py-8 sm:px-5 md:px-6 md:py-12">
+    <section
+      className="px-4 py-8 sm:px-5 md:px-6 md:py-12"
+      aria-labelledby="features-heading"
+    >
       <div className="mx-auto max-w-7xl space-y-10 md:space-y-12">
+        <h2 id="features-heading" className="sr-only">
+          Eati app features: AI meal logging, photo scan, barcode, voice, and progress
+        </h2>
         {/* Feature 1 - Log meals: text then image on all screens */}
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           {/* Text block - always first on mobile */}
@@ -18,8 +24,9 @@ export default function FeaturesSection() {
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
               style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
-              Simply describe what you ate in natural language — like "chicken breast with spaghetti" 
-              or "oatmeal 80g with banana" — and our AI instantly calculates calories, protein, carbs, 
+              Simply describe what you ate in natural language — like &ldquo;chicken breast with
+              spaghetti&rdquo; or &ldquo;oatmeal 80g with banana&rdquo; — and our AI instantly
+              calculates calories, protein, carbs, 
               and fats. No more searching through databases or scanning barcodes.
             </p>
           </div>
@@ -32,10 +39,12 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[320px]">
               <Image
                 src="/images/feature-chat.png"
-                alt="Chat interface showing meal logging"
+                alt="Eati AI calorie tracker: chat-style meal log showing high-protein food and macro totals"
                 width={400}
                 height={600}
                 className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 90vw, 400px"
               />
             </div>
           </div>
@@ -51,10 +60,12 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[360px]">
               <Image
                 src="/images/feature-history.png"
-                alt="Daily nutrition summary card"
+                alt="Daily nutrition summary in Eati: calories and macros for weight loss tracking"
                 width={480}
                 height={520}
                 className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 90vw, 480px"
               />
             </div>
           </div>
@@ -105,10 +116,12 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[320px]">
               <Image
                 src="/images/feature-voice.png"
-                alt="Voice input for meal logging"
+                alt="Voice meal logging in the Eati fat loss app: speak meals for instant calorie estimates"
                 width={400}
                 height={600}
                 className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 90vw, 400px"
               />
             </div>
           </div>
@@ -123,10 +136,12 @@ export default function FeaturesSection() {
             <div className="relative w-full">
               <Image
                 src="/images/feature-scan.png"
-                alt="Scan dishes and get nutrition from photos"
+                alt="Photo-based meal scan: AI estimates portions and calories for home-cooked and restaurant plates"
                 width={560}
                 height={420}
                 className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 560px"
               />
             </div>
           </div>
@@ -176,10 +191,12 @@ export default function FeaturesSection() {
             <div className="relative w-full">
               <Image
                 src="/images/feature-barcode.png"
-                alt="Barcode scanner for packaged products"
+                alt="Barcode scanner for packaged snacks and groceries — quick accurate calories for macro tracking"
                 width={560}
                 height={420}
                 className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 560px"
               />
             </div>
           </div>
@@ -194,10 +211,12 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[320px]">
               <Image
                 src="/images/feature-progress.png"
-                alt="Weight and progress tracking"
+                alt="Weight and body progress charts in Eati for long-term fat loss and habit building"
                 width={400}
                 height={600}
                 className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 90vw, 400px"
               />
             </div>
           </div>
@@ -247,10 +266,12 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[320px]">
               <Image
                 src="/images/feature-notifications.png"
-                alt="Widgets and notifications for motivation"
+                alt="Widgets and reminders in Eati: gentle nudges to stay on track with nutrition goals"
                 width={400}
                 height={600}
                 className="h-auto w-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 90vw, 400px"
               />
             </div>
           </div>

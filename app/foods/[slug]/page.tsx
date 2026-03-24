@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
 import FoodPortionCalculator from '@/components/FoodPortionCalculator';
 import { getFoodBySlug, getAllFoodSlugs, getRelatedFoods } from '@/lib/foods';
+import { SITE_URL, buildPageMetadata } from '@/lib/seo';
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';
@@ -16,17 +17,15 @@ export async function generateStaticParams() {
   return getAllFoodSlugs().map((slug) => ({ slug }));
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const food = getFoodBySlug(slug);
   if (!food) return { title: 'Food Not Found' };
   const name = food.name;
-  const canonical = `${siteUrl}/foods/${slug}`;
-  return {
-    title: `Nutrition Facts for ${name} | Calories per 100g`,
-    description: `${name} nutrition: ${food.caloriesPer100g} kcal per 100g, ${food.proteinPer100g}g protein, ${food.carbsPer100g}g carbs, ${food.fatPer100g}g fat. Calories in ${name}, serving sizes, and weight loss tips.`,
+  return buildPageMetadata({
+    title: `${name} Calories & Macros | Nutrition per 100g`,
+    description: `${name} nutrition: ${food.caloriesPer100g} kcal per 100g, ${food.proteinPer100g}g protein, ${food.carbsPer100g}g carbs, ${food.fatPer100g}g fat. Serving ideas for meal planning and fat loss with Eati.`,
+    path: `/foods/${slug}`,
     keywords: [
       `${name.toLowerCase()} calories`,
       `calories in ${name.toLowerCase()}`,
@@ -36,14 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `is ${name.toLowerCase()} healthy`,
       `${name.toLowerCase()} for weight loss`,
     ],
-    alternates: { canonical },
-    openGraph: {
-      title: `Nutrition Facts for ${name} | Eati`,
-      description: `${name}: ${food.caloriesPer100g} kcal, ${food.proteinPer100g}g protein per 100g.`,
-      url: canonical,
-      type: 'website',
-    },
-  };
+  });
 }
 
 function scale(n: number, factor: number): number {
@@ -61,7 +53,7 @@ export default async function FoodPage({ params }: Props) {
   const isLowCarb = carbsPer100g <= 5;
   const isModerateCal = caloriesPer100g <= 200;
 
-  const canonicalUrl = `${siteUrl}/foods/${slug}`;
+  const canonicalUrl = `${SITE_URL}/foods/${slug}`;
   const nutritionSchema = {
     '@context': 'https://schema.org',
     '@type': 'NutritionInformation',
@@ -75,8 +67,8 @@ export default async function FoodPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Foods', item: `${siteUrl}/foods` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Foods', item: `${SITE_URL}/foods` },
       { '@type': 'ListItem', position: 3, name, item: canonicalUrl },
     ],
   };

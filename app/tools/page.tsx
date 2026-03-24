@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools`;
-
-export const metadata: Metadata = {
-  title: 'Fitness & Weight Loss Tools | Free Calculators',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Free Fitness Calculators | TDEE, Macros, BMI & More',
   description:
-    'Free fitness and weight loss tools: calorie goal calculator, TDEE calculator, macro calculator, BMI calculator, body fat analyzer, and meal log calculator. Plan your nutrition with Eati.',
+    'Free nutrition calculators: calorie goals, TDEE, macros, protein, BMI, body fat, water intake, and meal estimates. Plan fat loss or muscle gain with Eati’s weight loss tools.',
+  path: '/tools',
   keywords: [
     'calorie calculator',
     'TDEE calculator',
@@ -19,15 +18,7 @@ export const metadata: Metadata = {
     'weight loss tools',
     'fitness calculators',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Fitness & Weight Loss Tools | Eati',
-    description:
-      'Free calorie, TDEE, macro, BMI, and body fat tools. Plan your nutrition and reach your goals.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const TOOLS = [
   {

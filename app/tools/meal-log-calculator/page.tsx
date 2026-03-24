@@ -3,15 +3,13 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import MealLogCalculator from '@/components/MealLogCalculator';
 import { getFrequentlySearchedFoods } from '@/lib/foods';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/meal-log-calculator`;
-
-export const metadata: Metadata = {
-  title:
-    'Meal Log Calculator | Calorie Tracker for Meals | AI Food Calorie Calculator',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Meal Log Calculator | AI Calories & Macros for Your Plate',
   description:
-    'Log meals and get instant calories and macros. Free meal calorie calculator and calorie tracker. Enter foods and amounts; AI estimates total calories, protein, carbs, and fat. Nutrition calculator online.',
+    'Free AI meal calorie calculator: type foods and portions for instant calories, protein, carbs, and fat — like a quick log before you track daily totals in the Eati app.',
+  path: '/tools/meal-log-calculator',
   keywords: [
     'meal calorie calculator',
     'calorie tracker for meals',
@@ -22,15 +20,7 @@ export const metadata: Metadata = {
     'nutrition calculator online',
     'log meals and calories',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Meal Log Calculator | Eati',
-    description:
-      'Log your meals and get AI-estimated calories and macros. Free meal calorie calculator.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';

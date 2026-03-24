@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Us",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact Eati | AI Calorie Tracker & Nutrition Tools",
   description:
-    "Get in touch with the Eati team. Questions about the AI calorie tracker app, nutrition tools, or partnerships.",
-  alternates: { canonical: "/contact" },
-};
+    "Contact the Eati team for app support, press, partnerships, or calculator feedback. We reply to questions about the AI calorie tracker, macros, and weight loss features.",
+  path: "/contact",
+  keywords: ["contact Eati", "AI calorie tracker support", "nutrition app help"],
+});
 
 export default function ContactLayout({
   children,

@@ -3,23 +3,17 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import BMICalculator from '@/components/BMICalculator';
 import { SeoFaqSection } from '@/components/SeoFaqSection';
+import { SITE_URL, absoluteUrl, buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/bmi-calculator`;
+const canonical = absoluteUrl('/tools/bmi-calculator');
 
-export const metadata: Metadata = {
-  title: 'BMI Calculator | Body Mass Index',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'BMI Calculator | Body Mass Index (Metric & Imperial)',
   description:
-    'Free BMI calculator. Enter your weight and height in metric or imperial units to get your Body Mass Index and category (underweight, normal, overweight, obesity).',
+    'Free BMI calculator: enter height and weight in metric or imperial for instant Body Mass Index and category — underweight, normal, overweight, or obesity ranges explained.',
+  path: '/tools/bmi-calculator',
   keywords: ['BMI calculator', 'body mass index', 'BMI', 'weight height calculator'],
-  alternates: { canonical },
-  openGraph: {
-    title: 'BMI Calculator | Eati',
-    description: 'Calculate your BMI and see your category. Free, simple, metric and imperial units.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const BMI_FAQS = [
   {
@@ -49,8 +43,8 @@ export default function BMICalculatorPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteUrl}/tools` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: `${SITE_URL}/tools` },
       { '@type': 'ListItem', position: 3, name: 'BMI Calculator', item: canonical },
     ],
   };

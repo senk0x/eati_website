@@ -2,14 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import TDEECalculator from '@/components/TDEECalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/tdee-calculator`;
-
-export const metadata: Metadata = {
-  title: 'TDEE Calculator | Free Total Daily Energy Expenditure',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'TDEE Calculator | Daily Calorie Burn & BMR (Free)',
   description:
-    'Calculate your TDEE and BMR with the Mifflin-St Jeor equation. Free TDEE calculator for weight loss, maintenance, or gain. Metric and imperial units.',
+    'Free TDEE calculator: total daily energy expenditure and BMR using Mifflin–St Jeor. Set calorie targets for fat loss, maintenance, or muscle gain — metric or imperial.',
+  path: '/tools/tdee-calculator',
   keywords: [
     'TDEE calculator',
     'total daily energy expenditure',
@@ -18,14 +17,7 @@ export const metadata: Metadata = {
     'calorie calculator',
     'weight loss calories',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'TDEE Calculator | Eati',
-    description: 'Free TDEE and BMR calculator. Find your daily calorie needs for weight loss, maintenance, or gain.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 export default function TDEECalculatorPage() {
   return (

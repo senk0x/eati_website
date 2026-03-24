@@ -2,15 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import WaterIntakeCalculator from '@/components/WaterIntakeCalculator';
+import { buildPageMetadata } from '@/lib/seo';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eatiapp.com';
-const canonical = `${siteUrl}/tools/water-intake-calculator`;
-
-export const metadata: Metadata = {
-  title:
-    'Water Intake Calculator | Daily Water Intake by Weight | Hydration Calculator',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Water Intake Calculator | Daily Hydration by Weight & Activity',
   description:
-    'Free water intake calculator. Find how much water you should drink per day by weight, activity, and climate. Daily water intake in ml, liters, and oz. Hydration calculator for health and fitness.',
+    'Free hydration calculator: daily water target from weight, activity, and climate. Results in ml, liters, and oz — ideal for training, fat loss, and everyday health on Eati.',
+  path: '/tools/water-intake-calculator',
   keywords: [
     'water intake calculator',
     'how much water should I drink',
@@ -21,15 +19,7 @@ export const metadata: Metadata = {
     'how much water to drink to lose weight',
     'water calculator per day',
   ],
-  alternates: { canonical },
-  openGraph: {
-    title: 'Water Intake Calculator | Eati',
-    description:
-      'Calculate your daily water intake by weight, activity level, and climate. Results in ml, liters, and oz.',
-    url: canonical,
-    type: 'website',
-  },
-};
+});
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';

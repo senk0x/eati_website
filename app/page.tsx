@@ -1,21 +1,35 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import ReviewsSection from "@/components/ReviewsSection";
+import HomeSeoContent from "@/components/HomeSeoContent";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Eati - AI Calorie Tracker | Track Calories & Macros in Seconds",
+const ReviewsSection = dynamic(() => import("@/components/ReviewsSection"), {
+  loading: () => (
+    <div
+      className="min-h-[380px] w-full bg-white"
+      aria-hidden
+    />
+  ),
+});
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Eati — AI Calorie Tracker App | Fat Loss & Macro Logging",
   description:
-    "Track calories and macros in seconds with AI. Snap a photo of your meal, get instant nutrition. Free calorie calculator, TDEE, macro calculator, and weight loss tools.",
-  openGraph: {
-    title: "Eati - AI Calorie Tracker | Track Calories & Macros in Seconds",
-    description:
-      "Track calories and macros in seconds with AI. Free calorie calculator, TDEE, macro calculator, and weight loss tools.",
-  },
-  alternates: { canonical: "/" },
-};
+    "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. The iOS fat loss and meal-planning app — stay consistent without tedious logging.",
+  path: "/",
+  keywords: [
+    "AI calorie tracker",
+    "fat loss app",
+    "meal planner",
+    "macro tracker",
+    "calorie counter",
+    "weight loss app",
+  ],
+});
 
 export default function Home() {
   return (
@@ -28,6 +42,7 @@ export default function Home() {
         <StatsSection />
         <FeaturesSection />
         <ReviewsSection />
+        <HomeSeoContent />
       </main>
 
       <Footer />
