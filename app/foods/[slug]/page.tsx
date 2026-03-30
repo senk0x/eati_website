@@ -8,7 +8,6 @@ import { SITE_URL, buildPageMetadata } from '@/lib/seo';
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';
-const h3Class = 'mb-2 text-lg font-semibold md:text-xl';
 const pClass = 'text-base leading-relaxed text-gray-600';
 
 type Props = { params: Promise<{ slug: string }> };
@@ -42,6 +41,203 @@ function scale(n: number, factor: number): number {
   return Math.round(n * factor * 10) / 10;
 }
 
+function hashString(input: string): number {
+  let h = 0;
+  for (let i = 0; i < input.length; i++) {
+    h = (h * 31 + input.charCodeAt(i)) >>> 0;
+  }
+  return h;
+}
+
+function pick<T>(items: T[], seed: number): T {
+  return items[seed % items.length];
+}
+
+type FoodCopyInput = {
+  name: string;
+  slug: string;
+  caloriesPer100g: number;
+  proteinPer100g: number;
+  carbsPer100g: number;
+  fatPer100g: number;
+};
+
+function getFoodCategory(name: string, slug: string): 'protein' | 'grain' | 'fruit' | 'vegetable' | 'dairy' | 'fat' | 'general' {
+  const n = `${name} ${slug}`.toLowerCase();
+  if (/(chicken|turkey|beef|salmon|tuna|fish|shrimp|pork|steak)/.test(n)) return 'protein';
+  if (/(egg|eggs)/.test(n)) return 'protein';
+  if (/(rice|oats|oatmeal|bread|pasta|noodle|quinoa|potato)/.test(n)) return 'grain';
+  if (/(banana|apple|berries|strawberry|blueberry|orange|grape)/.test(n)) return 'fruit';
+  if (/(broccoli|spinach|lettuce|tomato|cucumber|pepper|carrot)/.test(n)) return 'vegetable';
+  if (/(milk|yogurt|cheese|cottage|kefir)/.test(n)) return 'dairy';
+  if (/(olive oil|avocado|nuts|peanut butter|almond|butter)/.test(n)) return 'fat';
+  return 'general';
+}
+
+function buildFoodCopy(input: FoodCopyInput) {
+  const seed = hashString(input.slug);
+  const nameLower = input.name.toLowerCase();
+  const isHighProtein = input.proteinPer100g >= 15;
+  const isLowCarb = input.carbsPer100g <= 5;
+  const isHigherCarb = input.carbsPer100g >= 20;
+  const isHigherFat = input.fatPer100g >= 10;
+  const isLowerCal = input.caloriesPer100g <= 160;
+  const category = getFoodCategory(input.name, input.slug);
+
+  const intros = [
+    `${input.name} is a simple staple that shows up in a lot of real-world diets because it is easy to portion, easy to repeat, and easy to track.`,
+    `${input.name} is one of those “default” foods people come back to when they want predictable nutrition and a meal that fits their calorie target.`,
+    `If you are building a routine around an AI calorie tracker, ${input.name} is the kind of food that makes tracking feel straightforward instead of fussy.`,
+    `${input.name} can be a practical choice when you want food that is familiar, flexible, and easy to include in meal prep.`,
+  ];
+
+  const flavorStyle = pick(
+    [
+      `It works well as a base for balanced meals, because you can pair it with vegetables for volume, a protein source for satiety, and a sauce or seasoning for enjoyment.`,
+      `It is easy to “dress up” with spices, herbs, and sauces, which helps you stay consistent without getting bored.`,
+      `It fits both quick meals and meal prep, since you can cook it once and reuse it in different recipes across the week.`,
+      `It is a good example of a food where portion size matters more than perfection—measure once, repeat often.`,
+    ],
+    seed + 7
+  );
+
+  const macroAngle = (() => {
+    if (isHighProtein && isLowerCal) {
+      return `Per 100g, ${input.name} is relatively high in protein (${input.proteinPer100g}g) for its calories (${input.caloriesPer100g} kcal). That combination is helpful when you want meals that feel filling while staying in a calorie deficit.`;
+    }
+    if (isHighProtein && isHigherFat) {
+      return `Per 100g, ${input.name} gives you solid protein (${input.proteinPer100g}g) plus some fat (${input.fatPer100g}g). That can be great for satiety, but it also means portions matter if you are cutting.`;
+    }
+    if (isHigherCarb && !isHighProtein) {
+      return `Per 100g, ${input.name} is more carb-forward (${input.carbsPer100g}g carbs), which makes it a useful energy source around training. Pair it with a lean protein to round out the macros.`;
+    }
+    if (isLowCarb && isHigherFat) {
+      return `Per 100g, ${input.name} is low in carbs (${input.carbsPer100g}g) and provides fat (${input.fatPer100g}g). It can make meals taste satisfying, but it is easier to overshoot calories if you do not portion it.`;
+    }
+    return `Per 100g, ${input.name} has ${input.caloriesPer100g} calories, with ${input.proteinPer100g}g protein, ${input.carbsPer100g}g carbs, and ${input.fatPer100g}g fat. Use the serving table below to scale those numbers to your usual portions.`;
+  })();
+
+  const benefitBulletsBase = [
+    isHighProtein
+      ? `Helps you hit daily protein targets, which supports muscle maintenance during fat loss and recovery during training.`
+      : `Pairs well with higher-protein foods, making it easy to build a balanced meal without guessing.`,
+    isLowerCal
+      ? `Works well for volume-friendly meals when you want to stay full on fewer calories.`
+      : `Teaches portion awareness—use a repeatable serving size so your daily totals stay predictable.`,
+    isLowCarb
+      ? `Fits low-carb meal patterns and is easy to combine with high-fiber vegetables.`
+      : `Provides useful energy from carbohydrates when you need performance and consistency.`,
+    isHigherFat
+      ? `Adds satisfaction and flavor to meals, which can make a long-term plan more enjoyable.`
+      : `Keeps macros easier to manage when you want a simpler, leaner plate.`,
+  ];
+
+  const benefitBullets = pick(
+    [
+      benefitBulletsBase,
+      [benefitBulletsBase[2], benefitBulletsBase[0], benefitBulletsBase[3], benefitBulletsBase[1]],
+      [benefitBulletsBase[1], benefitBulletsBase[3], benefitBulletsBase[0], benefitBulletsBase[2]],
+    ],
+    seed + 19
+  );
+
+  const bestFor = {
+    weightLoss: (() => {
+      if (isLowerCal && isHighProtein) {
+        return `${input.name} is a strong pick for weight loss because protein helps satiety, and the calorie density stays manageable when you keep portions consistent.`;
+      }
+      if (input.caloriesPer100g > 220) {
+        return `${input.name} can still work for weight loss, but it is easier to overshoot calories. Use smaller servings and build the rest of the plate with vegetables and lean protein.`;
+      }
+      return `${input.name} can fit a weight loss plan when you track portions and keep your daily calorie target realistic.`;
+    })(),
+    muscleGain: (() => {
+      if (isHighProtein) {
+        return `${input.name} is useful for muscle gain because it contributes meaningful protein per serving. Add carbs or fat around it depending on your energy needs.`;
+      }
+      if (isHigherCarb) {
+        return `${input.name} is a convenient carb source for training performance. Pair it with a protein you enjoy to support muscle gain.`;
+      }
+      return `${input.name} can support muscle gain as part of a higher-calorie day. The key is pairing it with enough protein and total calories over time.`;
+    })(),
+    generalHealth: (() => {
+      if (category === 'vegetable' || category === 'fruit') {
+        return `${input.name} is an easy way to add more whole foods to your diet. Keep it visible and convenient so it actually shows up in your meals.`;
+      }
+      return `${input.name} can be part of a healthy diet when you balance it with vegetables, adequate protein, and overall calorie intake that matches your goals.`;
+    })(),
+  };
+
+  const mealIdeasByCategory: Record<typeof category, string[]> = {
+    protein: [
+      `Build a simple bowl: ${nameLower} + rice or potatoes + a big handful of vegetables + a sauce you love.`,
+      `Use it for meal prep: cook once, portion into containers, and rotate flavors (lemon herb, spicy, teriyaki-style).`,
+      `Make a high-protein salad: add ${nameLower} to greens, tomatoes, cucumbers, and a measured dressing.`,
+      `Add it to wraps or sandwiches with crunchy vegetables for volume without many extra calories.`,
+      `Pair it with a higher-carb side on training days, and with extra vegetables on lower-activity days.`,
+    ],
+    grain: [
+      `Use ${nameLower} as the base of a bowl with lean protein and vegetables for an easy calorie-controlled meal.`,
+      `For better satiety, add a protein source and keep sauces measured; the base portion stays consistent.`,
+      `Turn it into meal prep: cook a batch, then build different bowls across the week to avoid repetition.`,
+      `Mix it into soups or stir-fries to make meals more filling without relying on snacks later.`,
+      `Use smaller servings on rest days and larger servings around workouts for performance.`,
+    ],
+    fruit: [
+      `Use ${nameLower} as a snack with a protein (Greek yogurt, cottage cheese) to keep hunger steady.`,
+      `Add it to oatmeal or smoothies when you need an easy carb source that still feels “whole food.”`,
+      `Pre-portion it so you can log it quickly and avoid mindless snacking.`,
+      `Pair it with nuts or nut butter in a measured amount for a more satisfying snack.`,
+      `Use it as a sweet finish to meals if you are trying to reduce desserts. `,
+    ],
+    vegetable: [
+      `Add ${nameLower} to most meals for volume. A bigger plate can make a calorie deficit feel easier.`,
+      `Roast or sauté it with seasonings you enjoy so it is something you actually want to eat often.`,
+      `Use it in meal prep: cook a batch and add it to bowls, salads, and wraps throughout the week.`,
+      `Pair it with a protein you like, then adjust carbs and fats depending on your goals.`,
+      `Use it as the “default side” so your meals stay consistent even when your schedule is busy.`,
+    ],
+    dairy: [
+      `Use ${nameLower} as a quick protein anchor (especially at breakfast) and add fruit or oats for carbs.`,
+      `If you track macros, pre-portion servings so your protein is predictable day to day.`,
+      `Mix it into bowls with berries and a measured topping for a balanced snack or dessert.`,
+      `Pair it with savory meals as a side, then adjust the rest of the plate based on calories.`,
+      `Use it to raise protein without adding a lot of cooking time.`,
+    ],
+    fat: [
+      `Use ${nameLower} in measured amounts to improve taste and adherence—just keep portions consistent.`,
+      `Pair it with lean protein and high-volume vegetables for a satisfying, balanced plate.`,
+      `Add it to meals you already eat so you do not change everything at once while cutting.`,
+      `If fat loss is the goal, treat it like a “flavor budget” item: a little goes a long way.`,
+      `Use it on higher-activity days when you can fit more calories comfortably.`,
+    ],
+    general: [
+      `Keep portions consistent and pair ${nameLower} with vegetables and a protein for a balanced meal.`,
+      `Use it in meal prep so you can repeat meals without repeating flavors.`,
+      `Log it once in a calculator, then reuse the same serving to simplify daily tracking.`,
+      `Try pairing it with different seasonings or sauces so it stays enjoyable.`,
+      `Use smaller servings for weight loss and larger servings for muscle gain or higher-activity days.`,
+    ],
+  };
+
+  const mealIdeas = pick(
+    [
+      mealIdeasByCategory[category],
+      [mealIdeasByCategory[category][1], mealIdeasByCategory[category][0], mealIdeasByCategory[category][3], mealIdeasByCategory[category][2], mealIdeasByCategory[category][4]],
+    ],
+    seed + 31
+  );
+
+  return {
+    intro: pick(intros, seed),
+    flavorStyle,
+    macroAngle,
+    benefitBullets,
+    bestFor,
+    mealIdeas,
+  };
+}
+
 export default async function FoodPage({ params }: Props) {
   const { slug } = await params;
   const food = getFoodBySlug(slug);
@@ -52,6 +248,7 @@ export default async function FoodPage({ params }: Props) {
   const isHighProtein = proteinPer100g >= 15;
   const isLowCarb = carbsPer100g <= 5;
   const isModerateCal = caloriesPer100g <= 200;
+  const copy = buildFoodCopy({ name, slug, caloriesPer100g, proteinPer100g, carbsPer100g, fatPer100g });
 
   const canonicalUrl = `${SITE_URL}/foods/${slug}`;
   const nutritionSchema = {
@@ -108,6 +305,19 @@ export default async function FoodPage({ params }: Props) {
           >
             Nutrition Facts for {name}
           </h1>
+
+          {/* Added: richer unique content for SEO + usefulness */}
+          <section className={sectionClass}>
+            <h2 className={h2Class} style={{ color: '#364052' }}>
+              What Is {name}?
+            </h2>
+            <p className={pClass}>{copy.intro}</p>
+            <p className={`${pClass} mt-4`}>{copy.flavorStyle}</p>
+            <p className={`${pClass} mt-4`}>{copy.macroAngle}</p>
+            <p className="mt-4 text-sm text-gray-500">
+              Tip: If you are tracking intake, log portions using a realistic serving size (not just 100g) so your daily totals reflect what you actually eat.
+            </p>
+          </section>
 
           {/* Section 1: Calories in X (Per 100g) */}
           <section className={sectionClass}>
@@ -209,6 +419,42 @@ export default async function FoodPage({ params }: Props) {
             </p>
           </section>
 
+          {/* Added: Health benefits */}
+          <section className={sectionClass}>
+            <h2 className={h2Class} style={{ color: '#364052' }}>
+              Health Benefits of {name}
+            </h2>
+            <p className={pClass}>
+              No single food is “magic,” but choosing foods that you can portion consistently (and actually enjoy) is a big part of sustainable fat loss and better health habits. Here are practical reasons {name.toLowerCase()} can be a useful addition to a balanced diet:
+            </p>
+            <ul className="mt-4 list-inside list-disc space-y-2 text-gray-600">
+              {copy.benefitBullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Added: Who it's best for */}
+          <section className={sectionClass}>
+            <h2 className={h2Class} style={{ color: '#364052' }}>
+              Who Is {name} Best For?
+            </h2>
+            <div className="space-y-5">
+              <div className="rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-5">
+                <h3 className="mb-2 text-lg font-semibold text-[#364052]">Weight loss</h3>
+                <p className={pClass}>{copy.bestFor.weightLoss}</p>
+              </div>
+              <div className="rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-5">
+                <h3 className="mb-2 text-lg font-semibold text-[#364052]">Muscle gain</h3>
+                <p className={pClass}>{copy.bestFor.muscleGain}</p>
+              </div>
+              <div className="rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-5">
+                <h3 className="mb-2 text-lg font-semibold text-[#364052]">General health</h3>
+                <p className={pClass}>{copy.bestFor.generalHealth}</p>
+              </div>
+            </div>
+          </section>
+
           {/* Section 4: How to Use X in Your Diet */}
           <section className={sectionClass}>
             <h2 className={h2Class} style={{ color: '#364052' }}>
@@ -218,15 +464,16 @@ export default async function FoodPage({ params }: Props) {
               Practical ways to include {name.toLowerCase()} in meals:
             </p>
             <ul className="list-inside list-disc space-y-2 text-gray-600">
-              <li>Add a 100g portion to lunch or dinner and pair with vegetables and a carb source if needed.</li>
-              <li>Use in meal prep: cook in bulk and divide into portions for the week.</li>
-              <li>Log your portion in our{' '}
+              {copy.mealIdeas.map((idea) => (
+                <li key={idea}>{idea}</li>
+              ))}
+              <li>
+                Want a fast macro breakdown? Use the{' '}
                 <Link href="/tools/meal-log-calculator" className="text-[#85BEFF] hover:underline">
                   Meal Log Calculator
                 </Link>{' '}
-                to see how it contributes to daily calories and macros.
+                to estimate calories and macros for your full meal (not just one ingredient).
               </li>
-              <li>Combine with other high-protein or high-fiber foods to improve satiety.</li>
             </ul>
           </section>
 
