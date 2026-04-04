@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import ProteinCalculator from '@/components/ProteinCalculator';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free protein calculator: daily grams from body weight and goal — cutting, bulking, or maintenance. Split per meal and protect muscle on a calorie deficit with Eati’s macro tools.',
   path: '/tools/protein-calculator',
+  ogImagePath: ogToolPath('protein-calculator'),
+  ogImageAlt: toolOgAlt('protein-calculator'),
   keywords: [
     'protein calculator',
     'how much protein do I need',

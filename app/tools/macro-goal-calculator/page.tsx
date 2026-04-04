@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import MacroGoalCalculator from '@/components/MacroGoalCalculator';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free macro goal calculator from TDEE: split protein, carbs, and fats for fat loss, maintenance, or muscle gain. Evidence-based ratios — pair with Eati’s AI calorie tracker.',
   path: '/tools/macro-goal-calculator',
+  ogImagePath: ogToolPath('macro-goal-calculator'),
+  ogImageAlt: toolOgAlt('macro-goal-calculator'),
   keywords: [
     'macro calculator',
     'protein calculator',

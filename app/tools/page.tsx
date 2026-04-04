@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import { OG_TOOLS_INDEX_ALT, OG_TOOLS_INDEX_PATH } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -8,6 +9,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free nutrition calculators: calorie goals, TDEE, macros, protein, BMI, body fat, water intake, and meal estimates. Plan fat loss or muscle gain with Eati’s weight loss tools.',
   path: '/tools',
+  ogImagePath: OG_TOOLS_INDEX_PATH,
+  ogImageAlt: OG_TOOLS_INDEX_ALT,
   keywords: [
     'calorie calculator',
     'TDEE calculator',

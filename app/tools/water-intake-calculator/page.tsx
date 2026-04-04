@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import WaterIntakeCalculator from '@/components/WaterIntakeCalculator';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free hydration calculator: daily water target from weight, activity, and climate. Results in ml, liters, and oz — ideal for training, fat loss, and everyday health on Eati.',
   path: '/tools/water-intake-calculator',
+  ogImagePath: ogToolPath('water-intake-calculator'),
+  ogImageAlt: toolOgAlt('water-intake-calculator'),
   keywords: [
     'water intake calculator',
     'how much water should I drink',

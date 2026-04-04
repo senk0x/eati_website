@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
 import FoodPortionCalculator from '@/components/FoodPortionCalculator';
 import { getFoodBySlug, getAllFoodSlugs, getRelatedFoods } from '@/lib/foods';
-import { SITE_URL, buildPageMetadata } from '@/lib/seo';
+import { foodDetailOgImagePath, SITE_URL, buildPageMetadata } from '@/lib/seo';
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';
@@ -25,6 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${name} Calories & Macros | Nutrition per 100g`,
     description: `${name} nutrition: ${food.caloriesPer100g} kcal per 100g, ${food.proteinPer100g}g protein, ${food.carbsPer100g}g carbs, ${food.fatPer100g}g fat. Serving ideas for meal planning and fat loss with Eati.`,
     path: `/foods/${slug}`,
+    ogImagePath: foodDetailOgImagePath(slug),
+    ogImageAlt: `${name} nutrition facts — calories and macros per 100g on Eati`,
     keywords: [
       `${name.toLowerCase()} calories`,
       `calories in ${name.toLowerCase()}`,

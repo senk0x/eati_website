@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import CalorieDeficitCalculator from '@/components/CalorieDeficitCalculator';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Plan a sustainable calorie deficit from your TDEE: pick mild, standard, or aggressive targets and see estimated weekly weight change. Free fat loss calculator by Eati.',
   path: '/tools/calorie-deficit-calculator',
+  ogImagePath: ogToolPath('calorie-deficit-calculator'),
+  ogImageAlt: toolOgAlt('calorie-deficit-calculator'),
   keywords: [
     'calorie deficit calculator',
     'weight loss calculator',

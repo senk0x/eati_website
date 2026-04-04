@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import BodyFatAnalytics from '@/components/BodyFatAnalytics';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Upload front and optional side photos for an AI-assisted body fat percentage estimate — a visual companion to tape measurements, not a medical DEXA replacement. Free on Eati.',
   path: '/tools/body-fat-analytics',
+  ogImagePath: ogToolPath('body-fat-analytics'),
+  ogImageAlt: toolOgAlt('body-fat-analytics'),
   keywords: [
     'body fat photo calculator',
     'body fat analyzer from photo',

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import { FOODS } from '@/lib/foods';
+import { OG_FOODS_INDEX_ALT, OG_FOODS_INDEX_PATH } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Browse calories, protein, carbs, and fat per 100g for 40+ foods — chicken, rice, eggs, salmon, and more. Handy for meal planning, macro tracking, and fat loss on Eati.',
   path: '/foods',
+  ogImagePath: OG_FOODS_INDEX_PATH,
+  ogImageAlt: OG_FOODS_INDEX_ALT,
   keywords: [
     'food nutrition database',
     'calories per 100g',

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import BMICalculator from '@/components/BMICalculator';
 import { SeoFaqSection } from '@/components/SeoFaqSection';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { SITE_URL, absoluteUrl, buildPageMetadata } from '@/lib/seo';
 
 const canonical = absoluteUrl('/tools/bmi-calculator');
@@ -12,6 +13,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free BMI calculator: enter height and weight in metric or imperial for instant Body Mass Index and category — underweight, normal, overweight, or obesity ranges explained.',
   path: '/tools/bmi-calculator',
+  ogImagePath: ogToolPath('bmi-calculator'),
+  ogImageAlt: toolOgAlt('bmi-calculator'),
   keywords: ['BMI calculator', 'body mass index', 'BMI', 'weight height calculator'],
 });
 

@@ -5,6 +5,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import HomeSeoContent from "@/components/HomeSeoContent";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import { OG_HOME_ALT, OG_HOME_IMAGE_PATH } from "@/lib/og";
 import {
   buildPageMetadata,
   DEFAULT_SITE_DESCRIPTION,
@@ -24,6 +25,8 @@ export const metadata: Metadata = buildPageMetadata({
   title: DEFAULT_SITE_TITLE,
   description: DEFAULT_SITE_DESCRIPTION,
   path: "/",
+  ogImagePath: OG_HOME_IMAGE_PATH,
+  ogImageAlt: OG_HOME_ALT,
   keywords: [
     "AI calorie tracker",
     "fat loss app",

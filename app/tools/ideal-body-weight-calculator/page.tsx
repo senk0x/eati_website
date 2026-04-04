@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import IBWCalculator from '@/components/IBWCalculator';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free ideal weight calculator using Devine and Robinson formulas: healthy range by height, frame size, and how your current weight compares — reference tool for goals, not medical advice.',
   path: '/tools/ideal-body-weight-calculator',
+  ogImagePath: ogToolPath('ideal-body-weight-calculator'),
+  ogImageAlt: toolOgAlt('ideal-body-weight-calculator'),
   keywords: [
     'ideal body weight calculator',
     'what is my ideal weight',

@@ -18,9 +18,13 @@ export const OG_IMAGE_SIZE = { width: 1200, height: 630 } as const;
 export const DEFAULT_OG_IMAGE_ALT =
   "Eati — AI calorie tracker app: log meals, track macros, and plan nutrition";
 
-/** Dynamic blog post OG image (see `generateImageMetadata` id `default`). */
+/** Dynamic blog post OG image (see `generateImageMetadata` id `default`; uses article cover when set). */
 export function blogPostOgImagePath(slug: string): string {
   return `/blog/${slug}/opengraph-image/default`;
+}
+
+export function foodDetailOgImagePath(slug: string): string {
+  return `/foods/${slug}/opengraph-image/default`;
 }
 
 /** Absolute URL for a path or external URL. */

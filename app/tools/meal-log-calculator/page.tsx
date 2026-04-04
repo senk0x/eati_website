@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import MealLogCalculator from '@/components/MealLogCalculator';
 import { getFrequentlySearchedFoods } from '@/lib/foods';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -10,6 +11,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free AI meal calorie calculator: type foods and portions for instant calories, protein, carbs, and fat — like a quick log before you track daily totals in the Eati app.',
   path: '/tools/meal-log-calculator',
+  ogImagePath: ogToolPath('meal-log-calculator'),
+  ogImageAlt: toolOgAlt('meal-log-calculator'),
   keywords: [
     'meal calorie calculator',
     'calorie tracker for meals',

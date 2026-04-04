@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import { getPublishedArticles } from '@/lib/blog';
+import { OG_BLOG_INDEX_ALT, OG_BLOG_INDEX_PATH } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -10,6 +11,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Practical guides on calorie tracking, high-protein meals, macro splits, and sustainable fat loss from Eati — plus links to free TDEE, macro, and calorie calculators.',
   path: '/blog',
+  ogImagePath: OG_BLOG_INDEX_PATH,
+  ogImageAlt: OG_BLOG_INDEX_ALT,
   keywords: [
     'nutrition blog',
     'calorie tracking tips',

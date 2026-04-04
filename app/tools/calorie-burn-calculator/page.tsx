@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import CalorieBurnCalculator from '@/components/CalorieBurnCalculator';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free calories burned calculator using MET values: walking, running, cycling, weights, and more. Enter weight and duration — kcal, kJ, and fat-loss context. No sign-up on Eati.',
   path: '/tools/calorie-burn-calculator',
+  ogImagePath: ogToolPath('calorie-burn-calculator'),
+  ogImageAlt: toolOgAlt('calorie-burn-calculator'),
   keywords: [
     'calorie burn calculator',
     'calories burned calculator',

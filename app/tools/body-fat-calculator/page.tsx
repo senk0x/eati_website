@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import BodyFatCalculator from '@/components/BodyFatCalculator';
+import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,6 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free U.S. Navy body fat calculator: estimate body fat % from waist, neck, and height (hip for women). See fat mass and lean mass in kg or lbs — no photos required, private at home.',
   path: '/tools/body-fat-calculator',
+  ogImagePath: ogToolPath('body-fat-calculator'),
+  ogImageAlt: toolOgAlt('body-fat-calculator'),
   keywords: [
     'body fat calculator',
     'body fat percentage calculator',
