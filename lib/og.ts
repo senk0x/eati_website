@@ -3,10 +3,10 @@
  * Prefer file-based opengraph-image.* under app/ when the segment exists; use /api/og/* for flat tool routes.
  */
 
-/** Hero product shot used on the landing page features section (matches “try the app” UI). */
-export const OG_HERO_FEATURE_IMAGE = "/images/feature-chat.png";
+import { BRAND_OG_SHARE_IMAGE_PATH } from "./seo";
 
-export const OG_HOME_IMAGE_PATH = "/api/og/home";
+/** Home shares use the same branded marketing art as site-wide default OG. */
+export const OG_HOME_IMAGE_PATH = BRAND_OG_SHARE_IMAGE_PATH;
 
 /** Tools index uses file convention at /tools/opengraph-image */
 export const OG_TOOLS_INDEX_PATH = "/tools/opengraph-image";
@@ -82,7 +82,7 @@ export function toolOgAlt(slug: ToolOgSlug): string {
 }
 
 export const OG_HOME_ALT =
-  "Eati AI calorie tracker app — chat-style meal log and macro tracking on iPhone";
+  "Eati — track your calories in seconds: chat-style meal log with macros and totals on iPhone";
 
 export const OG_TOOLS_INDEX_ALT =
   "Eati free fitness calculators — TDEE, macros, BMI, body fat, calories, and more";

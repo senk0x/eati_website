@@ -11,12 +11,18 @@ export const DEFAULT_SITE_TITLE =
 export const DEFAULT_SITE_DESCRIPTION =
   "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. The fat loss and meal-planning app for iOS — stay consistent without tedious logging.";
 
-/** Next.js metadata routes: explicit URLs satisfy OG/Twitter validators (image + dimensions + alt). */
-export const DEFAULT_OG_IMAGE_PATH = "/opengraph-image";
-export const DEFAULT_TWITTER_IMAGE_PATH = "/twitter-image";
+/** Branded 1200×630 share art (Telegram, Facebook, Twitter, etc.). */
+export const BRAND_OG_SHARE_IMAGE_PATH = "/images/og-share.png";
+
+/** Next.js metadata: static file under /public for reliable crawler access. */
+export const DEFAULT_OG_IMAGE_PATH = BRAND_OG_SHARE_IMAGE_PATH;
+export const DEFAULT_TWITTER_IMAGE_PATH = BRAND_OG_SHARE_IMAGE_PATH;
+/** Generated OG routes (tools, blog, foods) use this size. */
 export const OG_IMAGE_SIZE = { width: 1200, height: 630 } as const;
+/** Actual pixel size of `BRAND_OG_SHARE_IMAGE_PATH` (public static art). */
+export const BRAND_OG_IMAGE_SIZE = { width: 1024, height: 635 } as const;
 export const DEFAULT_OG_IMAGE_ALT =
-  "Eati — AI calorie tracker app: log meals, track macros, and plan nutrition";
+  "Eati — track your calories in seconds: chat-style meal log with macros and totals on iPhone";
 
 /** Dynamic blog post OG image (see `generateImageMetadata` id `default`; uses article cover when set). */
 export function blogPostOgImagePath(slug: string): string {
@@ -55,7 +61,7 @@ export type BuildMetadataInput = {
 
 const defaultOgImageDescriptor = {
   url: DEFAULT_OG_IMAGE_PATH,
-  ...OG_IMAGE_SIZE,
+  ...BRAND_OG_IMAGE_SIZE,
   alt: DEFAULT_OG_IMAGE_ALT,
   type: "image/png" as const,
 };
@@ -75,10 +81,12 @@ export function buildPageMetadata({
   ogImageAlt = DEFAULT_OG_IMAGE_ALT,
 }: BuildMetadataInput): Metadata {
   const url = absoluteUrl(path);
+  const imageDims =
+    ogImagePath === BRAND_OG_SHARE_IMAGE_PATH ? BRAND_OG_IMAGE_SIZE : OG_IMAGE_SIZE;
   const ogImages = [
     {
       url: ogImagePath,
-      ...OG_IMAGE_SIZE,
+      ...imageDims,
       alt: ogImageAlt,
       type: "image/png" as const,
     },
@@ -113,7 +121,7 @@ export function buildPageMetadata({
       description,
       images: {
         url: twitterImagePath,
-        ...OG_IMAGE_SIZE,
+        ...(twitterImagePath === BRAND_OG_SHARE_IMAGE_PATH ? BRAND_OG_IMAGE_SIZE : imageDims),
         alt: ogImageAlt,
       },
     },
@@ -137,7 +145,7 @@ export const rootTwitterDefaults: Metadata["twitter"] = {
   description: DEFAULT_SITE_DESCRIPTION,
   images: {
     url: DEFAULT_TWITTER_IMAGE_PATH,
-    ...OG_IMAGE_SIZE,
+    ...BRAND_OG_IMAGE_SIZE,
     alt: DEFAULT_OG_IMAGE_ALT,
   },
 };
