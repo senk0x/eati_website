@@ -217,13 +217,7 @@ export default function HeroSection() {
           {/* Hero content - top on mobile, left on tablet+ */}
           <div className="relative z-10 flex flex-1 flex-col justify-center px-4 py-8 text-center md:min-h-[500px] md:items-start md:px-8 md:py-12 md:text-left lg:px-16 lg:py-16">
             {/* Title */}
-            <h1
-              className="text-3xl font-black uppercase leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-              style={{
-                fontFamily: "var(--font-bowlby-one), sans-serif",
-                fontWeight: 400,
-              }}
-            >
+            <h1 className="font-eati-heading text-3xl font-normal uppercase leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
               TRACK YOUR
               <br />
               CALORIES
@@ -232,7 +226,6 @@ export default function HeroSection() {
             </h1>
             <p
               className="mx-auto mt-4 max-w-xl text-pretty text-base font-medium leading-snug text-white/95 sm:text-lg md:mx-0 md:text-left md:text-xl"
-              style={{ fontFamily: "var(--font-rubik), sans-serif" }}
             >
               AI calorie tracker and meal planner — log by text, photo, barcode, or voice. Built for
               fat loss, macro goals, and everyday consistency.
@@ -249,11 +242,7 @@ export default function HeroSection() {
                     onKeyDown={handleKeyDown}
                     placeholder="Describe your meal..."
                     disabled={isLoading}
-                    className="min-h-[44px] w-full bg-transparent px-5 py-3 text-base text-white placeholder:text-white/80 focus:outline-none disabled:opacity-50 sm:px-6 md:px-8 md:py-4 md:text-lg"
-                    style={{
-                      fontFamily: "var(--font-rubik), sans-serif",
-                      fontWeight: 500,
-                    }}
+                    className="min-h-[44px] w-full bg-transparent px-5 py-3 text-base font-medium text-white placeholder:text-white/80 focus:outline-none disabled:opacity-50 sm:px-6 md:px-8 md:py-4 md:text-lg"
                   />
                 </div>
 
@@ -362,8 +351,6 @@ export default function HeroSection() {
                         className={`max-w-[70%] shrink-0 rounded-[12px] rounded-br-[3px] px-2 py-1.5 text-white transition-all duration-500 ${isLoading ? "animate-pulse" : ""}`}
                         style={{
                           backgroundColor: "#2F5176",
-                          fontFamily: "var(--font-rubik), sans-serif",
-                          fontWeight: 400,
                           maxWidth: "min(70%, 8.5rem)",
                         }}
                       >
@@ -379,7 +366,6 @@ export default function HeroSection() {
                         className={`min-w-0 max-w-full shrink-0 rounded-[12px] rounded-bl-[3px] p-2 transition-all duration-500 overflow-hidden ${isLoading ? "animate-pulse" : ""}`}
                         style={{
                           backgroundColor: "#F5F9FF",
-                          fontFamily: "var(--font-rubik), sans-serif",
                           boxSizing: "border-box",
                         }}
                       >
@@ -394,7 +380,6 @@ export default function HeroSection() {
                             <div key={index} className="mb-2 last:mb-1">
                               <p
                                 className="text-[11px] font-medium leading-tight md:text-xs"
-                                style={{ color: "#364052" }}
                               >
                                 {food.name}
                                 {food.weight ? ` (${food.weight})` : ""}
@@ -488,11 +473,9 @@ export default function HeroSection() {
 function MacroTag({ label, value }: { label: string; value: string }) {
   return (
     <span
-      className="rounded-full px-1.5 py-0.5 text-[8px] leading-tight md:text-[9px]"
+      className="text-eati-ink rounded-full px-1.5 py-0.5 text-[8px] leading-tight md:text-[9px]"
       style={{
         backgroundColor: "#E0E5ED",
-        color: "#364052",
-        fontFamily: "var(--font-rubik), sans-serif",
       }}
     >
       {label}: {value}
@@ -511,12 +494,7 @@ function TotalItem({
 }) {
   return (
     <div className="flex flex-col items-center">
-      <span
-        className="text-[9px] font-medium leading-tight md:text-[10px]"
-        style={{ color: "#364052", fontFamily: "var(--font-rubik), sans-serif" }}
-      >
-        {value}
-      </span>
+      <span className="text-[9px] font-medium leading-tight text-eati-ink md:text-[10px]">{value}</span>
       <div
         className="my-0.5 h-1 w-8 overflow-hidden rounded-full md:w-10"
         style={{ backgroundColor: "#FFFFFF" }}
@@ -526,16 +504,7 @@ function TotalItem({
           style={{ backgroundColor: color, width: `${percent}%` }}
         />
       </div>
-      <span
-        className="text-[7px] leading-tight md:text-[8px]"
-        style={{
-          color: "#364052",
-          opacity: 0.8,
-          fontFamily: "var(--font-rubik), sans-serif",
-        }}
-      >
-        {percent}%
-      </span>
+      <span className="text-[7px] leading-tight text-eati-ink/80 md:text-[8px]">{percent}%</span>
     </div>
   );
 }

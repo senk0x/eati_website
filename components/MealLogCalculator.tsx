@@ -118,7 +118,7 @@ export default function MealLogCalculator() {
   const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
 
   return (
-    <div style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+    <div>
       <form
         onSubmit={handleSubmit}
         className="space-y-6 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8"
@@ -198,7 +198,7 @@ export default function MealLogCalculator() {
 
       {result && (
         <div className="mt-8">
-          <h2 className="mb-4 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+          <h2 className="mb-4 text-xl font-semibold md:text-2xl">
             Your results
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -226,7 +226,7 @@ export default function MealLogCalculator() {
           </div>
 
           <div className="mt-6">
-            <h3 className="mb-3 text-base font-semibold" style={{ color: '#364052' }}>
+            <h3 className="mb-3 text-base font-semibold">
               Per-item breakdown
             </h3>
             <ul className="space-y-2 rounded-2xl border border-[#E3ECF7] bg-white p-4 md:rounded-3xl">
@@ -253,7 +253,6 @@ export default function MealLogCalculator() {
 
           <div
             className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 md:rounded-3xl"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <p className="text-sm font-medium text-amber-800">
               Nutritional values are AI-based estimates and may vary depending on preparation
@@ -280,9 +279,8 @@ function ResultCard({
   return (
     <div
       className="flex flex-col rounded-2xl border border-[#E3ECF7] bg-white p-5 transition-shadow hover:shadow-md md:rounded-3xl"
-      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
     >
-      <h3 className="mb-3 text-base font-semibold" style={{ color: '#364052' }}>
+      <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
       <p className="mb-0.5 text-2xl font-bold text-[#85BEFF]">{value}</p>

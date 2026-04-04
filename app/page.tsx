@@ -5,7 +5,11 @@ import FeaturesSection from "@/components/FeaturesSection";
 import HomeSeoContent from "@/components/HomeSeoContent";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
-import { buildPageMetadata } from "@/lib/seo";
+import {
+  buildPageMetadata,
+  DEFAULT_SITE_DESCRIPTION,
+  DEFAULT_SITE_TITLE,
+} from "@/lib/seo";
 
 const ReviewsSection = dynamic(() => import("@/components/ReviewsSection"), {
   loading: () => (
@@ -17,9 +21,8 @@ const ReviewsSection = dynamic(() => import("@/components/ReviewsSection"), {
 });
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Eati — AI Calorie Tracker App | Fat Loss & Macro Logging",
-  description:
-    "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. The iOS fat loss and meal-planning app — stay consistent without tedious logging.",
+  title: DEFAULT_SITE_TITLE,
+  description: DEFAULT_SITE_DESCRIPTION,
   path: "/",
   keywords: [
     "AI calorie tracker",

@@ -28,7 +28,6 @@ export default function CalorieDeficitCalculatorPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -47,14 +46,12 @@ export default function CalorieDeficitCalculatorPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Calorie Deficit Calculator
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             A calorie deficit means eating fewer calories than you burn. Your body then uses stored
             fat for energy, so you lose weight. This calculator finds your maintenance calories
@@ -67,10 +64,9 @@ export default function CalorieDeficitCalculatorPage() {
           {/* SEO description */}
           <div
             className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 What Is the Calorie Deficit Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -83,7 +79,7 @@ export default function CalorieDeficitCalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 How Does the Calorie Deficit Calculator Work?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -96,7 +92,7 @@ export default function CalorieDeficitCalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Why Use This Calorie Deficit Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -116,7 +112,7 @@ export default function CalorieDeficitCalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Who Should Use This Tool?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -129,7 +125,7 @@ export default function CalorieDeficitCalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Is This Calculation Accurate?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -147,7 +143,7 @@ export default function CalorieDeficitCalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Related Tools
               </h2>
               <p className="text-base leading-relaxed text-gray-600">

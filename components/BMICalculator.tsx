@@ -131,7 +131,7 @@ export default function BMICalculator() {
   const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
 
   return (
-    <div style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+    <div>
       <form
         onSubmit={handleSubmit}
         className="space-y-6 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8"
@@ -247,12 +247,11 @@ export default function BMICalculator() {
 
       {result && (
         <div className="mt-8">
-          <h2 className="mb-4 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+          <h2 className="mb-4 text-xl font-semibold md:text-2xl">
             Your result
           </h2>
           <div
             className="overflow-hidden rounded-2xl border border-[#E3ECF7] bg-white p-6 md:rounded-3xl md:p-8"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <div className="mb-4 flex flex-wrap items-baseline gap-3">
               <span className="text-4xl font-bold md:text-5xl" style={{ color: result.category.color }}>

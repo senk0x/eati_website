@@ -281,7 +281,6 @@ export default async function FoodPage({ params }: Props) {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex flex-wrap items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -300,15 +299,14 @@ export default async function FoodPage({ params }: Props) {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Nutrition Facts for {name}
           </h1>
 
           {/* Added: richer unique content for SEO + usefulness */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               What Is {name}?
             </h2>
             <p className={pClass}>{copy.intro}</p>
@@ -321,7 +319,7 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Section 1: Calories in X (Per 100g) */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               Calories in {name} (Per 100g)
             </h2>
             <p className="mb-4 text-gray-600">
@@ -349,7 +347,7 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Section 2: Nutrition by Serving Size */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               Nutrition by Serving Size
             </h2>
             <p className="mb-4 text-gray-600">
@@ -394,7 +392,7 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Section 3: Is X Good for Weight Loss? */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               Is {name} Good for Weight Loss?
             </h2>
             <p className={pClass}>
@@ -421,7 +419,7 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Added: Health benefits */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               Health Benefits of {name}
             </h2>
             <p className={pClass}>
@@ -436,7 +434,7 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Added: Who it's best for */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               Who Is {name} Best For?
             </h2>
             <div className="space-y-5">
@@ -457,7 +455,7 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Section 4: How to Use X in Your Diet */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               How to Use {name} in Your Diet
             </h2>
             <p className="mb-4 text-gray-600">
@@ -478,7 +476,7 @@ export default async function FoodPage({ params }: Props) {
           </section>
 
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               Related Tools
             </h2>
             <p className={pClass}>
@@ -499,7 +497,7 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Related Products */}
           <section className={sectionClass}>
-            <h2 className={h2Class} style={{ color: '#364052' }}>
+            <h2 className={h2Class}>
               Related Products
             </h2>
             <p className="mb-4 text-gray-600">

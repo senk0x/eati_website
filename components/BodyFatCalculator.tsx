@@ -199,7 +199,7 @@ export default function BodyFatCalculator() {
   const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
 
   return (
-    <div style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+    <div>
       <form
         onSubmit={handleSubmit}
         className="space-y-6 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8"
@@ -394,7 +394,7 @@ export default function BodyFatCalculator() {
 
       {results && (
         <div className="mt-8">
-          <h2 className="mb-4 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+          <h2 className="mb-4 text-xl font-semibold md:text-2xl">
             Your results
           </h2>
           <p className="mb-4 text-sm text-gray-600">
@@ -440,9 +440,8 @@ function ResultCard({
   return (
     <div
       className="flex flex-col rounded-2xl border border-[#E3ECF7] bg-white p-5 transition-shadow hover:shadow-md md:rounded-3xl"
-      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
     >
-      <h3 className="mb-3 text-base font-semibold" style={{ color: '#364052' }}>
+      <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
       <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{value}</p>

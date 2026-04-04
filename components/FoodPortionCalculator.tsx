@@ -61,9 +61,8 @@ export default function FoodPortionCalculator({ food }: Props) {
   return (
     <section
       className="mb-10 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8"
-      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
     >
-      <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+      <h2 className="mb-3 text-xl font-semibold md:text-2xl">
         Calculate Nutrition for Your Portion
       </h2>
       <p className="mb-4 text-sm text-gray-600">

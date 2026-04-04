@@ -48,13 +48,11 @@ export default function ContactPage() {
         <div className="mx-auto max-w-3xl">
           <h1
             className="mb-4 text-2xl font-semibold md:mb-6 md:text-3xl"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
           >
             Contact us
           </h1>
           <p
             className="mb-8 text-sm md:text-base"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
           >
             Have questions about Eati or want to share feedback? Send us a message using the form below and we&apos;ll
             get back to you by email.
@@ -63,7 +61,6 @@ export default function ContactPage() {
           <form
             onSubmit={handleSubmit}
             className="space-y-6 rounded-3xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:p-8"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
           >
             <div className="grid gap-4 md:grid-cols-2">
               <div className="flex flex-col gap-1.5">

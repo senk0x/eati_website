@@ -98,7 +98,7 @@ export default function WaterIntakeCalculator() {
   const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
 
   return (
-    <div style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+    <div>
       <form
         onSubmit={handleSubmit}
         className="space-y-6 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8"
@@ -252,7 +252,7 @@ export default function WaterIntakeCalculator() {
 
       {results && (
         <div className="mt-8">
-          <h2 className="mb-4 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+          <h2 className="mb-4 text-xl font-semibold md:text-2xl">
             Your results
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -296,9 +296,8 @@ function VolumeCard({
   return (
     <div
       className="flex flex-col rounded-2xl border border-[#E3ECF7] bg-white p-5 transition-shadow hover:shadow-md md:rounded-3xl"
-      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
     >
-      <h3 className="mb-3 text-base font-semibold" style={{ color: '#364052' }}>
+      <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
       <p className="mb-1 text-2xl font-bold text-[#85BEFF]">
@@ -315,9 +314,8 @@ function BreakdownCard({ results }: { results: Results }) {
   return (
     <div
       className="flex flex-col rounded-2xl border border-[#E3ECF7] bg-white p-5 transition-shadow hover:shadow-md md:rounded-3xl sm:col-span-2 lg:col-span-4"
-      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
     >
-      <h3 className="mb-3 text-base font-semibold" style={{ color: '#364052' }}>
+      <h3 className="mb-3 text-base font-semibold">
         Breakdown
       </h3>
       <ul className="mb-3 space-y-1 text-sm text-gray-600">

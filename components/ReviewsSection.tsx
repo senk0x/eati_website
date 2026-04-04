@@ -39,7 +39,6 @@ export default function ReviewsSection() {
       <div className="mx-auto max-w-7xl">
         <h2
           className="mb-8 text-center text-2xl font-bold text-gray-900 md:mb-12 md:text-3xl"
-          style={{ fontFamily: "var(--font-rubik), sans-serif" }}
         >
           What our users are saying
         </h2>
@@ -49,10 +48,7 @@ export default function ReviewsSection() {
             <div
               key={index}
               className="flex flex-col items-center rounded-[2rem] p-6 text-center md:rounded-[2.5rem] md:p-8"
-              style={{
-                backgroundColor: review.bgColor,
-                fontFamily: "var(--font-rubik), sans-serif",
-              }}
+              style={{ backgroundColor: review.bgColor }}
             >
               {/* Avatar */}
               <div className="relative mb-4 h-16 w-16 overflow-hidden rounded-full md:h-20 md:w-20">

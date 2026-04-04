@@ -29,14 +29,12 @@ export default function FoodsPage() {
       <main className="px-4 pb-12 md:px-6 md:pb-16">
         <div className="mx-auto max-w-5xl">
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
           >
             Food Nutrition Database
           </h1>
           <p
             className="mb-10 max-w-2xl text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Browse calories, protein, carbs, and fat for common foods. Click any food to see
             detailed nutrition facts, serving sizes, and tips for your diet.
@@ -58,13 +56,11 @@ export default function FoodsPage() {
                 <div className="flex-1 overflow-hidden">
                   <h2
                     className="truncate text-base font-semibold transition-colors group-hover:text-[#85BEFF] md:text-lg"
-                    style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
                   >
                     {food.name}
                   </h2>
                   <p
                     className="text-sm text-gray-500"
-                    style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
                   >
                     {food.caloriesPer100g} kcal · {food.proteinPer100g}g protein
                   </p>
@@ -77,7 +73,6 @@ export default function FoodsPage() {
           <div className="mt-12 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 text-center md:rounded-3xl">
             <p
               className="mb-4 text-base text-gray-700 md:text-lg"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
             >
               Track your meals and hit your calorie goals with our free tools.
             </p>
@@ -85,21 +80,18 @@ export default function FoodsPage() {
               <Link
                 href="/tools/meal-log-calculator"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-[#364052] bg-[#364052] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white hover:text-[#364052]"
-                style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
               >
                 Meal Log Calculator
               </Link>
               <Link
                 href="/tools/calorie-calculator"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-[#E3ECF7] bg-white px-5 py-2.5 text-sm font-semibold text-[#364052] transition-all hover:border-[#85BEFF] hover:text-[#85BEFF]"
-                style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
               >
                 Calorie Calculator
               </Link>
               <Link
                 href="/tools"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-[#E3ECF7] bg-white px-5 py-2.5 text-sm font-semibold text-[#364052] transition-all hover:border-[#85BEFF] hover:text-[#85BEFF]"
-                style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
               >
                 All Tools
               </Link>

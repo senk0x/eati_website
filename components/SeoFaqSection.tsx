@@ -32,7 +32,7 @@ export function SeoFaqSection({ faqs, title = 'Frequently Asked Questions', clas
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <h2 className="mb-4 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+      <h2 className="mb-4 text-xl font-semibold md:text-2xl">
         {title}
       </h2>
       <ul className="space-y-6">

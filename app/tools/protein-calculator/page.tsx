@@ -35,7 +35,6 @@ export default function ProteinCalculatorPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -54,14 +53,12 @@ export default function ProteinCalculatorPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Protein Calculator
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Protein supports muscle repair, satiety, and many body functions. This calculator gives
             you a daily protein target in grams based on your weight and goal, plus per-meal guidance
@@ -73,10 +70,9 @@ export default function ProteinCalculatorPage() {
           {/* SEO description */}
           <div
             className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is the Protein Calculator?
               </h2>
               <p className={pClass}>
@@ -89,7 +85,7 @@ export default function ProteinCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Does the Protein Calculator Work?
               </h2>
               <p className={pClass}>
@@ -102,7 +98,7 @@ export default function ProteinCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Why Use This Protein Calculator?
               </h2>
               <p className={pClass}>
@@ -121,7 +117,7 @@ export default function ProteinCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Who Should Use This Tool?
               </h2>
               <p className={pClass}>
@@ -134,7 +130,7 @@ export default function ProteinCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How much protein do you need?
               </h2>
               <p className={pClass}>
@@ -147,7 +143,7 @@ export default function ProteinCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Protein for muscle gain
               </h2>
               <p className={pClass}>
@@ -160,7 +156,7 @@ export default function ProteinCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Protein for weight loss
               </h2>
               <p className={pClass}>
@@ -172,7 +168,7 @@ export default function ProteinCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Is too much protein bad?
               </h2>
               <p className={pClass}>

@@ -116,14 +116,12 @@ export default function ToolsPage() {
       <main className="px-4 pb-12 md:px-6 md:pb-16">
         <div className="mx-auto max-w-5xl">
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
           >
             Fitness & Weight Loss Tools
           </h1>
           <p
             className="mb-10 max-w-2xl text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Free calculators and tools to plan your nutrition, track your progress, and reach your
             weight and fitness goals. More tools coming soon.
@@ -147,13 +145,11 @@ export default function ToolsPage() {
                 <div className="flex flex-1 flex-col p-5">
                   <h2
                     className="mb-2 text-lg font-semibold transition-colors group-hover:text-[#85BEFF] md:text-xl"
-                    style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
                   >
                     {tool.name}
                   </h2>
                   <p
                     className="text-sm leading-relaxed text-gray-600"
-                    style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
                   >
                     {tool.description}
                   </p>

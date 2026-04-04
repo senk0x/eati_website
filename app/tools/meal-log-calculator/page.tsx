@@ -36,7 +36,6 @@ export default function MealLogCalculatorPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -55,14 +54,12 @@ export default function MealLogCalculatorPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Meal Log Calculator
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Enter one or more foods and the amount you had (e.g. grams, ml, pieces, servings).
             AI estimates total calories and macros (protein, carbs, fat) for your meal. Add
@@ -75,9 +72,8 @@ export default function MealLogCalculatorPage() {
           {/* Frequently Searched Foods */}
           <section
             className="mt-10 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
-            <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+            <h2 className="mb-3 text-xl font-semibold md:text-2xl">
               Frequently Searched Foods
             </h2>
             <p className="mb-4 text-sm text-gray-600">
@@ -101,10 +97,9 @@ export default function MealLogCalculatorPage() {
           {/* SEO description */}
           <div
             className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is the Meal Log Calculator?
               </h2>
               <p className={pClass}>
@@ -118,7 +113,7 @@ export default function MealLogCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Does the AI Calculate Calories?
               </h2>
               <p className={pClass}>
@@ -136,7 +131,7 @@ export default function MealLogCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Accurate Is This Tool?
               </h2>
               <p className={pClass}>
@@ -155,7 +150,7 @@ export default function MealLogCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Why Tracking Meals Is Important
               </h2>
               <p className={pClass}>
@@ -178,7 +173,7 @@ export default function MealLogCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How This Tool Helps With Weight Loss
               </h2>
               <p className={pClass}>

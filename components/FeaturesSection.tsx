@@ -15,14 +15,12 @@ export default function FeaturesSection() {
           {/* Text block - always first on mobile */}
           <div className="order-1 w-full flex-1 md:pr-4">
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#364052" }}
+              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
             >
               Log meals like chatting
             </h3>
             <p
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-              style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
               Simply describe what you ate in natural language — like &ldquo;chicken breast with
               spaghetti&rdquo; or &ldquo;oatmeal 80g with banana&rdquo; — and our AI instantly
@@ -73,14 +71,12 @@ export default function FeaturesSection() {
           {/* Text - first on mobile, second (right) on md */}
           <div className="order-1 flex-1 md:order-2 md:pl-4">
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#364052" }}
+              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
             >
               See your day
             </h3>
             <p
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-              style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
               Tap on the nutrition banner to open a clean daily summary of everything you&apos;ve eaten.
               All meals are grouped in one place so you can quickly review calories, protein, carbs, and
@@ -93,14 +89,12 @@ export default function FeaturesSection() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           <div className="order-1 flex-1 md:pr-4">
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#364052" }}
+              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
             >
               Log with your voice
             </h3>
             <p
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-              style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
               Say what you ate and get instant nutrition — tap the microphone, speak your meal, and
               the AI transcribes and calculates calories and macros. Perfect when your hands are full
@@ -149,14 +143,12 @@ export default function FeaturesSection() {
           {/* Text - first on mobile */}
           <div className="order-1 flex-1 md:order-2 md:pl-4">
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#364052" }}
+              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
             >
               Scan & analyze
             </h3>
             <p
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-              style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
               Take a photo of your plate and get instant nutrition — the AI recognizes dishes, estimates
               portions, and calculates calories, protein, carbs, and fats. No typing required.
@@ -168,14 +160,12 @@ export default function FeaturesSection() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           <div className="order-1 flex-1 md:pr-4">
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#364052" }}
+              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
             >
               Scan barcodes
             </h3>
             <p
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-              style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
               Scan any packaged product&apos;s barcode and instantly get accurate nutrition info. 
               The app pulls data from a global database so you can log snacks, drinks, and groceries 
@@ -224,14 +214,12 @@ export default function FeaturesSection() {
           {/* Text - first on mobile */}
           <div className="order-1 flex-1 md:order-2 md:pl-4">
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#364052" }}
+              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
             >
               Track progress
             </h3>
             <p
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-              style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
               Log weight and body measurements over time and see your progress in clear charts. Set goals,
               track trends, and stay motivated as you build better eating and fitness habits.
@@ -243,14 +231,12 @@ export default function FeaturesSection() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           <div className="order-1 flex-1 md:pr-4">
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#364052" }}
+              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
             >
               Stay motivated
             </h3>
             <p
               className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-              style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
             >
               Enable optional home-screen widgets and gentle reminders to keep your nutrition on track. 
               Get motivational banners, streak notifications, and daily prompts that help you build 

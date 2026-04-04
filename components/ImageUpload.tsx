@@ -6,9 +6,19 @@ interface ImageUploadProps {
   value: string;
   onChange: (url: string) => void;
   label?: string;
+  /** Descriptive alt for the preview image (SEO and accessibility in the editor). */
+  previewAlt?: string;
 }
 
-export default function ImageUpload({ value, onChange, label = 'Cover Image' }: ImageUploadProps) {
+const DEFAULT_PREVIEW_ALT =
+  'Blog article cover image preview for the Eati content editor';
+
+export default function ImageUpload({
+  value,
+  onChange,
+  label = 'Cover Image',
+  previewAlt = DEFAULT_PREVIEW_ALT,
+}: ImageUploadProps) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -51,7 +61,7 @@ export default function ImageUpload({ value, onChange, label = 'Cover Image' }: 
   };
 
   return (
-    <div style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+    <div>
       <label className="mb-1 block text-sm font-medium text-gray-700">{label}</label>
 
       {value ? (
@@ -59,7 +69,7 @@ export default function ImageUpload({ value, onChange, label = 'Cover Image' }: 
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-100">
             <img
               src={value}
-              alt="Blog article cover image preview for the Eati content editor"
+              alt={previewAlt}
               className="absolute inset-0 h-full w-full object-cover"
               loading="eager"
             />

@@ -35,7 +35,6 @@ export default function BodyFatCalculatorPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -54,14 +53,12 @@ export default function BodyFatCalculatorPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Body Fat Calculator
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Body fat percentage is the share of your weight that comes from fat. This calculator
             uses the U.S. Navy body fat formula and your measurements (waist, neck, height, and
@@ -75,10 +72,9 @@ export default function BodyFatCalculatorPage() {
           {/* SEO description */}
           <div
             className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is the Body Fat Calculator?
               </h2>
               <p className={pClass}>
@@ -91,7 +87,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Does the Body Fat Calculator Work?
               </h2>
               <p className={pClass}>
@@ -103,7 +99,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Why Use This Body Fat Calculator?
               </h2>
               <p className={pClass}>
@@ -122,7 +118,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Who Should Use This Tool?
               </h2>
               <p className={pClass}>
@@ -141,7 +137,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is Body Fat Percentage?
               </h2>
               <p className={pClass}>
@@ -153,7 +149,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How to Calculate Body Fat
               </h2>
               <p className={pClass}>
@@ -167,7 +163,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 U.S. Navy Method Explained
               </h2>
               <p className={pClass}>
@@ -182,7 +178,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Is the Navy Method Accurate?
               </h2>
               <p className={pClass}>
@@ -203,7 +199,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Healthy Body Fat Ranges
               </h2>
               <p className={pClass}>
@@ -225,7 +221,7 @@ export default function BodyFatCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How to Reduce Body Fat
               </h2>
               <p className={pClass}>

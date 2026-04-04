@@ -129,7 +129,7 @@ export default function BodyFatAnalytics() {
   const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
 
   return (
-    <div style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+    <div>
       <div className="space-y-6 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8">
         <div>
           <h3 className={labelClass}>Photo guidelines</h3>
@@ -156,7 +156,7 @@ export default function BodyFatAnalytics() {
             <div className="mt-2">
               <img
                 src={frontPreview}
-                alt="Front view preview"
+                alt="Front-view photo uploaded for AI body fat percentage estimate — Eati free body composition tool"
                 className="max-h-40 rounded-xl border border-[#E3ECF7] object-contain"
               />
             </div>
@@ -179,7 +179,7 @@ export default function BodyFatAnalytics() {
             <div className="mt-2">
               <img
                 src={sidePreview}
-                alt="Side view preview"
+                alt="Side-view photo uploaded for AI body fat analysis — optional second image for the Eati body fat analyzer"
                 className="max-h-40 rounded-xl border border-[#E3ECF7] object-contain"
               />
             </div>
@@ -204,7 +204,7 @@ export default function BodyFatAnalytics() {
 
       {result && (
         <div className="mt-8">
-          <h2 className="mb-4 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+          <h2 className="mb-4 text-xl font-semibold md:text-2xl">
             Your results
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -225,9 +225,8 @@ export default function BodyFatAnalytics() {
             />
             <div
               className="flex flex-col rounded-2xl border border-[#E3ECF7] bg-white p-5 sm:col-span-2 md:rounded-3xl"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
             >
-              <h3 className="mb-3 text-base font-semibold" style={{ color: '#364052' }}>
+              <h3 className="mb-3 text-base font-semibold">
                 Visual interpretation
               </h3>
               <p className="text-sm leading-relaxed text-gray-600">{result.explanation}</p>
@@ -236,7 +235,6 @@ export default function BodyFatAnalytics() {
 
           <div
             className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 md:rounded-3xl"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <p className="text-sm font-medium text-amber-800">
               Disclaimer: This is an AI-based estimation tool and does not replace medical or
@@ -262,9 +260,8 @@ function ResultCard({
   return (
     <div
       className="flex flex-col rounded-2xl border border-[#E3ECF7] bg-white p-5 transition-shadow hover:shadow-md md:rounded-3xl"
-      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
     >
-      <h3 className="mb-3 text-base font-semibold" style={{ color: '#364052' }}>
+      <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
       <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{value}</p>

@@ -35,7 +35,6 @@ export default function CalorieBurnCalculatorPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -54,14 +53,12 @@ export default function CalorieBurnCalculatorPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Calorie Burn Calculator
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Calories are burned when your body uses energy for movement and metabolism. This
             calculator estimates how many calories you burn during a specific activity using
@@ -75,10 +72,9 @@ export default function CalorieBurnCalculatorPage() {
           {/* SEO description */}
           <div
             className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is the Calorie Burn Calculator?
               </h2>
               <p className={pClass}>
@@ -91,7 +87,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Does the Calorie Burn Calculator Work?
               </h2>
               <p className={pClass}>
@@ -104,7 +100,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Why Use This Calorie Burn Calculator?
               </h2>
               <p className={pClass}>
@@ -123,7 +119,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Who Should Use This Tool?
               </h2>
               <p className={pClass}>
@@ -143,7 +139,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Are Calories Burned?
               </h2>
               <p className={pClass}>
@@ -163,7 +159,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is a MET Value?
               </h2>
               <p className={pClass}>
@@ -178,7 +174,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Calories Burned by Activity
               </h2>
               <p className={pClass}>
@@ -195,7 +191,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Accurate Is This Calculator?
               </h2>
               <p className={pClass}>
@@ -216,7 +212,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Exercise Helps Weight Loss
               </h2>
               <p className={pClass}>
@@ -238,7 +234,7 @@ export default function CalorieBurnCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Best Exercises for Burning Calories
               </h2>
               <p className={pClass}>

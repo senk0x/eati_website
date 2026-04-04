@@ -10,14 +10,12 @@ export default function TermsOfUsePage() {
         <div className="mx-auto max-w-3xl">
           <h1
             className="mb-6 text-2xl font-semibold md:mb-8 md:text-3xl"
-            style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
           >
             Terms of Use (Terms &amp; Conditions)
           </h1>
 
           <div
             className="space-y-4 text-sm leading-relaxed md:text-base"
-            style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
           >
             <p>
               These Terms of Use apply to the Eati: AI Calorie Tracker mobile application (hereby referred to as the

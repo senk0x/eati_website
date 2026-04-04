@@ -23,14 +23,12 @@ export default function StatsSection() {
           {/* Centered text */}
           <div className="flex flex-col items-center text-center order-2">
             <span
-              className="block text-xl font-normal leading-tight sm:text-2xl md:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#343A40" }}
+              className="font-eati-heading text-eati-stats block text-xl font-normal leading-tight sm:text-2xl md:text-4xl lg:text-5xl"
             >
               N. 1 tool
             </span>
             <span
-              className="block text-lg font-normal leading-tight sm:text-xl md:text-3xl lg:text-4xl"
-              style={{ fontFamily: "var(--font-bowlby-one), sans-serif", color: "#343A40" }}
+              className="font-eati-heading text-eati-stats block text-lg font-normal leading-tight sm:text-xl md:text-3xl lg:text-4xl"
             >
               To Lose Weight
             </span>

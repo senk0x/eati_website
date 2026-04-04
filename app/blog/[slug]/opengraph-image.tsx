@@ -10,6 +10,27 @@ export const size = { width: 1200, height: 630 };
 
 export const contentType = "image/png";
 
+export async function generateImageMetadata({
+  params,
+}: {
+  params: { slug: string } | Promise<{ slug: string }>;
+}) {
+  const { slug } = await Promise.resolve(params);
+  const article = getArticleBySlug(slug);
+  const alt =
+    article && article.published
+      ? `${article.title} — featured Open Graph image for this Eati blog article on nutrition, calories, and healthy weight loss`
+      : "Eati nutrition and weight loss blog — Open Graph preview image";
+  return [
+    {
+      id: "default",
+      alt,
+      size,
+      contentType: "image/png" as const,
+    },
+  ];
+}
+
 function truncateTitle(title: string, max = 72): string {
   if (title.length <= max) return title;
   return `${title.slice(0, max - 1)}…`;
@@ -25,6 +46,7 @@ export default async function BlogOpenGraphImage({
   if (!article || !article.published) notFound();
 
   const title = truncateTitle(article.title);
+  const ogImageAlt = `${article.title} — featured Open Graph image for this Eati blog article on nutrition, calories, and healthy weight loss`;
   const cover = article.coverImage
     ? article.coverImage.startsWith("http")
       ? article.coverImage
@@ -45,7 +67,7 @@ export default async function BlogOpenGraphImage({
         {cover ? (
           <img
             src={cover}
-            alt={article.title}
+            alt={ogImageAlt}
             style={{
               position: "absolute",
               inset: 0,

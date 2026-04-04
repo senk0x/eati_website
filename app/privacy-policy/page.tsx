@@ -10,14 +10,12 @@ export default function PrivacyPolicyPage() {
         <div className="mx-auto max-w-3xl">
           <h1
             className="mb-6 text-2xl font-semibold md:mb-8 md:text-3xl"
-            style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
           >
             Privacy Policy
           </h1>
 
           <div
             className="space-y-4 text-sm leading-relaxed md:text-base"
-            style={{ fontFamily: "var(--font-rubik), sans-serif", color: "#364052" }}
           >
             <p>
               This privacy policy applies to the Eati: AI Calorie Tracker app (hereby referred to as

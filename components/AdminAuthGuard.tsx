@@ -56,7 +56,7 @@ export default function AdminAuthGuard({ children }: AdminAuthGuardProps) {
   if (status === 'loading') {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-50">
-        <p className="text-gray-500" style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+        <p className="text-gray-500">
           Loading...
         </p>
       </div>
@@ -68,7 +68,6 @@ export default function AdminAuthGuard({ children }: AdminAuthGuardProps) {
       <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4">
         <div
           className="w-full max-w-sm rounded-2xl border border-gray-200 bg-white p-6"
-          style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
         >
           <h1 className="mb-6 text-center text-xl font-bold text-[#364052]">Admin Login</h1>
 
@@ -109,7 +108,6 @@ export default function AdminAuthGuard({ children }: AdminAuthGuardProps) {
         <button
           onClick={handleLogout}
           className="rounded-full bg-gray-100 px-4 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-200"
-          style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
         >
           Logout
         </button>

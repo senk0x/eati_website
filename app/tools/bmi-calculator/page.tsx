@@ -68,7 +68,6 @@ export default function BMICalculatorPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -87,14 +86,12 @@ export default function BMICalculatorPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             BMI Calculator
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Body Mass Index (BMI) is a number based on your weight and height. It is used as a
             simple screening tool to place adults into broad categories (underweight, normal weight,
@@ -107,10 +104,9 @@ export default function BMICalculatorPage() {
           {/* SEO description */}
           <div
             className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 What Is the BMI Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -123,7 +119,7 @@ export default function BMICalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 How Does the BMI Calculator Work?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -135,7 +131,7 @@ export default function BMICalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Why Use This BMI Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -156,7 +152,7 @@ export default function BMICalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Who Should Use This Tool?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -169,7 +165,7 @@ export default function BMICalculatorPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Is This Calculation Accurate?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
@@ -189,7 +185,7 @@ export default function BMICalculatorPage() {
             <SeoFaqSection faqs={BMI_FAQS} className="mb-10" />
 
             <section className="mb-10">
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl" style={{ color: '#364052' }}>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
                 Related Tools
               </h2>
               <p className="text-base leading-relaxed text-gray-600">

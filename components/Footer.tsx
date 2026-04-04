@@ -24,7 +24,7 @@ export default function Footer() {
             {/* Links - min 44px touch target on mobile */}
             <nav
               className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white md:gap-8"
-              style={{ fontFamily: "var(--font-rubik), sans-serif" }}
+             
               aria-label="Footer navigation"
             >
               <Link href="/tools" className="min-h-[44px] min-w-[44px] py-2 hover:underline md:min-h-0 md:min-w-0 md:py-0">
@@ -48,7 +48,6 @@ export default function Footer() {
           {/* Copyright */}
           <div
             className="mt-8 text-center text-sm text-white"
-            style={{ fontFamily: "var(--font-rubik), sans-serif" }}
           >
             <p>&copy; 2026 Eati. All rights reserved.</p>
           </div>

@@ -33,7 +33,6 @@ export default function BodyFatAnalyticsPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -52,14 +51,12 @@ export default function BodyFatAnalyticsPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Body Fat % Analytics
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Get an AI-based estimate of your body fat percentage from one or two photos. Upload a
             front view (required) and optionally a side view for better accuracy. The model analyzes
@@ -73,10 +70,9 @@ export default function BodyFatAnalyticsPage() {
           {/* SEO description */}
           <div
             className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is Body Fat % Analytics?
               </h2>
               <p className={pClass}>
@@ -89,7 +85,7 @@ export default function BodyFatAnalyticsPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Does AI Estimate Body Fat From Photos?
               </h2>
               <p className={pClass}>
@@ -107,7 +103,7 @@ export default function BodyFatAnalyticsPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Is Photo-Based Body Fat Accurate?
               </h2>
               <p className={pClass}>
@@ -127,7 +123,7 @@ export default function BodyFatAnalyticsPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Advantages of AI Body Fat Estimation
               </h2>
               <p className={pClass}>
@@ -151,7 +147,7 @@ export default function BodyFatAnalyticsPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Limitations of This Method
               </h2>
               <p className={pClass}>

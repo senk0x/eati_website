@@ -34,7 +34,6 @@ export default function IdealBodyWeightCalculatorPage() {
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol
               className="flex items-center gap-2 text-sm"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
             >
               <li>
                 <Link href="/" className="hover:text-[#85BEFF]">
@@ -53,14 +52,12 @@ export default function IdealBodyWeightCalculatorPage() {
           </nav>
 
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Ideal Body Weight Calculator
           </h1>
           <p
             className="mb-8 text-base text-gray-600 md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             Ideal body weight (IBW) is an estimate of a healthy weight for a given height and sex,
             often used in medicine for dosing and nutrition. This calculator uses the Devine and
@@ -71,9 +68,9 @@ export default function IdealBodyWeightCalculatorPage() {
           <IBWCalculator />
 
           {/* SEO description */}
-          <div className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10" style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+          <div className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10">
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What Is the Ideal Body Weight Calculator?
               </h2>
               <p className={pClass}>
@@ -86,7 +83,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How Does the Ideal Body Weight Calculator Work?
               </h2>
               <p className={pClass}>
@@ -99,7 +96,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Why Use This Ideal Body Weight Calculator?
               </h2>
               <p className={pClass}>
@@ -118,7 +115,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Who Should Use This Tool?
               </h2>
               <p className={pClass}>
@@ -138,7 +135,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 What is Ideal Body Weight?
               </h2>
               <p className={pClass}>
@@ -151,7 +148,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 How is IBW calculated?
               </h2>
               <p className={pClass}>
@@ -163,7 +160,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Devine formula explanation
               </h2>
               <p className={pClass}>
@@ -176,7 +173,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Is IBW accurate?
               </h2>
               <p className={pClass}>
@@ -191,7 +188,7 @@ export default function IdealBodyWeightCalculatorPage() {
             </section>
 
             <section className={sectionClass}>
-              <h2 className={h2Class} style={{ color: '#364052' }}>
+              <h2 className={h2Class}>
                 Limitations of IBW
               </h2>
               <p className={pClass}>

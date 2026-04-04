@@ -33,14 +33,12 @@ export default function BlogPage() {
       <main className="px-4 pb-12 md:px-6 md:pb-16">
         <div className="mx-auto max-w-5xl">
           <h1
-            className="mb-4 text-3xl font-bold md:text-4xl"
-            style={{ fontFamily: 'var(--font-bowlby-one), sans-serif', color: '#364052' }}
+            className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
             Blog
           </h1>
           <p
             className="mb-10 text-base md:text-lg"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
           >
             Tips, guides, and insights on nutrition and healthy eating.
           </p>
@@ -48,7 +46,6 @@ export default function BlogPage() {
           {articles.length === 0 ? (
             <p
               className="text-center text-gray-500"
-              style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
             >
               No articles published yet. Check back soon!
             </p>
@@ -78,7 +75,6 @@ export default function BlogPage() {
                   <div className="flex flex-1 flex-col p-5">
                     <time
                       className="mb-2 text-xs text-gray-500"
-                      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
                     >
                       {new Date(article.publishedAt).toLocaleDateString('en-US', {
                         year: 'numeric',
@@ -88,19 +84,16 @@ export default function BlogPage() {
                     </time>
                     <h2
                       className="mb-2 text-lg font-semibold group-hover:text-[#85BEFF]"
-                      style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
                     >
                       {article.title}
                     </h2>
                     <p
                       className="line-clamp-3 flex-1 text-sm text-gray-600"
-                      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
                     >
                       {article.introduction}
                     </p>
                     <span
                       className="mt-4 text-sm font-medium text-[#85BEFF]"
-                      style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
                     >
                       Read more →
                     </span>

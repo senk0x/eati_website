@@ -93,14 +93,12 @@ export default function NewArticlePage() {
         <div className="mb-6 flex items-center justify-between">
           <h1
             className="text-2xl font-bold"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
           >
             New Article
           </h1>
           <Link
             href="/admin/blog"
             className="text-sm text-gray-500 hover:text-[#85BEFF]"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             ← Back to list
           </Link>
@@ -109,7 +107,6 @@ export default function NewArticlePage() {
         <form
           onSubmit={handleSubmit}
           className="space-y-6 rounded-2xl border border-gray-200 bg-white p-6"
-          style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
         >
           {/* Basic Info */}
           <div className="grid gap-4 md:grid-cols-2">
@@ -194,6 +191,7 @@ export default function NewArticlePage() {
                       value={section.imageUrl}
                       onChange={(url) => handleSectionChange(index, 'imageUrl', url)}
                       label="Section Image"
+                      previewAlt={`${form.title.trim() || 'Blog article'}${section.heading.trim() ? `: ${section.heading.trim()}` : ''} — inline section image preview · Eati blog editor`}
                     />
                   </div>
                 </div>
@@ -229,6 +227,7 @@ export default function NewArticlePage() {
           <ImageUpload
             value={form.coverImage}
             onChange={(url) => setForm({ ...form, coverImage: url })}
+            previewAlt={`${form.title.trim() || 'Blog article'} — cover image preview · Eati blog editor`}
           />
 
           {/* SEO */}

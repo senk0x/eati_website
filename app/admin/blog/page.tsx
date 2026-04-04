@@ -61,14 +61,12 @@ export default function AdminBlogPage() {
         <div className="mb-8 flex items-center justify-between">
           <h1
             className="text-2xl font-bold"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif', color: '#364052' }}
           >
             Blog Admin
           </h1>
           <Link
             href="/admin/blog/new"
             className="rounded-full bg-[#364052] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#2b3545]"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             + New Article
           </Link>
@@ -80,7 +78,7 @@ export default function AdminBlogPage() {
           <p className="text-gray-500">No articles yet. Create your first one!</p>
         ) : (
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-            <table className="w-full text-left text-sm" style={{ fontFamily: 'var(--font-rubik), sans-serif' }}>
+            <table className="w-full text-left text-sm">
               <thead className="border-b border-gray-200 bg-gray-50">
                 <tr>
                   <th className="px-4 py-3 font-medium text-gray-700">Title</th>
@@ -147,7 +145,6 @@ export default function AdminBlogPage() {
           <Link
             href="/"
             className="text-sm text-gray-500 hover:text-[#85BEFF]"
-            style={{ fontFamily: 'var(--font-rubik), sans-serif' }}
           >
             ← Back to site
           </Link>

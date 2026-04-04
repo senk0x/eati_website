@@ -1,40 +1,35 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
-import { Geist, Geist_Mono, Roboto_Flex, Rubik, Bowlby_One } from "next/font/google";
+import { Rubik, Bowlby_One } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import JsonLdDefaults from "@/components/JsonLdDefaults";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
-import { SITE_URL } from "@/lib/seo";
+import {
+  DEFAULT_SITE_DESCRIPTION,
+  DEFAULT_SITE_TITLE,
+  rootOpenGraphDefaults,
+  rootTwitterDefaults,
+  SITE_URL,
+} from "@/lib/seo";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const robotoFlex = Roboto_Flex({
-  variable: "--font-roboto-flex",
-  subsets: ["latin"],
-  weight: ["900"],
-});
-
+/** Only fonts used in UI (headings + body copy). Omitting unused families cuts render-blocking font CSS. */
 const rubik = Rubik({
   variable: "--font-rubik",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+  adjustFontFallback: true,
+  display: "swap",
 });
 
 const bowlbyOne = Bowlby_One({
   variable: "--font-bowlby-one",
   subsets: ["latin"],
   weight: "400",
+  adjustFontFallback: true,
+  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -47,11 +42,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Eati — AI Calorie Tracker App | Fat Loss & Macro Logging",
+    default: DEFAULT_SITE_TITLE,
     template: "%s | Eati",
   },
-  description:
-    "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. The fat loss and meal-planning app for iOS — stay consistent without tedious logging.",
+  description: DEFAULT_SITE_DESCRIPTION,
   keywords: [
     "AI calorie tracker",
     "fat loss app",
@@ -62,15 +56,8 @@ export const metadata: Metadata = {
     "weight loss app",
     "nutrition app",
   ],
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "Eati",
-    url: SITE_URL,
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
+  openGraph: rootOpenGraphDefaults,
+  twitter: rootTwitterDefaults,
   robots: {
     index: true,
     follow: true,
@@ -87,9 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robotoFlex.variable} ${rubik.variable} ${bowlbyOne.variable} antialiased`}
-      >
+      <body className={`${rubik.variable} ${bowlbyOne.variable} antialiased`}>
         <JsonLdDefaults />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
