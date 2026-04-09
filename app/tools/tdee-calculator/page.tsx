@@ -3,12 +3,14 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import TDEECalculator from '@/components/TDEECalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
+import { toolSerpAb } from '@/lib/tools-serp-ab';
 import { buildPageMetadata } from '@/lib/seo';
 
+const serp = toolSerpAb('tdee-calculator');
+
 export const metadata: Metadata = buildPageMetadata({
-  title: 'TDEE Calculator | Daily Calorie Burn & BMR (Free)',
-  description:
-    'Free TDEE calculator: total daily energy expenditure and BMR using Mifflin–St Jeor. Set calorie targets for fat loss, maintenance, or muscle gain — metric or imperial.',
+  title: serp.title,
+  description: serp.description,
   path: '/tools/tdee-calculator',
   ogImagePath: ogToolPath('tdee-calculator'),
   ogImageAlt: toolOgAlt('tdee-calculator'),

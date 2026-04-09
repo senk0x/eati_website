@@ -6,9 +6,9 @@ import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Protein Calculator | Daily Grams for Muscle, Fat Loss & Health',
+  title: 'Protein Calculator | Daily Grams for Muscle or Fat Loss',
   description:
-    'Free protein calculator: daily grams from body weight and goal — cutting, bulking, or maintenance. Split per meal and protect muscle on a calorie deficit with Eati’s macro tools.',
+    'Your weight and whether you cut, maintain, or bulk—daily protein grams spelled out so you know exactly what to eat. Straight math, no signup.',
   path: '/tools/protein-calculator',
   ogImagePath: ogToolPath('protein-calculator'),
   ogImageAlt: toolOgAlt('protein-calculator'),

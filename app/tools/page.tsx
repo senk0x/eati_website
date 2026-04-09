@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import { OG_TOOLS_INDEX_ALT, OG_TOOLS_INDEX_PATH } from '@/lib/og';
+import { toolSerpAb } from '@/lib/tools-serp-ab';
 import { buildPageMetadata } from '@/lib/seo';
 
+const serp = toolSerpAb('tools');
+
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Free Fitness Calculators | TDEE, Macros, BMI & More',
-  description:
-    'Free nutrition calculators: calorie goals, TDEE, macros, protein, BMI, body fat, water intake, and meal estimates. Plan fat loss or muscle gain with Eati’s weight loss tools.',
+  title: serp.title,
+  description: serp.description,
   path: '/tools',
   ogImagePath: OG_TOOLS_INDEX_PATH,
   ogImageAlt: OG_TOOLS_INDEX_ALT,

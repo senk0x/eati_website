@@ -4,14 +4,16 @@ import Footer from '@/components/Footer';
 import CalorieCalculator from '@/components/CalorieCalculator';
 import { SeoFaqSection } from '@/components/SeoFaqSection';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
+import { toolSerpAb } from '@/lib/tools-serp-ab';
 import { SITE_URL, absoluteUrl, buildPageMetadata } from '@/lib/seo';
 
 const canonical = absoluteUrl('/tools/calorie-calculator');
 
+const serp = toolSerpAb('calorie-calculator');
+
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Calorie Calculator | Daily Goal for Weight Loss or Muscle Gain',
-  description:
-    'Free calorie calculator using BMR and TDEE (Mifflin–St Jeor). Get a daily calorie target for fat loss, maintenance, or bulking — switch metric or imperial in one tap.',
+  title: serp.title,
+  description: serp.description,
   path: '/tools/calorie-calculator',
   ogImagePath: ogToolPath('calorie-calculator'),
   ogImageAlt: toolOgAlt('calorie-calculator'),

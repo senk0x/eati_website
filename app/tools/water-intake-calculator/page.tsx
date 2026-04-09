@@ -6,9 +6,9 @@ import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Water Intake Calculator | Daily Hydration by Weight & Activity',
+  title: 'Water Intake Calculator | Know How Much to Drink',
   description:
-    'Free hydration calculator: daily water target from weight, activity, and climate. Results in ml, liters, and oz — ideal for training, fat loss, and everyday health on Eati.',
+    'Weight, training level, and climate—one daily water number in milliliters, liters, and ounces. Finally know what to drink. No account needed.',
   path: '/tools/water-intake-calculator',
   ogImagePath: ogToolPath('water-intake-calculator'),
   ogImageAlt: toolOgAlt('water-intake-calculator'),

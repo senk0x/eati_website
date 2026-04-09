@@ -6,9 +6,9 @@ import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Ideal Body Weight Calculator | Healthy Range by Height',
+  title: 'Ideal Body Weight Calculator | Healthy lb/kg by Height',
   description:
-    'Free ideal weight calculator using Devine and Robinson formulas: healthy range by height, frame size, and how your current weight compares — reference tool for goals, not medical advice.',
+    'Height alone—healthy weight span in pounds and kilograms from trusted reference ranges. Informational context, not medical advice. No signup.',
   path: '/tools/ideal-body-weight-calculator',
   ogImagePath: ogToolPath('ideal-body-weight-calculator'),
   ogImageAlt: toolOgAlt('ideal-body-weight-calculator'),

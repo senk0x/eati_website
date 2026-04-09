@@ -9,9 +9,9 @@ import { SITE_URL, absoluteUrl, buildPageMetadata } from '@/lib/seo';
 const canonical = absoluteUrl('/tools/bmi-calculator');
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'BMI Calculator | Body Mass Index (Metric & Imperial)',
+  title: 'BMI Calculator | Know Your Index & Category',
   description:
-    'Free BMI calculator: enter height and weight in metric or imperial for instant Body Mass Index and category — underweight, normal, overweight, or obesity ranges explained.',
+    'Height and weight in—your BMI and a plain-English category appear on the spot, metric or imperial. Stays private in your browser. No signup.',
   path: '/tools/bmi-calculator',
   ogImagePath: ogToolPath('bmi-calculator'),
   ogImageAlt: toolOgAlt('bmi-calculator'),

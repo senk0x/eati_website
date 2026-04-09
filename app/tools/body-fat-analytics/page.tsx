@@ -6,9 +6,9 @@ import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Body Fat From Photo | AI Visual Estimate (Front & Side)',
+  title: 'Body Fat From Photo | Fast Visual % Estimate',
   description:
-    'Upload front and optional side photos for an AI-assisted body fat percentage estimate — a visual companion to tape measurements, not a medical DEXA replacement. Free on Eati.',
+    'Front and optional side photos—get a fast body fat percentage read alongside tape measurements. Educational only, not a clinic scan. No signup.',
   path: '/tools/body-fat-analytics',
   ogImagePath: ogToolPath('body-fat-analytics'),
   ogImageAlt: toolOgAlt('body-fat-analytics'),

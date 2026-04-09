@@ -6,9 +6,9 @@ import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Calorie Deficit Calculator | Safe Fat Loss & Weekly Pace',
+  title: 'Calorie Deficit Calculator | Safe Weekly Fat Loss Pace',
   description:
-    'Plan a sustainable calorie deficit from your TDEE: pick mild, standard, or aggressive targets and see estimated weekly weight change. Free fat loss calculator by Eati.',
+    'From TDEE, pick how aggressive you want to cut—see daily calories and roughly pounds per week off. Sustainable pacing with no guesswork. No signup.',
   path: '/tools/calorie-deficit-calculator',
   ogImagePath: ogToolPath('calorie-deficit-calculator'),
   ogImageAlt: toolOgAlt('calorie-deficit-calculator'),

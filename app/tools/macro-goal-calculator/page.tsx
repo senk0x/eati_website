@@ -6,9 +6,9 @@ import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Macro Calculator | Protein, Carbs & Fat Targets by Goal',
+  title: 'Macro Calculator | Gram Targets From Your TDEE',
   description:
-    'Free macro goal calculator from TDEE: split protein, carbs, and fats for fat loss, maintenance, or muscle gain. Evidence-based ratios — pair with Eati’s AI calorie tracker.',
+    'Enter TDEE and goal—get protein, carb, and fat grams for cutting, maintaining, or bulking. Tweak inputs and watch targets update; no guesswork. No account.',
   path: '/tools/macro-goal-calculator',
   ogImagePath: ogToolPath('macro-goal-calculator'),
   ogImageAlt: toolOgAlt('macro-goal-calculator'),
