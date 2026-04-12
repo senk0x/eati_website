@@ -16,3 +16,21 @@ export function sendPageView(path: string): void {
     page_path: path,
   });
 }
+
+export type EatiCtaAnalyticsPayload = {
+  context_type: string;
+  topic?: string;
+  variant?: string;
+  placement_id?: string;
+  button_label?: string;
+};
+
+export function sendEatiCtaView(payload: EatiCtaAnalyticsPayload): void {
+  if (typeof window === "undefined" || !window.gtag) return;
+  window.gtag("event", "eati_cta_view", { ...payload });
+}
+
+export function sendEatiCtaClick(payload: EatiCtaAnalyticsPayload): void {
+  if (typeof window === "undefined" || !window.gtag) return;
+  window.gtag("event", "eati_cta_click", { ...payload });
+}

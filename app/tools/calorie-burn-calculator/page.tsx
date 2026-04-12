@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import CalorieBurnCalculator from '@/components/CalorieBurnCalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
@@ -71,6 +72,12 @@ export default function CalorieBurnCalculatorPage() {
           </p>
 
           <CalorieBurnCalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="calorie burn exercise activity"
+            placementId="tool/calorie-burn-calculator"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div

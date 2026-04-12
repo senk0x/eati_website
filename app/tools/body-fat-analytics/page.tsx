@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import BodyFatAnalytics from '@/components/BodyFatAnalytics';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
@@ -69,6 +70,12 @@ export default function BodyFatAnalyticsPage() {
           </p>
 
           <BodyFatAnalytics />
+          <EatiCTA
+            contextType="tool"
+            topic="body fat photo analytics estimate"
+            placementId="tool/body-fat-analytics"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div

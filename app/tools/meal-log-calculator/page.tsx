@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import MealLogCalculator from '@/components/MealLogCalculator';
 import { getFrequentlySearchedFoods } from '@/lib/foods';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
@@ -73,6 +74,12 @@ export default function MealLogCalculatorPage() {
           </p>
 
           <MealLogCalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="meal log calories tracking"
+            placementId="tool/meal-log-calculator"
+            className="mt-8"
+          />
 
           {/* Frequently Searched Foods */}
           <section

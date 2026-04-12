@@ -5,6 +5,17 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://eatiapp.com"
 ).replace(/\/$/, "");
 
+/** iOS App Store listing (partner token + campaign tag for attribution). */
+const EATI_APP_STORE_LISTING_PATH = "/app/apple-store/id6758241088";
+
+export function eatiAppStoreUrl(campaignTag: string): string {
+  const u = new URL(EATI_APP_STORE_LISTING_PATH, "https://apps.apple.com");
+  u.searchParams.set("pt", "127995771");
+  u.searchParams.set("ct", campaignTag.slice(0, 120));
+  u.searchParams.set("mt", "8");
+  return u.toString();
+}
+
 /** Default marketing title/description (root layout + fallbacks). */
 export const DEFAULT_SITE_TITLE =
   "Eati — AI Calorie Tracker App | Fat Loss & Macro Logging";

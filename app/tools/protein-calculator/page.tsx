@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import ProteinCalculator from '@/components/ProteinCalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
@@ -69,6 +70,12 @@ export default function ProteinCalculatorPage() {
           </p>
 
           <ProteinCalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="protein calculator grams per day"
+            placementId="tool/protein-calculator"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div

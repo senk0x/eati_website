@@ -9,7 +9,9 @@ import {
   generateTableOfContents,
 } from '@/lib/blog';
 import LinkedText from '@/components/LinkedText';
-import { SITE_URL, blogPostOgImagePath, buildPageMetadata } from '@/lib/seo';
+import EatiCTA from '@/components/EatiCTA';
+import { blogTopicFromArticle } from '@/lib/eati-cta-copy';
+import { SITE_URL, blogPostOgImagePath, buildPageMetadata, eatiAppStoreUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -259,7 +261,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   {article.midArticleCta}
                 </p>
                 <a
-                  href="https://apps.apple.com/app/apple-store/id6758241088?pt=127995771&ct=Official%20Website&mt=8"
+                  href={eatiAppStoreUrl('blog_mid_article')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[#364052] transition-colors hover:bg-gray-100"
@@ -271,6 +273,16 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </a>
               </div>
             )}
+
+            <EatiCTA
+              contextType="blog"
+              topic={blogTopicFromArticle({
+                targetKeyword: article.targetKeyword,
+                title: article.title,
+              })}
+              placementId={`blog/${slug}`}
+              className="mt-2"
+            />
 
             {/* Conclusion */}
             <section>

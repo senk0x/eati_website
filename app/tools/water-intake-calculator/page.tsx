@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import WaterIntakeCalculator from '@/components/WaterIntakeCalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
@@ -69,6 +70,12 @@ export default function WaterIntakeCalculatorPage() {
           </p>
 
           <WaterIntakeCalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="water intake hydration calculator"
+            placementId="tool/water-intake-calculator"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div

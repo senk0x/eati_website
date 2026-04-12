@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import TDEECalculator from '@/components/TDEECalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { toolSerpAb } from '@/lib/tools-serp-ab';
@@ -65,6 +66,12 @@ export default function TDEECalculatorPage() {
           </p>
 
           <TDEECalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="TDEE calculator maintenance calories"
+            placementId="tool/tdee-calculator"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div

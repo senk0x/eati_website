@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import FoodPortionCalculator from '@/components/FoodPortionCalculator';
 import { getFoodBySlug, getAllFoodSlugs, getRelatedFoods } from '@/lib/foods';
 import { foodDetailOgImagePath, SITE_URL, buildPageMetadata } from '@/lib/seo';
@@ -391,6 +392,14 @@ export default async function FoodPage({ params }: Props) {
 
           {/* Dynamic portion calculator (food pages only) */}
           <FoodPortionCalculator food={food} />
+
+          <EatiCTA
+            contextType="programmatic"
+            topic={`${name} calories macros nutrition`}
+            productName={name}
+            placementId={`foods/${slug}`}
+            className={sectionClass}
+          />
 
           {/* Section 3: Is X Good for Weight Loss? */}
           <section className={sectionClass}>

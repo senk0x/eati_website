@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import BMICalculator from '@/components/BMICalculator';
 import { SeoFaqSection } from '@/components/SeoFaqSection';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
@@ -103,6 +104,12 @@ export default function BMICalculatorPage() {
           </p>
 
           <BMICalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="BMI calculator body mass index"
+            placementId="tool/bmi-calculator"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div

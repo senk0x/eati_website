@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import BodyFatCalculator from '@/components/BodyFatCalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
@@ -71,6 +72,12 @@ export default function BodyFatCalculatorPage() {
           </p>
 
           <BodyFatCalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="body fat calculator estimate percentage"
+            placementId="tool/body-fat-calculator"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import EatiCTA from '@/components/EatiCTA';
 import IBWCalculator from '@/components/IBWCalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
@@ -69,6 +70,12 @@ export default function IdealBodyWeightCalculatorPage() {
           </p>
 
           <IBWCalculator />
+          <EatiCTA
+            contextType="tool"
+            topic="ideal body weight calculator target weight"
+            placementId="tool/ideal-body-weight-calculator"
+            className="mt-8"
+          />
 
           {/* SEO description */}
           <div className="mt-16 space-y-10 border-t border-[#E3ECF7] pt-10">
