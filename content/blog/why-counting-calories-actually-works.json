@@ -22,19 +22,53 @@
     {
       "heading": "Use Calorie Counting as a Phase, Not a Prison",
       "content": "For many people, the best way to use calorie counting is as a temporary learning tool. You track for a few months while you lose weight and learn what portions, foods, and meal patterns work for you. Then, once you have reached your goal or built strong habits, you can transition to a more intuitive approach informed by that knowledge.\n\nYou might continue using Eati occasionally—to check in after holidays, during stressful periods, or when you notice your weight creeping up. This hybrid method gives you the clarity of tracking when you need it, without making it a lifetime obligation.\n\nIn this way, calorie counting becomes a skill you can use whenever you want more control, not a diet you are stuck with forever."
+    },
+    {
+      "heading": "The Science: Why Calorie Counting Outperforms Most 'Diets'",
+      "content": "Head-to-head research comparing popular diets consistently finds that when calories are matched, results are similar. Low-carb vs. low-fat, keto vs. Mediterranean, high-protein vs. moderate-protein — the winner in weight-loss trials is whichever group adhered best, not which macro split they used.\n\nCalorie counting wins where it matters most: adherence and awareness. A few key reasons:\n\n• It converts vague instructions ('eat healthy,' 'avoid carbs') into a measurable target you can hit or miss.\n• It works across all eating styles, so you don't have to abandon foods you enjoy.\n• It reveals compensation — when you 'earn' a dessert by skipping breakfast, the numbers show whether you actually stayed in a deficit.\n• It scales with your results. As you lose weight, a quick recalculation with a TDEE calculator updates the target instead of forcing you to pick a new diet.\n\nCounting isn't magic; it's the most precise way to apply a principle (calorie deficit) that every other diet relies on indirectly. For a deeper dive on deficits, read [what is a calorie deficit](/blog/what-is-a-calorie-deficit)."
+    },
+    {
+      "heading": "How Calorie Counting Teaches Portion Intuition",
+      "content": "Perhaps the biggest hidden benefit of counting: after a few months, you don't need to count anymore — because you finally see portions accurately.\n\nMost people start tracking with massive blind spots. A 'tablespoon' of peanut butter is closer to 2. A restaurant 'salad' can rival a pizza. A 'small' pasta portion is often 2–3 servings. After weighing and logging for a few weeks, you learn:\n\n• What 150 g of cooked rice actually looks like on your plate\n• How much oil really ends up in the pan\n• How quickly nuts, cheese, and dressings add up\n• The true difference between a 'light' and 'filling' version of the same meal\n\nThis recalibration sticks. Years later, you can glance at a plate and estimate calories within 10–15%. That's a skill no diet book can give you — it only comes from feedback loops, which is exactly what calorie counting provides. Use Eati to shortcut the learning: describe a meal, see the estimate, and calibrate your intuition week by week."
+    },
+    {
+      "heading": "How to Count Calories Without Burning Out",
+      "content": "The people who get the most from calorie counting treat it like a skill, not a punishment. Some principles:\n\n• Aim for 'accurate enough,' not 'perfect.' ±10% is fine.\n• Log meals in one batch at the end of the meal, not bite-by-bite.\n• Weigh staples (oils, rice, meat, nut butter) for 2 weeks, then estimate.\n• Include weekends and social meals — they're where most progress gets lost.\n• Review weekly, not daily. Single-day numbers are noisy; 7-day averages are signal.\n• Use friendly tools. A conversational app like Eati costs seconds per meal, which is why people actually keep logging.\n• Take diet breaks every 8–12 weeks at maintenance to reset hunger and mindset.\n\nPair this with basic tools — a calorie calculator for your daily target and a macro goal calculator for protein — and you have a complete system that makes tracking feel sustainable instead of exhausting. For more on execution, see [how to track calories correctly](/blog/how-to-track-calories-correctly)."
     }
   ],
   "midArticleCta": "Curious how powerful calorie awareness can be? Try logging a few days of eating in Eati and see how your actual intake compares to what you expected.",
   "conclusion": "Counting calories works because it respects the basic physics of weight loss while giving you clear, actionable feedback on your habits. When you use it to learn, adjust, and stay accountable—rather than to punish yourself—it becomes one of the most reliable tools for changing your body composition. Combined with Eati’s fast, intuitive logging, calorie tracking helps you turn vague effort into predictable, sustainable progress.",
   "coverImage": "/images/blog/1773399236004-rj72n8.jpg",
-  "metaTitle": "Why Counting Calories Actually Works | Eati Blog",
-  "metaDescription": "Discover why calorie counting still works, how to do it without obsession, and how to use it as a powerful tool for long‑term fat loss.",
+  "metaTitle": "Why Counting Calories Actually Works: The Science Behind Sustainable Fat Loss",
+  "metaDescription": "Counting calories works because it turns vague diet advice into a measurable target. Learn why calorie tracking beats most diets, builds portion intuition, and delivers sustainable fat loss.",
   "targetKeyword": "why counting calories actually works",
   "publishedAt": "2026-03-10T11:10:00Z",
   "published": true,
   "relatedSlugs": [
     "how-to-track-calories-correctly",
     "do-you-really-need-to-count-calories-to-lose-weight",
-    "why-most-diets-fail"
+    "is-tracking-calories-worth-it"
+  ],
+  "faqs": [
+    {
+      "question": "Why does counting calories work for some people and not others?",
+      "answer": "It works when people are consistent, log weekends, use a realistic target, and review weekly averages. It 'fails' when tracking is sporadic, the deficit is too aggressive, portions are unmeasured for calorie-dense foods, or social meals are skipped in the log. Fixing these almost always restarts progress."
+    },
+    {
+      "question": "Is it better to count calories or macros?",
+      "answer": "Calories drive weight change; macros (especially protein) drive body composition and hunger. For most goals, tracking calories plus a protein target is enough. Full macro tracking helps performance-focused athletes and physique competitors but usually isn't necessary for general fat loss."
+    },
+    {
+      "question": "How accurate are calorie-counting apps?",
+      "answer": "Within about ±10% for standard foods, which is plenty for fat loss. Sources of error are portion estimation, variable recipes, and database quality. AI-based apps like Eati reduce database errors by generating fresh estimates from your description rather than relying on user-submitted entries."
+    },
+    {
+      "question": "Do I have to count calories forever to keep weight off?",
+      "answer": "No. Most people track intensively during weight loss, then transition to occasional logging during holidays, travel, or whenever the scale creeps up. The skills you build — portion awareness, meal templates, weekly review — stick long after you stop daily tracking."
+    },
+    {
+      "question": "Can I lose weight without counting calories?",
+      "answer": "Yes, by using structural rules (higher protein, less ultra-processed food, smaller portions) that produce a deficit indirectly. Counting just makes the deficit explicit and much easier to troubleshoot if progress stalls."
+    }
   ]
 }

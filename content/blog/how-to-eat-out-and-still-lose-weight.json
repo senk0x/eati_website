@@ -22,19 +22,53 @@
     {
       "heading": "Handle Drinks and Desserts Intentionally",
       "content": "Liquid calories and desserts are some of the easiest ways to overshoot your target without feeling full. You do not have to avoid them completely, but make them deliberate choices rather than automatic add‑ons.\n\nDecide in advance: tonight, am I prioritizing a drink, a dessert, or a larger main course? Choose one or two instead of all three. For drinks, consider lower‑calorie options (like spirits with zero‑calorie mixers) or alternate alcoholic drinks with water.\n\nBy logging these in Eati along with your food, you will see how quickly they can add up—and how powerful it is to enjoy them in moderation."
+    },
+    {
+      "heading": "Best Menu Choices by Cuisine",
+      "content": "Different cuisines make different meals easy or hard. Here's a cheat sheet for staying in a deficit while enjoying the food.\n\nAmerican/Grill:\n• Order: grilled chicken, steak (6–8 oz), salmon, big salad with dressing on the side.\n• Skip or split: fried foods, loaded baked potatoes, creamy sauces, giant burgers with fries.\n\nItalian:\n• Order: grilled fish or chicken, lean protein over half-portion pasta, Caprese salad, thin-crust pizza with veggies.\n• Skip or split: cream sauces (Alfredo, carbonara), cheesy breads, family-style pasta bowls.\n\nMexican:\n• Order: fajitas (go light on tortillas), grilled meats, salads, ceviche, street tacos (2–3).\n• Skip or split: chips and queso as the entire meal, creamy enchiladas, chimichangas, frozen margaritas (500–700 cal each).\n\nAsian (Chinese/Thai/Japanese):\n• Order: sashimi, sushi rolls (prioritize non-tempura), stir-fry with steamed rice, clear or miso soup, edamame.\n• Skip or split: sweet-sour, General Tso's, fried rice, pad thai (900–1,200 cal), lo mein.\n\nIndian:\n• Order: tandoori proteins, tikka, dal, vegetable curries in tomato-based sauces, one side of rice or one naan (not both).\n• Skip or split: creamy curries (butter chicken, korma), biryani family-style, fried appetizers.\n\nFast food:\n• Order: grilled chicken sandwiches, small burgers, salads with grilled protein, protein bowls, wraps without mayo.\n• Skip or split: large fries, shakes, combos, anything fried and breaded.\n\nA calorie calculator gives you your target for the day; smart cuisine-by-cuisine swaps keep restaurant meals inside it."
+    },
+    {
+      "heading": "How to Log Restaurant Meals in a Calorie Tracker",
+      "content": "Most people skip restaurant logs because they feel impossible to track accurately. In reality, 'good enough' logging is surprisingly powerful.\n\nA simple workflow:\n\n1. Describe the dish in plain language as specifically as possible: 'grilled salmon, about 6 oz, with roasted potatoes and asparagus, no visible butter on the salmon.'\n2. Add cooking fats and dressings: 'dressing on the side, used about half.'\n3. Include drinks and bread basket: '1 glass of wine, 1 piece of bread with butter.'\n4. For shared dishes, estimate your portion: 'split a large pizza 3 ways, had 3 slices.'\n\nAI-based apps like Eati handle descriptions like these natively and give you a calorie estimate in seconds — no database search required. Even if the estimate is ±15%, it's far better than skipping the log entirely and letting a 1,200-calorie dinner vanish from your weekly average.\n\nOnce you know your numbers, a calorie deficit calculator or TDEE calculator helps you decide how to compensate — maybe a slightly lighter breakfast or a 30-minute walk the next day. For more, see [how to track calories correctly](/blog/how-to-track-calories-correctly)."
+    },
+    {
+      "heading": "Fast Food, Coffee Shops, and Delivery Done Right",
+      "content": "You don't have to avoid fast food, coffee shops, or delivery to lose weight. A few rules handle each:\n\nFast food:\n• Skip the combo; order protein + sides separately to stay under 600 cal.\n• Swap fries for a side salad or fruit; ask for sauces on the side.\n• Grilled > crispy/fried; double meat + no bun is usually better than single meat + bun + fries.\n\nCoffee shops:\n• Specialty drinks run 250–500 calories. Switch to black coffee, Americano, or coffee with milk for 30–70 calories.\n• Skip whipped cream and flavored syrups, or ask for half the syrup.\n• For breakfast sandwiches, pick egg + lean protein over sausage + cheese.\n\nDelivery apps:\n• Check calorie counts before ordering; many chains now display them.\n• Choose one indulgence per order (dessert OR fries OR extra cheese), not all three.\n• Portion half the meal into tomorrow's lunch container before you start eating — instantly cuts calories in half.\n\nFor the daily flexibility framework, see [how to lose weight without giving up your favorite foods](/blog/how-to-lose-weight-without-giving-up-your-favorite-foods). For keeping hunger manageable overall, read [how to stay in a calorie deficit without feeling hungry](/blog/how-to-stay-in-a-calorie-deficit-without-feeling-hungry)."
     }
   ],
   "midArticleCta": "Want to see how your favorite restaurant meals fit your goals? Log them in Eati, get instant calorie and macro estimates, and adjust portion sizes or sides without giving up the foods you love.",
   "conclusion": "Eating out does not have to be the enemy of weight loss. When you plan ahead, make smart menu swaps, control portions, and treat drinks and desserts as intentional choices, you can enjoy social meals and still move steadily toward your goal. With Eati making restaurant logging fast and simple, you get to keep your lifestyle—and your progress.",
   "coverImage": "/images/blog/1773399264831-gt5cal.jpg",
-  "metaTitle": "How to Eat Out and Still Lose Weight | Eati Blog",
-  "metaDescription": "Learn practical strategies to enjoy restaurants, takeout, and social meals while staying in a calorie deficit and losing weight.",
+  "metaTitle": "How to Eat Out and Still Lose Weight: Restaurant Menu Hacks by Cuisine",
+  "metaDescription": "Enjoy restaurants, fast food, and delivery while losing weight. Menu tips by cuisine, portion control tactics, smart drink and dessert choices, and how to log restaurant meals accurately.",
   "targetKeyword": "how to eat out and still lose weight",
   "publishedAt": "2026-03-10T11:15:00Z",
   "published": true,
   "relatedSlugs": [
     "how-to-lose-weight-without-giving-up-your-favorite-foods",
     "how-to-track-calories-correctly",
-    "why-most-diets-fail"
+    "how-to-stay-in-a-calorie-deficit-without-feeling-hungry"
+  ],
+  "faqs": [
+    {
+      "question": "Can you lose weight and still eat out often?",
+      "answer": "Yes. Many people lose weight while eating out 3–5 times per week. The key is menu discipline (grilled proteins, vegetables, one indulgence per meal), honest portion estimation, and logging in a calorie tracker. Aim for daily calories in a deficit averaged over the week, not every single meal."
+    },
+    {
+      "question": "How many calories does a typical restaurant meal have?",
+      "answer": "Most sit-down restaurant entrées run 900–1,400 calories before sides, drinks, and dessert. Full meals easily hit 1,500–2,500 calories. Assuming 1.5–2× what a home version would have is usually closer to reality than menu 'light' sections suggest."
+    },
+    {
+      "question": "What's the best low-calorie restaurant meal?",
+      "answer": "Grilled protein (chicken, salmon, steak 6 oz) with a salad or roasted vegetables and dressing on the side, plus a small side of rice or potato. This typically lands at 500–700 calories with 40+ g of protein, fitting most fat-loss targets comfortably."
+    },
+    {
+      "question": "How do I eat out without overeating?",
+      "answer": "Eat a protein-rich snack 60–90 minutes before the meal so you arrive hungry but not starving. Order protein + vegetables first, ask for sauces on the side, and portion half your meal into a to-go box before starting. Choose one indulgence (drink OR dessert OR appetizer) rather than all three."
+    },
+    {
+      "question": "Does alcohol really matter that much when eating out?",
+      "answer": "Yes. A glass of wine is 120–200 calories; a cocktail 250–500; a margarita or piña colada 500–700. Two drinks can add 400–900 untracked calories to a meal, often more than the main entrée. Alternate with water and choose lower-calorie options (spirits with zero-cal mixers, light beer, dry wine) when possible."
+    }
   ]
 }

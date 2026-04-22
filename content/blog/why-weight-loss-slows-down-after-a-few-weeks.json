@@ -22,19 +22,53 @@
     {
       "heading": "How to Safely Restart Progress When Loss Slows",
       "content": "When progress slows for 3–4 weeks, run through a simple checklist:\n\n1. Log your intake thoroughly for 10–14 days.\n2. Check your average calories versus your estimated maintenance at your new body weight.\n3. Track your steps and confirm you are not significantly less active than before.\n4. Review weekends and social events for large, untracked calorie spikes.\n\nIf your deficit has effectively disappeared, make a small change instead of overreacting: reduce average daily intake by 150–300 calories, increase movement slightly, or both. Then give the new plan at least 3–4 weeks before judging it."
+    },
+    {
+      "heading": "Real vs Perceived Plateaus: How to Tell the Difference",
+      "content": "Not every 'plateau' is a real plateau. Many are just normal fluctuations that feel like stalls because we're looking at individual daily readings instead of trends.\n\nSigns of a perceived (not real) plateau:\n• Weight is flat for 1–2 weeks but was dropping before.\n• Scale jumps 1–3 lbs overnight and you panic.\n• You weigh daily and notice every up-tick.\n• It's the week before your period, after a salty meal, or after intense exercise.\n• Your clothes fit the same or slightly looser.\n\nThese are not plateaus. Water retention from sodium, glycogen fluctuations, menstrual cycles, muscle recovery inflammation, and digestive variation can all mask real fat loss for 1–3 weeks. Body fat is still dropping underneath.\n\nSigns of a real plateau:\n• Weight is flat for 3+ weeks on a consistent tracking weekly average.\n• Measurements (waist, hips) also stopped changing.\n• Clothes fit the same for weeks.\n• Progress photos show no visible change over a month.\n\nAction depends on which type you're dealing with. For perceived plateaus: keep going, track the 7-day weight average, and wait another week. For real plateaus: run the diagnostic checklist in the previous section, and recalculate your maintenance calories using a TDEE calculator. For deeper troubleshooting, read [why am I not losing weight in a calorie deficit](/blog/why-am-i-not-losing-weight-in-a-calorie-deficit)."
+    },
+    {
+      "heading": "The Diet Break: A Counterintuitive Strategy That Works",
+      "content": "When a real plateau persists despite doing everything right, a common fix is to stop dieting temporarily. Sounds backwards, but research consistently shows it works.\n\nWhat a diet break is:\nA planned 1–2 week period where you eat at your new maintenance calories (not a cheat, just maintenance). Keep protein high, training normal, and tracking on.\n\nWhy it works:\n• Reduces metabolic adaptation (leptin, thyroid hormones rebound).\n• Increases NEAT (you move more spontaneously).\n• Restores training intensity and mental focus.\n• Provides a psychological reset — many people come back more motivated.\n• Breaks the chronic-deficit fatigue that causes sloppy tracking.\n\nHow to structure it:\n1. Calculate maintenance calories using a calorie calculator based on your current (reduced) weight.\n2. Eat at that maintenance level for 10–14 days. Don't binge; just match calories.\n3. Expect a 1–3 lb jump from glycogen and water in the first 3 days — this is not fat gain.\n4. Resume your deficit. Many people see weight immediately drop to below where they started the break within 2 weeks.\n\nStudies on the MATADOR protocol showed people using diet breaks (2 weeks cut, 2 weeks maintenance, repeat) lost more fat and kept it off better than continuous dieters over 30 weeks. For more on making your deficit sustainable, see [how to stay in a calorie deficit without feeling hungry](/blog/how-to-stay-in-a-calorie-deficit-without-feeling-hungry)."
+    },
+    {
+      "heading": "Protein, Strength Training, and Why They Matter More Now",
+      "content": "As you lose weight, preserving muscle becomes increasingly important. Muscle is your metabolically expensive tissue — losing it lowers your maintenance calories and shrinks the visible results you get from fat loss (no 'toned' look).\n\nAt the start of a diet: You can get away with moderate protein (1.2–1.4 g/kg) and casual training.\n\nAfter several weeks in a deficit: Requirements ramp up.\n• Protein: 1.8–2.2 g/kg of body weight (or about 1.0 g/lb). This is non-negotiable for muscle retention.\n• Resistance training 3–4x per week. Emphasizes compound lifts: squat, deadlift, bench, row, overhead press. This signals your body to keep muscle it would otherwise shed.\n• Heavy loads, not just high reps. Training to near-failure at 6–12 reps is more effective for muscle retention than light circuit training.\n\nPeople who hit these targets in a calorie deficit typically preserve 90%+ of their muscle. People who don't often lose 25–40% of weight as muscle, causing metabolic slowdown and poor body composition outcomes. Use a protein calculator to hit your updated protein target, and consider adding resistance training if you've been doing only cardio. For practical food choices, see [high-protein low-calorie foods](/blog/high-protein-low-calorie-foods)."
     }
   ],
   "midArticleCta": "Has your progress slowed? Use Eati to tighten your tracking for a couple of weeks and see exactly where your deficit has shrunk—and how to nudge it back without extreme dieting.",
   "conclusion": "Weight loss slowing after the first few weeks is not a sign of failure; it is a normal part of how your body responds to a calorie deficit. Water loss stabilizes, you weigh less, you may move less, and your margin for error becomes smaller. By understanding these factors and using tools like Eati to keep your nutrition honest, you can make small, intelligent adjustments that keep the scale moving without burning out.",
   "coverImage": "/images/blog/1773399146774-74351d.jpg",
-  "metaTitle": "Why Weight Loss Slows Down After a Few Weeks | Eati Blog",
-  "metaDescription": "Learn why your weight loss slows after early success and how to adjust your calories, activity, and habits to restart progress without extreme diets.",
+  "metaTitle": "Why Weight Loss Slows Down After a Few Weeks: Causes & Fixes",
+  "metaDescription": "Weight loss slowing after early success is normal — water loss stabilizes, maintenance calories drop, and NEAT shrinks. Learn to spot real vs perceived plateaus and use diet breaks, protein, and tracking to restart progress.",
   "targetKeyword": "why weight loss slows down after a few weeks",
   "publishedAt": "2026-03-10T11:00:00Z",
   "published": true,
   "relatedSlugs": [
     "why-am-i-not-losing-weight-in-a-calorie-deficit",
     "how-long-does-it-take-to-lose-weight-in-a-calorie-deficit",
-    "why-most-diets-fail"
+    "how-to-stay-in-a-calorie-deficit-without-feeling-hungry"
+  ],
+  "faqs": [
+    {
+      "question": "Why does weight loss slow down after a few weeks?",
+      "answer": "Four main reasons: (1) Initial water and glycogen loss stabilizes, so the scale now reflects true fat loss rate (0.5–1% body weight per week). (2) You weigh less, so your body burns fewer calories at rest. (3) NEAT (non-exercise activity) drops unconsciously in a diet. (4) Diet drift — portions, snacks, and untracked weekend calories creep in. Together these can shrink a once-effective deficit to nothing."
+    },
+    {
+      "question": "How long does a weight loss plateau last?",
+      "answer": "Most 'plateaus' are 1–2 weeks of normal fluctuation due to water, stress, or cycle effects — not real plateaus. A genuine plateau (no change for 3+ weeks on a tracking weekly average) usually indicates your deficit has disappeared. Once you adjust calories or add movement, progress typically resumes within 1–2 weeks."
+    },
+    {
+      "question": "Should I eat more or less to break a plateau?",
+      "answer": "Usually less, not more — but only if you've verified a real plateau and your logging is accurate. If you've been in a deficit for 3+ months, a 1–2 week diet break at maintenance calories can help reset hormones and metabolism before resuming the deficit. Eating more long-term won't restart fat loss."
+    },
+    {
+      "question": "Is a weight loss plateau normal?",
+      "answer": "Yes. Plateaus are nearly universal in weight loss. Almost everyone hits one (or several) if they're dieting for more than 8–12 weeks. Understanding they're normal — not a sign of failure — is critical for pushing through without panic diets or giving up."
+    },
+    {
+      "question": "Does a 'starvation mode' exist?",
+      "answer": "True starvation mode (where your body refuses to lose weight) is a myth. What's real is metabolic adaptation — a 10–15% reduction in maintenance calories beyond what's predicted by weight loss alone, driven by lower NEAT, hormonal changes (thyroid, leptin), and increased efficiency. This doesn't stop weight loss — it just shrinks your deficit. Adjusting calories, adding activity, and using diet breaks handle it."
+    }
   ]
 }

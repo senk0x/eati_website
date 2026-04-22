@@ -26,19 +26,53 @@
     {
       "heading": "Use Data to Adjust, Not to Judge Yourself",
       "content": "Accurate calorie tracking is a feedback tool, not a moral scorecard. The goal is not to prove that you are \"good\" or \"bad\", but to understand how your habits affect your body.\n\nAfter 2–4 weeks of honest logging and consistent weigh‑ins, compare your average calorie intake with your weight trend. If you are not losing at the expected rate, adjust your target or tighten up obvious weak spots (like unlogged snacks or weekend meals).\n\nEati makes this process easier by handling the heavy lifting of calorie and macro estimation. You bring the honesty; the app shows you the patterns. Together, that is enough to make fat loss predictable instead of confusing."
+    },
+    {
+      "heading": "Food Weighing vs. Eyeballing: What to Measure and When",
+      "content": "You do not need to weigh lettuce or celery. You do need to weigh things that hide hundreds of calories in small servings.\n\nWeigh or carefully measure:\n\n• Oils and butter (120 cal/tbsp olive oil, ~100 cal/tbsp butter)\n• Nut butters (~100 cal/tbsp)\n• Nuts and seeds (~160–200 cal/oz)\n• Cheese (~100–120 cal/oz)\n• Granola and trail mix (~400–500 cal/cup)\n• Dressings and sauces\n• Pasta, rice, and oats dry before cooking\n• Meat portions (raw or cooked, just stay consistent)\n\nYou can eyeball:\n\n• Leafy greens and most vegetables\n• Berries and most fruits\n• Plain Greek yogurt and cottage cheese (their calorie density is moderate)\n• Broth-based soups\n• Eggs (just count them)\n\nAfter 2–3 weeks of measuring the first list, your eye calibrates and you can drop back to estimating. Use a kitchen scale (the single highest-ROI $15 in a fat loss journey) and double-check with a calorie calculator if numbers ever look suspicious."
+    },
+    {
+      "heading": "Tracking Restaurant Meals and Home-Cooked Recipes",
+      "content": "These two categories cause the most tracking errors. The fix is to estimate honestly rather than skip.\n\nRestaurant meals:\n\n• Default to estimating 1.5–2× what you'd cook at home for the same dish.\n• Log sides and drinks separately (bread basket, fries, soda, alcohol).\n• Dressings, sauces, and oils are almost always more than expected — add 100–250 calories unless you explicitly asked for sauce on the side.\n• Describe the meal in plain language in Eati: 'grilled chicken Caesar salad, standard portion, dressing on the side' works better than searching a database for an exact match.\n\nHome-cooked recipes:\n\n• For dishes you make often, calculate total recipe calories once, then divide by servings. Store the number in a notes app or just log 'my chili, 1 bowl.'\n• For shared dishes (family lasagna, casseroles), weigh your plate — it's the only reliable way to estimate.\n• Count cooking oils even if most stay in the pan. Half the oil ends up in the food.\n\nThis is an area where a conversational tracker like Eati outperforms database apps — you just describe what you ate, and it estimates calories in context."
+    },
+    {
+      "heading": "How to Reconcile Your Calories With the Scale",
+      "content": "Correct tracking means your numbers line up with your weight trend. When they don't, use this diagnostic loop:\n\n1. Weigh daily for 2 weeks and take the 7-day average at the end of each week.\n2. Compare average intake to your target calculated via a TDEE calculator minus 300–500.\n3. Expected result: weekly weight drops 0.5–1% of body weight.\n4. If weight drops as expected: tracking is accurate, plan is working.\n5. If weight is flat: your actual intake is roughly (target + needed deficit) calories higher than logged. The gap is typically from oils, drinks, weekends, or uncounted bites.\n6. If weight drops too fast (>1.5%/week after week 1): you're either under-eating or over-tracking activity. Add 100–150 calories and reassess.\n\nThis loop is what turns calorie counting from 'hopeful' to 'predictable.' For context on what progress should look like, see [how long does it take to lose weight in a calorie deficit](/blog/how-long-does-it-take-to-lose-weight-in-a-calorie-deficit). For diagnosing specific plateaus, read [why am I not losing weight in a calorie deficit](/blog/why-am-i-not-losing-weight-in-a-calorie-deficit)."
     }
   ],
   "midArticleCta": "Ready to see what you are really eating? Describe your next few meals in Eati and let the app calculate calories and macros so you can align your intake with your goals.",
   "conclusion": "Tracking calories correctly does not require perfection, but it does require consistency, honesty, and a few simple habits. By measuring key foods, logging oils and extras, tracking weekends, and reviewing your data calmly, you turn calorie counting into a powerful, low‑stress tool. Combine these strategies with Eati’s fast, text‑based logging and you will finally understand how your daily choices translate into weekly results on the scale—and how to tweak them for steady, sustainable fat loss.",
   "coverImage": "/images/blog/1773398848430-8xsicj.jpg",
-  "metaTitle": "How to Track Calories Correctly for Weight Loss | Eati Blog",
-  "metaDescription": "Learn how to count calories accurately so your results match your expectations. Discover practical tips for weighing food, logging meals, and using data to guide fat loss.",
+  "metaTitle": "How to Track Calories Correctly: Accurate Logging for Real Weight Loss Results",
+  "metaDescription": "Learn how to count calories accurately: what to weigh vs. eyeball, how to log restaurant and home-cooked meals, and how to reconcile your numbers with the scale for steady fat loss.",
   "targetKeyword": "how to track calories correctly",
   "publishedAt": "2026-03-10T10:30:00Z",
   "published": true,
   "relatedSlugs": [
-    "how-many-calories-to-lose-weight",
+    "how-many-calories-should-i-eat-to-lose-weight",
     "why-counting-calories-actually-works",
     "do-you-really-need-to-count-calories-to-lose-weight"
+  ],
+  "faqs": [
+    {
+      "question": "How do I track calories accurately without weighing everything?",
+      "answer": "Weigh calorie-dense foods (oils, nut butters, cheese, nuts, granola) for 2–3 weeks to calibrate your eye, then estimate. Always log oils, sauces, drinks, and weekend meals — these are where most tracking errors come from. Aim for ±10% accuracy, not perfection."
+    },
+    {
+      "question": "Should I weigh food raw or cooked?",
+      "answer": "Either works, as long as you're consistent. Raw weights are more accurate (cooked weights change with water content), but cooked is often more convenient. Pick one method per food and stick with it. For meat, raw weights typically run 20–25% higher than cooked because of water loss."
+    },
+    {
+      "question": "Why are my calorie counts different in different apps?",
+      "answer": "Most traditional apps rely on user-submitted database entries, which vary widely. The same cup of pasta can show 200 vs. 300 calories depending on the entry. AI-based apps like Eati generate estimates from your description instead of relying on crowd-sourced data, which reduces this type of error."
+    },
+    {
+      "question": "How do I track calories when eating out?",
+      "answer": "Estimate 1.5–2× what the home version would have, log sides and drinks separately, and add 100–250 calories for sauces and cooking fats unless you asked for them on the side. Describe the meal in plain language rather than trying to find an exact database match."
+    },
+    {
+      "question": "Do I need to count calories on rest days the same as training days?",
+      "answer": "For fat loss, yes — daily consistency is simpler and more effective than carb-cycling or rest/training day splits for most non-athletes. If you prefer to eat more on training days, add 150–300 calories on heavy days and subtract the same on rest days to keep the weekly average stable."
+    }
   ]
 }

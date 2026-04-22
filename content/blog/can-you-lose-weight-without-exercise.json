@@ -22,13 +22,25 @@
     {
       "heading": "When to Add Strength Training Back In",
       "content": "If you can, consider introducing some form of resistance training once you are able. It does not have to be heavy lifting in a gym—bodyweight exercises, resistance bands, or simple dumbbell workouts at home are all effective.\n\nStrength training helps you:\n\n• Preserve or build muscle while losing fat.\n• Improve joint health and stability.\n• Enhance your metabolism and body composition.\n\nEven two short sessions per week can make your results noticeably better. When combined with accurate tracking in Eati, you have both sides of the equation working in your favor."
+    },
+    {
+      "heading": "Diet-Only Weight Loss: Realistic Timeline and Expectations",
+      "content": "You can lose meaningful weight without working out, but the pace and experience differ from a diet + exercise approach.\n\nTypical results with diet alone (moderate 500-calorie deficit):\n• Week 1: 2–4 lb drop (mostly water and glycogen)\n• Weeks 2–4: 0.75–1.5 lb/week on average\n• Months 2–3: 0.5–1.25 lb/week as metabolic adaptation kicks in\n• Months 4–6: slowing to 0.3–0.75 lb/week; may need small calorie or step adjustments\n\nTradeoffs:\n• Body shape changes more slowly — muscle definition requires resistance training\n• Metabolic rate drops slightly more because there's no strength training to preserve muscle\n• Plateaus tend to come sooner because you can't use extra activity to widen the deficit\n\nTo compensate, pay extra attention to protein (0.8–1 g per pound of body weight), use a calorie deficit calculator to keep your target realistic, and expect to recalculate with a TDEE calculator every 8–10 lb lost. For realistic expectations, see [how long does it take to lose weight in a calorie deficit](/blog/how-long-does-it-take-to-lose-weight-in-a-calorie-deficit)."
+    },
+    {
+      "heading": "The 'Walking Only' Plan That Works Like Exercise",
+      "content": "If structured workouts aren't possible but you can walk, this counts as hybrid diet + light movement rather than pure diet-only — and it's one of the highest-ROI approaches for sustainable weight loss.\n\nA simple 4-week walking progression:\n\n• Week 1: 15 minutes of walking after dinner daily (~2,000 extra steps, ~75 cal).\n• Week 2: 20 minutes after dinner + 10 minutes at lunch (~4,000 extra steps, ~150 cal).\n• Week 3: 30 minutes after dinner + 10 minutes at lunch + 2,000 casual steps (~8,000 total, ~250 cal).\n• Week 4: Aim for 10,000 daily steps total, spread across any time of day (~350–400 cal).\n\nOver a week, this walking alone adds 2,000–2,800 calories of burn — roughly another pound of fat per month on top of your dietary deficit. Use a calorie burn calculator to estimate your personal numbers.\n\nWalking is gentle on joints, improves mood, stabilizes blood sugar, and builds a habit of daily movement without requiring a gym. For most people who 'don't exercise,' this is the lightest-effort way to dramatically improve fat-loss outcomes."
+    },
+    {
+      "heading": "Diet-Only Pitfalls to Watch Out For",
+      "content": "When exercise isn't part of the plan, certain mistakes hurt more. Watch out for these.\n\n1. Cutting calories too aggressively. Without exercise to add back calories on training days, a too-deep deficit is harder to recover from. Keep the deficit to 300–500 per day.\n\n2. Protein below 0.7 g per pound. Without strength training, protein is your only real tool for preserving muscle during a deficit. Use a protein calculator to set a firm target.\n\n3. Ignoring steps. Even 'no exercise' plans should aim for 5,000–7,000 daily steps. Under 3,000 steps, maintenance calories drop a lot, shrinking any deficit.\n\n4. Extreme low-carb because 'you're not working out.' Low-carb isn't required, and extreme versions can crash energy further when you already aren't moving much.\n\n5. Skipping resistance work entirely. Even 2 × 20-minute bodyweight sessions per week (squats, push-ups, planks, rows with bands) dramatically improves body composition on a diet-only plan.\n\n6. Relying on 'eating healthy' instead of a deficit. 'Healthy' foods can still exceed maintenance calories. Log meals in Eati for 2 weeks to see the real numbers.\n\nFor more on avoiding common pitfalls, read [why most diets fail](/blog/why-most-diets-fail) and [how to lose weight without starving](/blog/how-to-lose-weight-without-starving)."
     }
   ],
   "midArticleCta": "Want to focus on nutrition first? Use Eati to log your meals in seconds, hit a sustainable calorie target, and start losing weight—even before you add structured exercise.",
   "conclusion": "You can absolutely lose weight without traditional exercise as long as your calorie intake is consistently below your daily needs. By paying close attention to portions, prioritizing protein and high‑volume foods, and using tools like Eati to keep your numbers honest, you can create steady fat loss from diet alone. Over time, adding even gentle movement and, eventually, some strength training will make your results faster, more enjoyable, and easier to maintain.",
   "coverImage": "/images/blog/1773399089287-rbixer.jpg",
-  "metaTitle": "Can You Lose Weight Without Exercise? | Eati Blog",
-  "metaDescription": "Find out whether you can lose weight without working out, how to set up a diet‑only fat‑loss plan, and when to add movement back in for better long‑term results.",
+  "metaTitle": "Can You Lose Weight Without Exercise? Diet-Only Fat Loss Guide",
+  "metaDescription": "Can you lose weight without exercise? Yes — here's how to build a diet-only fat-loss plan, what to expect, the walking-only alternative, and the pitfalls to avoid for real results.",
   "targetKeyword": "can you lose weight without exercise",
   "publishedAt": "2026-03-10T10:55:00Z",
   "published": true,
@@ -36,5 +48,27 @@
     "how-to-lose-weight-without-starving",
     "how-long-does-it-take-to-lose-weight-in-a-calorie-deficit",
     "why-most-diets-fail"
+  ],
+  "faqs": [
+    {
+      "question": "Can you lose weight fast without exercise?",
+      "answer": "Yes. Weight loss is 70–80% diet. With a 500-calorie daily deficit and a focus on protein and volume, most people lose 1–2 lb per week without exercise. Adding 7,000+ daily steps accelerates results and protects metabolic rate without requiring formal workouts."
+    },
+    {
+      "question": "How many calories should I eat to lose weight without exercise?",
+      "answer": "Calculate your TDEE using a sedentary activity multiplier (typically BMR × 1.2) and subtract 300–500 calories. For most women this lands at 1,300–1,600 calories; for most men, 1,700–2,100. Use a TDEE calculator to get your personal number instead of a generic target."
+    },
+    {
+      "question": "Is walking enough exercise to lose weight?",
+      "answer": "Yes, especially when combined with a calorie deficit. 7,000–10,000 daily steps burns 250–400 extra calories for most adults, improves cardiovascular health, and preserves NEAT while dieting. It's not a replacement for strength training, but it's enough for weight loss alone."
+    },
+    {
+      "question": "Will I lose muscle if I lose weight without exercising?",
+      "answer": "You'll likely lose more muscle than someone doing strength training. Without a resistance stimulus, the body has less reason to preserve muscle during a deficit. Protein at 0.8–1 g per pound of body weight minimizes this loss but doesn't fully replace the effect of lifting."
+    },
+    {
+      "question": "How long will it take to see results without exercising?",
+      "answer": "Most people see scale and clothing changes within 3–4 weeks of a consistent diet-only deficit. Visible photo changes typically appear at 6–8 weeks. Diet-only loss tends to be slightly slower than diet + exercise, but the difference is smaller than most people expect — usually 0.25–0.5 lb per week."
+    }
   ]
 }

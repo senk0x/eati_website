@@ -26,13 +26,25 @@
     {
       "heading": "How to Troubleshoot Your \"Calorie Deficit\"",
       "content": "If you truly feel stuck, walk through a structured checklist:\n\n1. Tighten your tracking for 10–14 days. Log everything, including oils, drinks, and small bites.\n2. Compare weekday and weekend behavior. Are weekends erasing your deficit?\n3. Check your step count. Has your daily movement dropped since you started dieting?\n4. Evaluate sleep and stress. Poor recovery can lead to more snacking and higher water retention.\n5. If weight has not changed for 3–4 weeks after these adjustments, consider a small calorie reduction of 150–200 per day or a modest increase in activity.\n\nUsing Eati simplifies this process: you can quickly see patterns in your meals, macros, and calories without spending hours on manual tracking."
+    },
+    {
+      "heading": "The 'Math Check': Verifying Your True Calorie Deficit",
+      "content": "Before assuming anything exotic is wrong, do a strict math check for two weeks. It is the single fastest way to find the problem.\n\n1. Recalculate your TDEE. Use a TDEE calculator with your current weight, age, and an honest activity level — most people pick an activity level one notch too high.\n2. Pick a precise daily target. For a 500-calorie deficit, subtract 500 from TDEE. For a 300-calorie deficit, subtract 300.\n3. Weigh or measure 3–5 staple foods for 14 days. Oils, nut butters, pasta, rice, granola, cheese, and meat portions are where most invisible calories hide.\n4. Log every drink. Smoothies, juices, lattes, beer, wine, and even 'splashes' of milk can quietly contribute 300–600 calories per day.\n5. At day 14, compare your tracked daily average to your target and your weekly weight average to week 0.\n\nIf your weekly average dropped by 0.5–1% of body weight, the deficit is real and working. If not, your true intake is usually higher than what you logged — by roughly the expected weekly deficit divided by 7."
+    },
+    {
+      "heading": "Hormones, Medication, and Medical Conditions That Slow Fat Loss",
+      "content": "Most plateaus come from tracking drift, but real medical factors exist. If you've been strict for 6+ weeks with no change, they're worth considering with your doctor.\n\nCommon contributors:\n\n• Hypothyroidism: can lower metabolic rate by 10–20%. Symptoms include fatigue, cold intolerance, and thinning hair.\n• PCOS: associated with insulin resistance that makes fat loss slower but not impossible; often responds well to higher protein and consistent movement.\n• High cortisol from chronic stress or poor sleep: increases water retention and appetite.\n• Certain medications: antidepressants (especially some SSRIs), antipsychotics, corticosteroids, insulin, and beta-blockers can affect hunger, water balance, or metabolic rate.\n• Menopause and perimenopause: lower estrogen often leads to a 100–200 calorie drop in maintenance and changes in fat distribution.\n\nBlood work (TSH, free T4, fasting insulin, A1C) is a smart starting point if you suspect a hormonal issue. None of these factors break the calorie equation — they just change the size of the deficit you need and the pace you can expect. Pair medical guidance with honest tracking and patience."
+    },
+    {
+      "heading": "When to Take a Diet Break Instead of Cutting More",
+      "content": "When you're stuck, the instinct is to cut calories further. Often, the better move is the opposite.\n\nSigns you need a diet break rather than a deeper cut:\n\n• You've been in a deficit for 10+ weeks\n• Training performance is dropping\n• Hunger is constant and food thoughts feel intrusive\n• Sleep quality is worse than when you started\n• Weight is flat but waist circumference is also flat\n\nA diet break means eating at estimated maintenance calories for 1–2 weeks. Expect a 1–3 lb scale bump from glycogen and water — that is not fat regain. Most people return from a break with better energy, steadier hunger, and renewed fat loss when they drop back into a moderate deficit.\n\nFor deeper context on how plateaus emerge, read [why weight loss slows down after a few weeks](/blog/why-weight-loss-slows-down-after-a-few-weeks) and [why am I not losing weight even though I eat less](/blog/why-am-i-not-losing-weight-even-though-i-eat-less)."
     }
   ],
   "midArticleCta": "Not sure whether you are truly in a deficit? Describe your meals in Eati and let the app estimate your calories and macros so you can see exactly where adjustments are needed.",
   "conclusion": "If you are not losing weight in a supposed calorie deficit, there is always a reason. It might be hidden calories, weekend overeating, water retention, reduced daily movement, or a combination of all of the above. By tightening your tracking, watching weekly trends instead of daily swings, and adjusting your plan based on honest data, you can get fat loss moving again without resorting to extreme diets. Use this guide as a checklist, pair it with the calorie awareness that Eati provides, and you will turn confusion and frustration into clear, predictable progress.",
   "coverImage": "/images/blog/1773398676745-baq3pv.jpg",
-  "metaTitle": "Why Am I Not Losing Weight in a Calorie Deficit? | Eati Blog",
-  "metaDescription": "Stuck in a calorie deficit with no results? Learn the real reasons the scale may not be moving and how to fix hidden calorie errors, water retention, weekend overeating, and more.",
+  "metaTitle": "Why Am I Not Losing Weight in a Calorie Deficit? 6 Real Reasons & Fixes",
+  "metaDescription": "In a calorie deficit but the scale won't move? Learn the real reasons weight loss stalls — hidden calories, weekend overeating, water retention, NEAT drop, hormones — and how to fix each.",
   "targetKeyword": "why am i not losing weight in a calorie deficit",
   "publishedAt": "2026-03-10T10:15:00Z",
   "published": true,
@@ -40,5 +52,27 @@
     "why-am-i-not-losing-weight-even-though-i-eat-less",
     "how-long-does-it-take-to-lose-weight-in-a-calorie-deficit",
     "why-weight-loss-slows-down-after-a-few-weeks"
+  ],
+  "faqs": [
+    {
+      "question": "How long can you be in a calorie deficit without losing weight?",
+      "answer": "Short-term flat periods of 1–3 weeks are normal because of water retention, glycogen, and hormonal cycles. If your weekly weight average has not moved for 3–4 weeks of honest tracking, that is the right time to adjust — either tightening tracking, adding movement, or trimming 100–150 calories per day."
+    },
+    {
+      "question": "Why am I gaining weight in a calorie deficit?",
+      "answer": "Short-term weight gain in a true deficit is almost always water retention from salt, stress, poor sleep, new strength training, or menstrual cycles. It can mask real fat loss for 1–2 weeks. If the gain persists for 3–4 weeks, the 'deficit' likely isn't as large as you think — re-tighten tracking and check drinks, oils, and weekend eating."
+    },
+    {
+      "question": "Does water retention hide fat loss in a calorie deficit?",
+      "answer": "Yes. Water fluctuations can easily swing weight by 2–5 lb over a few days. High-sodium meals, intense workouts, poor sleep, and the luteal phase of the menstrual cycle all increase retention. Use 7-day average weights and waist measurements every 2–3 weeks to see the real trend underneath the noise."
+    },
+    {
+      "question": "Should I eat more calories if I'm not losing weight in a deficit?",
+      "answer": "Counterintuitively, sometimes yes — but only if you've already been in a deficit for 8+ weeks with signs of adaptation (constant hunger, low energy, poor sleep, flat progress). A 1–2 week diet break at maintenance often restarts fat loss when you return to a deficit. If you're only 2–3 weeks in, the fix is usually tighter tracking, not more food."
+    },
+    {
+      "question": "Can I be in a calorie deficit and not lose belly fat specifically?",
+      "answer": "You can't spot-reduce belly fat, but it often comes off last because of higher fat-cell density and hormonal factors. In a consistent deficit, total body fat drops, and belly fat eventually follows — usually after visible changes in the face, arms, and upper body. Patience, strength training, sleep, and stress management all help."
+    }
   ]
 }

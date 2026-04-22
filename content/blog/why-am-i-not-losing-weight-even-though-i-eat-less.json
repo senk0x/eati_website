@@ -26,13 +26,25 @@
     {
       "heading": "How to Turn \"Eating Less\" into Real, Measurable Progress",
       "content": "If you feel stuck, here is a simple way to get unstuck:\n\n1. Log everything you eat and drink in detail for 10–14 days using Eati.\n2. Keep a rough step target and note your sleep quality.\n3. Weigh yourself several times per week and track the weekly average.\n4. After two weeks, compare your average intake to your weight trend.\n\nIf your weight is not moving and your average calories are higher than you thought, adjust your portions or food choices to bring them down by 150–300 per day. If your steps are very low, add a bit more movement. These small, data‑driven tweaks beat extreme restriction every time."
+    },
+    {
+      "heading": "The Top 10 Hidden Calorie Sources People Miss",
+      "content": "When someone says 'I'm eating less but nothing is happening,' these are the specific items that almost always turn up in the audit.\n\n1. Cooking oils: 1 tablespoon of olive oil is ~120 calories; many people use 2–3 without measuring.\n2. Nut butters: a rounded tablespoon is closer to 110 calories than 90.\n3. Salad dressings: restaurant-style creamy dressings often run 80–150 calories per 2 tablespoons.\n4. Specialty coffee drinks: 250–500 calories from milk, syrup, and whipped toppings.\n5. Smoothies and juices: easily 400–700 calories, often underestimated as 'just fruit.'\n6. Alcoholic drinks: a glass of wine is 120–200 calories; a cocktail can be 300–600.\n7. Sauces, dips, and spreads: ketchup, mayo, BBQ sauce, hummus, cream cheese.\n8. Protein bars and granola bars: 180–300 calories each, often eaten 'for health.'\n9. Restaurant portions: typically 2× home portions plus added fats and sugars.\n10. 'Tastes' while cooking or finishing kids' plates: small bites that add 100–300 calories per day.\n\nThe average stall comes from 2–4 of these items combined. A single week of weighing portions and logging in Eati usually surfaces the culprit. You can sanity-check your total with a calorie calculator — if your logged intake is already at or above maintenance, 'eating less' is still eating enough."
+    },
+    {
+      "heading": "The NEAT Drop: Why You Burn Fewer Calories on a Diet",
+      "content": "Exercise gets most of the attention, but non-exercise activity thermogenesis (NEAT) — all the unstructured movement in your day — often has a bigger impact on your daily burn.\n\nWhen calories drop, NEAT tends to fall automatically. You fidget less. You take the elevator. You park closer. You nap in the afternoon. A research-backed estimate: NEAT can drop by 100–300 calories per day within weeks of starting a diet, quietly shrinking your actual deficit.\n\nPractical fixes:\n\n• Set a daily step target (7,000–10,000 is a reasonable range) and track it via your phone or watch.\n• Add a 10-minute walk after every meal — roughly 3,000–4,000 steps and steadier blood sugar.\n• Stand up every 30–60 minutes during seated work.\n• Use a calorie burn calculator to estimate how much the extra movement is adding back to your deficit.\n\nPreserving movement while eating less is often more effective than cutting more food."
+    },
+    {
+      "heading": "How to Reset After Months of Spinning Your Wheels",
+      "content": "If you've been 'eating less' for months with no results, the reset rarely involves cutting more. It usually involves getting more precise.\n\nA 4-step reset:\n\n1. Spend 1–2 weeks at estimated maintenance calories. Use a TDEE calculator as the starting point. This stabilizes hunger and restores movement.\n2. Start a fresh 14-day honest log. Weigh staples, include every drink, count weekends the same as weekdays.\n3. Re-establish protein and fiber minimums. Aim for roughly 0.8 g protein per pound and 25–35 g fiber per day.\n4. Drop calories by a modest 300 below your new TDEE estimate and hold for 3–4 weeks. Adjust based on the weekly weight average.\n\nThis approach works because it replaces vague 'eating less' with a repeatable, measurable plan. For a complementary deep dive, read [why am I not losing weight in a calorie deficit](/blog/why-am-i-not-losing-weight-in-a-calorie-deficit) and [how to track calories correctly](/blog/how-to-track-calories-correctly)."
     }
   ],
   "midArticleCta": "Not sure if you are truly in a deficit? Start logging your meals in Eati, see your real calorie intake, and finally understand why the scale is—or is not—moving.",
   "conclusion": "Eating less is a good start, but it is not specific enough to guarantee fat loss. Hidden calories, healthier but still high‑calorie foods, reduced movement, and water retention can all make it feel like nothing is happening even when you are trying. By tightening your tracking, monitoring your activity, and focusing on weekly trends instead of single days, you can turn vague effort into predictable results. With Eati handling the nutrition math, you are free to focus on building habits that feel good and actually move you toward your goal.",
   "coverImage": "/images/blog/1773398918306-j6kvbl.jpg",
-  "metaTitle": "Why Am I Not Losing Weight Even Though I Eat Less? | Eati Blog",
-  "metaDescription": "Eating less but not losing weight? Learn the real reasons progress stalls—from hidden calories to reduced movement—and how to fix them with simple, data‑driven changes.",
+  "metaTitle": "Why Am I Not Losing Weight Even Though I Eat Less? 10 Hidden Calorie Sources",
+  "metaDescription": "Eating less but not losing weight? Discover the hidden calories, NEAT drop, water retention, and 'healthy' food traps behind stalled fat loss — and the step-by-step reset that fixes them.",
   "targetKeyword": "why am i not losing weight even though i eat less",
   "publishedAt": "2026-03-10T10:40:00Z",
   "published": true,
@@ -40,5 +52,27 @@
     "why-am-i-not-losing-weight-in-a-calorie-deficit",
     "how-to-track-calories-correctly",
     "why-weight-loss-slows-down-after-a-few-weeks"
+  ],
+  "faqs": [
+    {
+      "question": "Why am I eating less and still not losing weight?",
+      "answer": "The most common reason is that 'less' is still above maintenance, usually because of hidden calories in oils, sauces, drinks, snacks, and restaurant meals, plus a drop in daily movement (NEAT). Tighten tracking for 2 weeks and compare your real average intake to your estimated TDEE — the gap is almost always the answer."
+    },
+    {
+      "question": "How do I know if I'm really eating in a calorie deficit?",
+      "answer": "Weigh or measure your most common foods for 10–14 days, log every drink and snack, and compute your daily average. If your weekly weight average is trending down 0.3–1% of body weight per week, you are in a true deficit. If it isn't moving, your actual intake is roughly your weekly needed deficit / 7 higher than logged."
+    },
+    {
+      "question": "Can eating too little stop weight loss?",
+      "answer": "Severe underfeeding (many hundreds below estimated TDEE) can cause hormonal and NEAT drops that shrink your real deficit and increase the chance of binges. However, 'starvation mode' does not make you gain fat from very low calories — what usually happens is strict weekdays followed by large weekend rebounds that erase the week's deficit."
+    },
+    {
+      "question": "How long should I try 'eating less' before changing my plan?",
+      "answer": "Give a defined target and honest tracking 3–4 weeks before changing anything. If your weekly weight average hasn't moved, either add a small calorie reduction (100–150/day) or 1,500–3,000 more daily steps. Avoid adjusting based on 2–3 noisy weigh-ins."
+    },
+    {
+      "question": "What's the difference between eating less and being in a calorie deficit?",
+      "answer": "'Eating less' compares your current intake to your past intake; a calorie deficit compares your current intake to your body's actual energy needs. You can easily do the first without doing the second — for example, dropping from 2,600 calories to 2,200 when maintenance is 2,000. Only the deficit produces fat loss."
+    }
   ]
 }

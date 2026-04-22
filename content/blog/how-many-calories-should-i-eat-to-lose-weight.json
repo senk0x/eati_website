@@ -42,15 +42,53 @@
     {
       "heading": "Do You Need to Count Calories Forever?",
       "content": "No.\n\nCounting calories is a tool — not a life sentence.\n\nMany people use calorie tracking to:\n• Learn portion sizes\n• Understand food energy\n• Build awareness\n\nOver time, you may develop intuitive habits.\n\nHowever, tracking can be extremely helpful during fat loss phases."
+    },
+    {
+      "heading": "Step-by-Step: Calculating Your Daily Calorie Intake for Weight Loss",
+      "content": "Here's a practical, repeatable way to set your calorie target without spreadsheets or guesswork.\n\n1. Estimate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor formula:\n\n• Men: (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5\n• Women: (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161\n\n2. Multiply by an activity factor to get your TDEE (maintenance):\n\n• Sedentary (desk job, little exercise): × 1.2\n• Lightly active (light exercise 1–3 days/week): × 1.375\n• Moderately active (exercise 3–5 days/week): × 1.55\n• Very active (hard training 6–7 days/week): × 1.725\n\n3. Subtract 300–500 calories from TDEE to create your weight-loss target.\n\nExample: a 35-year-old woman, 5'6\" (168 cm), 165 lb (75 kg), moderately active:\n\n• BMR: (10 × 75) + (6.25 × 168) − (5 × 35) − 161 = 1,464\n• TDEE: 1,464 × 1.55 ≈ 2,269\n• Weight-loss target: 1,769–1,969 calories per day\n\nIf doing the math by hand feels tedious, plug the same numbers into a calorie calculator or TDEE calculator — they use the exact same formulas."
+    },
+    {
+      "heading": "How to Split Your Calories Into Protein, Carbs, and Fat",
+      "content": "Hitting your calorie number is the main driver of fat loss, but macro split affects how hungry you feel, how much muscle you keep, and how sustainable the plan is.\n\nA solid starting framework for weight loss:\n\n• Protein: 0.8–1 g per pound of body weight (about 30% of calories for most people)\n• Fat: 20–30% of calories (healthy fats from olive oil, nuts, avocado, fatty fish)\n• Carbs: the remainder, mostly from whole grains, fruit, and vegetables\n\nFor a 1,800-calorie fat-loss plan on a 160 lb person, this might look like 140 g protein, 50–60 g fat, and 180–200 g carbs. High protein is the single biggest variable people underestimate — it preserves muscle mass, reduces hunger, and burns more energy to digest.\n\nUse a macro goal calculator to automate the split, and log meals in Eati to check that your day actually lands within range. If you struggle with constant hunger, see [how to stay in a calorie deficit without feeling hungry](/blog/how-to-stay-in-a-calorie-deficit-without-feeling-hungry) for food choices that stretch fewer calories."
+    },
+    {
+      "heading": "Adjusting Your Calorie Target Over Time",
+      "content": "Your calorie needs change as your body changes. Expecting the same number to work for 12 months is one of the main reasons progress stalls.\n\nA good review rhythm:\n\n• Every 2–3 weeks: compare your 7-day average weight to three weeks ago.\n• Drop rate of 0.5–1% of body weight per week: keep calories the same.\n• No meaningful change for 3–4 weeks (and tracking is honest): subtract 100–150 calories, or add 1,000–2,000 daily steps.\n• Dropping faster than 1.5%/week (after week 1): add 100–150 calories — you're underfueling.\n\nWhen you hit your goal weight, transition gradually to maintenance by adding back 100–150 calories per week over 3–4 weeks. This slow ramp helps prevent the bounce-back that happens when people jump straight from restriction to pre-diet eating. For more context, read [how long does it take to lose weight in a calorie deficit](/blog/how-long-does-it-take-to-lose-weight-in-a-calorie-deficit) and [what is a calorie deficit](/blog/what-is-a-calorie-deficit)."
     }
   ],
-  "midArticleCta": "",
+  "midArticleCta": "Want a personalized calorie target without doing the math? Plug your stats into Eati, get a daily number, and start logging meals to see exactly how your current eating compares.",
   "conclusion": "So how many calories should you eat to lose weight?\n\nThe answer depends on your body, activity level, and goals — but the principle remains the same:\n\nEat fewer calories than you burn.\n\nFor most people, a moderate deficit of 300–500 calories per day is sustainable and effective.\n\nAvoid extreme restriction.\nFocus on consistency.\nTrack your progress.\nPrioritize protein.\nAnd monitor trends instead of daily fluctuations.\n\nWeight loss does not have to be complicated.\n\nOnce you understand your calorie target, fat loss becomes predictable and manageable.\n\nNow the next step is simple: calculate your maintenance calories and create your personalized deficit.",
   "coverImage": "/images/blog/1773395564352-ihg5hu.jpg",
-  "metaTitle": "How Many Calories Should I Eat to Lose Weight? Complete Guide",
-  "metaDescription": "Learn how many calories you should eat to lose weight with science-based calculations, real examples, and practical tips for sustainable fat loss.",
+  "metaTitle": "How Many Calories Should I Eat to Lose Weight? Calculator, Examples & Macro Split",
+  "metaDescription": "Find out how many calories you should eat to lose weight with a step-by-step calculation, real examples for men and women, macro split guidance, and how to adjust as you progress.",
   "targetKeyword": "how many calories should i eat to lose weight",
   "published": true,
-  "relatedSlugs": [],
-  "publishedAt": "2026-03-13T09:54:24.101Z"
+  "relatedSlugs": [
+    "what-is-a-calorie-deficit",
+    "how-long-does-it-take-to-lose-weight-in-a-calorie-deficit",
+    "how-to-stay-in-a-calorie-deficit-without-feeling-hungry"
+  ],
+  "publishedAt": "2026-03-13T09:54:24.101Z",
+  "faqs": [
+    {
+      "question": "How many calories should I eat to lose 1 pound a week?",
+      "answer": "To lose about 1 pound per week, create a daily deficit of roughly 500 calories below your TDEE (maintenance). For a 180-lb moderately active man with a TDEE of ~2,700, this would mean eating around 2,200 calories per day. Use a TDEE calculator to get your personal maintenance number first."
+    },
+    {
+      "question": "Is 1,200 calories a day enough to lose weight?",
+      "answer": "For many adults, 1,200 calories is too low. It's often below BMR for men and taller or more active women, and can trigger hunger, muscle loss, low energy, and rebound eating. Most women do better at 1,400–1,700 calories for fat loss, and most men at 1,700–2,100. Use your TDEE minus 300–500, not an arbitrary number."
+    },
+    {
+      "question": "Should I eat more calories on workout days?",
+      "answer": "You can, but it's not required. Many people average their deficit across the week instead, eating the same amount every day. If you do adjust, add 150–300 extra calories on heavy training days (mostly from carbs and protein) and eat closer to your base target on rest days. Eati makes it easy to see how weekly averages, not single days, actually drive progress."
+    },
+    {
+      "question": "Why am I in a calorie deficit but not losing weight?",
+      "answer": "The most common reasons are underestimated portions, untracked oils/sauces/drinks, weekend intake erasing weekday deficits, and reduced daily movement (NEAT). Tighten tracking for 10–14 days, weigh a few key portions, and look at the 7-day average. If honest tracking shows a true deficit for 3–4 weeks with no change, trim another 100–150 calories per day or add more daily steps."
+    },
+    {
+      "question": "How do I calculate calories to lose weight without a calculator?",
+      "answer": "A fast rule of thumb: multiply your body weight in pounds by 12–13 for a conservative weight-loss target (for example, 160 lb × 12 = ~1,920 calories). This works for most people with average activity, but it's less accurate than a TDEE formula that accounts for age, height, gender, and activity level."
+    }
+  ]
 }

@@ -42,15 +42,53 @@
     {
       "heading": "What Happens If You Stop the Deficit?",
       "content": "If you return to maintenance calories:\n\n• Weight stabilizes\n• Fat loss stops\n• Energy improves\n• Hormones normalize\n\nIf you eat above maintenance:\n• Weight gain will occur gradually\n\nThis is why understanding calorie balance is essential for long-term weight control."
+    },
+    {
+      "heading": "Calorie Deficit vs Low-Carb, Keto, and Intermittent Fasting",
+      "content": "Most trendy diets work for the same underlying reason: they create a calorie deficit. They just get there through different rules.\n\n• Low-carb and keto: Removing most carbohydrates reduces appetite and eliminates an entire category of high-calorie foods, which usually produces a deficit by default.\n• Intermittent fasting: Compressing eating into a shorter window tends to cut one meal or several snacks per day, which often lowers total calories.\n• Whole-food and plant-forward diets: They emphasize lower-calorie, higher-fiber foods, so the same plate size contains fewer calories.\n\nNone of these approaches bypass the laws of energy balance. If you eat enough calories on keto, you will not lose fat. If you eat too many calories in an 8-hour window, intermittent fasting alone will not shrink body fat. The calorie deficit is the lever; the diet style is simply how you pull it.\n\nThis is why the same person can succeed on almost any \"diet\" they actually enjoy. Use Eati to log a few days of whatever eating style you prefer and a calorie deficit calculator to confirm the target—it's far more honest than trusting a diet's branding."
+    },
+    {
+      "heading": "Calorie Deficit vs Exercise: Which Matters More?",
+      "content": "A common myth is that you can outrun a poor diet. In reality, the calories you can burn in a workout are much smaller than most people assume.\n\n• A 30-minute brisk walk: roughly 150–200 calories.\n• A 45-minute run: roughly 400–500 calories.\n• An intense strength session: roughly 200–400 calories.\n\nMeanwhile, a single fast-food combo meal can easily exceed 1,200 calories. One untracked coffee drink can add 400–600.\n\nThat does not mean exercise is pointless—far from it. Training helps preserve muscle, improves insulin sensitivity, boosts mood, and raises your maintenance calories slightly over time. Walking more (daily step counts of 8,000–12,000) can also reliably increase your calorie burn without aggressive workouts.\n\nBut as a direct fat-loss driver, what you eat is 70–80% of the picture. Lock in the deficit with nutrition first, then add movement to support the process."
+    },
+    {
+      "heading": "How to Track a Calorie Deficit in Real Life",
+      "content": "Knowing the theory is one thing—making it work during a busy week is another. A practical workflow looks like this:\n\n1. Calculate your baseline. Use a TDEE calculator to estimate maintenance, then subtract 300–500 calories for a moderate deficit.\n2. Set a protein target. Aim for 0.7–1 g per pound of body weight to preserve muscle while in a deficit.\n3. Log meals with minimal friction. Describe what you ate in Eati in plain language instead of searching databases; this is the single biggest predictor of whether people stick with tracking.\n4. Track weekly, not daily. Daily weight can swing 1–3 lb purely from water, salt, and digestion. Focus on the 7-day average.\n5. Adjust every 2–4 weeks. If weight and measurements are not trending down, trim another 100–150 calories per day or add 1,000–2,000 daily steps.\n\nThis data-driven approach removes guesswork. Instead of asking \"is my diet working?\" you can answer it with numbers, which is what turns a calorie deficit from an abstract concept into real, visible results.\n\nFor a deeper walkthrough on getting numbers right, read [how to track calories correctly](/blog/how-to-track-calories-correctly) and [why counting calories actually works](/blog/why-counting-calories-actually-works)."
     }
   ],
-  "midArticleCta": "",
+  "midArticleCta": "Want your calorie deficit to actually match the math? Log a few days in Eati, confirm your average intake, and see exactly how your plan compares to your target.",
   "conclusion": "A calorie deficit is the foundation of fat loss.\n\nWhen you consistently consume fewer calories than your body burns, your body uses stored fat for energy.\n\nThe key principles are:\n\n• Create a moderate deficit\n• Prioritize protein\n• Avoid extreme restriction\n• Track progress over time\n• Stay consistent\n\nFat loss does not require complicated diets or extreme rules.\n\nUnderstanding calorie balance gives you control over your results.\n\nOnce you master the concept of a calorie deficit, weight loss becomes predictable, structured, and sustainable.",
   "coverImage": "/images/blog/1773395968092-md3anx.jpg",
-  "metaTitle": "What Is a Calorie Deficit? Complete Guide to Fat Loss Science",
-  "metaDescription": "Learn what a calorie deficit is, how it works for weight loss, how to calculate it, and how to use it safely for sustainable fat loss.",
+  "metaTitle": "What Is a Calorie Deficit? Science-Based Guide to Fat Loss & How to Calculate Yours",
+  "metaDescription": "Learn what a calorie deficit is, how it works for weight loss, how to calculate your daily calorie deficit target, and how to stay in a sustainable fat-loss range without extreme restriction.",
   "targetKeyword": "what is a calorie deficit",
   "published": true,
-  "relatedSlugs": [],
-  "publishedAt": "2026-03-13T09:59:32.097Z"
+  "relatedSlugs": [
+    "how-long-does-it-take-to-lose-weight-in-a-calorie-deficit",
+    "how-to-stay-in-a-calorie-deficit-without-feeling-hungry",
+    "why-am-i-not-losing-weight-in-a-calorie-deficit"
+  ],
+  "publishedAt": "2026-03-13T09:59:32.097Z",
+  "faqs": [
+    {
+      "question": "How do I know my exact calorie deficit number?",
+      "answer": "Estimate your maintenance calories (TDEE) based on age, gender, height, weight, and activity level, then subtract 300–500 for a moderate deficit or 500–750 for faster fat loss. A TDEE calculator gives you a realistic starting point; after 2–3 weeks, adjust up or down based on your actual weight trend. For most people, using a calorie deficit calculator and logging meals in Eati for a week is far more accurate than guessing."
+    },
+    {
+      "question": "Can I be in a calorie deficit and still gain weight?",
+      "answer": "Short-term weight gain can happen in a true deficit because of water retention, glycogen storage, hormonal fluctuations, salt intake, or digestive contents. These variations can hide actual fat loss for days or even two weeks. If your weekly weight average is trending down over 3–4 weeks—or your waist measurements are shrinking—your deficit is working even when the daily scale isn't cooperating."
+    },
+    {
+      "question": "How many calories is a safe daily deficit?",
+      "answer": "A safe, sustainable deficit for most adults is 300–500 calories per day, producing about 0.5–1 lb of weight loss per week. Deficits above 750 calories per day can work short-term but often cause fatigue, muscle loss, strong hunger, and rebound eating. Never drop below roughly 1,200 calories/day for women or 1,500 calories/day for men without medical supervision."
+    },
+    {
+      "question": "Do I have to count calories to be in a deficit?",
+      "answer": "No, but counting helps. Many people accidentally create a deficit by eating more protein, more vegetables, fewer liquid calories, and smaller portions. However, tracking with a tool like Eati gives you objective feedback and makes it obvious when 'eating less' has drifted back toward maintenance—the single most common reason people stall."
+    },
+    {
+      "question": "How long should I stay in a calorie deficit?",
+      "answer": "You can stay in a moderate deficit until you reach your goal weight, but long dieting phases benefit from short maintenance breaks every 8–12 weeks. These 1–2 week diet breaks restore hormones, movement, and adherence, making the next deficit phase more effective. After reaching your goal, transition slowly to maintenance calories rather than jumping straight back to old portions."
+    }
+  ]
 }

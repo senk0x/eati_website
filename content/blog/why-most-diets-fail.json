@@ -22,13 +22,25 @@
     {
       "heading": "They Ignore Individual Preferences and Lifestyles",
       "content": "A diet can look perfect on paper but fail completely if it does not fit your life. If you hate cooking, a plan that demands daily meal prep will not last. If you love carbs, an ultra‑low‑carb diet will feel like punishment. If you work night shifts, standard meal timing rules may not apply.\n\nThe best diet is the one you can stick to. That means adjusting your approach to your schedule, culture, preferences, and family situation. Eati supports this by adapting to whatever meals you actually eat—you describe them, and the app shows you how they fit into your goals, rather than forcing you into a rigid meal plan."
+    },
+    {
+      "heading": "Why Popular Diets Fail: Keto, Intermittent Fasting, Low-Fat, and More",
+      "content": "Each popular diet has a specific failure pattern. Understanding them helps you avoid the traps.\n\nKeto diet — Fails because it cuts out an entire macronutrient (carbs) and eliminates many favorite foods. Most people cannot maintain under 20–50g carbs per day in the long run, especially around social events, travel, and cultural foods. The rapid initial water-weight loss creates false confidence that usually ends in rebound.\n\nIntermittent fasting — Works for some, fails for others. Fails when it leads to binge eating in the feeding window, excessive hunger that destroys daily function, or sleep and hormonal disruption. If you find yourself starving by 11 AM and overeating at night, IF is not working for you regardless of what influencers say.\n\nLow-fat diets — The default advice from the 1980s–2000s. Failed at the population level because it replaced fats with refined carbs and sugar, increasing hunger and calorie intake. Low-fat yogurt, low-fat dressing, fat-free cookies — all heavily processed and often higher in sugar.\n\nJuice cleanses and detoxes — Fail because they're starvation diets in disguise. No scientific basis for 'detox' (the liver and kidneys do that 24/7), massive glucose spikes from pure juice, and zero habit-building for post-cleanse life.\n\nMeal replacement shakes — Fail because they don't teach you how to eat real food. When you stop the shakes, weight returns because underlying habits never changed.\n\n75 Hard / extreme programs — Fail because they're unsustainable by design. The binary pass/fail nature means one missed workout = starting over, which creates demotivation.\n\nThe common thread: all of these depend on external rules rather than internal skills. A calorie calculator and protein calculator give you your own numbers to work with — no rules, no forbidden foods, just a budget to spend wisely."
+    },
+    {
+      "heading": "The Calorie Deficit Approach: Why It Works When Others Don't",
+      "content": "The calorie-deficit approach with adequate protein — what Eati is built around — works long-term because it:\n\n• Doesn't ban any food. You can have pizza, wine, or ice cream. They just need to fit your daily budget. This eliminates the 'forbidden fruit' effect that drives binge cycles.\n• Adapts to any lifestyle. Vegan, keto, Mediterranean, junk-food-and-protein, cultural cuisines — all work inside a calorie deficit as long as protein is adequate.\n• Is based on unchanging physics. Calories in vs calories out is not a trend. It has worked the same way for decades of research.\n• Uses skills, not willpower. You learn to estimate portions, read labels, balance meals, and handle social events. These skills transfer to maintenance and don't expire.\n• Tracks real progress. Instead of 'I followed the rules', you see actual data: 'I averaged 1,700 calories this week and lost 0.8 lbs.' Data lets you adjust accurately.\n\nThe main downside: it requires tracking, which some people resist. But modern AI-based trackers make logging a 10-second task per meal, not a database-search chore. See [how to track calories correctly](/blog/how-to-track-calories-correctly) for practical tracking methods, and [why counting calories actually works](/blog/why-counting-calories-actually-works) for the science."
+    },
+    {
+      "heading": "How to Build a Diet That Actually Lasts: A 5-Step Framework",
+      "content": "Instead of picking a named diet, build your own sustainable approach using these five steps:\n\nStep 1 — Set realistic targets.\nUse a TDEE calculator to find your maintenance calories, then subtract 300–500 calories for a moderate deficit. Aim for 0.5–1% of body weight loss per week — faster usually means muscle loss and rebound. Calculate protein at 1.6–2.2 g per kg of body weight.\n\nStep 2 — Pick 5–10 'staple' meals you love.\nThese are meals you can cook or order on autopilot, that fit your calorie and protein targets. Most successful dieters rotate 6–8 breakfast/lunch/dinner options, not 50. Consistency beats variety.\n\nStep 3 — Build the 80/20 rule into your plan.\n80% of calories from whole, minimally processed foods. 20% flexibility for restaurants, social events, desserts, and favorites. This ratio is sustainable for decades; 100% clean eating is not.\n\nStep 4 — Track with a method you can maintain.\nThe best tracker is the one you'll actually use. AI-based logging (describe your meal in plain language) works far better than database searching for most people. Track your weight weekly, not daily, and track the 7-day average, not individual readings.\n\nStep 5 — Plan for maintenance from day one.\nBefore starting, ask: 'Could I do this for the rest of my life with small tweaks?' If the answer is no, adjust the plan now. When you hit your goal weight, gradually add 100 calories per day over 2–3 weeks to land at maintenance.\n\nThis framework has no name and no brand, but it's what actually works. For more, see [how to lose weight without giving up your favorite foods](/blog/how-to-lose-weight-without-giving-up-your-favorite-foods) and [why am I not losing weight in a calorie deficit](/blog/why-am-i-not-losing-weight-in-a-calorie-deficit)."
     }
   ],
   "midArticleCta": "Tired of diets that do not last? Use Eati to build a flexible, data‑driven way of eating that fits your life and finally breaks the lose‑regain cycle.",
   "conclusion": "Most diets fail because they are too extreme, too vague, or too disconnected from the realities of everyday life. They demand perfection instead of building resilient habits and clear structures you can maintain. By focusing on sustainable calorie and protein targets, flexible food choices, supportive environments, and a real maintenance plan—all made easier with Eati—you can create an approach that not only helps you lose weight, but also keeps it off for good.",
   "coverImage": "/images/blog/1773399330830-mepbz4.jpg",
-  "metaTitle": "Why Most Diets Fail (and How to Succeed) | Eati Blog",
-  "metaDescription": "Understand the real reasons most diets fail and learn how to build a sustainable, flexible approach to weight loss that actually lasts.",
+  "metaTitle": "Why Most Diets Fail: 5 Reasons and a Sustainable Framework That Works",
+  "metaDescription": "95% of diets fail within 2 years. Learn the specific failure modes of keto, intermittent fasting, low-fat, and juice cleanses — plus a 5-step framework to build a sustainable diet you can stick to.",
   "targetKeyword": "why most diets fail",
   "publishedAt": "2026-03-10T11:25:00Z",
   "published": true,
@@ -36,5 +48,27 @@
     "why-counting-calories-actually-works",
     "how-to-lose-weight-without-giving-up-your-favorite-foods",
     "why-am-i-not-losing-weight-in-a-calorie-deficit"
+  ],
+  "faqs": [
+    {
+      "question": "What percentage of diets fail?",
+      "answer": "Research shows 80–95% of dieters regain the weight within 2–5 years of completing a diet. The failure isn't because the diets don't work short-term — nearly all produce initial weight loss — it's because they're not sustainable as lifelong habits. The diets that have the highest long-term success rates are the ones that emphasize flexibility, adequate protein, and skill-building over rigid rules."
+    },
+    {
+      "question": "Why do I keep gaining weight back after dieting?",
+      "answer": "Three main reasons: (1) The diet was too restrictive to maintain, so you reverted to old habits once you hit your goal. (2) You lost muscle along with fat due to low protein intake or rapid loss, lowering your maintenance calories. (3) There was no maintenance plan — you finished the 'diet phase' with no clear strategy for daily eating after. Sustainable diets build maintenance in from day one."
+    },
+    {
+      "question": "What's the easiest diet to stick to?",
+      "answer": "For most people, flexible calorie tracking with adequate protein beats any named diet in sustainability trials. It allows all favorite foods, adapts to any cuisine or lifestyle, requires no forbidden lists, and builds transferable skills. The Mediterranean diet also ranks highly for long-term adherence because it emphasizes enjoyable foods rather than restriction."
+    },
+    {
+      "question": "Is it better to lose weight fast or slow?",
+      "answer": "Slow is dramatically more effective long-term. Research shows losing 0.5–1% of body weight per week preserves muscle, hormonal health, and makes rebound much less likely. Rapid weight-loss diets cause 30–70% regain within a year. Aim for 1–2 lbs per week for most adults — it feels slow but results last."
+    },
+    {
+      "question": "Why don't diets work long-term?",
+      "answer": "Traditional diets fail because they're temporary phases. They rely on willpower, forbidden foods, and external rules. When the diet ends, the rules end, and weight returns. Sustainable approaches work by teaching you skills — portion estimation, calorie awareness, balanced meal-building, handling social events — that you carry into normal life for decades."
+    }
   ]
 }

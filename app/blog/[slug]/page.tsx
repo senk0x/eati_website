@@ -9,6 +9,7 @@ import {
   generateTableOfContents,
 } from '@/lib/blog';
 import LinkedText from '@/components/LinkedText';
+import ArticleContent from '@/components/ArticleContent';
 import EatiCTA from '@/components/EatiCTA';
 import { blogTopicFromArticle } from '@/lib/eati-cta-copy';
 import { SITE_URL, blogPostOgImagePath, buildPageMetadata, eatiAppStoreUrl } from '@/lib/seo';
@@ -241,12 +242,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                       </div>
                     )}
 
-                    <p
-                      className="text-base leading-relaxed text-gray-700"
-                      style={{ whiteSpace: 'pre-line' }}
-                    >
-                      <LinkedText text={contentWithoutPhoto} />
-                    </p>
+                    <ArticleContent content={contentWithoutPhoto} />
                   </section>
                 );
               })()
@@ -294,20 +290,39 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* FAQ section (optional, for long-tail + FAQ schema) */}
             {article.faqs && article.faqs.length > 0 && (
-              <section className="mt-10 border-t border-[#E3ECF7] pt-10">
-                <h2 className="mb-4 text-xl font-semibold md:text-2xl">
+              <section className="mt-10 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:p-8">
+                <h2 className="mb-5 text-xl font-semibold md:text-2xl">
                   Frequently Asked Questions
                 </h2>
-                <ul className="space-y-6">
+                <div className="space-y-3">
                   {article.faqs.map((faq, i) => (
-                    <li key={i}>
-                      <h3 className="mb-2 text-base font-semibold text-[#364052]">{faq.question}</h3>
-                      <p className="text-base leading-relaxed text-gray-700">
-                        <LinkedText text={faq.answer} />
-                      </p>
-                    </li>
+                    <details
+                      key={i}
+                      className="group overflow-hidden rounded-xl border border-[#E3ECF7] bg-white transition-colors open:border-[#85BEFF]"
+                    >
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-base font-semibold text-[#364052] hover:bg-[#F7FAFF] [&::-webkit-details-marker]:hidden">
+                        <h3 className="m-0 text-base font-semibold">{faq.question}</h3>
+                        <svg
+                          className="h-5 w-5 flex-shrink-0 text-[#85BEFF] transition-transform duration-200 group-open:rotate-180"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.25 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </summary>
+                      <div className="border-t border-[#E3ECF7] px-5 py-4">
+                        <p className="text-base leading-relaxed text-gray-700">
+                          <LinkedText text={faq.answer} />
+                        </p>
+                      </div>
+                    </details>
                   ))}
-                </ul>
+                </div>
               </section>
             )}
 
