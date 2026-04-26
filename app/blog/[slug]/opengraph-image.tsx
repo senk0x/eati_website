@@ -37,6 +37,101 @@ function truncateTitle(title: string, max = 72): string {
   return `${title.slice(0, max - 1)}…`;
 }
 
+function blogOgMarkup(
+  title: string,
+  coverDataUrl: string | null,
+  w: number,
+  h: number
+) {
+  return (
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        position: "relative",
+        background: "#1a2744",
+      }}
+    >
+      {[
+        ...(coverDataUrl
+          ? [
+              <img
+                key="cover"
+                src={coverDataUrl}
+                alt=""
+                width={w}
+                height={h}
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />,
+            ]
+          : []),
+        <div
+          key="grad"
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
+            display: "flex",
+            background: coverDataUrl
+              ? "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 45%, transparent 72%)"
+              : "linear-gradient(145deg, #85BEFF 0%, #2F5176 100%)",
+          }}
+        />,
+        <div
+          key="text"
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            padding: 48,
+            display: "flex",
+            flexDirection: "column",
+            gap: 16,
+          }}
+        >
+          {[
+            <div
+              key="t"
+              style={{
+                display: "flex",
+                fontSize: 52,
+                fontWeight: 800,
+                color: "white",
+                lineHeight: 1.15,
+                textShadow: "0 2px 24px rgba(0,0,0,0.45)",
+              }}
+            >
+              {title}
+            </div>,
+            <div
+              key="b"
+              style={{
+                display: "flex",
+                fontSize: 24,
+                color: "rgba(255,255,255,0.9)",
+                fontWeight: 600,
+              }}
+            >
+              {`Eati Blog · ${SITE_URL.replace(/^https?:\/\//, "")}`}
+            </div>,
+          ]}
+        </div>,
+      ]}
+    </div>
+  );
+}
+
 export default async function BlogOpenGraphImage({
   params,
 }: {
@@ -53,100 +148,17 @@ export default async function BlogOpenGraphImage({
       : absoluteUrl(article.coverImage)
     : null;
 
-  const coverPng =
+  const coverDataUrl =
     coverUrl != null ? await encodeImageForOgDataUrl(coverUrl) : null;
 
   const w = size.width;
   const h = size.height;
 
-  return new ImageResponse(
-    (
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          position: "relative",
-          background: "#1a2744",
-        }}
-      >
-        {[
-          ...(coverPng
-            ? [
-                <img
-                  key="cover"
-                  src={coverPng}
-                  alt=""
-                  width={w}
-                  height={h}
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />,
-              ]
-            : []),
-          <div
-            key="grad"
-            style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              right: 0,
-              bottom: 0,
-              display: "flex",
-              background: coverPng
-                ? "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 45%, transparent 72%)"
-                : "linear-gradient(145deg, #85BEFF 0%, #2F5176 100%)",
-            }}
-          />,
-          <div
-            key="text"
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              right: 0,
-              padding: 48,
-              display: "flex",
-              flexDirection: "column",
-              gap: 16,
-            }}
-          >
-            {[
-              <div
-                key="t"
-                style={{
-                  display: "flex",
-                  fontSize: 52,
-                  fontWeight: 800,
-                  color: "white",
-                  lineHeight: 1.15,
-                  textShadow: "0 2px 24px rgba(0,0,0,0.45)",
-                }}
-              >
-                {title}
-              </div>,
-              <div
-                key="b"
-                style={{
-                  display: "flex",
-                  fontSize: 24,
-                  color: "rgba(255,255,255,0.9)",
-                  fontWeight: 600,
-                }}
-              >
-                {`Eati Blog · ${SITE_URL.replace(/^https?:\/\//, "")}`}
-              </div>,
-            ]}
-          </div>,
-        ]}
-      </div>
-    ),
-    { ...size }
-  );
+  try {
+    return new ImageResponse(blogOgMarkup(title, coverDataUrl, w, h), {
+      ...size,
+    });
+  } catch {
+    return new ImageResponse(blogOgMarkup(title, null, w, h), { ...size });
+  }
 }

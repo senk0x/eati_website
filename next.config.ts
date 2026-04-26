@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  /** Native addon must not be bundled (Turbopack/Vercel); avoids FUNCTION_INVOCATION_FAILED at runtime. */
+  serverExternalPackages: ["sharp"],
   // Match Vercel trailing-slash normalization: /path/ → /path with 308 (see Vercel docs)
   trailingSlash: false,
   /** Inlines route CSS into the document to avoid an extra render-blocking stylesheet request (Lighthouse). */
