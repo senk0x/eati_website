@@ -55,8 +55,8 @@ export default function FoodPortionCalculator({ food }: Props) {
   const totalKj = Math.round(totalCalories * KCAL_TO_KJ * 10) / 10;
 
   const inputClass =
-    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#85BEFF]';
-  const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
+    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#88B8FF]';
+  const labelClass = 'mb-1.5 block text-sm font-medium text-eati-ink';
 
   return (
     <section
@@ -112,26 +112,26 @@ export default function FoodPortionCalculator({ food }: Props) {
 
       {grams > 0 && (
         <div className="mt-6">
-          <p className="mb-3 text-sm font-medium text-[#364052]">
+          <p className="mb-3 text-sm font-medium text-eati-ink">
             For {grams}g {variantKeys.length > 0 ? `(${variantLabel(selectedMethod)})` : ''}:
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-2xl border border-[#E3ECF7] bg-white p-4 md:rounded-3xl">
               <span className="text-sm text-gray-500">Total calories</span>
-              <p className="mt-1 text-2xl font-bold text-[#85BEFF]">{totalCalories} kcal</p>
+              <p className="mt-1 text-2xl font-bold text-[#88B8FF]">{totalCalories} kcal</p>
               <p className="text-sm text-gray-500">{totalKj} kJ</p>
             </div>
             <div className="rounded-2xl border border-[#E3ECF7] bg-white p-4 md:rounded-3xl">
               <span className="text-sm text-gray-500">Protein</span>
-              <p className="mt-1 text-2xl font-bold text-[#85BEFF]">{totalProtein} g</p>
+              <p className="mt-1 text-2xl font-bold text-[#88B8FF]">{totalProtein} g</p>
             </div>
             <div className="rounded-2xl border border-[#E3ECF7] bg-white p-4 md:rounded-3xl">
               <span className="text-sm text-gray-500">Carbohydrates</span>
-              <p className="mt-1 text-2xl font-bold text-[#85BEFF]">{totalCarbs} g</p>
+              <p className="mt-1 text-2xl font-bold text-[#88B8FF]">{totalCarbs} g</p>
             </div>
             <div className="rounded-2xl border border-[#E3ECF7] bg-white p-4 md:rounded-3xl">
               <span className="text-sm text-gray-500">Fat</span>
-              <p className="mt-1 text-2xl font-bold text-[#85BEFF]">{totalFat} g</p>
+              <p className="mt-1 text-2xl font-bold text-[#88B8FF]">{totalFat} g</p>
             </div>
           </div>
         </div>

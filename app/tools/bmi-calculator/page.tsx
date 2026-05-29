@@ -74,13 +74,13 @@ export default function BMICalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -148,14 +148,14 @@ export default function BMICalculatorPage() {
                 A BMI calculator gives you a fast way to see where you sit on the standard
                 weight-for-height scale. It is useful for general awareness and for comparing
                 with health guidelines. For a better picture of body composition, pair it with our{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/ideal-body-weight-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/ideal-body-weight-calculator" className="text-[#88B8FF] hover:underline">
                   ideal body weight calculator
                 </Link>. For calorie and weight goals, use our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>.
               </p>
@@ -183,10 +183,10 @@ export default function BMICalculatorPage() {
                 your weight and height. What varies is how well BMI reflects health or body fat
                 for each person. It does not account for muscle mass, bone density, age, or sex.
                 For body composition, consider our{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>; for daily nutrition, use the{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>.
               </p>
@@ -200,19 +200,19 @@ export default function BMICalculatorPage() {
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 After checking your BMI, explore the{' '}
-                <Link href="/tools/ideal-body-weight-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/ideal-body-weight-calculator" className="text-[#88B8FF] hover:underline">
                   ideal body weight calculator
                 </Link>{' '}
                 for a height-based weight range, the{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>{' '}
                 for composition, and the{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 for daily intake goals. More in our{' '}
-                <Link href="/blog" className="text-[#85BEFF] hover:underline">
+                <Link href="/blog" className="text-[#88B8FF] hover:underline">
                   blog
                 </Link>.
               </p>

@@ -128,8 +128,8 @@ export default function CalorieDeficitCalculator() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#85BEFF]';
-  const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
+    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#88B8FF]';
+  const labelClass = 'mb-1.5 block text-sm font-medium text-eati-ink';
 
   return (
     <div>
@@ -146,9 +146,9 @@ export default function CalorieDeficitCalculator() {
                 name="unit"
                 checked={unitSystem === 'metric'}
                 onChange={() => setUnitSystem('metric')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Metric (kg, cm)</span>
+              <span className="text-sm text-eati-ink">Metric (kg, cm)</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -156,9 +156,9 @@ export default function CalorieDeficitCalculator() {
                 name="unit"
                 checked={unitSystem === 'imperial'}
                 onChange={() => setUnitSystem('imperial')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Imperial (lbs, feet & inches)</span>
+              <span className="text-sm text-eati-ink">Imperial (lbs, feet & inches)</span>
             </label>
           </div>
         </div>
@@ -189,9 +189,9 @@ export default function CalorieDeficitCalculator() {
                 name="gender"
                 checked={gender === 'male'}
                 onChange={() => setGender('male')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Male</span>
+              <span className="text-sm text-eati-ink">Male</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -199,9 +199,9 @@ export default function CalorieDeficitCalculator() {
                 name="gender"
                 checked={gender === 'female'}
                 onChange={() => setGender('female')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Female</span>
+              <span className="text-sm text-eati-ink">Female</span>
             </label>
           </div>
         </div>
@@ -296,17 +296,17 @@ export default function CalorieDeficitCalculator() {
             {DEFICIT_OPTIONS.map((opt) => (
               <label
                 key={opt.value}
-                className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#E3ECF7] bg-white px-4 py-3 transition-colors has-[:checked]:border-[#85BEFF] has-[:checked]:bg-[#E7F0FF]/50"
+                className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#E3ECF7] bg-white px-4 py-3 transition-colors has-[:checked]:border-[#88B8FF] has-[:checked]:bg-[#E7F0FF]/50"
               >
                 <input
                   type="radio"
                   name="deficit"
                   checked={deficitKcal === opt.value}
                   onChange={() => setDeficitKcal(opt.value)}
-                  className="mt-1 h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                  className="mt-1 h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
                 />
                 <div>
-                  <span className="text-sm font-medium text-[#364052]">{opt.label}</span>
+                  <span className="text-sm font-medium text-eati-ink">{opt.label}</span>
                   <p className="text-xs text-gray-500">{opt.description}</p>
                 </div>
               </label>
@@ -322,7 +322,7 @@ export default function CalorieDeficitCalculator() {
 
         <button
           type="submit"
-          className="w-full rounded-full bg-[#364052] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2b3545] sm:w-auto sm:px-8"
+          className="w-full rounded-full bg-eati-ink px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-eati-ink-hover sm:w-auto sm:px-8"
         >
           Calculate deficit
         </button>
@@ -374,7 +374,7 @@ function CalorieResultCard({
       <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{kcal} kcal</p>
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">{kcal} kcal</p>
       <p className="mb-3 text-sm text-gray-500">{kj} kJ</p>
       <p className="text-sm leading-relaxed text-gray-600">{explanation}</p>
     </div>
@@ -389,7 +389,7 @@ function WeeklyLossCard({ weeklyLossKg }: { weeklyLossKg: number }) {
       <h3 className="mb-3 text-base font-semibold">
         Estimated weekly weight loss
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{weeklyLossKg} kg</p>
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">{weeklyLossKg} kg</p>
       <p className="mb-3 text-sm text-gray-500">
         ≈ {(weeklyLossKg * 2.205).toFixed(2)} lbs per week
       </p>

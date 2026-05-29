@@ -84,13 +84,13 @@ export default function CalorieCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -159,11 +159,11 @@ export default function CalorieCalculatorPage() {
                 calculator gives you a single target so you can plan meals, track intake, and
                 adjust. It is useful for fat loss (controlled deficit), muscle gain (surplus with
                 enough protein), or maintenance. Pair it with our{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 for a full picture.
@@ -180,7 +180,7 @@ export default function CalorieCalculatorPage() {
                 want to double-check their targets. If you have a medical condition or are on
                 medication that affects weight, use the result as a guide and consider talking to
                 your doctor. For a safe deficit, combine with our{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>.
               </p>
@@ -207,19 +207,19 @@ export default function CalorieCalculatorPage() {
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Use the{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 to see your maintenance calories in detail, the{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 to set protein goals, and the{' '}
-                <Link href="/tools/calorie-burn-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-burn-calculator" className="text-[#88B8FF] hover:underline">
                   calorie burn calculator
                 </Link>{' '}
                 to see how exercise affects your daily burn. Read our{' '}
-                <Link href="/blog" className="text-[#85BEFF] hover:underline">
+                <Link href="/blog" className="text-[#88B8FF] hover:underline">
                   blog
                 </Link>{' '}
                 for guides on calorie deficits and weight loss.

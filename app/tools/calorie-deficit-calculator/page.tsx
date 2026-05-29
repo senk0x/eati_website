@@ -34,13 +34,13 @@ export default function CalorieDeficitCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -110,11 +110,11 @@ export default function CalorieDeficitCalculatorPage() {
                 too little. Too large a deficit can harm energy and muscle; too small can slow
                 progress. This calorie deficit calculator gives you a clear daily target and
                 expected weekly loss. Pair it with our{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 to preserve muscle and our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 for a single goal number.
@@ -143,10 +143,10 @@ export default function CalorieDeficitCalculatorPage() {
                 water retention, and individual metabolism. The calorie deficit calculator uses
                 standard formulas; your real deficit may need tuning after a few weeks. For total
                 daily burn, use our{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>; for exercise burn, try the{' '}
-                <Link href="/tools/calorie-burn-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-burn-calculator" className="text-[#88B8FF] hover:underline">
                   calorie burn calculator
                 </Link>.
               </p>
@@ -158,14 +158,14 @@ export default function CalorieDeficitCalculatorPage() {
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Get your maintenance first with the{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>, then use this calorie deficit calculator to set your target. Add the{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 to plan protein, carbs, and fat while in a deficit.

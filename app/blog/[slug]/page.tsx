@@ -129,13 +129,13 @@ export default async function BlogPostPage({ params }: PageProps) {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/blog" className="hover:text-[#85BEFF]">
+                <Link href="/blog" className="hover:text-[#88B8FF]">
                   Blog
                 </Link>
               </li>
@@ -195,7 +195,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <li key={item.id}>
                     <a
                       href={`#${item.id}`}
-                      className="text-sm text-[#364052] hover:text-[#85BEFF]"
+                      className="text-sm text-eati-ink hover:text-[#88B8FF]"
                     >
                       {index + 1}. {item.title}
                     </a>
@@ -250,7 +250,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Mid-Article CTA */}
             {article.midArticleCta && (
-              <div className="rounded-2xl bg-[#85BEFF] p-6 text-center text-white">
+              <div className="rounded-2xl bg-[#88B8FF] p-6 text-center text-white">
                 <p
                   className="mb-4 text-lg font-medium"
                 >
@@ -260,7 +260,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   href={eatiAppStoreUrl('blog_mid_article')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[#364052] transition-colors hover:bg-gray-100"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-eati-ink transition-colors hover:bg-gray-100"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
@@ -298,12 +298,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                   {article.faqs.map((faq, i) => (
                     <details
                       key={i}
-                      className="group overflow-hidden rounded-xl border border-[#E3ECF7] bg-white transition-colors open:border-[#85BEFF]"
+                      className="group overflow-hidden rounded-xl border border-[#E3ECF7] bg-white transition-colors open:border-[#88B8FF]"
                     >
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-base font-semibold text-[#364052] hover:bg-[#F7FAFF] [&::-webkit-details-marker]:hidden">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-base font-semibold text-eati-ink hover:bg-[#F7FAFF] [&::-webkit-details-marker]:hidden">
                         <h3 className="m-0 text-base font-semibold">{faq.question}</h3>
                         <svg
-                          className="h-5 w-5 flex-shrink-0 text-[#85BEFF] transition-transform duration-200 group-open:rotate-180"
+                          className="h-5 w-5 flex-shrink-0 text-[#88B8FF] transition-transform duration-200 group-open:rotate-180"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           aria-hidden="true"
@@ -333,19 +333,19 @@ export default async function BlogPostPage({ params }: PageProps) {
               </h2>
               <p className="mb-4 text-base leading-relaxed text-gray-700">
                 Use our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>
                 ,{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>
                 , and{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>{' '}
                 to set your daily targets. Explore all{' '}
-                <Link href="/tools" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools" className="text-[#88B8FF] hover:underline">
                   fitness & weight loss tools
                 </Link>.
               </p>
@@ -377,14 +377,14 @@ export default async function BlogPostPage({ params }: PageProps) {
                         loading="lazy"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-3xl text-[#85BEFF]">
+                      <div className="flex h-full w-full items-center justify-center text-3xl text-[#88B8FF]">
                         📝
                       </div>
                     )}
                   </div>
                   <div className="p-4">
                     <h3
-                      className="text-base font-semibold group-hover:text-[#85BEFF]"
+                      className="text-base font-semibold group-hover:text-[#88B8FF]"
                     >
                       {related.title}
                     </h3>

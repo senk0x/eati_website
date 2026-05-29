@@ -66,7 +66,7 @@ export default function AdminBlogPage() {
           </h1>
           <Link
             href="/admin/blog/new"
-            className="rounded-full bg-[#364052] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#2b3545]"
+            className="rounded-full bg-eati-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-eati-ink-hover"
           >
             + New Article
           </Link>
@@ -93,7 +93,7 @@ export default function AdminBlogPage() {
                     <td className="px-4 py-3">
                       <Link
                         href={`/admin/blog/${article.slug}`}
-                        className="font-medium text-[#364052] hover:text-[#85BEFF]"
+                        className="font-medium text-eati-ink hover:text-[#88B8FF]"
                       >
                         {article.title}
                       </Link>
@@ -116,7 +116,7 @@ export default function AdminBlogPage() {
                       <div className="flex items-center gap-2">
                         <Link
                           href={`/admin/blog/${article.slug}`}
-                          className="text-[#85BEFF] hover:underline"
+                          className="text-[#88B8FF] hover:underline"
                         >
                           Edit
                         </Link>
@@ -144,7 +144,7 @@ export default function AdminBlogPage() {
         <div className="mt-8">
           <Link
             href="/"
-            className="text-sm text-gray-500 hover:text-[#85BEFF]"
+            className="text-sm text-gray-500 hover:text-[#88B8FF]"
           >
             ← Back to site
           </Link>

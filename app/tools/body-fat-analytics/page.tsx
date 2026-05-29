@@ -39,13 +39,13 @@ export default function BodyFatAnalyticsPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -105,7 +105,7 @@ export default function BodyFatAnalyticsPage() {
                 model returns a structured estimate (body fat %, confidence, category, and a short
                 explanation of the visible indicators used). For a measurement-based approach
                 without photos, use our{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>{' '}
                 (U.S. Navy formula).
@@ -122,11 +122,11 @@ export default function BodyFatAnalyticsPage() {
                 quality. This tool is best used for relative tracking over time (e.g. same setup
                 each time) rather than an absolute number. Always treat it as an estimate. For
                 daily nutrition and calorie targets, pair with our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>.
               </p>
@@ -140,17 +140,17 @@ export default function BodyFatAnalyticsPage() {
                 Photo-based estimation requires no special equipment — just a phone or camera. You
                 can track changes over time by taking new photos in similar conditions. It
                 complements formula-based tools like our{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>{' '}
                 (waist, neck, height) and fits into a broader fitness toolkit:{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>,{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>, and{' '}
-                <Link href="/tools/bmi-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/bmi-calculator" className="text-[#88B8FF] hover:underline">
                   BMI calculator
                 </Link>.
               </p>

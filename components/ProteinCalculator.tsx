@@ -86,8 +86,8 @@ export default function ProteinCalculator() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#85BEFF]';
-  const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
+    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#88B8FF]';
+  const labelClass = 'mb-1.5 block text-sm font-medium text-eati-ink';
 
   return (
     <div>
@@ -104,9 +104,9 @@ export default function ProteinCalculator() {
                 name="unit"
                 checked={unitSystem === 'metric'}
                 onChange={() => setUnitSystem('metric')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Metric (kg)</span>
+              <span className="text-sm text-eati-ink">Metric (kg)</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -114,9 +114,9 @@ export default function ProteinCalculator() {
                 name="unit"
                 checked={unitSystem === 'imperial'}
                 onChange={() => setUnitSystem('imperial')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Imperial (lbs)</span>
+              <span className="text-sm text-eati-ink">Imperial (lbs)</span>
             </label>
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function ProteinCalculator() {
 
         <button
           type="submit"
-          className="w-full rounded-full bg-[#364052] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2b3545] sm:w-auto sm:px-8"
+          className="w-full rounded-full bg-eati-ink px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-eati-ink-hover sm:w-auto sm:px-8"
         >
           Calculate protein
         </button>
@@ -227,7 +227,7 @@ function DailyProteinCard({
       <h3 className="mb-3 text-base font-semibold">
         Recommended daily protein
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{dailyG} g</p>
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">{dailyG} g</p>
       <p className="mb-3 text-sm text-gray-500">Roughly {foodLb} lb lean meat equivalent per day</p>
       <p className="text-sm leading-relaxed text-gray-600">
         Based on {multiplier} g per kg body weight ({weightKg} kg). Spread this across your meals for best absorption and satiety.
@@ -244,7 +244,7 @@ function RangeCard({ minG, maxG }: { minG: number; maxG: number }) {
       <h3 className="mb-3 text-base font-semibold">
         Protein range
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">
         {minG} – {maxG} g
       </p>
       <p className="mb-3 text-sm text-gray-500">per day</p>
@@ -263,10 +263,10 @@ function PerMealCard({ perMeal3, perMeal4 }: { perMeal3: number; perMeal4: numbe
       <h3 className="mb-3 text-base font-semibold">
         Protein per meal
       </h3>
-      <p className="mb-1 text-lg font-bold text-[#85BEFF]">
+      <p className="mb-1 text-lg font-bold text-[#88B8FF]">
         {perMeal3} g (3 meals)
       </p>
-      <p className="mb-3 text-lg font-bold text-[#85BEFF]">
+      <p className="mb-3 text-lg font-bold text-[#88B8FF]">
         {perMeal4} g (4 meals)
       </p>
       <p className="text-sm leading-relaxed text-gray-600">
@@ -300,7 +300,7 @@ function GoalCard({
       <h3 className="mb-3 text-base font-semibold">
         Goal-based recommendation
       </h3>
-      <p className="mb-2 font-medium text-[#364052]">{goalLabel}</p>
+      <p className="mb-2 font-medium text-eati-ink">{goalLabel}</p>
       {trainingDays != null && (
         <p className="mb-2 text-sm text-gray-600">
           Training {trainingDays} day{trainingDays !== 1 ? 's' : ''} per week.

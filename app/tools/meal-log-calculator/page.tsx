@@ -44,13 +44,13 @@ export default function MealLogCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -97,7 +97,7 @@ export default function MealLogCalculatorPage() {
                 <li key={food.slug}>
                   <Link
                     href={`/foods/${food.slug}`}
-                    className="inline-block rounded-full border border-[#D5E3F5] bg-white px-4 py-2 text-sm font-medium text-[#364052] transition-colors hover:border-[#85BEFF] hover:text-[#85BEFF]"
+                    className="inline-block rounded-full border border-[#D5E3F5] bg-white px-4 py-2 text-sm font-medium text-eati-ink transition-colors hover:border-[#88B8FF] hover:text-[#88B8FF]"
                   >
                     {food.name}
                   </Link>
@@ -135,7 +135,7 @@ export default function MealLogCalculatorPage() {
                 It returns calories and macros per item and totals. Use clear descriptions and
                 amounts (e.g. &quot;salmon 150g&quot;, &quot;broccoli 100g&quot;) for better
                 estimates. Pair this with our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 to compare your meal to your daily goal.
@@ -150,11 +150,11 @@ export default function MealLogCalculatorPage() {
                 Values are AI-based estimates and can vary with preparation, brand, and portion
                 accuracy. They are best used for general tracking and trend awareness rather than
                 exact medical or dietetic use. For personalized targets, use our{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 to set daily goals, then log meals here to see how each meal fits.
@@ -169,15 +169,15 @@ export default function MealLogCalculatorPage() {
                 Logging what you eat helps you see patterns, hit calorie and macro targets, and
                 stay accountable. A meal log calculator makes it easy to get quick totals without
                 manual lookup. Combine it with a daily calorie goal from our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>{' '}
                 for weight loss, or with the{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 to meet protein targets.

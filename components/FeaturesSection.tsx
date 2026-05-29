@@ -8,258 +8,167 @@ export default function FeaturesSection() {
     >
       <div className="mx-auto max-w-7xl space-y-10 md:space-y-12">
         <h2 id="features-heading" className="sr-only">
-          Eati app features: AI meal logging, photo scan, barcode, voice, and progress
+          Eati app features: data logging, personalized AI nutrition approach, progress, and motivation
         </h2>
-        {/* Feature 1 - Log meals: text then image on all screens */}
+
+        {/* Feature 1 - Log your data */}
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
-          {/* Text block - always first on mobile */}
           <div className="order-1 w-full flex-1 md:pr-4">
-            <h3
-              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
-            >
-              Log meals like chatting
+            <h3 className="font-eati-heading text-3xl md:text-4xl lg:text-5xl">
+              Log your data
             </h3>
-            <p
-              className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-            >
-              Simply describe what you ate in natural language — like &ldquo;chicken breast with
-              spaghetti&rdquo; or &ldquo;oatmeal 80g with banana&rdquo; — and our AI instantly
-              calculates calories, protein, carbs, 
-              and fats. No more searching through databases or scanning barcodes.
+            <p className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg">
+              Log meals, activity, and body progress in seconds with the Eati AI calorie tracker and macro
+              tracker. Type naturally, speak with voice input, or use camera-based logging to capture real
+              life data fast and keep daily nutrition, training, and progress history in one place.
             </p>
           </div>
 
-          {/* Image - second on mobile */}
           <div
-            className="order-2 flex flex-1 items-start justify-center overflow-hidden rounded-[2rem] pb-6 md:rounded-[3rem] md:pb-8 min-h-[210px] md:min-h-[260px]"
+            className="order-2 flex w-full flex-1 items-start justify-center overflow-visible rounded-[2rem] pb-6 md:rounded-[3rem] md:pb-8 min-h-[210px] md:min-h-[260px]"
             style={{ backgroundColor: "#95E3A1" }}
           >
-            <div className="relative w-full max-w-[320px]">
+            <div className="relative w-full max-w-[560px] aspect-[580/418] overflow-visible">
               <Image
-                src="/images/feature-chat.png"
-                alt="Eati AI calorie tracker: chat-style meal log showing high-protein food and macro totals"
-                width={400}
-                height={600}
-                className="h-auto w-full"
+                src="/images/logbg.svg"
+                alt="Eati logging interface background with fixed phone frame"
+                fill
+                className="object-contain"
                 loading="lazy"
-                sizes="(max-width: 768px) 90vw, 400px"
+                sizes="(max-width: 768px) 92vw, 560px"
               />
+              <div className="feature-log-messages">
+                <div className="feature-log-message-slot feature-log-message-slot-1">
+                  <Image
+                    src="/images/logmess1.svg"
+                    alt="Meal logging card with macro breakdown"
+                    width={397}
+                    height={219}
+                    className="feature-log-frame feature-log-frame-1 is-first h-auto w-full"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 65vw, 397px"
+                  />
+                </div>
+                <div className="feature-log-message-slot feature-log-message-slot-2">
+                  <Image
+                    src="/images/logmess2.svg"
+                    alt="Activity logging card with calories burned"
+                    width={392}
+                    height={187}
+                    className="feature-log-frame feature-log-frame-2 h-auto w-full"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 64vw, 392px"
+                  />
+                </div>
+                <div
+                  className="feature-log-message-slot feature-log-message-slot-3"
+                  style={{ top: "1.5%", width: "71%" }}
+                >
+                  <Image
+                    src="/images/logmess3.svg"
+                    alt="Photo-based meal logging card with nutrition estimate"
+                    width={437}
+                    height={269}
+                    className="feature-log-frame feature-log-frame-3 h-auto w-full"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 72vw, 437px"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Feature 2 - See your day: text above image on mobile */}
+        {/* Feature 2 - Get Personalized Approach */}
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
-          {/* Image - second on mobile, first (left) on md */}
           <div
-            className="order-2 flex flex-1 items-end justify-center overflow-hidden rounded-[2rem] pt-6 md:order-1 md:rounded-[3rem] md:pt-8 min-h-[210px] md:min-h-[260px]"
+            className="order-2 flex w-full flex-1 items-end justify-center overflow-hidden rounded-[2rem] pt-6 md:order-1 md:rounded-[3rem] md:pt-8 min-h-[210px] md:min-h-[260px]"
             style={{ backgroundColor: "#F9DF74" }}
           >
-            <div className="relative w-full max-w-[360px]">
+            <div className="relative w-full max-w-[560px]">
               <Image
-                src="/images/feature-history.png"
-                alt="Daily nutrition summary in Eati: calories and macros for weight loss tracking"
-                width={480}
-                height={520}
+                src="/images/approach.svg"
+                alt="Personalized AI nutrition approach with custom meal plans, advice, and recommendations"
+                width={580}
+                height={418}
                 className="h-auto w-full"
                 loading="lazy"
-                sizes="(max-width: 768px) 90vw, 480px"
+                sizes="(max-width: 768px) 92vw, 560px"
               />
             </div>
           </div>
 
-          {/* Text - first on mobile, second (right) on md */}
           <div className="order-1 flex-1 md:order-2 md:pl-4">
-            <h3
-              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
-            >
-              See your day
+            <h3 className="font-eati-heading text-3xl md:text-4xl lg:text-5xl">
+              Get Personalized Approach
             </h3>
-            <p
-              className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-            >
-              Tap on the nutrition banner to open a clean daily summary of everything you&apos;ve eaten.
-              All meals are grouped in one place so you can quickly review calories, protein, carbs, and
-              fats for the whole day without scrolling through a long log.
+            <p className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg">
+              Based on your logs, Eati builds a personalized meal plan, gives practical nutrition advice,
+              answers your food and fitness questions, and recommends relevant recipes and exercises. This
+              creates a realistic fat loss or muscle gain strategy tailored to your routine.
             </p>
           </div>
         </div>
 
-        {/* Feature 3 - Voice log: text then image */}
+        {/* Feature 3 - Get Better */}
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           <div className="order-1 flex-1 md:pr-4">
-            <h3
-              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
-            >
-              Log with your voice
+            <h3 className="font-eati-heading text-3xl md:text-4xl lg:text-5xl">
+              Get Better
             </h3>
-            <p
-              className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-            >
-              Say what you ate and get instant nutrition — tap the microphone, speak your meal, and
-              the AI transcribes and calculates calories and macros. Perfect when your hands are full
-              or you&apos;re on the go.
+            <p className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg">
+              The app helps you move toward any body goal, from weight loss to lean muscle gain, as fast
+              and safely as your plan allows. Track trends, adjust nutrition and activity with clear data,
+              and improve consistency without extreme restrictions.
             </p>
           </div>
 
-          {/* Image - second on mobile */}
           <div
-            className="order-2 flex flex-1 items-start justify-center overflow-hidden rounded-[2rem] pb-6 md:rounded-[3rem] md:pb-8 min-h-[210px] md:min-h-[260px]"
+            className="order-2 flex w-full flex-1 items-start justify-center overflow-hidden rounded-[2rem] pb-6 md:rounded-[3rem] md:pb-8 min-h-[210px] md:min-h-[260px]"
             style={{ backgroundColor: "#E097EA" }}
           >
-            <div className="relative w-full max-w-[320px]">
+            <div className="relative w-full max-w-[560px]">
               <Image
-                src="/images/feature-voice.png"
-                alt="Voice meal logging in the Eati fat loss app: speak meals for instant calorie estimates"
-                width={400}
-                height={600}
+                src="/images/progress.svg"
+                alt="Progress tracking for weight loss and muscle gain with actionable nutrition and training data"
+                width={580}
+                height={418}
                 className="h-auto w-full"
                 loading="lazy"
-                sizes="(max-width: 768px) 90vw, 400px"
+                sizes="(max-width: 768px) 92vw, 560px"
               />
             </div>
           </div>
         </div>
 
-        {/* Feature 4 - Scan & analyze: text above image on mobile */}
+        {/* Feature 4 - Stay motivated */}
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           <div
-            className="order-2 flex flex-1 items-end justify-center overflow-hidden rounded-[2rem] md:order-1 md:rounded-[3rem] min-h-[210px] md:min-h-[260px]"
-            style={{ backgroundColor: "#F97477" }}
+            className="order-2 flex w-full flex-1 items-end justify-center overflow-hidden rounded-[2rem] md:order-1 md:rounded-[3rem] min-h-[210px] md:min-h-[260px]"
+            style={{ backgroundColor: "#97DFEA" }}
           >
-            <div className="relative w-full">
+            <div className="relative w-full max-w-[560px]">
               <Image
-                src="/images/feature-scan.png"
-                alt="Photo-based meal scan: AI estimates portions and calories for home-cooked and restaurant plates"
-                width={560}
-                height={420}
+                src="/images/motivation.svg"
+                alt="Smart reminders, home widgets, and gamification that keep healthy habits consistent"
+                width={580}
+                height={418}
                 className="h-auto w-full"
                 loading="lazy"
-                sizes="(max-width: 768px) 100vw, 560px"
+                sizes="(max-width: 768px) 92vw, 560px"
               />
             </div>
           </div>
 
-          {/* Text - first on mobile */}
           <div className="order-1 flex-1 md:order-2 md:pl-4">
-            <h3
-              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
-            >
-              Scan & analyze
+            <h3 className="font-eati-heading text-3xl md:text-4xl lg:text-5xl">
+              STAY MOTIVATED!
             </h3>
-            <p
-              className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-            >
-              Take a photo of your plate and get instant nutrition — the AI recognizes dishes, estimates
-              portions, and calculates calories, protein, carbs, and fats. No typing required.
+            <p className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg">
+              Keep momentum with smart notifications, home-screen widgets, streaks, and light gamification
+              that reward consistency. Eati helps you maintain healthy habits even on busy days, so your
+              results keep moving forward.
             </p>
-          </div>
-        </div>
-
-        {/* Feature 5 - Barcode: text then image */}
-        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
-          <div className="order-1 flex-1 md:pr-4">
-            <h3
-              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
-            >
-              Scan barcodes
-            </h3>
-            <p
-              className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-            >
-              Scan any packaged product&apos;s barcode and instantly get accurate nutrition info. 
-              The app pulls data from a global database so you can log snacks, drinks, and groceries 
-              in seconds without manual entry.
-            </p>
-          </div>
-
-          {/* Image - second on mobile */}
-          <div
-            className="order-2 flex flex-1 items-end justify-center overflow-hidden rounded-[2rem] pt-6 md:rounded-[3rem] md:pt-8 min-h-[210px] md:min-h-[260px]"
-            style={{ backgroundColor: "#74B5F9" }}
-          >
-            <div className="relative w-full">
-              <Image
-                src="/images/feature-barcode.png"
-                alt="Barcode scanner for packaged snacks and groceries — quick accurate calories for macro tracking"
-                width={560}
-                height={420}
-                className="h-auto w-full"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 560px"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Feature 6 - Track progress: text above image on mobile */}
-        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
-          <div
-            className="order-2 flex flex-1 items-center justify-center overflow-hidden rounded-[2rem] py-6 md:order-1 md:rounded-[3rem] md:py-8 min-h-[210px] md:min-h-[260px]"
-            style={{ backgroundColor: "#F99C74" }}
-          >
-            <div className="relative w-full max-w-[320px]">
-              <Image
-                src="/images/feature-progress.png"
-                alt="Weight and body progress charts in Eati for long-term fat loss and habit building"
-                width={400}
-                height={600}
-                className="h-auto w-full"
-                loading="lazy"
-                sizes="(max-width: 768px) 90vw, 400px"
-              />
-            </div>
-          </div>
-
-          {/* Text - first on mobile */}
-          <div className="order-1 flex-1 md:order-2 md:pl-4">
-            <h3
-              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
-            >
-              Track progress
-            </h3>
-            <p
-              className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-            >
-              Log weight and body measurements over time and see your progress in clear charts. Set goals,
-              track trends, and stay motivated as you build better eating and fitness habits.
-            </p>
-          </div>
-        </div>
-
-        {/* Feature 7 - Stay motivated: text then image */}
-        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
-          <div className="order-1 flex-1 md:pr-4">
-            <h3
-              className="font-eati-heading text-3xl md:text-4xl lg:text-5xl"
-            >
-              Stay motivated
-            </h3>
-            <p
-              className="mt-4 text-base leading-relaxed md:mt-6 md:text-lg"
-            >
-              Enable optional home-screen widgets and gentle reminders to keep your nutrition on track. 
-              Get motivational banners, streak notifications, and daily prompts that help you build 
-              lasting healthy habits.
-            </p>
-          </div>
-
-          {/* Image - second on mobile */}
-          <div
-            className="order-2 flex flex-1 items-center justify-center overflow-hidden rounded-[2rem] py-6 md:rounded-[3rem] md:py-8 min-h-[210px] md:min-h-[260px]"
-            style={{ backgroundColor: "#9374F9" }}
-          >
-            <div className="relative w-full max-w-[320px]">
-              <Image
-                src="/images/feature-notifications.png"
-                alt="Widgets and reminders in Eati: gentle nudges to stay on track with nutrition goals"
-                width={400}
-                height={600}
-                className="h-auto w-full"
-                loading="lazy"
-                sizes="(max-width: 768px) 90vw, 400px"
-              />
-            </div>
           </div>
         </div>
       </div>

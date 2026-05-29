@@ -286,13 +286,13 @@ export default async function FoodPage({ params }: Props) {
               className="flex flex-wrap items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/foods" className="hover:text-[#85BEFF]">
+                <Link href="/foods" className="hover:text-[#88B8FF]">
                   Foods
                 </Link>
               </li>
@@ -331,19 +331,19 @@ export default async function FoodPage({ params }: Props) {
             <ul className="grid gap-2 sm:grid-cols-2">
               <li className="rounded-xl border border-[#E3ECF7] bg-[#F7FAFF] px-4 py-3">
                 <span className="text-sm text-gray-500">Calories</span>
-                <p className="text-xl font-semibold text-[#364052]">{caloriesPer100g} kcal</p>
+                <p className="text-xl font-semibold text-eati-ink">{caloriesPer100g} kcal</p>
               </li>
               <li className="rounded-xl border border-[#E3ECF7] bg-[#F7FAFF] px-4 py-3">
                 <span className="text-sm text-gray-500">Protein</span>
-                <p className="text-xl font-semibold text-[#364052]">{proteinPer100g} g</p>
+                <p className="text-xl font-semibold text-eati-ink">{proteinPer100g} g</p>
               </li>
               <li className="rounded-xl border border-[#E3ECF7] bg-[#F7FAFF] px-4 py-3">
                 <span className="text-sm text-gray-500">Carbohydrates</span>
-                <p className="text-xl font-semibold text-[#364052]">{carbsPer100g} g</p>
+                <p className="text-xl font-semibold text-eati-ink">{carbsPer100g} g</p>
               </li>
               <li className="rounded-xl border border-[#E3ECF7] bg-[#F7FAFF] px-4 py-3">
                 <span className="text-sm text-gray-500">Fat</span>
-                <p className="text-xl font-semibold text-[#364052]">{fatPer100g} g</p>
+                <p className="text-xl font-semibold text-eati-ink">{fatPer100g} g</p>
               </li>
             </ul>
           </section>
@@ -360,17 +360,17 @@ export default async function FoodPage({ params }: Props) {
               <table className="w-full text-left text-sm">
                 <thead>
                   <tr className="border-b border-[#E3ECF7] bg-[#F7FAFF]">
-                    <th className="px-4 py-3 font-semibold text-[#364052]">Portion</th>
-                    <th className="px-4 py-3 font-semibold text-[#364052]">Calories</th>
-                    <th className="px-4 py-3 font-semibold text-[#364052]">Protein</th>
-                    <th className="px-4 py-3 font-semibold text-[#364052]">Carbs</th>
-                    <th className="px-4 py-3 font-semibold text-[#364052]">Fat</th>
+                    <th className="px-4 py-3 font-semibold text-eati-ink">Portion</th>
+                    <th className="px-4 py-3 font-semibold text-eati-ink">Calories</th>
+                    <th className="px-4 py-3 font-semibold text-eati-ink">Protein</th>
+                    <th className="px-4 py-3 font-semibold text-eati-ink">Carbs</th>
+                    <th className="px-4 py-3 font-semibold text-eati-ink">Fat</th>
                   </tr>
                 </thead>
                 <tbody>
                   {portions.map((g) => (
                     <tr key={g} className="border-b border-[#E3ECF7] last:border-0">
-                      <td className="px-4 py-3 font-medium text-[#364052]">{g}g</td>
+                      <td className="px-4 py-3 font-medium text-eati-ink">{g}g</td>
                       <td className="px-4 py-3 text-gray-600">
                         {scale(caloriesPer100g, g / 100)} kcal
                       </td>
@@ -418,11 +418,11 @@ export default async function FoodPage({ params }: Props) {
                 'It is low in carbs, making it easy to pair with vegetables and other foods. '}
               For best results, combine {name.toLowerCase()} with plenty of vegetables and a
               sustainable calorie target from a{' '}
-              <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+              <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                 calorie calculator
               </Link>{' '}
               or{' '}
-              <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+              <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                 calorie deficit calculator
               </Link>.
             </p>
@@ -450,15 +450,15 @@ export default async function FoodPage({ params }: Props) {
             </h2>
             <div className="space-y-5">
               <div className="rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-5">
-                <h3 className="mb-2 text-lg font-semibold text-[#364052]">Weight loss</h3>
+                <h3 className="mb-2 text-lg font-semibold text-eati-ink">Weight loss</h3>
                 <p className={pClass}>{copy.bestFor.weightLoss}</p>
               </div>
               <div className="rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-5">
-                <h3 className="mb-2 text-lg font-semibold text-[#364052]">Muscle gain</h3>
+                <h3 className="mb-2 text-lg font-semibold text-eati-ink">Muscle gain</h3>
                 <p className={pClass}>{copy.bestFor.muscleGain}</p>
               </div>
               <div className="rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-5">
-                <h3 className="mb-2 text-lg font-semibold text-[#364052]">General health</h3>
+                <h3 className="mb-2 text-lg font-semibold text-eati-ink">General health</h3>
                 <p className={pClass}>{copy.bestFor.generalHealth}</p>
               </div>
             </div>
@@ -478,7 +478,7 @@ export default async function FoodPage({ params }: Props) {
               ))}
               <li>
                 Want a fast macro breakdown? Use the{' '}
-                <Link href="/tools/meal-log-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/meal-log-calculator" className="text-[#88B8FF] hover:underline">
                   Meal Log Calculator
                 </Link>{' '}
                 to estimate calories and macros for your full meal (not just one ingredient).
@@ -492,15 +492,15 @@ export default async function FoodPage({ params }: Props) {
             </h2>
             <p className={pClass}>
               Log {name.toLowerCase()} and other foods in the{' '}
-              <Link href="/tools/meal-log-calculator" className="text-[#85BEFF] hover:underline">
+              <Link href="/tools/meal-log-calculator" className="text-[#88B8FF] hover:underline">
                 Meal Log Calculator
               </Link>
               . Set daily targets with the{' '}
-              <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+              <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                 calorie calculator
               </Link>{' '}
               and{' '}
-              <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+              <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                 macro calculator
               </Link>.
             </p>
@@ -519,7 +519,7 @@ export default async function FoodPage({ params }: Props) {
                 <Link
                   key={related.slug}
                   href={`/foods/${related.slug}`}
-                  className="group flex items-center gap-3 rounded-xl border border-[#E3ECF7] bg-[#F7FAFF] p-3 transition-all hover:border-[#85BEFF] hover:shadow-md"
+                  className="group flex items-center gap-3 rounded-xl border border-[#E3ECF7] bg-[#F7FAFF] p-3 transition-all hover:border-[#88B8FF] hover:shadow-md"
                 >
                   <div
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-lg"
@@ -528,7 +528,7 @@ export default async function FoodPage({ params }: Props) {
                     {related.emoji}
                   </div>
                   <div className="flex-1 overflow-hidden">
-                    <p className="truncate text-sm font-semibold text-[#364052] transition-colors group-hover:text-[#85BEFF]">
+                    <p className="truncate text-sm font-semibold text-eati-ink transition-colors group-hover:text-[#88B8FF]">
                       {related.name}
                     </p>
                     <p className="text-xs text-gray-500">
@@ -539,7 +539,7 @@ export default async function FoodPage({ params }: Props) {
               ))}
             </div>
             <p className="mt-4 text-sm text-gray-500">
-              <Link href="/foods" className="text-[#85BEFF] hover:underline">
+              <Link href="/foods" className="text-[#88B8FF] hover:underline">
                 Browse all foods →
               </Link>
             </p>

@@ -34,13 +34,13 @@ export default function MacroGoalCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -108,11 +108,11 @@ export default function MacroGoalCalculatorPage() {
                 Hitting the right macros supports muscle retention during a cut, muscle gain in a
                 surplus, and steady energy. This macro calculator turns a calorie goal into
                 concrete protein, carb, and fat targets. Use it with our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 to align intake with your goals.
@@ -128,7 +128,7 @@ export default function MacroGoalCalculatorPage() {
                 muscle gain — can use this macro goal calculator. It suits people who already have
                 a calorie target and want to break it into macros, and those who want one tool to
                 set both calories and macros. Combine with the{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 for a full nutrition plan.
@@ -144,7 +144,7 @@ export default function MacroGoalCalculatorPage() {
                 weight and goal). Individual needs can vary. Use the macro calculator output as a
                 starting point and adjust based on energy, performance, and results. For exercise
                 context, try our{' '}
-                <Link href="/tools/calorie-burn-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-burn-calculator" className="text-[#88B8FF] hover:underline">
                   calorie burn calculator
                 </Link>.
               </p>
@@ -156,15 +156,15 @@ export default function MacroGoalCalculatorPage() {
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Set your calorie target first with the{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>, then use this macro calculator for protein, carbs, and fat. For weight
                 loss planning, add the{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>.
               </p>

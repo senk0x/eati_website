@@ -143,7 +143,7 @@ export default function EatiCTA({
         </div>
 
         <div className="min-w-0 flex-1">
-          <p className="font-eati-heading text-lg font-semibold leading-snug text-[#364052] md:text-xl">
+          <p className="font-eati-heading text-lg font-semibold leading-snug text-eati-ink md:text-xl">
             {copy.headline}
           </p>
           <p className="mt-2 text-sm leading-relaxed text-gray-600 md:text-base">
@@ -154,8 +154,8 @@ export default function EatiCTA({
               {copy.subtextAddon}
             </p>
           ) : null}
-          <p className="mt-3 text-sm font-medium text-[#364052]">
-            <span className="text-[#85BEFF]">●</span> {copy.featureHighlight}
+          <p className="mt-3 text-sm font-medium text-eati-ink">
+            <span className="text-[#88B8FF]">●</span> {copy.featureHighlight}
           </p>
           {showSocialProof && (
             <p className="mt-2 text-xs text-gray-500 md:text-sm">
@@ -167,7 +167,7 @@ export default function EatiCTA({
             target="_blank"
             rel="noopener noreferrer"
             onClick={onClick}
-            className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#364052] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2b3545] md:px-6"
+            className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-eati-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-eati-ink-hover md:px-6"
           >
             <svg
               className="h-5 w-5 shrink-0"

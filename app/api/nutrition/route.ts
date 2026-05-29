@@ -9,15 +9,60 @@ interface FoodItem {
   fats: number;
 }
 
-interface NutritionResponse {
-  type: "nutrition" | "conversation";
-  message?: string;
-  foods?: FoodItem[];
-  totalCalories?: number;
-  totalProtein?: number;
-  totalCarbs?: number;
-  totalFats?: number;
+interface ActivityItem {
+  name: string;
+  duration: number;
+  caloriesBurned: number;
+  intensity?: "light" | "moderate" | "intense";
 }
+
+interface MealRecipe {
+  summary?: string;
+  cookTimeMinutes?: number;
+  servings?: number;
+  ingredients: string[];
+  steps: string[];
+  tip?: string;
+}
+
+interface MealSuggestion {
+  mealType: string;
+  name: string;
+  foods: FoodItem[];
+  totalCalories: number;
+  totalProtein: number;
+  totalCarbs: number;
+  totalFats: number;
+  recipe?: MealRecipe;
+}
+
+type ChatResponse =
+  | {
+      type: "food" | "nutrition";
+      foods?: FoodItem[];
+      totalCalories?: number;
+      totalProtein?: number;
+      totalCarbs?: number;
+      totalFats?: number;
+    }
+  | {
+      type: "activity";
+      activities?: ActivityItem[];
+      totalCaloriesBurned?: number;
+    }
+  | {
+      type: "meal_plan";
+      title?: string;
+      meals?: MealSuggestion[];
+      totalCalories?: number;
+      totalProtein?: number;
+      totalCarbs?: number;
+      totalFats?: number;
+    }
+  | {
+      type: "conversation";
+      message?: string;
+    };
 
 function parseWeight(weightStr: string): { value: number; unit: string } | null {
   const match = (weightStr || "")
@@ -104,15 +149,7 @@ function extractJSON(content: string): string {
   return cleaned;
 }
 
-function parseNutritionJSON(jsonString: string): {
-  type: string;
-  message?: string;
-  foods?: FoodItem[];
-  totalCalories?: number;
-  totalProtein?: number;
-  totalCarbs?: number;
-  totalFats?: number;
-} {
+function parseNutritionJSON(jsonString: string): Record<string, unknown> {
   let parsed: Record<string, unknown>;
   try {
     parsed = JSON.parse(jsonString);
@@ -137,14 +174,84 @@ function parseNutritionJSON(jsonString: string): {
   if (!parsed || typeof parsed !== "object") {
     throw new Error("Invalid response shape");
   }
-  return parsed as {
-    type: string;
-    message?: string;
-    foods?: FoodItem[];
-    totalCalories?: number;
-    totalProtein?: number;
-    totalCarbs?: number;
-    totalFats?: number;
+  return parsed;
+}
+
+function coerceNumber(value: unknown): number {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function normalizeResponse(parsed: Record<string, unknown>): ChatResponse {
+  const type = String(parsed.type ?? "conversation");
+
+  if (type === "conversation") {
+    return {
+      type: "conversation",
+      message: String(parsed.message ?? "I'm Eati, your fitness assistant!"),
+    };
+  }
+
+  if (type === "activity") {
+    const rawActs = Array.isArray(parsed.activities) ? parsed.activities : [];
+    const activities: ActivityItem[] = rawActs.map((a: Record<string, unknown>) => ({
+      name: String(a?.name ?? "Activity"),
+      duration: Math.max(0, coerceNumber(a?.duration)),
+      caloriesBurned: Math.max(0, coerceNumber(a?.caloriesBurned)),
+      intensity: ["light", "moderate", "intense"].includes(String(a?.intensity))
+        ? (a.intensity as ActivityItem["intensity"])
+        : undefined,
+    }));
+    return {
+      type: "activity",
+      activities,
+      totalCaloriesBurned: activities.reduce((s, a) => s + a.caloriesBurned, 0),
+    };
+  }
+
+  if (type === "meal_plan") {
+    const rawMeals = Array.isArray(parsed.meals) ? parsed.meals : [];
+    const meals: MealSuggestion[] = rawMeals.map((m: Record<string, unknown>) => {
+      const foods = sanitizeFoods((m.foods as FoodItem[]) || []);
+      return {
+        mealType: String(m.mealType ?? "lunch"),
+        name: String(m.name ?? "Meal"),
+        foods,
+        totalCalories:
+          coerceNumber(m.totalCalories) ||
+          foods.reduce((s, f) => s + (f.calories || 0), 0),
+        totalProtein:
+          coerceNumber(m.totalProtein) ||
+          foods.reduce((s, f) => s + (f.protein || 0), 0),
+        totalCarbs:
+          coerceNumber(m.totalCarbs) ||
+          foods.reduce((s, f) => s + (f.carbs || 0), 0),
+        totalFats:
+          coerceNumber(m.totalFats) ||
+          foods.reduce((s, f) => s + (f.fats || 0), 0),
+        recipe: m.recipe as MealRecipe | undefined,
+      };
+    });
+    return {
+      type: "meal_plan",
+      title: String(parsed.title ?? ""),
+      meals,
+      totalCalories: meals.reduce((s, m) => s + m.totalCalories, 0),
+      totalProtein: meals.reduce((s, m) => s + m.totalProtein, 0),
+      totalCarbs: meals.reduce((s, m) => s + m.totalCarbs, 0),
+      totalFats: meals.reduce((s, m) => s + m.totalFats, 0),
+    };
+  }
+
+  const foods = sanitizeFoods((parsed.foods as FoodItem[]) || []);
+  return {
+    type: "food",
+    foods,
+    totalCalories: foods.reduce((s, f) => s + (f.calories || 0), 0),
+    totalProtein: foods.reduce((s, f) => s + (f.protein || 0), 0),
+    totalCarbs: foods.reduce((s, f) => s + (f.carbs || 0), 0),
+    totalFats: foods.reduce((s, f) => s + (f.fats || 0), 0),
   };
 }
 
@@ -168,48 +275,38 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    const systemPrompt = `You are Eati, a friendly nutrition calculator assistant. Respond ONLY in valid JSON.
+    const systemPrompt = `You are Eati, a friendly AI nutrition and fitness assistant. Respond ONLY in valid JSON.
 
-YOUR PURPOSE:
-You help users track their food intake by calculating nutritional values (calories, protein, carbs, fats).
-You ONLY respond to:
-1. Food/dish names that need nutrition calculation
-2. Questions about nutrition, calories, or food-related topics
+DEMO MODE (mandatory):
+- NEVER return {"type":"clarification"} — use sensible defaults for missing details.
+- For FOOD with missing weight or cooking: assume 100–200 g and return {"type":"food",...} immediately.
+- For ACTIVITY with missing duration: assume 30 min and moderate intensity.
+- For MEAL_PLAN: return a complete meal_plan JSON immediately with recipe details.
+- For CONVERSATION: answer nutrition/fitness questions in 1–3 sentences.
 
-LANGUAGE RULE (CRITICAL):
-- Detect the language of the user's message
-- ALL text in your response MUST be in that EXACT language
-- Food names MUST stay in the user's original language - NEVER translate them
+CLASSIFICATION:
+1. FOOD: User mentions food/drinks they ate (e.g., "chicken 200g", "coffee", "Today I ate pizza").
+2. MEAL_PLAN: User asks for meal suggestions, recipes, or meal ideas (e.g., "give me a recipe", "what should I eat for lunch", "I have chicken and rice — what can I cook?").
+3. ACTIVITY: User mentions physical activity/exercise (e.g., "ran 30 min", "gym workout", "swimming 1 hour").
+4. CONVERSATION: Questions about nutrition/fitness, greetings, or general chat.
 
-WHEN TO CALCULATE NUTRITION:
-- User mentions a food, dish, meal, drink, or ingredient
-- Examples: "chicken sandwich", "100g rice", "pizza", "apple", "coffee with milk"
+LANGUAGE: Reply in the SAME language as the user's message. Food names stay in the user's language.
 
-WHEN TO RESPOND WITH CONVERSATION:
-- Message is unclear, random text, or doesn't make sense
-- Message is not about food or nutrition
-- Message is a greeting without food context
-- In these cases, politely explain you're here to help calculate nutrition
+For FOOD:
+{"type":"food","foods":[{"name":"Food Name","weight":"150 g","calories":250,"protein":20,"carbs":25,"fats":8}],"totalCalories":250,"totalProtein":20,"totalCarbs":25,"totalFats":8}
+- NEVER add "Total" or "Result" entries to foods array.
+- Numbers next to food names mean grams by default.
 
-NUTRITION RULES:
-1. Calculate nutrition for ANY food mentioned - never say "not in database"
-2. If no weight specified, assume a typical serving size
-3. For composite foods, account for ALL ingredients
-4. Be accurate with nutritional values
+For MEAL_PLAN:
+{"type":"meal_plan","title":"...","meals":[{"mealType":"lunch","name":"...","foods":[{"name":"...","weight":"150 g","calories":200,"protein":20,"carbs":10,"fats":5}],"totalCalories":200,"totalProtein":20,"totalCarbs":10,"totalFats":5,"recipe":{"summary":"...","cookTimeMinutes":25,"servings":1,"ingredients":["200 g chicken breast","1 tbsp olive oil"],"steps":["Step 1","Step 2"],"tip":"..."}}]}
 
-WEIGHT/PORTION PARSING (CRITICAL):
-- Numbers next to food names mean GRAMS by default: "Banana 100" = "Banana 100g"
-- Only use different units if explicitly specified (ml, oz, lbs, pieces, etc.)
+For ACTIVITY:
+{"type":"activity","activities":[{"name":"Running","duration":30,"caloriesBurned":300,"intensity":"moderate"}],"totalCaloriesBurned":300}
+- Running ~10 cal/min, walking ~4, cycling ~8, swimming ~9, weights ~5, HIIT ~12.
 
-CRITICAL - FOODS ARRAY RULES:
-- Each "foods" array item MUST be an ACTUAL food/dish the user mentioned
-- NEVER add a "Result", "Total", "Sum", "Итого", "Результат", or similar entry to the foods array
-- The totalCalories/totalProtein/totalCarbs/totalFats fields are for the sum - do NOT duplicate this as a food item
-
-RESPONSE FORMAT:
-- For food: {"type":"nutrition","foods":[{"name":"Food Name","weight":"150 g","calories":250,"protein":20,"carbs":25,"fats":8}],"totalCalories":250,"totalProtein":20,"totalCarbs":25,"totalFats":8}
-- For multiple foods: {"type":"nutrition","foods":[{"name":"Dish 1","weight":"100 g","calories":100,"protein":10,"carbs":10,"fats":5},{"name":"Dish 2","weight":"200 g","calories":200,"protein":15,"carbs":20,"fats":10}],"totalCalories":300,"totalProtein":25,"totalCarbs":30,"totalFats":15}
-- For unclear/non-food messages: {"type":"conversation","message":"Hi! I'm Eati, your nutrition assistant. Tell me what you ate and I'll calculate the calories and nutrients for you!"}
+For CONVERSATION:
+{"type":"conversation","message":"..."}
+- Answer fitness/nutrition questions helpfully. For off-topic, be playful and redirect to food/fitness.
 
 Respond with ONLY the JSON, no markdown or extra text.`;
 
@@ -225,8 +322,9 @@ Respond with ONLY the JSON, no markdown or extra text.`;
           { role: "system", content: systemPrompt },
           { role: "user", content: message },
         ],
-        temperature: 0.2,
+        temperature: 0.25,
         max_tokens: 2000,
+        response_format: { type: "json_object" },
       }),
     });
 
@@ -234,7 +332,7 @@ Respond with ONLY the JSON, no markdown or extra text.`;
     if (!response.ok) {
       console.error("OpenAI API error:", responseText?.slice(0, 500));
       return NextResponse.json(
-        { error: "Failed to calculate nutrition" },
+        { error: "Failed to process message" },
         { status: 500 }
       );
     }
@@ -251,27 +349,7 @@ Respond with ONLY the JSON, no markdown or extra text.`;
 
     const jsonString = extractJSON(content);
     const parsed = parseNutritionJSON(jsonString);
-
-    if (parsed.type === "conversation") {
-      const result: NutritionResponse = {
-        type: "conversation",
-        message: parsed.message || "",
-      };
-      return NextResponse.json(result);
-    }
-
-    const foodsRaw = parsed.foods;
-    const foodsArray = Array.isArray(foodsRaw) ? foodsRaw : [];
-    const sanitized = sanitizeFoods(foodsArray);
-
-    const result: NutritionResponse = {
-      type: "nutrition",
-      foods: sanitized,
-      totalCalories: sanitized.reduce((s, f) => s + (f.calories || 0), 0),
-      totalProtein: sanitized.reduce((s, f) => s + (f.protein || 0), 0),
-      totalCarbs: sanitized.reduce((s, f) => s + (f.carbs || 0), 0),
-      totalFats: sanitized.reduce((s, f) => s + (f.fats || 0), 0),
-    };
+    const result = normalizeResponse(parsed);
 
     return NextResponse.json(result);
   } catch (error) {

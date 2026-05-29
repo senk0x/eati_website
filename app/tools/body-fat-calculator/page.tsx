@@ -41,13 +41,13 @@ export default function BodyFatCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -116,11 +116,11 @@ export default function BodyFatCalculatorPage() {
                 Tracking body fat percentage helps you see whether you are losing fat or muscle and
                 set realistic goals. This body fat calculator works at home with a tape measure —
                 no DEXA or calipers required. Use it with our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>{' '}
                 to plan intake while losing fat.
@@ -136,11 +136,11 @@ export default function BodyFatCalculatorPage() {
                 body fat calculator. It suits people tracking fat loss, athletes monitoring
                 composition, and anyone curious about body fat without access to DEXA or other
                 methods. For context, pair with our{' '}
-                <Link href="/tools/bmi-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/bmi-calculator" className="text-[#88B8FF] hover:underline">
                   BMI calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/ideal-body-weight-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/ideal-body-weight-calculator" className="text-[#88B8FF] hover:underline">
                   ideal body weight calculator
                 </Link>.
               </p>
@@ -198,11 +198,11 @@ export default function BodyFatCalculatorPage() {
                 measure. Use it for tracking trends over time (same formula, same technique)
                 rather than an absolute “true” number. For context on weight and height, pair
                 with our{' '}
-                <Link href="/tools/bmi-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/bmi-calculator" className="text-[#88B8FF] hover:underline">
                   BMI calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/ideal-body-weight-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/ideal-body-weight-calculator" className="text-[#88B8FF] hover:underline">
                   ideal body weight calculator
                 </Link>.
               </p>
@@ -220,11 +220,11 @@ export default function BodyFatCalculatorPage() {
                 into. These ranges are guidelines; individual goals depend on health, sport,
                 and preference. Use the result to inform nutrition and training — for example
                 with our{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>.
               </p>
@@ -238,15 +238,15 @@ export default function BodyFatCalculatorPage() {
                 To reduce body fat, most people need a modest calorie deficit (eating slightly
                 less than they burn), enough protein to preserve muscle, and resistance
                 training. Use our{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 to set a target intake, and the{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 to hit a daily protein goal. Re-measure with this body fat calculator every few

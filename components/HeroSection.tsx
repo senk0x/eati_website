@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import GreetingMascotIcon from "@/components/GreetingMascotIcon";
 
 interface FoodItem {
   name: string;
@@ -11,64 +13,159 @@ interface FoodItem {
   fats: number;
 }
 
-interface Meal {
-  userMessage: string;
-  foods: FoodItem[];
+interface ActivityItem {
+  name: string;
+  duration: number;
+  caloriesBurned: number;
+  intensity?: "light" | "moderate" | "intense";
 }
 
-const defaultMeals: Meal[] = [
+interface MealSuggestion {
+  mealType: string;
+  name: string;
+  foods: FoodItem[];
+  totalCalories: number;
+  totalProtein: number;
+  totalCarbs: number;
+  totalFats: number;
+  recipe?: {
+    summary?: string;
+    cookTimeMinutes?: number;
+    ingredients?: string[];
+    steps?: string[];
+  };
+}
+
+type HeroContentType = "food" | "activity" | "meal_plan" | "conversation";
+
+interface HeroDemo {
+  userMessage: string;
+  contentType: HeroContentType;
+  foods?: FoodItem[];
+  activities?: ActivityItem[];
+  meals?: MealSuggestion[];
+  message?: string;
+}
+
+interface CustomSession {
+  userMessage: string;
+  response: HeroDemo | null;
+  isLoading: boolean;
+}
+
+const PLACEHOLDER_HINTS = [
+  "Suggest me a meal...",
+  "Jogging 30 mins...",
+  "Today I ate...",
+  "Give me a breakfast idea...",
+  "Bench press 5 reps...",
+  "Rice 200g...",
+];
+
+const defaultDemos: HeroDemo[] = [
   {
-    userMessage: "Chicken breast 200g with spaghetti 150g",
+    userMessage: "Chicken breast with spagetti",
+    contentType: "food",
     foods: [
-      { name: "Chicken Breast", weight: "200g", calories: 330, protein: 62, carbs: 0, fats: 7 },
-      { name: "Spaghetti", weight: "150g", calories: 237, protein: 8, carbs: 47, fats: 1 },
+      { name: "Chicken Breast", weight: "100 g", calories: 234, protein: 23, carbs: 23, fats: 23 },
+      { name: "Spagetti", weight: "200 g", calories: 234, protein: 23, carbs: 23, fats: 23 },
     ],
   },
   {
-    userMessage: "Greek salad with feta cheese",
-    foods: [
-      { name: "Greek Salad", weight: "100g", calories: 48, protein: 1, carbs: 3, fats: 4 },
-      { name: "Feta Cheese", weight: "100g", calories: 264, protein: 14, carbs: 4, fats: 21 },
+    userMessage: "Ran 30 minutes this morning",
+    contentType: "activity",
+    activities: [
+      { name: "Running", duration: 30, caloriesBurned: 300, intensity: "moderate" },
     ],
   },
   {
-    userMessage: "Salmon 180g with rice 150g and vegetables",
-    foods: [
-      { name: "Salmon Fillet", weight: "180g", calories: 367, protein: 40, carbs: 0, fats: 22 },
-      { name: "White Rice", weight: "150g", calories: 195, protein: 4, carbs: 43, fats: 0 },
-      { name: "Mixed Vegetables", weight: "100g", calories: 65, protein: 3, carbs: 13, fats: 0 },
+    userMessage: "Give me a high-protein lunch recipe",
+    contentType: "meal_plan",
+    meals: [
+      {
+        mealType: "lunch",
+        name: "Grilled Chicken Bowl",
+        foods: [
+          { name: "Chicken Breast", weight: "150 g", calories: 248, protein: 46, carbs: 0, fats: 5 },
+          { name: "Brown Rice", weight: "120 g", calories: 134, protein: 3, carbs: 28, fats: 1 },
+          { name: "Broccoli", weight: "80 g", calories: 27, protein: 2, carbs: 5, fats: 0 },
+        ],
+        totalCalories: 409,
+        totalProtein: 51,
+        totalCarbs: 33,
+        totalFats: 6,
+        recipe: {
+          summary: "Simple grilled chicken with rice and steamed broccoli.",
+          cookTimeMinutes: 25,
+        },
+      },
     ],
   },
   {
-    userMessage: "Oatmeal 80g with banana 120g and honey 20g",
-    foods: [
-      { name: "Oatmeal", weight: "80g", calories: 303, protein: 11, carbs: 51, fats: 5 },
-      { name: "Banana", weight: "120g", calories: 107, protein: 1, carbs: 27, fats: 0 },
-      { name: "Honey", weight: "20g", calories: 64, protein: 0, carbs: 17, fats: 0 },
-    ],
-  },
-  {
-    userMessage: "Beef steak with mashed potatoes",
-    foods: [
-      { name: "Beef Steak", weight: "100g", calories: 271, protein: 25, carbs: 0, fats: 18 },
-      { name: "Mashed Potatoes", weight: "100g", calories: 107, protein: 2, carbs: 16, fats: 4 },
-    ],
+    userMessage: "How much protein should I eat per day?",
+    contentType: "conversation",
+    message:
+      "Most active adults do well with 1.6–2.2 g of protein per kg of body weight. For a 70 kg person, that's roughly 110–155 g daily.",
   },
 ];
 
+function buildCustomResponse(userInput: string, data: Record<string, unknown>): HeroDemo {
+  if (
+    (data.type === "food" || data.type === "nutrition") &&
+    Array.isArray(data.foods) &&
+    data.foods.length > 0
+  ) {
+    return {
+      userMessage: userInput,
+      contentType: "food",
+      foods: data.foods as FoodItem[],
+    };
+  }
+
+  if (data.type === "activity" && Array.isArray(data.activities) && data.activities.length > 0) {
+    return {
+      userMessage: userInput,
+      contentType: "activity",
+      activities: data.activities as ActivityItem[],
+    };
+  }
+
+  if (data.type === "meal_plan" && Array.isArray(data.meals) && data.meals.length > 0) {
+    return {
+      userMessage: userInput,
+      contentType: "meal_plan",
+      meals: data.meals as MealSuggestion[],
+    };
+  }
+
+  if (data.type === "conversation") {
+    return {
+      userMessage: userInput,
+      contentType: "conversation",
+      message: String(data.message || "How can I help with your nutrition or fitness?"),
+    };
+  }
+
+  return {
+    userMessage: userInput,
+    contentType: "conversation",
+    message: "Could not process request. Please try again.",
+  };
+}
+
 export default function HeroSection() {
-  const rays = generateSunburstRays();
-  const [currentMealIndex, setCurrentMealIndex] = useState(0);
+  const [currentDemoIndex, setCurrentDemoIndex] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [customMeal, setCustomMeal] = useState<Meal | null>(null);
+  const [customSession, setCustomSession] = useState<CustomSession | null>(null);
   const [isAutoRotating, setIsAutoRotating] = useState(true);
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+  const [placeholderFading, setPlaceholderFading] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    if (isAutoRotating && !customMeal) {
+    if (isAutoRotating && !customSession) {
       intervalRef.current = setInterval(() => {
-        setCurrentMealIndex((prev) => (prev + 1) % defaultMeals.length);
+        setCurrentDemoIndex((prev) => (prev + 1) % defaultDemos.length);
       }, 4000);
     }
     return () => {
@@ -76,10 +173,28 @@ export default function HeroSection() {
         clearInterval(intervalRef.current);
       }
     };
-  }, [isAutoRotating, customMeal]);
+  }, [isAutoRotating, customSession]);
 
-  const currentMeal = customMeal || defaultMeals[currentMealIndex];
-  const totals = currentMeal.foods.reduce(
+  useEffect(() => {
+    if (inputValue.trim()) return;
+
+    const rotate = setInterval(() => {
+      setPlaceholderFading(true);
+      setTimeout(() => {
+        setPlaceholderIndex((prev) => (prev + 1) % PLACEHOLDER_HINTS.length);
+        setPlaceholderFading(false);
+      }, 220);
+    }, 3200);
+
+    return () => clearInterval(rotate);
+  }, [inputValue]);
+
+  const activeDemo = customSession?.response ?? defaultDemos[currentDemoIndex];
+  const displayUserMessage =
+    customSession?.userMessage ?? defaultDemos[currentDemoIndex].userMessage;
+  const isPhoneLoading = customSession?.isLoading ?? false;
+
+  const totals = (activeDemo.foods ?? []).reduce(
     (acc, food) => ({
       calories: acc.calories + food.calories,
       protein: acc.protein + food.protein,
@@ -92,16 +207,17 @@ export default function HeroSection() {
   const dailyGoals = { calories: 2000, protein: 150, carbs: 250, fats: 65 };
 
   const handleSubmit = async () => {
-    if (!inputValue.trim() || isLoading) return;
+    if (!inputValue.trim() || customSession?.isLoading) return;
 
-    setIsLoading(true);
     setIsAutoRotating(false);
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
 
     const userInput = inputValue.trim();
-    
+    setInputValue("");
+    setCustomSession({ userMessage: userInput, response: null, isLoading: true });
+
     try {
       const response = await fetch("/api/nutrition", {
         method: "POST",
@@ -114,74 +230,33 @@ export default function HeroSection() {
       const data = await response.json();
 
       if (!response.ok || data.error) {
-        // Handle API errors - show error message in the phone
-        setCustomMeal({
+        setCustomSession({
           userMessage: userInput,
-          foods: [
-            {
-              name: data.error || "Service temporarily unavailable. Please try again.",
-              weight: "",
-              calories: 0,
-              protein: 0,
-              carbs: 0,
-              fats: 0,
-            },
-          ],
-        });
-      } else if (data.type === "nutrition" && data.foods && data.foods.length > 0) {
-        setCustomMeal({
-          userMessage: userInput,
-          foods: data.foods,
-        });
-      } else if (data.type === "conversation") {
-        setCustomMeal({
-          userMessage: userInput,
-          foods: [
-            {
-              name: data.message || "Please describe a food item",
-              weight: "",
-              calories: 0,
-              protein: 0,
-              carbs: 0,
-              fats: 0,
-            },
-          ],
+          response: {
+            userMessage: userInput,
+            contentType: "conversation",
+            message: data.error || "Service temporarily unavailable. Please try again.",
+          },
+          isLoading: false,
         });
       } else {
-        // Fallback for unexpected response format
-        setCustomMeal({
+        setCustomSession({
           userMessage: userInput,
-          foods: [
-            {
-              name: "Could not process request. Please try again.",
-              weight: "",
-              calories: 0,
-              protein: 0,
-              carbs: 0,
-              fats: 0,
-            },
-          ],
+          response: buildCustomResponse(userInput, data),
+          isLoading: false,
         });
       }
     } catch (error) {
       console.error("Error fetching nutrition:", error);
-      // Show error in the phone display
-      setCustomMeal({
+      setCustomSession({
         userMessage: userInput,
-        foods: [
-          {
-            name: "Network error. Please check your connection and try again.",
-            weight: "",
-            calories: 0,
-            protein: 0,
-            carbs: 0,
-            fats: 0,
-          },
-        ],
+        response: {
+          userMessage: userInput,
+          contentType: "conversation",
+          message: "Network error. Please check your connection and try again.",
+        },
+        isLoading: false,
       });
-    } finally {
-      setIsLoading(false);
-      setInputValue("");
     }
   };
 
@@ -191,74 +266,80 @@ export default function HeroSection() {
     }
   };
 
+  const isSubmitting = customSession?.isLoading ?? false;
+
   return (
     <section className="px-4 sm:px-5 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div
           className="relative flex min-h-[min(680px,100svh)] flex-col overflow-hidden rounded-[2rem] md:min-h-[500px] md:flex-none md:rounded-[3rem] lg:min-h-[540px]"
-          style={{ backgroundColor: "#85BEFF" }}
+          style={{ backgroundColor: "#88B8FF" }}
         >
-          {/* Sunburst rays background */}
-          <div className="absolute inset-0">
-            <svg
-              className="h-full w-full"
-              viewBox="0 0 1000 800"
-              preserveAspectRatio="xMidYMid slice"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="#99CAFF">
-                {rays.map((points, i) => (
-                  <polygon key={i} points={points} />
-                ))}
-              </g>
-            </svg>
+          {/* Pattern background */}
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src="/images/Frame 101563.svg"
+              alt=""
+              fill
+              priority
+              className="object-cover object-right"
+              aria-hidden
+            />
           </div>
 
           {/* Hero content - top on mobile, left on tablet+ */}
           <div className="relative z-10 flex flex-1 flex-col justify-center px-4 py-8 text-center md:min-h-[500px] md:items-start md:px-8 md:py-12 md:text-left lg:px-16 lg:py-16">
+            {/* App icon */}
+            <div className="mx-auto mb-4 md:mx-0 md:mb-5">
+              <GreetingMascotIcon size={72} />
+            </div>
+
             {/* Title */}
             <h1 className="font-eati-heading text-3xl font-normal uppercase leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-              TRACK YOUR
+              I AM EATI!
               <br />
-              CALORIES
+              YOUR FITNESS
               <br />
-              IN SECONDS
+              ASSISTANT
             </h1>
-            <p
-              className="mx-auto mt-4 max-w-xl text-pretty text-base font-medium leading-snug text-white/95 sm:text-lg md:mx-0 md:text-left md:text-xl"
-            >
-              AI calorie tracker and meal planner — log by text, photo, barcode, or voice. Built for
-              fat loss, macro goals, and everyday consistency.
-            </p>
 
             {/* Input field and send button */}
-            <div className="mt-6 flex flex-col items-center md:mt-8 md:items-start md:text-left lg:mt-12">
+            <div className="mt-6 flex flex-col items-center md:mt-8 md:items-start md:text-left lg:mt-10">
               <div className="flex w-full max-w-[280px] items-center gap-3 sm:max-w-[320px] md:max-w-none md:w-auto md:max-w-[320px]">
-                <div className="min-w-0 flex-1 rounded-full border-[3px] border-white sm:w-64 md:w-80">
+                <div className="relative min-w-0 flex-1 rounded-full border-[3px] border-white sm:w-64 md:w-80">
                   <input
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    placeholder="Describe your meal..."
-                    disabled={isLoading}
-                    className="min-h-[44px] w-full bg-transparent px-5 py-3 text-base font-medium text-white placeholder:text-white/80 focus:outline-none disabled:opacity-50 sm:px-6 md:px-8 md:py-4 md:text-lg"
+                    placeholder=" "
+                    disabled={isSubmitting}
+                    aria-label="Chat with Eati"
+                    className="min-h-[44px] w-full bg-transparent px-5 py-3 text-base font-medium text-white focus:outline-none disabled:opacity-50 sm:px-6 md:px-8 md:py-4 md:text-lg"
                   />
+                  {!inputValue && (
+                    <span
+                      aria-hidden
+                      className={`hero-placeholder-hint pointer-events-none absolute inset-y-0 left-5 flex items-center text-base font-medium text-white/80 sm:left-6 md:left-8 md:text-lg ${placeholderFading ? "hero-placeholder-hint-fade" : ""}`}
+                    >
+                      {PLACEHOLDER_HINTS[placeholderIndex]}
+                    </span>
+                  )}
                 </div>
 
-                {/* Send button - 44px min touch target */}
+                {/* Send button */}
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  disabled={isLoading || !inputValue.trim()}
+                  disabled={isSubmitting || !inputValue.trim()}
                   className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90 disabled:opacity-50 md:h-14 md:w-14"
                   aria-label="Send"
                 >
-                  {isLoading ? (
-                    <div className="h-5 w-5 animate-spin rounded-full border-2 border-[#85BEFF] border-t-transparent md:h-6 md:w-6" />
+                  {isSubmitting ? (
+                    <div className="h-5 w-5 animate-spin rounded-full border-2 border-[#88B8FF] border-t-transparent md:h-6 md:w-6" />
                   ) : (
                     <svg
-                      className="h-5 w-5 text-[#85BEFF] md:h-6 md:w-6"
+                      className="h-5 w-5 text-[#88B8FF] md:h-6 md:w-6"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -303,161 +384,84 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* iPhone mockup - on mobile: larger, centered, lower with bottom slightly cropped */}
+          {/* iPhone mockup */}
           <div className="relative z-10 mt-6 flex w-full shrink-0 justify-center pb-0 pt-10 md:mt-0 md:w-auto md:absolute md:right-8 md:top-8 md:justify-end md:pt-0 lg:right-16">
             <div className="relative flex w-full justify-center overflow-hidden md:w-auto md:overflow-visible">
-              {/* Larger phone; no overflow on wrapper so SVG stroke is not cropped; inner content clips messages */}
               <div className="relative inline-flex w-56 justify-center sm:w-64 md:w-64 lg:w-72 xl:w-80 -mb-12 sm:-mb-16 md:mb-0">
-                  {/* iPhone frame - SVG stroke can extend; wrapper does not clip it */}
-                  <svg
-                    className="h-auto w-full min-w-0 flex-shrink-0"
-                    viewBox="0 0 408 885"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                        <rect
-                      x="5.06293"
-                      y="5.06293"
-                      width="396.934"
-                      height="874.874"
-                      rx="45.5664"
-                      stroke="white"
-                      strokeWidth="10.1259"
-                    />
-                    <rect
-                      x="127.584"
-                      y="46.5801"
-                      width="150.875"
-                      height="42.5286"
-                      rx="21.2643"
-                      fill="white"
-                    />
-                  </svg>
+                <svg
+                  className="h-auto w-full min-w-0 flex-shrink-0"
+                  viewBox="0 0 408 885"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5.06293"
+                    y="5.06293"
+                    width="396.934"
+                    height="874.874"
+                    rx="45.5664"
+                    stroke="white"
+                    strokeWidth="10.1259"
+                  />
+                  <rect
+                    x="127.584"
+                    y="46.5801"
+                    width="150.875"
+                    height="42.5286"
+                    rx="21.2643"
+                    fill="white"
+                  />
+                </svg>
 
-              {/* Phone screen content - inset; hard clip so messages cannot extend past */}
-              <div
-                className="absolute left-[12px] right-[12px] top-[82px] bottom-[8px] overflow-hidden rounded-[26px]"
-                style={{
-                  width: "calc(100% - 24px)",
-                  maxWidth: "calc(100% - 24px)",
-                  boxSizing: "border-box",
-                }}
-              >
-                <div className="flex h-full w-full min-w-0 flex-col gap-2 overflow-hidden px-2.5 pt-2.5 pb-0">
-                  {/* User message bubble - fixed max width so it never exceeds frame */}
-                  <div key={`msg-${customMeal ? 'custom' : currentMealIndex}`} className="flex min-w-0 flex-col gap-2 overflow-hidden">
-                    <div className="hero-phone-bubble-enter flex min-w-0 justify-end overflow-hidden">
+                <div
+                  className="absolute left-[12px] right-[12px] top-[82px] bottom-[8px] overflow-hidden rounded-[26px]"
+                  style={{
+                    width: "calc(100% - 24px)",
+                    maxWidth: "calc(100% - 24px)",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  <div className="flex h-full w-full min-w-0 flex-col gap-2 overflow-hidden px-2.5 pt-2.5 pb-0">
+                    <div className="flex min-w-0 flex-col gap-2 overflow-hidden">
                       <div
-                        className={`max-w-[70%] shrink-0 rounded-[12px] rounded-br-[3px] px-2 py-1.5 text-white transition-all duration-500 ${isLoading ? "animate-pulse" : ""}`}
-                        style={{
-                          backgroundColor: "#2F5176",
-                          maxWidth: "min(70%, 8.5rem)",
-                        }}
+                        key={`user-${displayUserMessage}`}
+                        className="hero-phone-bubble-enter flex min-w-0 justify-end overflow-hidden"
                       >
-                        <span className="break-words text-[11px] leading-tight md:text-xs">
-                          {currentMeal.userMessage}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* AI response bubble - contained within frame */}
-                    <div className="hero-phone-bubble-enter hero-phone-bubble-delay flex min-w-0 justify-start overflow-hidden">
-                      <div
-                        className={`min-w-0 max-w-full shrink-0 rounded-[12px] rounded-bl-[3px] p-2 transition-all duration-500 overflow-hidden ${isLoading ? "animate-pulse" : ""}`}
-                        style={{
-                          backgroundColor: "#F5F9FF",
-                          boxSizing: "border-box",
-                        }}
-                      >
-                      {isLoading ? (
-                        <div className="flex items-center justify-center py-3">
-                          <div className="h-4 w-4 animate-spin rounded-full border-2 border-[#85BEFF] border-t-transparent" />
+                        <div
+                          className="max-w-[80%] shrink-0 rounded-[12px] rounded-br-[4px] px-3 py-2 text-white md:rounded-[13px] md:rounded-br-[4px] md:px-3.5 md:py-2.5"
+                          style={{ backgroundColor: "#2F5176" }}
+                        >
+                          <p className="m-0 break-words text-[11px] leading-[1.15] md:text-xs">
+                            {displayUserMessage}
+                          </p>
                         </div>
-                      ) : (
-                        <div className="min-w-0 overflow-hidden">
-                          {/* Food items - smaller */}
-                          {currentMeal.foods.map((food, index) => (
-                            <div key={index} className="mb-2 last:mb-1">
-                              <p
-                                className="text-[11px] font-medium leading-tight md:text-xs"
-                              >
-                                {food.name}
-                                {food.weight ? ` (${food.weight})` : ""}
-                              </p>
-                              {food.calories > 0 && (
-                                <div className="mt-0.5 flex flex-wrap gap-1">
-                                  <MacroTag
-                                    label="Calories"
-                                    value={`${food.calories}`}
-                                  />
-                                  <MacroTag
-                                    label="Protein"
-                                    value={`${food.protein} g`}
-                                  />
-                                  <MacroTag
-                                    label="Carbs"
-                                    value={`${food.carbs} g`}
-                                  />
-                                  <MacroTag
-                                    label="Fats"
-                                    value={`${food.fats} g`}
-                                  />
-                                </div>
-                              )}
-                            </div>
-                          ))}
+                      </div>
 
-                          {/* Totals summary - smaller */}
-                          {totals.calories > 0 && (
-                            <div
-                              className="mt-1.5 flex justify-between border-t border-[#EEF5FF] pt-1.5"
-                            >
-                              <TotalItem
-                                value={`${totals.calories} cal`}
-                                percent={Math.min(
-                                  Math.round(
-                                    (totals.calories / dailyGoals.calories) * 100
-                                  ),
-                                  100
-                                )}
-                                color="#44EF5B"
-                              />
-                              <TotalItem
-                                value={`${totals.protein} g`}
-                                percent={Math.min(
-                                  Math.round(
-                                    (totals.protein / dailyGoals.protein) * 100
-                                  ),
-                                  100
-                                )}
-                                color="#44CAEF"
-                              />
-                              <TotalItem
-                                value={`${totals.carbs} g`}
-                                percent={Math.min(
-                                  Math.round(
-                                    (totals.carbs / dailyGoals.carbs) * 100
-                                  ),
-                                  100
-                                )}
-                                color="#F399FF"
-                              />
-                              <TotalItem
-                                value={`${totals.fats} g`}
-                                percent={Math.min(
-                                  Math.round(
-                                    (totals.fats / dailyGoals.fats) * 100
-                                  ),
-                                  100
-                                )}
-                                color="#EFCD44"
-                              />
+                      <div
+                        key={`reply-${isPhoneLoading ? "loading" : `${activeDemo.contentType}-${displayUserMessage}`}`}
+                        className="hero-phone-bubble-enter hero-phone-bubble-delay flex min-w-0 justify-start overflow-hidden"
+                      >
+                        <div
+                          className="min-w-0 max-w-full shrink-0 rounded-[12px] rounded-bl-[3px] p-2 overflow-hidden"
+                          style={{
+                            backgroundColor: "#F5F9FF",
+                            boxSizing: "border-box",
+                          }}
+                        >
+                          {isPhoneLoading ? (
+                            <div className="flex items-center justify-center py-3">
+                              <div className="h-4 w-4 animate-spin rounded-full border-2 border-[#88B8FF] border-t-transparent" />
                             </div>
+                          ) : (
+                            <PhoneResponseContent
+                              demo={activeDemo}
+                              totals={totals}
+                              dailyGoals={dailyGoals}
+                            />
                           )}
                         </div>
-                      )}
+                      </div>
                     </div>
-                  </div>
                   </div>
                 </div>
               </div>
@@ -465,8 +469,172 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      </div>
     </section>
+  );
+}
+
+function PhoneResponseContent({
+  demo,
+  totals,
+  dailyGoals,
+}: {
+  demo: HeroDemo;
+  totals: { calories: number; protein: number; carbs: number; fats: number };
+  dailyGoals: { calories: number; protein: number; carbs: number; fats: number };
+}) {
+  if (demo.contentType === "conversation" && demo.message) {
+    return (
+      <p className="m-0 text-[11px] leading-[1.25] text-eati-ink md:text-xs">{demo.message}</p>
+    );
+  }
+
+  if (demo.contentType === "activity" && demo.activities?.length) {
+    return (
+      <div className="min-w-0 overflow-hidden">
+        {demo.activities.map((activity, index) => (
+          <div key={index} className="mb-2 last:mb-0">
+            <p className="m-0 text-[11px] font-medium leading-[1.15] md:text-xs">
+              {activity.name}
+              {activity.duration > 0 ? ` (${activity.duration} min)` : ""}
+            </p>
+            <div className="mt-0.5 flex flex-wrap gap-1">
+              <MacroTag label="Burned" value={`${activity.caloriesBurned} cal`} />
+              {activity.intensity && (
+                <MacroTag
+                  label="Intensity"
+                  value={activity.intensity.charAt(0).toUpperCase() + activity.intensity.slice(1)}
+                />
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (demo.contentType === "meal_plan" && demo.meals?.length) {
+    return (
+      <div className="min-w-0 overflow-hidden">
+        {demo.meals.map((meal, mealIndex) => (
+          <div key={mealIndex} className={mealIndex > 0 ? "mt-2 border-t border-[#EEF5FF] pt-2" : ""}>
+            <p className="mb-1.5 text-[13px] font-bold leading-[1.15] text-eati-ink md:text-sm">
+              {meal.name}
+            </p>
+            {meal.foods.map((food, index) => (
+              <div key={index} className="mb-2 last:mb-1">
+                <p className="m-0 text-[11px] font-medium leading-[1.15] md:text-xs">
+                  {food.name}
+                  {food.weight ? ` (${food.weight})` : ""}
+                </p>
+                {food.calories > 0 && (
+                  <div className="mt-0.5 flex flex-wrap gap-1">
+                    <MacroTag label="Calories" value={`${food.calories}`} />
+                    <MacroTag label="Protein" value={`${food.protein} g`} />
+                    <MacroTag label="Carbs" value={`${food.carbs} g`} />
+                    <MacroTag label="Fats" value={`${food.fats} g`} />
+                  </div>
+                )}
+              </div>
+            ))}
+            {meal.totalCalories > 0 && (
+              <div className="mt-1.5 flex justify-between border-t border-[#EEF5FF] pt-1.5">
+                <TotalItem
+                  value={`${meal.totalCalories} cal`}
+                  percent={Math.min(
+                    Math.round((meal.totalCalories / dailyGoals.calories) * 100),
+                    100
+                  )}
+                  color="#44EF5B"
+                />
+                <TotalItem
+                  value={`${meal.totalProtein} g`}
+                  percent={Math.min(
+                    Math.round((meal.totalProtein / dailyGoals.protein) * 100),
+                    100
+                  )}
+                  color="#44CAEF"
+                />
+                <TotalItem
+                  value={`${meal.totalCarbs} g`}
+                  percent={Math.min(
+                    Math.round((meal.totalCarbs / dailyGoals.carbs) * 100),
+                    100
+                  )}
+                  color="#EFCD44"
+                />
+                <TotalItem
+                  value={`${meal.totalFats} g`}
+                  percent={Math.min(
+                    Math.round((meal.totalFats / dailyGoals.fats) * 100),
+                    100
+                  )}
+                  color="#F399FF"
+                />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  const foods = demo.foods ?? [];
+  return (
+    <div className="min-w-0 overflow-hidden">
+      {foods.map((food, index) => (
+        <div key={index} className="mb-2 last:mb-1">
+          <p className="m-0 text-[11px] font-medium leading-[1.15] md:text-xs">
+            {food.name}
+            {food.weight ? ` (${food.weight})` : ""}
+          </p>
+          {food.calories > 0 && (
+            <div className="mt-0.5 flex flex-wrap gap-1">
+              <MacroTag label="Calories" value={`${food.calories}`} />
+              <MacroTag label="Protein" value={`${food.protein} g`} />
+              <MacroTag label="Carbs" value={`${food.carbs} g`} />
+              <MacroTag label="Fats" value={`${food.fats} g`} />
+            </div>
+          )}
+        </div>
+      ))}
+
+      {totals.calories > 0 && (
+        <div className="mt-1.5 flex justify-between border-t border-[#EEF5FF] pt-1.5">
+          <TotalItem
+            value={`${totals.calories} cal`}
+            percent={Math.min(
+              Math.round((totals.calories / dailyGoals.calories) * 100),
+              100
+            )}
+            color="#44EF5B"
+          />
+          <TotalItem
+            value={`${totals.protein} g`}
+            percent={Math.min(
+              Math.round((totals.protein / dailyGoals.protein) * 100),
+              100
+            )}
+            color="#44CAEF"
+          />
+          <TotalItem
+            value={`${totals.carbs} g`}
+            percent={Math.min(
+              Math.round((totals.carbs / dailyGoals.carbs) * 100),
+              100
+            )}
+            color="#EFCD44"
+          />
+          <TotalItem
+            value={`${totals.fats} g`}
+            percent={Math.min(
+              Math.round((totals.fats / dailyGoals.fats) * 100),
+              100
+            )}
+            color="#F399FF"
+          />
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -507,34 +675,4 @@ function TotalItem({
       <span className="text-[7px] leading-tight text-eati-ink/80 md:text-[8px]">{percent}%</span>
     </div>
   );
-}
-
-function generateSunburstRays(): string[] {
-  const originX = 1000;
-  const originY = 800;
-  const rayLength = 2000;
-  const numRays = 7;
-  const startAngle = 180;
-  const endAngle = 360;
-  const totalAngle = endAngle - startAngle;
-  const sliceAngle = totalAngle / (numRays * 2);
-
-  const rays: string[] = [];
-
-  for (let i = 0; i < numRays; i++) {
-    const angle1 = startAngle + (i * 2 + 1) * sliceAngle;
-    const angle2 = startAngle + (i * 2 + 2) * sliceAngle;
-
-    const rad1 = (angle1 * Math.PI) / 180;
-    const rad2 = (angle2 * Math.PI) / 180;
-
-    const x1 = Math.round(originX + rayLength * Math.cos(rad1));
-    const y1 = Math.round(originY + rayLength * Math.sin(rad1));
-    const x2 = Math.round(originX + rayLength * Math.cos(rad2));
-    const y2 = Math.round(originY + rayLength * Math.sin(rad2));
-
-    rays.push(`${originX},${originY} ${x1},${y1} ${x2},${y2}`);
-  }
-
-  return rays;
 }

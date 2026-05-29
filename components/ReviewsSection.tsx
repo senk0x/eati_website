@@ -38,7 +38,7 @@ export default function ReviewsSection() {
     <section className="px-4 py-8 sm:px-5 md:px-6 md:py-12">
       <div className="mx-auto max-w-7xl">
         <h2
-          className="mb-8 text-center text-2xl font-bold text-gray-900 md:mb-12 md:text-3xl"
+          className="mb-8 text-center text-2xl font-bold text-eati-ink md:mb-12 md:text-3xl"
         >
           What our users are saying
         </h2>
@@ -65,7 +65,7 @@ export default function ReviewsSection() {
 
               {/* Name and flag */}
               <div className="mb-1 flex items-center justify-center gap-2">
-                <span className="text-lg font-bold text-gray-900 md:text-xl">
+                <span className="text-lg font-bold text-eati-ink md:text-xl">
                   {review.name}
                 </span>
                 <span className="text-xl leading-none" aria-hidden>
@@ -77,7 +77,7 @@ export default function ReviewsSection() {
               <p className="mb-4 text-sm text-gray-600">{review.progress}</p>
 
               {/* Comment */}
-              <p className="text-left text-sm leading-relaxed text-gray-800 md:text-base">
+              <p className="text-left text-sm leading-relaxed text-eati-ink md:text-base">
                 &ldquo;{review.comment}&rdquo;
               </p>
             </div>

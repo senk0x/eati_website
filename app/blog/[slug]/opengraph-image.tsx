@@ -84,7 +84,7 @@ function blogOgMarkup(
             display: "flex",
             background: coverDataUrl
               ? "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 45%, transparent 72%)"
-              : "linear-gradient(145deg, #85BEFF 0%, #2F5176 100%)",
+              : "linear-gradient(145deg, #88B8FF 0%, #2F5176 100%)",
           }}
         />,
         <div

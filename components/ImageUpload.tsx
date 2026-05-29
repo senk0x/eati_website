@@ -79,7 +79,7 @@ export default function ImageUpload({
               type="text"
               value={value}
               onChange={(e) => onChange(e.target.value)}
-              className="flex-1 rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#85BEFF]"
+              className="flex-1 rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#88B8FF]"
               placeholder="Image URL"
             />
             <button
@@ -94,7 +94,7 @@ export default function ImageUpload({
       ) : (
         <div className="space-y-3">
           <div
-            className="flex aspect-[16/9] w-full cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 hover:border-[#85BEFF] hover:bg-gray-100"
+            className="flex aspect-[16/9] w-full cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 hover:border-[#88B8FF] hover:bg-gray-100"
             onClick={() => fileInputRef.current?.click()}
           >
             {uploading ? (
@@ -134,7 +134,7 @@ export default function ImageUpload({
             type="text"
             value={value}
             onChange={(e) => onChange(e.target.value)}
-            className="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#85BEFF]"
+            className="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#88B8FF]"
             placeholder="/images/blog/my-image.jpg"
           />
         </div>

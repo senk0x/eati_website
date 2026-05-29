@@ -48,17 +48,17 @@ export default function FoodsPage() {
               <Link
                 key={food.slug}
                 href={`/foods/${food.slug}`}
-                className="group flex items-center gap-4 rounded-2xl border border-[#E3ECF7] bg-white p-4 transition-all hover:border-[#85BEFF] hover:shadow-lg md:rounded-3xl"
+                className="group flex items-center gap-4 rounded-2xl border border-[#E3ECF7] bg-white p-4 transition-all hover:border-[#88B8FF] hover:shadow-lg md:rounded-3xl"
               >
                 <div
-                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#E7F0FF] text-2xl transition-colors group-hover:bg-[#85BEFF]/20"
+                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#E7F0FF] text-2xl transition-colors group-hover:bg-[#88B8FF]/20"
                   aria-hidden
                 >
                   {food.emoji}
                 </div>
                 <div className="flex-1 overflow-hidden">
                   <h2
-                    className="truncate text-base font-semibold transition-colors group-hover:text-[#85BEFF] md:text-lg"
+                    className="truncate text-base font-semibold transition-colors group-hover:text-[#88B8FF] md:text-lg"
                   >
                     {food.name}
                   </h2>
@@ -82,19 +82,19 @@ export default function FoodsPage() {
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/tools/meal-log-calculator"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-[#364052] bg-[#364052] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white hover:text-[#364052]"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-eati-ink bg-eati-ink px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white hover:text-eati-ink"
               >
                 Meal Log Calculator
               </Link>
               <Link
                 href="/tools/calorie-calculator"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-[#E3ECF7] bg-white px-5 py-2.5 text-sm font-semibold text-[#364052] transition-all hover:border-[#85BEFF] hover:text-[#85BEFF]"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#E3ECF7] bg-white px-5 py-2.5 text-sm font-semibold text-eati-ink transition-all hover:border-[#88B8FF] hover:text-[#88B8FF]"
               >
                 Calorie Calculator
               </Link>
               <Link
                 href="/tools"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-[#E3ECF7] bg-white px-5 py-2.5 text-sm font-semibold text-[#364052] transition-all hover:border-[#85BEFF] hover:text-[#85BEFF]"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#E3ECF7] bg-white px-5 py-2.5 text-sm font-semibold text-eati-ink transition-all hover:border-[#88B8FF] hover:text-[#88B8FF]"
               >
                 All Tools
               </Link>

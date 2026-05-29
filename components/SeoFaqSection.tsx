@@ -38,7 +38,7 @@ export function SeoFaqSection({ faqs, title = 'Frequently Asked Questions', clas
       <ul className="space-y-6">
         {faqs.map((faq, i) => (
           <li key={i}>
-            <h3 className="mb-2 text-base font-semibold text-[#364052]">{faq.question}</h3>
+            <h3 className="mb-2 text-base font-semibold text-eati-ink">{faq.question}</h3>
             <p className="text-base leading-relaxed text-gray-700">{faq.answer}</p>
           </li>
         ))}

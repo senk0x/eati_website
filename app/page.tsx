@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import HomeSeoContent from "@/components/HomeSeoContent";
+import StartNowSection from "@/components/StartNowSection";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { OG_HOME_ALT, OG_HOME_IMAGE_PATH } from "@/lib/og";
@@ -48,7 +48,7 @@ export default function Home() {
         <StatsSection />
         <FeaturesSection />
         <ReviewsSection />
-        <HomeSeoContent />
+        <StartNowSection />
       </main>
 
       <Footer />

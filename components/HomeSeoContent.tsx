@@ -3,10 +3,10 @@ import { SeoFaqSection } from "@/components/SeoFaqSection";
 
 const sectionClass = "mx-auto max-w-7xl px-4 sm:px-5 md:px-6";
 const h2Class =
-  "text-2xl font-bold tracking-tight text-[#364052] md:text-3xl";
-const h3Class = "mt-8 text-xl font-semibold text-[#364052] md:text-2xl";
+  "text-2xl font-bold tracking-tight text-eati-ink md:text-3xl";
+const h3Class = "mt-8 text-xl font-semibold text-eati-ink md:text-2xl";
 const pClass = "mt-4 text-base leading-relaxed text-gray-700 md:text-lg";
-const linkClass = "font-medium text-[#85BEFF] underline-offset-2 hover:underline";
+const linkClass = "font-medium text-[#88B8FF] underline-offset-2 hover:underline";
 
 const HOME_FAQS = [
   {
@@ -53,15 +53,15 @@ export default function HomeSeoContent() {
         </h2>
         <p className={pClass}>
           Sticking to a calorie goal is less about perfection and more about showing up every day.
-          <strong className="font-semibold text-[#364052]"> Eati</strong> is an{" "}
-          <strong className="font-semibold text-[#364052]">AI calorie tracker</strong> designed for
+          <strong className="font-semibold text-eati-ink"> Eati</strong> is an{" "}
+          <strong className="font-semibold text-eati-ink">AI calorie tracker</strong> designed for
           real life: log breakfast in a few words, capture lunch with a photo, or scan packaged snacks
           so your numbers stay up to date without turning every meal into a research project. If you
-          are focused on <strong className="font-semibold text-[#364052]">fat loss</strong>, that
+          are focused on <strong className="font-semibold text-eati-ink">fat loss</strong>, that
           consistency matters more than nailing every single gram.
         </p>
         <p className={pClass}>
-          The app works as a <strong className="font-semibold text-[#364052]">macro tracker</strong>{" "}
+          The app works as a <strong className="font-semibold text-eati-ink">macro tracker</strong>{" "}
           and daily nutrition dashboard. You see calories plus protein, carbs, and fats together, which
           makes it easier to spot whether you are under-eating protein or drifting over budget on
           casual snacks. Many people combine an AI-assisted log with a simple weekly check-in on the
@@ -79,7 +79,7 @@ export default function HomeSeoContent() {
           tracking actually sticks.
         </p>
         <p className={pClass}>
-          Think of Eati as a <strong className="font-semibold text-[#364052]">meal planner</strong>{" "}
+          Think of Eati as a <strong className="font-semibold text-eati-ink">meal planner</strong>{" "}
           companion: even if you do not pre-plan every dish, you can review your day at a glance,
           notice patterns, and decide tomorrow&apos;s portions with clearer data. For deeper planning,
           browse our{" "}

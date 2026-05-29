@@ -41,13 +41,13 @@ export default function WaterIntakeCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -115,11 +115,11 @@ export default function WaterIntakeCalculatorPage() {
                 calculator gives you a clear daily target instead of guessing. It is useful for
                 general health, athletes who sweat more, and anyone in hot weather. Pair it with
                 our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 for full nutrition planning.
@@ -173,11 +173,11 @@ export default function WaterIntakeCalculatorPage() {
                 lbs) and multiplies by 35 ml per kg to get a base daily amount. You can enter
                 weight in kilograms (metric) or pounds (imperial); all math is done in metric
                 for consistency. Pair this with our{' '}
-                <Link href="/tools/bmi-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/bmi-calculator" className="text-[#88B8FF] hover:underline">
                   BMI calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/ideal-body-weight-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/ideal-body-weight-calculator" className="text-[#88B8FF] hover:underline">
                   ideal body weight calculator
                 </Link>{' '}
                 to understand your weight in context.
@@ -194,11 +194,11 @@ export default function WaterIntakeCalculatorPage() {
                 heavy training, or athlete (up to 1000 ml extra). Hot or humid conditions add
                 another 500 ml. Drink before, during, and after workouts to stay hydrated. For
                 calorie and macro targets around training, use our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>.
               </p>
@@ -229,11 +229,11 @@ export default function WaterIntakeCalculatorPage() {
                 kidney or heart conditions, your doctor may recommend specific fluid limits. For
                 general health and fitness, the amounts from this water intake calculator are a
                 sensible starting point. Combine with our{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 to plan full nutrition and energy needs.

@@ -40,13 +40,13 @@ export default function IdealBodyWeightCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -113,11 +113,11 @@ export default function IdealBodyWeightCalculatorPage() {
                 An ideal body weight calculator gives you a height-based reference for a healthy
                 weight. It is useful for context when setting goals or when a clinician uses IBW
                 for dosing. Use it alongside our{' '}
-                <Link href="/tools/bmi-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/bmi-calculator" className="text-[#88B8FF] hover:underline">
                   BMI calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>{' '}
                 for a fuller picture of weight and composition.
@@ -134,11 +134,11 @@ export default function IdealBodyWeightCalculatorPage() {
                 current weight. Athletes and very muscular people may sit above IBW and still be
                 healthy; the calculator is a guide, not a diagnosis. For calorie or nutrition
                 targets, use our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>.
               </p>
@@ -206,8 +206,8 @@ export default function IdealBodyWeightCalculatorPage() {
                 distribution. It assumes a &quot;reference&quot; body shape and composition that
                 does not apply to everyone. Athletes, older adults, and people with different
                 body types may find that their healthy weight is outside the calculated range.
-                For personalized targets, combine this tool with a <Link href="/tools/bmi-calculator" className="text-[#85BEFF] hover:underline">BMI calculator</Link>, a{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">calorie calculator</Link>, or guidance from a healthcare provider.
+                For personalized targets, combine this tool with a <Link href="/tools/bmi-calculator" className="text-[#88B8FF] hover:underline">BMI calculator</Link>, a{' '}
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">calorie calculator</Link>, or guidance from a healthcare provider.
               </p>
             </section>
           </div>

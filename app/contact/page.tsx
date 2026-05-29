@@ -71,7 +71,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   type="text"
-                  className="min-h-[44px] w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none ring-0 transition-colors focus:border-[#85BEFF]"
+                  className="min-h-[44px] w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none ring-0 transition-colors focus:border-[#88B8FF]"
                 />
               </div>
 
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   type="email"
-                  className="min-h-[44px] w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none ring-0 transition-colors focus:border-[#85BEFF]"
+                  className="min-h-[44px] w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none ring-0 transition-colors focus:border-[#88B8FF]"
                 />
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 name="message"
                 required
                 rows={5}
-                className="min-h-[120px] w-full rounded-2xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none ring-0 transition-colors focus:border-[#85BEFF]"
+                className="min-h-[120px] w-full rounded-2xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none ring-0 transition-colors focus:border-[#88B8FF]"
               />
             </div>
 
@@ -111,7 +111,7 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-[#364052] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2b3545] disabled:cursor-not-allowed disabled:opacity-70"
+              className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-eati-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-eati-ink-hover disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === 'submitting' ? 'Sending...' : 'Send message'}
             </button>

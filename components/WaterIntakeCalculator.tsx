@@ -94,8 +94,8 @@ export default function WaterIntakeCalculator() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#85BEFF]';
-  const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
+    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#88B8FF]';
+  const labelClass = 'mb-1.5 block text-sm font-medium text-eati-ink';
 
   return (
     <div>
@@ -112,9 +112,9 @@ export default function WaterIntakeCalculator() {
                 name="unit"
                 checked={unitSystem === 'metric'}
                 onChange={() => setUnitSystem('metric')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Metric (kg)</span>
+              <span className="text-sm text-eati-ink">Metric (kg)</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -122,9 +122,9 @@ export default function WaterIntakeCalculator() {
                 name="unit"
                 checked={unitSystem === 'imperial'}
                 onChange={() => setUnitSystem('imperial')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Imperial (lbs)</span>
+              <span className="text-sm text-eati-ink">Imperial (lbs)</span>
             </label>
           </div>
         </div>
@@ -172,9 +172,9 @@ export default function WaterIntakeCalculator() {
                 name="gender"
                 checked={gender === 'male'}
                 onChange={() => setGender('male')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Male</span>
+              <span className="text-sm text-eati-ink">Male</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -182,9 +182,9 @@ export default function WaterIntakeCalculator() {
                 name="gender"
                 checked={gender === 'female'}
                 onChange={() => setGender('female')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Female</span>
+              <span className="text-sm text-eati-ink">Female</span>
             </label>
           </div>
         </div>
@@ -244,7 +244,7 @@ export default function WaterIntakeCalculator() {
 
         <button
           type="submit"
-          className="w-full rounded-full bg-[#364052] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2b3545] sm:w-auto sm:px-8"
+          className="w-full rounded-full bg-eati-ink px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-eati-ink-hover sm:w-auto sm:px-8"
         >
           Calculate water intake
         </button>
@@ -300,7 +300,7 @@ function VolumeCard({
       <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">
         {value} {unit}
       </p>
       <p className="text-sm leading-relaxed text-gray-600">{explanation}</p>

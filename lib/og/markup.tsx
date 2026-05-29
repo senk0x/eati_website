@@ -50,7 +50,7 @@ export function ToolOpenGraphMarkup({
             bottom: 0,
             display: "flex",
             background:
-              "linear-gradient(135deg, rgba(47,81,118,0.92) 0%, rgba(26,39,68,0.88) 55%, rgba(133,190,255,0.5) 100%)",
+              "linear-gradient(135deg, rgba(47,81,118,0.92) 0%, rgba(26,39,68,0.88) 55%, rgba(136,184,255,0.5) 100%)",
           }}
         />,
         <div

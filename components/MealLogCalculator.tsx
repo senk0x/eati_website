@@ -114,8 +114,8 @@ export default function MealLogCalculator() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#85BEFF]';
-  const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
+    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#88B8FF]';
+  const labelClass = 'mb-1.5 block text-sm font-medium text-eati-ink';
 
   return (
     <div>
@@ -164,7 +164,7 @@ export default function MealLogCalculator() {
                 type="button"
                 onClick={() => removeItem(item.id)}
                 disabled={items.length <= 1}
-                className="rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm font-medium text-[#364052] transition-colors hover:bg-[#F7FAFF] disabled:opacity-50"
+                className="rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm font-medium text-eati-ink transition-colors hover:bg-[#F7FAFF] disabled:opacity-50"
                 aria-label="Remove item"
               >
                 Remove
@@ -176,7 +176,7 @@ export default function MealLogCalculator() {
         <button
           type="button"
           onClick={addItem}
-          className="rounded-xl border border-dashed border-[#85BEFF] bg-transparent px-4 py-2.5 text-sm font-medium text-[#85BEFF] transition-colors hover:bg-[#85BEFF]/10"
+          className="rounded-xl border border-dashed border-[#88B8FF] bg-transparent px-4 py-2.5 text-sm font-medium text-[#88B8FF] transition-colors hover:bg-[#88B8FF]/10"
         >
           + Add another item
         </button>
@@ -190,7 +190,7 @@ export default function MealLogCalculator() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-full bg-[#364052] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2b3545] disabled:opacity-50 sm:w-auto sm:px-8"
+          className="w-full rounded-full bg-eati-ink px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-eati-ink-hover disabled:opacity-50 sm:w-auto sm:px-8"
         >
           {loading ? 'Calculating…' : 'Calculate calories & macros'}
         </button>
@@ -235,7 +235,7 @@ export default function MealLogCalculator() {
                   key={i}
                   className="flex flex-wrap items-center justify-between gap-2 border-b border-[#E3ECF7] pb-2 last:border-0 last:pb-0"
                 >
-                  <span className="font-medium text-[#364052]">
+                  <span className="font-medium text-eati-ink">
                     {f.name}
                     {f.weight ? ` (${f.weight})` : ''}
                   </span>
@@ -283,7 +283,7 @@ function ResultCard({
       <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
-      <p className="mb-0.5 text-2xl font-bold text-[#85BEFF]">{value}</p>
+      <p className="mb-0.5 text-2xl font-bold text-[#88B8FF]">{value}</p>
       {sub && <p className="mb-1 text-sm text-gray-500">{sub}</p>}
       <p className="text-sm leading-relaxed text-gray-600">{description}</p>
     </div>

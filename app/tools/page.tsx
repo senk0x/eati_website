@@ -137,10 +137,10 @@ export default function ToolsPage() {
               <Link
                 key={tool.name}
                 href={tool.href}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-[#E3ECF7] bg-white transition-all hover:border-[#85BEFF] hover:shadow-lg md:rounded-3xl"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-[#E3ECF7] bg-white transition-all hover:border-[#88B8FF] hover:shadow-lg md:rounded-3xl"
               >
                 <div
-                  className="flex h-28 items-center justify-center bg-[#E7F0FF] transition-colors group-hover:bg-[#85BEFF]/20"
+                  className="flex h-28 items-center justify-center bg-[#E7F0FF] transition-colors group-hover:bg-[#88B8FF]/20"
                   aria-hidden
                 >
                   <span className="text-5xl md:text-6xl" role="img" aria-hidden>
@@ -149,7 +149,7 @@ export default function ToolsPage() {
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <h2
-                    className="mb-2 text-lg font-semibold transition-colors group-hover:text-[#85BEFF] md:text-xl"
+                    className="mb-2 text-lg font-semibold transition-colors group-hover:text-[#88B8FF] md:text-xl"
                   >
                     {tool.name}
                   </h2>

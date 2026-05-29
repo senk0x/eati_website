@@ -127,7 +127,7 @@ export default function EditArticlePage() {
   };
 
   const inputClass =
-    'w-full rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#85BEFF]';
+    'w-full rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#88B8FF]';
   const labelClass = 'mb-1 block text-sm font-medium text-gray-700';
 
   if (loading) {
@@ -142,7 +142,7 @@ export default function EditArticlePage() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50">
         <p className="mb-4 text-gray-500">Article not found</p>
-        <Link href="/admin/blog" className="text-[#85BEFF] hover:underline">
+        <Link href="/admin/blog" className="text-[#88B8FF] hover:underline">
           ← Back to list
         </Link>
       </div>
@@ -162,13 +162,13 @@ export default function EditArticlePage() {
             <Link
               href={`/blog/${slug}`}
               target="_blank"
-              className="text-sm text-[#85BEFF] hover:underline"
+              className="text-sm text-[#88B8FF] hover:underline"
             >
               View live →
             </Link>
             <Link
               href="/admin/blog"
-              className="text-sm text-gray-500 hover:text-[#85BEFF]"
+              className="text-sm text-gray-500 hover:text-[#88B8FF]"
             >
               ← Back to list
             </Link>
@@ -221,7 +221,7 @@ export default function EditArticlePage() {
               <button
                 type="button"
                 onClick={handleAddSection}
-                className="text-sm text-[#85BEFF] hover:underline"
+                className="text-sm text-[#88B8FF] hover:underline"
               >
                 + Add Section
               </button>
@@ -353,7 +353,7 @@ export default function EditArticlePage() {
               <button
                 type="submit"
                 disabled={saving}
-                className="rounded-full bg-[#364052] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2b3545] disabled:opacity-50"
+                className="rounded-full bg-eati-ink px-6 py-2.5 text-sm font-semibold text-white hover:bg-eati-ink-hover disabled:opacity-50"
               >
                 {saving ? 'Saving...' : 'Save Changes'}
               </button>

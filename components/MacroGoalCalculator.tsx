@@ -149,8 +149,8 @@ export default function MacroGoalCalculator() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#85BEFF]';
-  const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
+    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#88B8FF]';
+  const labelClass = 'mb-1.5 block text-sm font-medium text-eati-ink';
 
   return (
     <div>
@@ -167,9 +167,9 @@ export default function MacroGoalCalculator() {
                 name="unit"
                 checked={unitSystem === 'metric'}
                 onChange={() => setUnitSystem('metric')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Metric (kg, cm)</span>
+              <span className="text-sm text-eati-ink">Metric (kg, cm)</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -177,9 +177,9 @@ export default function MacroGoalCalculator() {
                 name="unit"
                 checked={unitSystem === 'imperial'}
                 onChange={() => setUnitSystem('imperial')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Imperial (lbs, feet & inches)</span>
+              <span className="text-sm text-eati-ink">Imperial (lbs, feet & inches)</span>
             </label>
           </div>
         </div>
@@ -210,9 +210,9 @@ export default function MacroGoalCalculator() {
                 name="gender"
                 checked={gender === 'male'}
                 onChange={() => setGender('male')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Male</span>
+              <span className="text-sm text-eati-ink">Male</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -220,9 +220,9 @@ export default function MacroGoalCalculator() {
                 name="gender"
                 checked={gender === 'female'}
                 onChange={() => setGender('female')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Female</span>
+              <span className="text-sm text-eati-ink">Female</span>
             </label>
           </div>
         </div>
@@ -320,9 +320,9 @@ export default function MacroGoalCalculator() {
                 name="goal"
                 checked={goal === 'fat-loss'}
                 onChange={() => setGoal('fat-loss')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Fat loss</span>
+              <span className="text-sm text-eati-ink">Fat loss</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -330,9 +330,9 @@ export default function MacroGoalCalculator() {
                 name="goal"
                 checked={goal === 'maintain'}
                 onChange={() => setGoal('maintain')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Maintain weight</span>
+              <span className="text-sm text-eati-ink">Maintain weight</span>
             </label>
             <label className="flex cursor-pointer items-center gap-2">
               <input
@@ -340,9 +340,9 @@ export default function MacroGoalCalculator() {
                 name="goal"
                 checked={goal === 'muscle-gain'}
                 onChange={() => setGoal('muscle-gain')}
-                className="h-4 w-4 border-[#D5E3F5] text-[#85BEFF] focus:ring-[#85BEFF]"
+                className="h-4 w-4 border-[#D5E3F5] text-[#88B8FF] focus:ring-[#88B8FF]"
               />
-              <span className="text-sm text-[#364052]">Muscle gain</span>
+              <span className="text-sm text-eati-ink">Muscle gain</span>
             </label>
           </div>
         </div>
@@ -355,7 +355,7 @@ export default function MacroGoalCalculator() {
 
         <button
           type="submit"
-          className="w-full rounded-full bg-[#364052] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2b3545] sm:w-auto sm:px-8"
+          className="w-full rounded-full bg-eati-ink px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-eati-ink-hover sm:w-auto sm:px-8"
         >
           Calculate macros
         </button>
@@ -414,7 +414,7 @@ function CalorieResultCard({
       <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{kcal} kcal</p>
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">{kcal} kcal</p>
       <p className="mb-3 text-sm text-gray-500">{kj} kJ</p>
       <p className="text-sm leading-relaxed text-gray-600">{explanation}</p>
     </div>
@@ -439,7 +439,7 @@ function MacroResultCard({
       <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{valueG} g</p>
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">{valueG} g</p>
       <p className="mb-3 text-sm text-gray-500">{valueKcal} kcal</p>
       <p className="text-sm leading-relaxed text-gray-600">{explanation}</p>
     </div>

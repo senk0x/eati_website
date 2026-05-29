@@ -41,13 +41,13 @@ export default function CalorieBurnCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -117,11 +117,11 @@ export default function CalorieBurnCalculatorPage() {
                 Knowing how many calories you burn per workout helps you plan intake, create a
                 deficit, or fuel properly. This calorie burn calculator gives you a clear number
                 for each session and per hour so you can compare activities. Use it with our{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>{' '}
                 to see how exercise fits your daily budget.
@@ -137,11 +137,11 @@ export default function CalorieBurnCalculatorPage() {
                 burn calculator — from casual exercisers to regular gym-goers. It is useful for
                 weight loss planning (how much to eat vs. burn), comparing exercises, and
                 understanding hourly burn rates. Pair it with our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 for full nutrition and training planning.
@@ -159,10 +159,10 @@ export default function CalorieBurnCalculatorPage() {
                 intensity of the activity, and duration. This calculator uses MET (metabolic
                 equivalent of task) values to estimate energy expenditure. To see your total
                 daily burn, use our{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>; for a daily calorie target, try our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>.
               </p>
@@ -193,7 +193,7 @@ export default function CalorieBurnCalculatorPage() {
                 strength training 6, swimming 8, and HIIT around 9. The calculator includes these
                 and shows calories burned for your weight and duration. You also see calories
                 per 30 minutes and per hour so you can plan workouts. Combine with our{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>{' '}
                 to see how exercise contributes to weight loss.
@@ -210,11 +210,11 @@ export default function CalorieBurnCalculatorPage() {
                 rather than an exact count. Actual burn can be 10–20% higher or lower. Use the
                 result as a guide and track progress over time. For overall daily energy needs,
                 the{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">
                   TDEE calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>{' '}
                 help you understand composition and total expenditure.
@@ -232,11 +232,11 @@ export default function CalorieBurnCalculatorPage() {
                 guide: 1 kg of body fat is about 7700 kcal, so burning 7700 kcal through
                 exercise could theoretically match 1 kg fat loss if diet stays the same. In
                 practice, weight change depends on total intake and expenditure. Use our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/protein-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/protein-calculator" className="text-[#88B8FF] hover:underline">
                   protein calculator
                 </Link>{' '}
                 to set intake and protect muscle while losing fat.
@@ -254,11 +254,11 @@ export default function CalorieBurnCalculatorPage() {
                 training builds muscle and can raise resting metabolism. Use this calorie burn
                 calculator to compare activities and see how duration affects total burn, then
                 pair with your{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>{' '}
                 for a full plan.

@@ -125,8 +125,8 @@ export default function BodyFatAnalytics() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#85BEFF] file:mr-3 file:rounded-lg file:border-0 file:bg-[#E7F0FF] file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-[#364052]';
-  const labelClass = 'mb-1.5 block text-sm font-medium text-[#364052]';
+    'w-full rounded-xl border border-[#D5E3F5] px-3 py-2.5 text-sm outline-none transition-colors focus:border-[#88B8FF] file:mr-3 file:rounded-lg file:border-0 file:bg-[#E7F0FF] file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-eati-ink';
+  const labelClass = 'mb-1.5 block text-sm font-medium text-eati-ink';
 
   return (
     <div>
@@ -196,7 +196,7 @@ export default function BodyFatAnalytics() {
           type="button"
           onClick={handleAnalyze}
           disabled={loading || !frontFile}
-          className="w-full rounded-full bg-[#364052] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2b3545] disabled:opacity-50 sm:w-auto sm:px-8"
+          className="w-full rounded-full bg-eati-ink px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-eati-ink-hover disabled:opacity-50 sm:w-auto sm:px-8"
         >
           {loading ? 'Analyzing…' : 'Analyze photos'}
         </button>
@@ -264,7 +264,7 @@ function ResultCard({
       <h3 className="mb-3 text-base font-semibold">
         {title}
       </h3>
-      <p className="mb-1 text-2xl font-bold text-[#85BEFF]">{value}</p>
+      <p className="mb-1 text-2xl font-bold text-[#88B8FF]">{value}</p>
       <p className="text-sm leading-relaxed text-gray-600">{description}</p>
     </div>
   );

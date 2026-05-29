@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #364052;
 }
 
 @theme inline {
@@ -15,7 +15,9 @@
   /* Eati brand typography — use utilities instead of repetitive inline styles (better HTML text-to-code ratio). */
   --font-eati-heading: var(--font-bowlby-one), ui-sans-serif, sans-serif;
   --color-eati-ink: #364052;
+  --color-eati-ink-hover: #2b3545;
   --color-eati-stats: #343a40;
+  --color-eati-accent: #88b8ff;
 }
 
 /* Prevent horizontal scroll and layout shift (CLS) */
@@ -31,12 +33,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Responsive: ensure images and embeds don't overflow */
-img,
-video,
-iframe {
+/* Responsive: fluid images in content. :where() keeps specificity low so Tailwind
+   height/width utilities and Next.js Image sizing are not overridden. */
+:where(img:not(.stats-laurel)),
+:where(video),
+:where(iframe) {
   max-width: 100%;
   height: auto;
+}
+
+.stats-laurel {
+  max-width: none;
+  height: 100%;
+  width: 100%;
 }
 
 /* Page transition: soft fade + slide. GPU-friendly (opacity, transform). */
@@ -166,4 +175,100 @@ iframe {
     opacity: 1;
     transform: none;
   }
+}
+
+.hero-placeholder-hint {
+  transition: opacity 220ms ease;
+}
+
+.hero-placeholder-hint-fade {
+  opacity: 0;
+}
+
+/* Features: rotate log bubbles while keeping the phone frame/background fixed. */
+.feature-log-frame {
+  opacity: 0;
+  animation: feature-log-cycle 9.6s infinite cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.feature-log-messages {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.feature-log-message-slot {
+  position: absolute;
+  left: 50%;
+  width: 73%;
+  transform: translateX(-50%);
+}
+
+.feature-log-message-slot-1 {
+  top: 8.5%;
+}
+
+.feature-log-message-slot-2 {
+  top: 13.5%;
+  width: 72%;
+}
+
+.feature-log-message-slot-3 {
+  top: 1.5%;
+  width: 71%;
+}
+
+.feature-log-frame.is-first {
+  opacity: 1;
+}
+
+.feature-log-frame-1 {
+  animation-delay: 0s;
+}
+
+.feature-log-frame-2 {
+  animation-delay: 3.2s;
+}
+
+.feature-log-frame-3 {
+  animation-delay: 6.4s;
+}
+
+@keyframes feature-log-cycle {
+  0%,
+  4% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  8%,
+  28% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-log-frame {
+    animation: none;
+    opacity: 0;
+  }
+  .feature-log-frame-1 {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats badges — explicit sizes so global img rules cannot shrink laurels/text. */
+.stats-badge__title {
+  font-size: clamp(1.125rem, 2.2vw, 2.25rem);
+}
+
+.stats-badge__subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.75rem);
 }

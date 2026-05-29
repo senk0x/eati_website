@@ -87,7 +87,7 @@ export default function ArticleContent({ content, className }: ArticleContentPro
                     {block.headers.map((h, hi) => (
                       <th
                         key={hi}
-                        className="px-4 py-2.5 text-left font-semibold text-[#364052]"
+                        className="px-4 py-2.5 text-left font-semibold text-eati-ink"
                       >
                         <LinkedText text={h} />
                       </th>

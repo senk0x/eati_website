@@ -37,13 +37,13 @@ export default function TDEECalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -109,11 +109,11 @@ export default function TDEECalculatorPage() {
                 Your TDEE is the reference point for planning intake: eat less to lose weight, more
                 to gain, or match it to maintain. This TDEE calculator gives you one number you can
                 use with our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">
                   calorie deficit calculator
                 </Link>{' '}
                 to set daily goals. It is useful for understanding how much you burn before
@@ -142,11 +142,11 @@ export default function TDEECalculatorPage() {
                 adults, but your actual expenditure can vary with metabolism, NEAT, and accuracy of
                 the activity factor. Use the result as a starting point and adjust based on your
                 weight change over 2–4 weeks. For body composition context, try our{' '}
-                <Link href="/tools/body-fat-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/body-fat-calculator" className="text-[#88B8FF] hover:underline">
                   body fat calculator
                 </Link>{' '}
                 or{' '}
-                <Link href="/tools/bmi-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/bmi-calculator" className="text-[#88B8FF] hover:underline">
                   BMI calculator
                 </Link>.
               </p>
@@ -158,15 +158,15 @@ export default function TDEECalculatorPage() {
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 After you have your TDEE, use the{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 for a daily goal, the{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>{' '}
                 for protein, carbs, and fat, and the{' '}
-                <Link href="/tools/calorie-burn-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-burn-calculator" className="text-[#88B8FF] hover:underline">
                   calorie burn calculator
                 </Link>{' '}
                 to see how exercise adds to your burn.

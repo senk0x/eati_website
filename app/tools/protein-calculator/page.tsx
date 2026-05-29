@@ -41,13 +41,13 @@ export default function ProteinCalculatorPage() {
               className="flex items-center gap-2 text-sm"
             >
               <li>
-                <Link href="/" className="hover:text-[#85BEFF]">
+                <Link href="/" className="hover:text-[#88B8FF]">
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/tools" className="hover:text-[#85BEFF]">
+                <Link href="/tools" className="hover:text-[#88B8FF]">
                   Tools
                 </Link>
               </li>
@@ -115,11 +115,11 @@ export default function ProteinCalculatorPage() {
                 Hitting the right protein intake supports muscle preservation during a cut, muscle
                 gain in a surplus, and fullness. This protein calculator turns evidence-based
                 ranges into one number and per-meal targets. Use it with our{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>{' '}
                 and{' '}
-                <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">
+                <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">
                   macro calculator
                 </Link>{' '}
                 to align protein with total calories and carbs/fat.
@@ -160,8 +160,8 @@ export default function ProteinCalculatorPage() {
                 To support muscle growth, research suggests roughly 1.6–2.2 g of protein per kg of
                 body weight per day when combined with resistance training and enough calories.
                 Spreading intake across 3–4 meals with 20–40 g per meal can help maximize muscle
-                protein synthesis. Use our <Link href="/tools/macro-goal-calculator" className="text-[#85BEFF] hover:underline">macro calculator</Link> or{' '}
-                <Link href="/tools/calorie-calculator" className="text-[#85BEFF] hover:underline">calorie calculator</Link> to pair protein with the right total calories.
+                protein synthesis. Use our <Link href="/tools/macro-goal-calculator" className="text-[#88B8FF] hover:underline">macro calculator</Link> or{' '}
+                <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">calorie calculator</Link> to pair protein with the right total calories.
               </p>
             </section>
 
@@ -172,8 +172,8 @@ export default function ProteinCalculatorPage() {
               <p className={pClass}>
                 During a calorie deficit, higher protein (e.g. 1.6–2.2 g/kg) can help preserve
                 muscle, keep you full, and support recovery. Many people aim for the upper end of
-                the range when cutting. Combine with the <Link href="/tools/calorie-deficit-calculator" className="text-[#85BEFF] hover:underline">calorie deficit calculator</Link> and{' '}
-                <Link href="/tools/tdee-calculator" className="text-[#85BEFF] hover:underline">TDEE calculator</Link> to set your overall intake.
+                the range when cutting. Combine with the <Link href="/tools/calorie-deficit-calculator" className="text-[#88B8FF] hover:underline">calorie deficit calculator</Link> and{' '}
+                <Link href="/tools/tdee-calculator" className="text-[#88B8FF] hover:underline">TDEE calculator</Link> to set your overall intake.
               </p>
             </section>
 

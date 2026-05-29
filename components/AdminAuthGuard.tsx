@@ -69,7 +69,7 @@ export default function AdminAuthGuard({ children }: AdminAuthGuardProps) {
         <div
           className="w-full max-w-sm rounded-2xl border border-gray-200 bg-white p-6"
         >
-          <h1 className="mb-6 text-center text-xl font-bold text-[#364052]">Admin Login</h1>
+          <h1 className="mb-6 text-center text-xl font-bold text-eati-ink">Admin Login</h1>
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
@@ -81,7 +81,7 @@ export default function AdminAuthGuard({ children }: AdminAuthGuardProps) {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#85BEFF]"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm outline-none focus:border-[#88B8FF]"
                 placeholder="Enter admin password"
                 autoFocus
               />
@@ -92,7 +92,7 @@ export default function AdminAuthGuard({ children }: AdminAuthGuardProps) {
             <button
               type="submit"
               disabled={submitting || !password}
-              className="w-full rounded-full bg-[#364052] py-2.5 text-sm font-semibold text-white hover:bg-[#2b3545] disabled:opacity-50"
+              className="w-full rounded-full bg-eati-ink py-2.5 text-sm font-semibold text-white hover:bg-eati-ink-hover disabled:opacity-50"
             >
               {submitting ? 'Logging in...' : 'Login'}
             </button>

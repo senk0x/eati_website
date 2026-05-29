@@ -1,49 +1,86 @@
 import Image from "next/image";
 
+const BADGES = [
+  {
+    id: "weight-loss",
+    title: "N. 1 tool",
+    subtitle: "To Lose Weight",
+  },
+  {
+    id: "app-store-rating",
+    title: "5 ★",
+    subtitle: "on App Store",
+  },
+] as const;
+
+function StatBadge({
+  id,
+  title,
+  subtitle,
+}: {
+  id: string;
+  title: string;
+  subtitle: string;
+}) {
+  return (
+    <div className="stats-badge flex shrink-0 flex-row items-center justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-5">
+      <div
+        className="relative shrink-0 w-[4.5rem] h-[4.5rem] sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-36 lg:h-36 xl:w-44 xl:h-44"
+        aria-hidden
+      >
+        <Image
+          src="/images/laurel.svg"
+          alt=""
+          fill
+          className="stats-laurel object-contain"
+          sizes="(max-width: 640px) 72px, (max-width: 1024px) 112px, 176px"
+        />
+      </div>
+
+      <div className="stats-badge__text flex shrink-0 flex-col items-center text-center">
+        <span
+          id={`${id}-title`}
+          className="stats-badge__title font-eati-heading text-eati-stats block whitespace-nowrap font-bold leading-tight"
+        >
+          {title}
+        </span>
+        <span className="stats-badge__subtitle font-eati-heading text-eati-stats block whitespace-nowrap font-normal leading-tight">
+          {subtitle}
+        </span>
+      </div>
+
+      <div
+        className="relative shrink-0 w-[4.5rem] h-[4.5rem] sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-36 lg:h-36 xl:w-44 xl:h-44 [transform:scaleX(-1)]"
+        aria-hidden
+      >
+        <Image
+          src="/images/laurel.svg"
+          alt=""
+          fill
+          className="stats-laurel object-contain"
+          sizes="(max-width: 640px) 72px, (max-width: 1024px) 112px, 176px"
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function StatsSection() {
   return (
-    <section className="px-4 py-4 sm:px-5 sm:py-6 md:px-6 md:py-12" aria-labelledby="stats-heading">
+    <section className="px-4 py-4 sm:px-5 sm:py-5 md:px-6 md:py-8" aria-labelledby="stats-heading">
       <h2 id="stats-heading" className="sr-only">
         Social proof: Eati as a top-rated weight loss and calorie tracking tool
       </h2>
-      <div className="mx-auto max-w-7xl">
-        {/* Mobile: row with laurels flanking text (like photo 2); laurels half size. Desktop: unchanged */}
-        <div className="flex flex-row items-center justify-center gap-2 sm:gap-3 md:gap-8 lg:gap-12">
-          {/* Left laurel - 3x smaller; wrapper controls size (Next/Image width/height can override class) */}
-          <div className="relative order-1 flex shrink-0 items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56">
-            <Image
-              src="/images/laurel.svg"
-              alt="Decorative laurel wreath beside text highlighting Eati as a leading calorie and weight loss app"
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 96px, 224px"
+      <div className="mx-auto max-w-7xl overflow-visible">
+        <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16">
+          {BADGES.map((badge) => (
+            <StatBadge
+              key={badge.id}
+              id={badge.id}
+              title={badge.title}
+              subtitle={badge.subtitle}
             />
-          </div>
-
-          {/* Centered text */}
-          <div className="flex flex-col items-center text-center order-2">
-            <span
-              className="font-eati-heading text-eati-stats block text-xl font-normal leading-tight sm:text-2xl md:text-4xl lg:text-5xl"
-            >
-              N. 1 tool
-            </span>
-            <span
-              className="font-eati-heading text-eati-stats block text-lg font-normal leading-tight sm:text-xl md:text-3xl lg:text-4xl"
-            >
-              To Lose Weight
-            </span>
-          </div>
-
-          {/* Right laurel - 3x smaller, mirrored */}
-          <div className="relative order-3 flex shrink-0 items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 [transform:scaleX(-1)]">
-            <Image
-              src="/images/laurel.svg"
-              alt="Decorative laurel wreath beside text highlighting Eati as a leading calorie and weight loss app"
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 96px, 224px"
-            />
-          </div>
+          ))}
         </div>
       </div>
     </section>

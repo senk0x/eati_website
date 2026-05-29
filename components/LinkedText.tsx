@@ -22,7 +22,7 @@ export default function LinkedText({ text, className }: LinkedTextProps) {
                 href={segment.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#85BEFF] hover:underline"
+                className="text-[#88B8FF] hover:underline"
               >
                 {segment.content}
               </a>
@@ -33,7 +33,7 @@ export default function LinkedText({ text, className }: LinkedTextProps) {
             <Link
               key={index}
               href={segment.href}
-              className="text-[#85BEFF] hover:underline"
+              className="text-[#88B8FF] hover:underline"
             >
               {segment.content}
             </Link>

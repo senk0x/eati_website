@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div
           className="rounded-[2rem] p-6 sm:p-8 md:rounded-[3rem] md:p-12"
-          style={{ backgroundColor: "#85BEFF" }}
+          style={{ backgroundColor: "#88B8FF" }}
         >
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             {/* Logo */}
             <div className="h-8 w-[72px] shrink-0 md:h-9 md:w-[84px]">
               <Image
-                src="/images/logo-footer.svg"
+                src="/images/blog/Frame 101455.svg"
                 alt="Eati — AI calorie tracker and nutrition app logo"
                 width={84}
                 height={36}

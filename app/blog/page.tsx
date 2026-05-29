@@ -70,7 +70,7 @@ export default function BlogPage() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-4xl text-[#85BEFF]">
+                      <div className="flex h-full w-full items-center justify-center text-4xl text-[#88B8FF]">
                         📝
                       </div>
                     )}
@@ -86,7 +86,7 @@ export default function BlogPage() {
                       })}
                     </time>
                     <h2
-                      className="mb-2 text-lg font-semibold group-hover:text-[#85BEFF]"
+                      className="mb-2 text-lg font-semibold group-hover:text-[#88B8FF]"
                     >
                       {article.title}
                     </h2>
@@ -96,7 +96,7 @@ export default function BlogPage() {
                       {article.introduction}
                     </p>
                     <span
-                      className="mt-4 text-sm font-medium text-[#85BEFF]"
+                      className="mt-4 text-sm font-medium text-[#88B8FF]"
                     >
                       Read more →
                     </span>
