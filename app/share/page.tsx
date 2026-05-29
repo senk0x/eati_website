@@ -1,12 +1,49 @@
 import type { Metadata } from "next";
-import { buildPageMetadata, eatiAppStoreUrl } from "@/lib/seo";
-import {
-  type SearchParamsInput,
-  buildShareQuery,
-  normalizeShareSummary,
-  renderDateRange,
-  resolveShareGradient,
-} from "@/lib/sharePreview";
+import { SITE_URL, eatiAppStoreUrl, OG_IMAGE_SIZE } from "@/lib/seo";
+
+type SearchParamsInput = Record<string, string | string[] | undefined>;
+
+type SharedSummary = {
+  name: string;
+  startDate: string;
+  endDate: string;
+  startWeight: string;
+  endWeight: string;
+  deltaPercent: string;
+  caloriesIn: string;
+  caloriesOut: string;
+  healthyDays: string;
+  totalDays: string;
+  streak: string;
+  kind: string;
+  image: string;
+  background: string;
+};
+
+const DEFAULT_SUMMARY: SharedSummary = {
+  name: "Eati User",
+  startDate: "",
+  endDate: "",
+  startWeight: "",
+  endWeight: "",
+  deltaPercent: "",
+  caloriesIn: "",
+  caloriesOut: "",
+  healthyDays: "",
+  totalDays: "",
+  streak: "",
+  kind: "summary",
+  image: "",
+  background: "tier1",
+};
+
+function pickFirst(
+  value: string | string[] | undefined,
+  fallback = ""
+): string {
+  if (Array.isArray(value)) return value[0] ?? fallback;
+  return value ?? fallback;
+}
 
 export async function generateMetadata({
   searchParams,
@@ -14,18 +51,92 @@ export async function generateMetadata({
   searchParams: Promise<SearchParamsInput>;
 }): Promise<Metadata> {
   const params = await searchParams;
-  const summary = normalizeShareSummary(params);
-  const query = buildShareQuery(summary);
-  const ogPath = query ? `/api/og/share?${query}` : "/api/og/share";
+  const name = pickFirst(params.n, "Eati User");
+  const imageUrl = pickFirst(params.img);
 
-  return buildPageMetadata({
-    title: "Shared Progress",
-    description:
-      "A shared Eati progress snapshot. See weekly results and continue with Eati.",
-    path: "/share",
-    ogImagePath: ogPath,
-    ogImageAlt: "Shared Eati progress preview",
-  });
+  const title = `${name}'s Progress | Eati`;
+  const description =
+    "Check out this Eati progress snapshot. See weekly results and track your own progress with Eati.";
+
+  // Use uploaded image as OG image if available, otherwise use dynamic OG route
+  const ogImageUrl = imageUrl && (imageUrl.startsWith("https://") || imageUrl.startsWith("http://"))
+    ? imageUrl
+    : `${SITE_URL}/share/opengraph-image`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      siteName: "Eati",
+      images: [
+        {
+          url: ogImageUrl,
+          width: OG_IMAGE_SIZE.width,
+          height: OG_IMAGE_SIZE.height,
+          alt: `${name}'s Eati progress`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImageUrl],
+    },
+  };
+}
+
+function normalize(params: SearchParamsInput): SharedSummary {
+  const summary: SharedSummary = {
+    name: pickFirst(params.n, DEFAULT_SUMMARY.name),
+    startDate: pickFirst(params.sd),
+    endDate: pickFirst(params.ed),
+    startWeight: pickFirst(params.sw),
+    endWeight: pickFirst(params.ew),
+    deltaPercent: pickFirst(params.dp),
+    caloriesIn: pickFirst(params.ci),
+    caloriesOut: pickFirst(params.co),
+    healthyDays: pickFirst(params.hd),
+    totalDays: pickFirst(params.td),
+    streak: pickFirst(params.st),
+    kind: pickFirst(params.k, DEFAULT_SUMMARY.kind),
+    image: pickFirst(params.img),
+    background: pickFirst(params.bg, DEFAULT_SUMMARY.background),
+  };
+
+  return summary;
+}
+
+function renderDateRange(startDate: string, endDate: string): string {
+  if (!startDate && !endDate) return "This week";
+  if (startDate && endDate) return `${startDate} - ${endDate}`;
+  return startDate || endDate;
+}
+
+function resolveShareImage(kind: string, imageParam: string): { url: string; isUploadedBanner: boolean } {
+  if (imageParam) {
+    if (imageParam.startsWith("https://") || imageParam.startsWith("http://")) {
+      return { url: imageParam, isUploadedBanner: true };
+    }
+    if (imageParam.startsWith("/images/")) {
+      return { url: imageParam, isUploadedBanner: false };
+    }
+  }
+
+  if (kind === "streak") return { url: "/images/motivation.svg", isUploadedBanner: false };
+  if (kind === "weight") return { url: "/images/log1.svg", isUploadedBanner: false };
+  return { url: "/images/progress.svg", isUploadedBanner: false };
+}
+
+function resolveBackgroundClass(background: string): string {
+  if (background === "solid") return "bg-[#88B8FF]";
+  if (background === "tier14") return "bg-gradient-to-b from-[#79F1CB] to-[#EDD36B]";
+  if (background === "tier31") return "bg-gradient-to-b from-[#DBA1FF] to-[#94A6FF]";
+  if (background === "monthly") return "bg-gradient-to-b from-[#F58D93] to-[#F0C56A]";
+  return "bg-gradient-to-b from-[#F17979] to-[#EDD36B]";
 }
 
 export default async function SharePage({
@@ -34,12 +145,11 @@ export default async function SharePage({
   searchParams: Promise<SearchParamsInput>;
 }) {
   const params = await searchParams;
-  const summary = normalizeShareSummary(params);
-  const query = buildShareQuery(summary);
+  const summary = normalize(params);
   const appStoreUrl = eatiAppStoreUrl("shared_progress_page");
   const dateRange = renderDateRange(summary.startDate, summary.endDate);
-  const [bgStart, bgEnd] = resolveShareGradient(summary.background);
-  const previewImage = query ? `/api/og/share?${query}` : "/api/og/share";
+  const { url: previewImage, isUploadedBanner } = resolveShareImage(summary.kind, summary.image);
+  const previewBackground = resolveBackgroundClass(summary.background);
 
   return (
     <div className="min-h-screen bg-[#F7F9FB]">
@@ -130,24 +240,29 @@ export default async function SharePage({
               </div>
             </div>
 
-            <div
-              className="relative overflow-hidden rounded-[24px] p-3 sm:p-4"
-              style={{
-                background:
-                  bgStart === bgEnd
-                    ? bgStart
-                    : `linear-gradient(to bottom, ${bgStart}, ${bgEnd})`,
-              }}
-            >
-              <div className="relative h-[460px] w-full sm:h-[520px]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={previewImage}
-                  alt="Shared progress preview card"
-                  className="h-full w-full rounded-[16px] object-cover object-left"
-                />
+            {isUploadedBanner ? (
+              <div className="relative overflow-hidden rounded-[24px]">
+                <div className="relative h-[460px] w-full sm:h-[520px]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={previewImage}
+                    alt="Shared progress preview"
+                    className="h-full w-full rounded-[24px] object-contain shadow-lg"
+                  />
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className={`relative overflow-hidden rounded-[24px] ${previewBackground} p-3 sm:p-4`}>
+                <div className="relative h-[460px] w-full sm:h-[520px]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={previewImage}
+                    alt="Shared progress preview"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </section>
       </main>
