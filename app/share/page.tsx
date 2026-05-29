@@ -1,103 +1,31 @@
 import type { Metadata } from "next";
 import { buildPageMetadata, eatiAppStoreUrl } from "@/lib/seo";
+import {
+  type SearchParamsInput,
+  buildShareQuery,
+  normalizeShareSummary,
+  renderDateRange,
+  resolveShareGradient,
+} from "@/lib/sharePreview";
 
-type SearchParamsInput = Record<string, string | string[] | undefined>;
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<SearchParamsInput>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const summary = normalizeShareSummary(params);
+  const query = buildShareQuery(summary);
+  const ogPath = query ? `/api/og/share?${query}` : "/api/og/share";
 
-type SharedSummary = {
-  name: string;
-  startDate: string;
-  endDate: string;
-  startWeight: string;
-  endWeight: string;
-  deltaPercent: string;
-  caloriesIn: string;
-  caloriesOut: string;
-  healthyDays: string;
-  totalDays: string;
-  streak: string;
-  kind: string;
-  image: string;
-  background: string;
-};
-
-const DEFAULT_SUMMARY: SharedSummary = {
-  name: "Eati User",
-  startDate: "",
-  endDate: "",
-  startWeight: "",
-  endWeight: "",
-  deltaPercent: "",
-  caloriesIn: "",
-  caloriesOut: "",
-  healthyDays: "",
-  totalDays: "",
-  streak: "",
-  kind: "summary",
-  image: "",
-  background: "tier1",
-};
-
-export const metadata: Metadata = buildPageMetadata({
-  title: "Shared Progress",
-  description:
-    "A shared Eati progress snapshot. See weekly results and continue with Eati.",
-  path: "/share",
-});
-
-function pickFirst(
-  value: string | string[] | undefined,
-  fallback = ""
-): string {
-  if (Array.isArray(value)) return value[0] ?? fallback;
-  return value ?? fallback;
-}
-
-function normalize(params: SearchParamsInput): SharedSummary {
-  const summary: SharedSummary = {
-    name: pickFirst(params.n, DEFAULT_SUMMARY.name),
-    startDate: pickFirst(params.sd),
-    endDate: pickFirst(params.ed),
-    startWeight: pickFirst(params.sw),
-    endWeight: pickFirst(params.ew),
-    deltaPercent: pickFirst(params.dp),
-    caloriesIn: pickFirst(params.ci),
-    caloriesOut: pickFirst(params.co),
-    healthyDays: pickFirst(params.hd),
-    totalDays: pickFirst(params.td),
-    streak: pickFirst(params.st),
-    kind: pickFirst(params.k, DEFAULT_SUMMARY.kind),
-    image: pickFirst(params.img),
-    background: pickFirst(params.bg, DEFAULT_SUMMARY.background),
-  };
-
-  return summary;
-}
-
-function renderDateRange(startDate: string, endDate: string): string {
-  if (!startDate && !endDate) return "This week";
-  if (startDate && endDate) return `${startDate} - ${endDate}`;
-  return startDate || endDate;
-}
-
-function resolveShareImage(kind: string, imageParam: string): string {
-  if (imageParam) {
-    if (imageParam.startsWith("/images/")) return imageParam;
-    if (imageParam.startsWith("https://") || imageParam.startsWith("http://")) {
-      return imageParam;
-    }
-  }
-
-  if (kind === "streak") return "/images/motivation.svg";
-  if (kind === "weight") return "/images/log1.svg";
-  return "/images/progress.svg";
-}
-
-function resolveBackgroundClass(background: string): string {
-  if (background === "solid") return "bg-[#88B8FF]";
-  if (background === "tier14") return "bg-gradient-to-b from-[#79F1CB] to-[#EDD36B]";
-  if (background === "tier31") return "bg-gradient-to-b from-[#DBA1FF] to-[#94A6FF]";
-  if (background === "monthly") return "bg-gradient-to-b from-[#F58D93] to-[#F0C56A]";
-  return "bg-gradient-to-b from-[#F17979] to-[#EDD36B]";
+  return buildPageMetadata({
+    title: "Shared Progress",
+    description:
+      "A shared Eati progress snapshot. See weekly results and continue with Eati.",
+    path: "/share",
+    ogImagePath: ogPath,
+    ogImageAlt: "Shared Eati progress preview",
+  });
 }
 
 export default async function SharePage({
@@ -106,11 +34,12 @@ export default async function SharePage({
   searchParams: Promise<SearchParamsInput>;
 }) {
   const params = await searchParams;
-  const summary = normalize(params);
+  const summary = normalizeShareSummary(params);
+  const query = buildShareQuery(summary);
   const appStoreUrl = eatiAppStoreUrl("shared_progress_page");
   const dateRange = renderDateRange(summary.startDate, summary.endDate);
-  const previewImage = resolveShareImage(summary.kind, summary.image);
-  const previewBackground = resolveBackgroundClass(summary.background);
+  const [bgStart, bgEnd] = resolveShareGradient(summary.background);
+  const previewImage = query ? `/api/og/share?${query}` : "/api/og/share";
 
   return (
     <div className="min-h-screen bg-[#F7F9FB]">
@@ -201,13 +130,21 @@ export default async function SharePage({
               </div>
             </div>
 
-            <div className={`relative overflow-hidden rounded-[24px] ${previewBackground} p-3 sm:p-4`}>
+            <div
+              className="relative overflow-hidden rounded-[24px] p-3 sm:p-4"
+              style={{
+                background:
+                  bgStart === bgEnd
+                    ? bgStart
+                    : `linear-gradient(to bottom, ${bgStart}, ${bgEnd})`,
+              }}
+            >
               <div className="relative h-[460px] w-full sm:h-[520px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={previewImage}
-                  alt="Shared progress preview"
-                  className="h-full w-full object-contain"
+                  alt="Shared progress preview card"
+                  className="h-full w-full rounded-[16px] object-cover object-left"
                 />
               </div>
             </div>
