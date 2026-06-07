@@ -11,8 +11,8 @@ interface ImageUploadProps {
 
 const DEFAULT_PREVIEW_ALT = 'Blog article cover image preview for the Eati content editor';
 
-/** Resize and compress an image file client-side. Returns a JPEG data URL. */
-async function compressImage(file: File, maxWidth = 1200, quality = 0.82): Promise<string> {
+/** Resize and compress image client-side, returning a JPEG file for upload retry. */
+async function compressImageToJpegFile(file: File, maxWidth = 1200, quality = 0.82): Promise<File> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -27,7 +27,14 @@ async function compressImage(file: File, maxWidth = 1200, quality = 0.82): Promi
         const ctx = canvas.getContext('2d');
         if (!ctx) { reject(new Error('Canvas not supported')); return; }
         ctx.drawImage(img, 0, 0, w, h);
-        resolve(canvas.toDataURL('image/jpeg', quality));
+        canvas.toBlob((blob) => {
+          if (!blob) {
+            reject(new Error('Failed to compress image'));
+            return;
+          }
+          const baseName = file.name.replace(/\.[^.]+$/, '') || 'image';
+          resolve(new File([blob], `${baseName}.jpg`, { type: 'image/jpeg' }));
+        }, 'image/jpeg', quality);
       };
       img.onerror = () => reject(new Error('Failed to decode image'));
       img.src = e.target?.result as string;
@@ -37,23 +44,43 @@ async function compressImage(file: File, maxWidth = 1200, quality = 0.82): Promi
   });
 }
 
-/** Try server-side upload first; fall back to client-side compression. */
-async function uploadImage(file: File): Promise<string> {
-  // 1. Attempt server upload (works locally + on Vercel with BLOB_READ_WRITE_TOKEN)
-  try {
-    const formData = new FormData();
-    formData.append('file', file);
-    const res = await fetch('/api/admin/upload', { method: 'POST', body: formData });
-    if (res.ok) {
-      const data = await res.json();
-      return data.url as string;
+async function uploadToServer(file: File): Promise<string> {
+  const formData = new FormData();
+  formData.append('file', file);
+  const res = await fetch('/api/admin/upload', { method: 'POST', body: formData });
+
+  if (!res.ok) {
+    let message = 'Failed to upload image';
+    try {
+      const payload = await res.json();
+      if (payload?.error) message = payload.error;
+    } catch {
+      // keep fallback message when body is not JSON
     }
-  } catch {
-    // network error — fall through to client-side path
+    throw new Error(message);
   }
 
-  // 2. Client-side fallback: resize + compress in-browser, store as data URL
-  return compressImage(file);
+  const data = await res.json();
+  if (!data?.url || typeof data.url !== 'string') {
+    throw new Error('Upload succeeded but no image URL was returned');
+  }
+  return data.url;
+}
+
+/** Upload image; retry once with compressed JPEG if needed. */
+async function uploadImage(file: File): Promise<string> {
+  // 1. Attempt original file upload.
+  try {
+    return await uploadToServer(file);
+  } catch (initialError) {
+    // 2. Retry with client-side compressed JPEG.
+    try {
+      const compressed = await compressImageToJpegFile(file);
+      return await uploadToServer(compressed);
+    } catch {
+      throw initialError instanceof Error ? initialError : new Error('Failed to upload image');
+    }
+  }
 }
 
 export default function ImageUpload({
