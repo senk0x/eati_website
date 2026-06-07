@@ -5,7 +5,8 @@ import EatiCTA from '@/components/EatiCTA';
 import TDEECalculator from '@/components/TDEECalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { toolSerpAb } from '@/lib/tools-serp-ab';
-import { buildPageMetadata } from '@/lib/seo';
+import { buildPageMetadata, absoluteUrl } from '@/lib/seo';
+import ToolBreadcrumbSchema from '@/components/ToolBreadcrumbSchema';
 
 const serp = toolSerpAb('tdee-calculator');
 
@@ -28,6 +29,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function TDEECalculatorPage() {
   return (
     <div className="min-h-screen bg-white">
+      <ToolBreadcrumbSchema toolName="TDEE Calculator" toolUrl={absoluteUrl('/tools/tdee-calculator')} />
       <div className="pt-20 sm:pt-24 md:pt-28" />
 
       <main className="px-4 pb-12 md:px-6 md:pb-16">

@@ -6,7 +6,8 @@ import MealLogCalculator from '@/components/MealLogCalculator';
 import { getFrequentlySearchedFoods } from '@/lib/foods';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
 import { toolSerpAb } from '@/lib/tools-serp-ab';
-import { buildPageMetadata } from '@/lib/seo';
+import { buildPageMetadata, absoluteUrl } from '@/lib/seo';
+import ToolBreadcrumbSchema from '@/components/ToolBreadcrumbSchema';
 
 const serp = toolSerpAb('meal-log-calculator');
 
@@ -35,6 +36,7 @@ const pClass = 'text-base leading-relaxed text-gray-600';
 export default function MealLogCalculatorPage() {
   return (
     <div className="min-h-screen bg-white">
+      <ToolBreadcrumbSchema toolName="Meal Log Calculator" toolUrl={absoluteUrl('/tools/meal-log-calculator')} />
       <div className="pt-20 sm:pt-24 md:pt-28" />
 
       <main className="px-4 pb-12 md:px-6 md:pb-16">

@@ -4,7 +4,8 @@ import Footer from '@/components/Footer';
 import EatiCTA from '@/components/EatiCTA';
 import CalorieBurnCalculator from '@/components/CalorieBurnCalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
-import { buildPageMetadata } from '@/lib/seo';
+import { buildPageMetadata, absoluteUrl } from '@/lib/seo';
+import ToolBreadcrumbSchema from '@/components/ToolBreadcrumbSchema';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Calorie Burn Calculator | Walk, Run & Workout Calories',
@@ -32,6 +33,7 @@ const pClass = 'text-base leading-relaxed text-gray-600';
 export default function CalorieBurnCalculatorPage() {
   return (
     <div className="min-h-screen bg-white">
+      <ToolBreadcrumbSchema toolName="Calorie Burn Calculator" toolUrl={absoluteUrl('/tools/calorie-burn-calculator')} />
       <div className="pt-20 sm:pt-24 md:pt-28" />
 
       <main className="px-4 pb-12 md:px-6 md:pb-16">

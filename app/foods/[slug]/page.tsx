@@ -256,12 +256,18 @@ export default async function FoodPage({ params }: Props) {
   const canonicalUrl = `${SITE_URL}/foods/${slug}`;
   const nutritionSchema = {
     '@context': 'https://schema.org',
-    '@type': 'NutritionInformation',
-    name: `Nutrition facts for ${name} (per 100g)`,
-    calories: `${caloriesPer100g} kcal`,
-    proteinContent: `${proteinPer100g} g`,
-    carbohydrateContent: `${carbsPer100g} g`,
-    fatContent: `${fatPer100g} g`,
+    '@type': 'FoodProduct',
+    name,
+    description: `Nutrition facts for ${name}: ${caloriesPer100g} kcal per 100g, ${proteinPer100g}g protein, ${carbsPer100g}g carbs, ${fatPer100g}g fat.`,
+    url: canonicalUrl,
+    nutrition: {
+      '@type': 'NutritionInformation',
+      servingSize: '100 g',
+      calories: `${caloriesPer100g} kcal`,
+      proteinContent: `${proteinPer100g} g`,
+      carbohydrateContent: `${carbsPer100g} g`,
+      fatContent: `${fatPer100g} g`,
+    },
   };
   const breadcrumbSchema = {
     '@context': 'https://schema.org',

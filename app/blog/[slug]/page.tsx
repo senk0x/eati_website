@@ -12,9 +12,7 @@ import LinkedText from '@/components/LinkedText';
 import ArticleContent from '@/components/ArticleContent';
 import EatiCTA from '@/components/EatiCTA';
 import { blogTopicFromArticle } from '@/lib/eati-cta-copy';
-import { SITE_URL, blogPostOgImagePath, buildPageMetadata, eatiAppStoreUrl } from '@/lib/seo';
-
-export const dynamic = 'force-dynamic';
+import { SITE_URL, blogPostOgImagePath, buildPageMetadata, eatiAppStoreUrl, BRAND_OG_SHARE_IMAGE_PATH, absoluteUrl } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -64,13 +62,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const imageUrl = article.coverImage
     ? (article.coverImage.startsWith('http') ? article.coverImage : `${SITE_URL}${article.coverImage}`)
-    : undefined;
+    : absoluteUrl(BRAND_OG_SHARE_IMAGE_PATH);
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: article.title,
     description: article.metaDescription || article.introduction,
-    image: imageUrl ? [imageUrl] : undefined,
+    image: [imageUrl],
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     author: { '@type': 'Organization', name: 'Eati', url: SITE_URL },
@@ -147,6 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Header */}
           <header className="mb-8">
             <time
+              dateTime={article.publishedAt}
               className="mb-2 block text-sm text-gray-500"
             >
               {new Date(article.publishedAt).toLocaleDateString('en-US', {

@@ -4,7 +4,8 @@ import Footer from '@/components/Footer';
 import EatiCTA from '@/components/EatiCTA';
 import CalorieDeficitCalculator from '@/components/CalorieDeficitCalculator';
 import { ogToolPath, toolOgAlt } from '@/lib/og';
-import { buildPageMetadata } from '@/lib/seo';
+import { buildPageMetadata, absoluteUrl } from '@/lib/seo';
+import ToolBreadcrumbSchema from '@/components/ToolBreadcrumbSchema';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Calorie Deficit Calculator | Safe Weekly Fat Loss Pace',
@@ -25,6 +26,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function CalorieDeficitCalculatorPage() {
   return (
     <div className="min-h-screen bg-white">
+      <ToolBreadcrumbSchema toolName="Calorie Deficit Calculator" toolUrl={absoluteUrl('/tools/calorie-deficit-calculator')} />
       <div className="pt-20 sm:pt-24 md:pt-28" />
 
       <main className="px-4 pb-12 md:px-6 md:pb-16">

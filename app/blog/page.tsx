@@ -23,8 +23,6 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-export const dynamic = 'force-dynamic';
-
 export default function BlogPage() {
   const articles = getPublishedArticles();
 
@@ -38,12 +36,12 @@ export default function BlogPage() {
           <h1
             className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
-            Blog
+            Nutrition & Weight Loss Blog
           </h1>
           <p
             className="mb-10 text-base md:text-lg"
           >
-            Tips, guides, and insights on nutrition and healthy eating.
+            Practical guides on calorie tracking, macro splits, high-protein meals, and sustainable fat loss — with links to our free TDEE, calorie, and macro calculators.
           </p>
 
           {articles.length === 0 ? (
@@ -77,6 +75,7 @@ export default function BlogPage() {
                   </div>
                   <div className="flex flex-1 flex-col p-5">
                     <time
+                      dateTime={article.publishedAt}
                       className="mb-2 text-xs text-gray-500"
                     >
                       {new Date(article.publishedAt).toLocaleDateString('en-US', {

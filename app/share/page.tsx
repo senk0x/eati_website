@@ -86,6 +86,7 @@ export async function generateMetadata({
       description,
       images: [ogImageUrl],
     },
+    robots: { index: false, follow: false },
   };
 }
 
@@ -227,7 +228,7 @@ export default async function SharePage({
 
               <div className="mt-8 rounded-2xl border border-[#E9EDF3] bg-[#F7F9FB] p-4 sm:p-5">
                 <p className="text-sm font-medium text-[#6B7685]">
-                  Get Eati and build your own streak with AI-assisted nutrition tracking.
+                  Start your fitness journey with Eati - your personal fitness coach, too
                 </p>
                 <a
                   href={appStoreUrl}

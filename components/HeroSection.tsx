@@ -298,9 +298,9 @@ export default function HeroSection() {
             <h1 className="font-eati-heading text-3xl font-normal uppercase leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
               I AM EATI!
               <br />
-              YOUR FITNESS
+              YOUR ALL-IN-ONE
               <br />
-              ASSISTANT
+              FITNESS COACH
             </h1>
 
             {/* Input field and send button */}
