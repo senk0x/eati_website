@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getAllArticles, saveArticle, BlogArticle } from '@/lib/blog';
+import { githubConfigured, putFile } from '@/lib/github-content';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,7 +31,15 @@ export async function POST(request: Request) {
       article.publishedAt = new Date().toISOString();
     }
 
-    saveArticle(article);
+    if (githubConfigured()) {
+      await putFile(
+        `content/blog/${article.slug}.json`,
+        JSON.stringify(article, null, 2),
+        `Add article: ${article.slug}`,
+      );
+    } else {
+      saveArticle(article);
+    }
 
     return NextResponse.json({ ok: true, slug: article.slug });
   } catch (error) {
