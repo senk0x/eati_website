@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
-import { getPublishedArticles } from '@/lib/blog';
+import { getPublishedArticlesHybrid } from '@/lib/blog-blob';
 import { OG_BLOG_INDEX_ALT, OG_BLOG_INDEX_PATH } from '@/lib/og';
 import { buildPageMetadata } from '@/lib/seo';
 
@@ -23,8 +23,10 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-export default function BlogPage() {
-  const articles = getPublishedArticles();
+export const dynamic = 'force-dynamic';
+
+export default async function BlogPage() {
+  const articles = await getPublishedArticlesHybrid();
 
   return (
     <div className="min-h-screen bg-white">

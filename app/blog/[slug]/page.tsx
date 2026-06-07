@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
 import {
-  getArticleBySlug,
-  getPublishedArticles,
-  getRelatedArticles,
   generateTableOfContents,
 } from '@/lib/blog';
+import {
+  getArticleHybrid,
+  getRelatedArticlesHybrid,
+} from '@/lib/blog-blob';
 import LinkedText from '@/components/LinkedText';
 import ArticleContent from '@/components/ArticleContent';
 import EatiCTA from '@/components/EatiCTA';
@@ -18,9 +19,11 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = await getArticleHybrid(slug);
 
   if (!article || !article.published) {
     return { title: 'Article Not Found' };
@@ -43,21 +46,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-export async function generateStaticParams() {
-  const articles = getPublishedArticles();
-  return articles.map((article) => ({ slug: article.slug }));
-}
-
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = await getArticleHybrid(slug);
 
   if (!article || !article.published) {
     notFound();
   }
 
   const toc = generateTableOfContents(article.sections);
-  const relatedArticles = getRelatedArticles(slug, 3);
+  const relatedArticles = await getRelatedArticlesHybrid(slug, 3);
   const canonicalUrl = `${SITE_URL}/blog/${slug}`;
 
   const imageUrl = article.coverImage

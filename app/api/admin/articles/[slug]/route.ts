@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getArticleBySlug, saveArticle, deleteArticle, BlogArticle } from '@/lib/blog';
-import { githubConfigured, putFile, deleteFile } from '@/lib/github-content';
+import { getArticleBySlug, BlogArticle } from '@/lib/blog';
+import { persistArticle, removeArticle } from '@/lib/blog-blob';
 
 export const dynamic = 'force-dynamic';
 
@@ -33,21 +33,13 @@ export async function PUT(request: Request, { params }: RouteParams) {
     }
 
     const updated: BlogArticle = { ...existing, ...updates, slug };
-
-    if (githubConfigured()) {
-      await putFile(
-        `content/blog/${slug}.json`,
-        JSON.stringify(updated, null, 2),
-        `Update article: ${slug}`,
-      );
-    } else {
-      saveArticle(updated);
-    }
+    await persistArticle(updated);
 
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error('Failed to update article:', error);
-    return NextResponse.json({ error: 'Failed to save article' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Failed to save article';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
@@ -60,18 +52,11 @@ export async function DELETE(request: Request, { params }: RouteParams) {
       return NextResponse.json({ error: 'Article not found' }, { status: 404 });
     }
 
-    if (githubConfigured()) {
-      await deleteFile(
-        `content/blog/${slug}.json`,
-        `Delete article: ${slug}`,
-      );
-    } else {
-      deleteArticle(slug);
-    }
-
+    await removeArticle(slug);
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error('Failed to delete article:', error);
-    return NextResponse.json({ error: 'Failed to delete article' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Failed to delete article';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

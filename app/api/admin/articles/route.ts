@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getAllArticles, saveArticle, BlogArticle } from '@/lib/blog';
-import { githubConfigured, putFile } from '@/lib/github-content';
+import { getAllArticles, BlogArticle } from '@/lib/blog';
+import { persistArticle } from '@/lib/blog-blob';
 
 export const dynamic = 'force-dynamic';
 
@@ -31,19 +31,11 @@ export async function POST(request: Request) {
       article.publishedAt = new Date().toISOString();
     }
 
-    if (githubConfigured()) {
-      await putFile(
-        `content/blog/${article.slug}.json`,
-        JSON.stringify(article, null, 2),
-        `Add article: ${article.slug}`,
-      );
-    } else {
-      saveArticle(article);
-    }
-
+    await persistArticle(article);
     return NextResponse.json({ ok: true, slug: article.slug });
   } catch (error) {
     console.error('Failed to save article:', error);
-    return NextResponse.json({ error: 'Failed to save article' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Failed to save article';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

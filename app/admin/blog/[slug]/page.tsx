@@ -109,7 +109,7 @@ export default function EditArticlePage() {
       setSaving(false);
     } catch (err) {
       console.error(err);
-      alert('Failed to save article');
+      alert(err instanceof Error ? err.message : 'Failed to save article');
       setSaving(false);
     }
   };
