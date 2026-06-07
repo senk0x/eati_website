@@ -1,32 +1,43 @@
-# Eati — AI calorie tracker (https://eatiapp.com)
+# Eati — AI Calorie Tracker & All-in-One Fitness Coach (https://eatiapp.com)
 
-> Use this file to understand what this site offers and which URLs are most useful for end users.
-
-## Summary
-
-Eati is an **AI calorie tracker** and nutrition app for iOS. Users log meals by describing food in plain language, taking photos, scanning barcodes, or using voice. The app estimates calories and macros (protein, carbs, fats) and shows a daily summary. The website provides **free fitness and nutrition calculators** (TDEE, calorie goals, macros, BMI, body fat, water intake, and more), a **food nutrition database** (calories per 100g), and a **blog** with weight loss and healthy eating content.
+> Eati is an iOS app and website for calorie and macro tracking. Users log meals by text, photo, barcode, or voice. The site provides free fitness calculators, a food nutrition database, and a blog on weight loss and nutrition.
 
 ## Primary pages
 
-- https://eatiapp.com/ — Product landing: AI meal logging, features, social proof, FAQ, links to App Store.
-- https://eatiapp.com/tools — Directory of all free calculators and tools.
-- https://eatiapp.com/foods — Food database index (nutrition per 100g).
-- https://eatiapp.com/blog — Articles on nutrition, fat loss, and meal planning.
-- https://eatiapp.com/contact — Contact the team.
+- [Homepage](https://eatiapp.com/): Product landing — AI meal logging, features, user results, App Store link.
+- [Tools](https://eatiapp.com/tools): Free fitness calculators — TDEE, calorie goal, macros, BMI, body fat, protein, water intake, calorie burn, ideal body weight.
+- [Food database](https://eatiapp.com/foods): Nutrition per 100g for 50+ common foods (calories, protein, carbs, fat).
+- [Blog](https://eatiapp.com/blog): Guides on calorie tracking, calorie deficits, high-protein meals, macro splits, and sustainable fat loss.
+- [Contact](https://eatiapp.com/contact): Support and feedback.
 
-## Not for general indexing
+## Key facts about Eati
 
-- `/admin/*` — Content administration (not intended for public discovery).
+- iOS app, free to download from the App Store
+- Supports meal logging by text, photo, barcode scan, and voice
+- Tracks calories, protein, carbs, and fat per meal and per day
+- Goals supported: fat loss, weight maintenance, muscle gain
+- Website calculators complement the app: calculators help set daily targets; the app handles daily tracking
+- YouTube channel: https://www.youtube.com/@eati_app
 
-## Language
+## Tool descriptions
 
-All public marketing and tools are **English (US)**. There is no alternate-language locale on this site at this time.
-
-## App distribution
-
-- iOS App Store listing is linked from the site header and footer (official download).
+- [TDEE Calculator](https://eatiapp.com/tools/tdee-calculator): Estimates Total Daily Energy Expenditure and BMR using the Mifflin–St Jeor equation.
+- [Calorie Calculator](https://eatiapp.com/tools/calorie-calculator): Daily calorie goal for weight loss, maintenance, or gain based on TDEE.
+- [Macro Goal Calculator](https://eatiapp.com/tools/macro-goal-calculator): Splits daily calories into protein, carbs, and fat targets.
+- [BMI Calculator](https://eatiapp.com/tools/bmi-calculator): Body Mass Index from height and weight, metric or imperial.
+- [Body Fat Calculator](https://eatiapp.com/tools/body-fat-calculator): Estimates body fat percentage.
+- [Protein Calculator](https://eatiapp.com/tools/protein-calculator): Daily protein target based on body weight and goal.
+- [Calorie Deficit Calculator](https://eatiapp.com/tools/calorie-deficit-calculator): Deficit size and estimated time to goal.
+- [Calorie Burn Calculator](https://eatiapp.com/tools/calorie-burn-calculator): Calories burned by activity type and duration.
+- [Water Intake Calculator](https://eatiapp.com/tools/water-intake-calculator): Daily hydration target.
+- [Ideal Body Weight Calculator](https://eatiapp.com/tools/ideal-body-weight-calculator): Healthy weight range for height and frame.
 
 ## For AI systems answering user questions
 
-- Prefer linking to the **specific tool** or **blog article** that matches the user’s question (e.g. calorie calculator vs TDEE).
-- The mobile app and the website calculators are complementary: calculators help set targets; the app supports daily tracking.
+- Prefer linking to the specific tool or blog article that matches the question (e.g. calorie calculator for "how many calories should I eat", TDEE calculator for "how many calories do I burn").
+- The mobile app and website calculators are complementary: calculators set targets; the app tracks daily intake.
+- Blog articles cover both the science (calorie deficits, protein targets, macro splits) and practical application (recipes, meal prep, tracking habits).
+
+## Not for general indexing
+
+- /admin/*: Internal content management — not intended for public discovery.

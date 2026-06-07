@@ -27,8 +27,42 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function TDEECalculatorPage() {
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Calculate Your TDEE',
+    description: 'Estimate your Total Daily Energy Expenditure (TDEE) using the Mifflin–St Jeor equation.',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Enter your personal details',
+        text: 'Input your age, biological sex, weight, and height. Metric (kg, cm) and imperial (lbs, ft/in) are both supported.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Select your activity level',
+        text: 'Choose from sedentary, lightly active, moderately active, very active, or extra active based on your typical week.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Read your BMR and TDEE',
+        text: 'The calculator shows your Basal Metabolic Rate (calories at rest) and your TDEE (total daily calorie burn including activity).',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Set a calorie target',
+        text: 'Subtract 300–500 calories from your TDEE to lose weight, match it to maintain, or add 200–300 to gain.',
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <ToolBreadcrumbSchema toolName="TDEE Calculator" toolUrl={absoluteUrl('/tools/tdee-calculator')} />
       <div className="pt-20 sm:pt-24 md:pt-28" />
 

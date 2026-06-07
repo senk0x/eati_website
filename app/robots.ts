@@ -5,11 +5,21 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [
+      // General crawlers
       {
         userAgent: '*',
         allow: '/',
         disallow: ['/admin/', '/api/admin/'],
       },
+      // AI search crawlers — explicitly allowed for inference/search features
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'OAI-SearchBot', allow: '/' },
+      { userAgent: 'ChatGPT-User', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'PerplexityBot', allow: '/' },
+      // Training scrapers — blocked (not search/inference)
+      { userAgent: 'CCBot', disallow: '/' },
+      { userAgent: 'anthropic-ai', disallow: '/' },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };

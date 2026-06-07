@@ -70,11 +70,44 @@ export default function CalorieCalculatorPage() {
     url: canonical,
     applicationCategory: 'HealthApplication',
   };
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Calculate Your Daily Calorie Goal',
+    description: 'Find the daily calorie intake that supports your weight loss, maintenance, or muscle gain goal.',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Enter your details',
+        text: 'Input your age, sex, weight, height, and activity level. Metric and imperial units are both supported.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Choose your goal',
+        text: 'Select lose weight, maintain weight, or gain weight. The calculator adjusts your calorie target accordingly.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Read your calorie target',
+        text: 'The result shows your BMR, TDEE, and recommended daily calories for your selected goal.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Track your intake',
+        text: 'Use the Eati app to log meals daily and stay within your calorie target consistently.',
+      },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="pt-20 sm:pt-24 md:pt-28" />
 
       <main className="px-4 pb-12 md:px-6 md:pb-16">

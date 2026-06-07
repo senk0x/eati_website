@@ -67,7 +67,10 @@ export default function JsonLdDefaults() {
       contactType: "customer support",
       url: `${SITE_URL}/contact`,
     },
-    sameAs: [APP_STORE_URL],
+    sameAs: [
+      APP_STORE_URL,
+      "https://www.youtube.com/@eati_app",
+    ],
   };
 
   return (
