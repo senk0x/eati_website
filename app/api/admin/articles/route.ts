@@ -1,12 +1,13 @@
 import { NextResponse } from 'next/server';
-import { getAllArticles, BlogArticle } from '@/lib/blog';
-import { persistArticle } from '@/lib/blog-blob';
+import { BlogArticle } from '@/lib/blog';
+import { persistArticle, getPublishedArticlesHybrid } from '@/lib/blog-blob';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const articles = getAllArticles();
+    // Return merged list so the admin shows Blob-saved articles too
+    const articles = await getPublishedArticlesHybrid();
     return NextResponse.json(articles);
   } catch (error) {
     console.error('Failed to get articles:', error);

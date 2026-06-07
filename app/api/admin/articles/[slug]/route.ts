@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getArticleBySlug, BlogArticle } from '@/lib/blog';
-import { persistArticle, removeArticle } from '@/lib/blog-blob';
+import { persistArticle, removeArticle, getArticleHybrid } from '@/lib/blog-blob';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,7 +11,8 @@ interface RouteParams {
 export async function GET(request: Request, { params }: RouteParams) {
   try {
     const { slug } = await params;
-    const article = getArticleBySlug(slug);
+    // Blob-first so the admin always loads the latest saved version
+    const article = await getArticleHybrid(slug);
     if (!article) {
       return NextResponse.json({ error: 'Article not found' }, { status: 404 });
     }
@@ -27,7 +28,8 @@ export async function PUT(request: Request, { params }: RouteParams) {
     const { slug } = await params;
     const updates: Partial<BlogArticle> = await request.json();
 
-    const existing = getArticleBySlug(slug);
+    // Use hybrid read so we base the update on the latest Blob version when it exists
+    const existing = await getArticleHybrid(slug);
     if (!existing) {
       return NextResponse.json({ error: 'Article not found' }, { status: 404 });
     }
@@ -47,7 +49,7 @@ export async function DELETE(request: Request, { params }: RouteParams) {
   try {
     const { slug } = await params;
 
-    const existing = getArticleBySlug(slug);
+    const existing = await getArticleHybrid(slug);
     if (!existing) {
       return NextResponse.json({ error: 'Article not found' }, { status: 404 });
     }
