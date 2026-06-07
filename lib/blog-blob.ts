@@ -26,6 +26,10 @@ export async function persistArticle(article: BlogArticle): Promise<void> {
       JSON.stringify(article, null, 2),
       { access: 'public', contentType: 'application/json', addRandomSuffix: false },
     );
+  } else if (process.env.VERCEL) {
+    throw new Error(
+      'Blob storage not configured. In Vercel Dashboard → your project → Storage → Connect Store → Blob. Then redeploy.',
+    );
   } else {
     saveArticle(article);
   }
@@ -36,6 +40,10 @@ export async function removeArticle(slug: string): Promise<void> {
     const { del, list } = await import('@vercel/blob');
     const { blobs } = await list({ prefix: `${BLOB_PREFIX}${slug}.json` });
     if (blobs.length) await del(blobs.map((b) => b.url));
+  } else if (process.env.VERCEL) {
+    throw new Error(
+      'Blob storage not configured. In Vercel Dashboard → your project → Storage → Connect Store → Blob. Then redeploy.',
+    );
   } else {
     deleteArticle(slug);
   }
