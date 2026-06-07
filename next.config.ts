@@ -23,6 +23,13 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      // Vercel Blob storage for admin-uploaded images
+      {
+        protocol: "https",
+        hostname: "*.public.blob.vercel-storage.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   async headers() {
