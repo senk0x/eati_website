@@ -12,14 +12,54 @@ import {
 import LinkedText from '@/components/LinkedText';
 import ArticleContent from '@/components/ArticleContent';
 import EatiCTA from '@/components/EatiCTA';
+import RecipeMacroCalculator from '@/components/RecipeMacroCalculator';
 import { blogTopicFromArticle } from '@/lib/eati-cta-copy';
-import { SITE_URL, blogPostOgImagePath, buildPageMetadata, eatiAppStoreUrl, BRAND_OG_SHARE_IMAGE_PATH, absoluteUrl } from '@/lib/seo';
+import { SITE_URL, blogPostOgImagePath, buildPageMetadata, BRAND_OG_SHARE_IMAGE_PATH, absoluteUrl } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
 export const dynamic = 'force-dynamic';
+
+type ParsedRecipeMacros = {
+  calories: number;
+  protein: number;
+  fat: number;
+  carbs: number;
+};
+
+function extractNumber(content: string, labelPattern: RegExp): number | null {
+  const match = content.match(labelPattern);
+  if (!match) return null;
+  const value = Number(match[1]);
+  return Number.isFinite(value) ? value : null;
+}
+
+function parseRecipeMacros(sectionContent: string): ParsedRecipeMacros | null {
+  const calories = extractNumber(sectionContent, /calories?\s*:\s*(\d+(?:\.\d+)?)/i);
+  const protein = extractNumber(sectionContent, /protein\s*:\s*(\d+(?:\.\d+)?)/i);
+  const fat = extractNumber(sectionContent, /fat\s*:\s*(\d+(?:\.\d+)?)/i);
+  const carbs = extractNumber(sectionContent, /(?:carbohydrates|carbs)\s*:\s*(\d+(?:\.\d+)?)/i);
+
+  if (calories === null || protein === null || fat === null || carbs === null) {
+    return null;
+  }
+
+  return { calories, protein, fat, carbs };
+}
+
+function parseRecipeBaseGramsFromIngredients(ingredientsContent: string): number | null {
+  const gramMatches = ingredientsContent.match(/(\d+(?:\.\d+)?)\s*g\b/gi);
+  if (!gramMatches || gramMatches.length === 0) return null;
+
+  const total = gramMatches.reduce((sum, token) => {
+    const value = Number(token.replace(/[^\d.]/g, ''));
+    return Number.isFinite(value) ? sum + value : sum;
+  }, 0);
+
+  return total > 0 ? total : null;
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -57,6 +97,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   const toc = generateTableOfContents(article.sections);
   const relatedArticles = await getRelatedArticlesHybrid(slug, 3);
   const canonicalUrl = `${SITE_URL}/blog/${slug}`;
+  const isRecipeArticle = slug.toLowerCase().includes('recipe');
+  const ingredientsSection = article.sections.find((section) => /ingredients/i.test(section.heading));
+  const recipeBaseGrams = ingredientsSection
+    ? parseRecipeBaseGramsFromIngredients(ingredientsSection.content) ?? 100
+    : 100;
 
   const imageUrl = article.coverImage
     ? (article.coverImage.startsWith('http') ? article.coverImage : `${SITE_URL}${article.coverImage}`)
@@ -214,6 +259,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                   photoLineIndex >= 0 ? lines[photoLineIndex].trim().slice('photo:'.length).trim() : null;
 
                 const photoUrl = section.imageUrl?.trim() || parsedPhotoUrl;
+                const isMacroSection = /calories\s*,\s*protein\s*,\s*fat\s*&\s*carbs/i.test(section.heading);
+                const parsedRecipeMacros =
+                  isRecipeArticle && isMacroSection ? parseRecipeMacros(section.content) : null;
 
                 // Remove the `Photo:` line wherever it appears, so content renders cleanly.
                 const contentWithoutPhoto =
@@ -240,32 +288,19 @@ export default async function BlogPostPage({ params }: PageProps) {
                     )}
 
                     <ArticleContent content={contentWithoutPhoto} />
+                    {parsedRecipeMacros && (
+                      <RecipeMacroCalculator
+                        calories={parsedRecipeMacros.calories}
+                        protein={parsedRecipeMacros.protein}
+                        fat={parsedRecipeMacros.fat}
+                        carbs={parsedRecipeMacros.carbs}
+                        baseGrams={recipeBaseGrams}
+                      />
+                    )}
                   </section>
                 );
               })()
             ))}
-
-            {/* Mid-Article CTA */}
-            {article.midArticleCta && (
-              <div className="rounded-2xl bg-[#88B8FF] p-6 text-center text-white">
-                <p
-                  className="mb-4 text-lg font-medium"
-                >
-                  {article.midArticleCta}
-                </p>
-                <a
-                  href={eatiAppStoreUrl('blog_mid_article')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-eati-ink transition-colors hover:bg-gray-100"
-                >
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                  </svg>
-                  Download Eati
-                </a>
-              </div>
-            )}
 
             <EatiCTA
               contextType="blog"

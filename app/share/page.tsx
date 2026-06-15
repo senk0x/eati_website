@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SITE_URL, eatiAppStoreUrl, OG_IMAGE_SIZE } from "@/lib/seo";
 
 type SearchParamsInput = Record<string, string | string[] | undefined>;
@@ -226,17 +227,23 @@ export default async function SharePage({
                 </div>
               </div>
 
-              <div className="mt-8 rounded-2xl border border-[#E9EDF3] bg-[#F7F9FB] p-4 sm:p-5">
-                <p className="text-sm font-medium text-[#6B7685]">
-                  Start your fitness journey with Eati - your personal fitness coach, too
-                </p>
+              <div className="mt-8 overflow-hidden rounded-[24px] border border-[#D7E6FA] bg-[#8ABCF9]">
                 <a
                   href={appStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex min-h-[44px] items-center rounded-full bg-eati-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2B3545]"
+                  className="group block"
+                  aria-label="Download Eati on the App Store"
                 >
-                  Download on the App Store
+                  <div className="relative aspect-[4331/2688] w-full">
+                    <Image
+                      src="/images/Frame%20101639.svg"
+                      alt="Get your free AI coach now. Download Eati."
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 960px"
+                      className="object-cover object-center transition-transform duration-300 group-hover:scale-[1.01]"
+                    />
+                  </div>
                 </a>
               </div>
             </div>
