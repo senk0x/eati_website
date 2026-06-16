@@ -59,6 +59,7 @@ export default function StartNowSection() {
           <div className="inline-flex flex-col items-center">
             <a
               href={APP_STORE_URL}
+              data-eati-app-store="start_now_section"
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-flex min-h-[44px] items-center justify-center rounded-full bg-[#0A0B10] px-5 py-2.5 text-center text-lg font-semibold leading-tight text-white shadow-[0_8px_20px_rgba(0,0,0,0.22)] transition-all duration-200 hover:scale-[1.04] hover:shadow-[0_12px_28px_rgba(0,0,0,0.28)] active:scale-[0.98] sm:px-7 sm:py-3 sm:text-xl md:px-8 md:text-2xl ${revealClass()}`}

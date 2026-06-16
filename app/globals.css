@@ -185,6 +185,72 @@ body {
   opacity: 0;
 }
 
+/* Hero V2: App Store CTA with lift + shine on hover. */
+.hero-download-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 320ms ease,
+    border-color 320ms ease;
+}
+
+.hero-download-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 28%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 72%
+  );
+  transform: translateX(-130%);
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.hero-download-cta:hover {
+  transform: translateY(-2px) scale(1.03);
+  background-color: #151821;
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 16px 36px rgba(10, 11, 16, 0.38),
+    0 0 0 4px rgba(255, 255, 255, 0.12);
+}
+
+.hero-download-cta:hover::before {
+  transform: translateX(130%);
+}
+
+.hero-download-cta:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 8px 20px rgba(10, 11, 16, 0.28);
+}
+
+.hero-download-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-download-cta,
+  .hero-download-cta::before {
+    transition: none;
+  }
+
+  .hero-download-cta:hover {
+    transform: none;
+  }
+
+  .hero-download-cta:hover::before {
+    transform: translateX(-130%);
+  }
+}
+
 /* Features: rotate log bubbles while keeping the phone frame/background fixed. */
 .feature-log-frame {
   opacity: 0;

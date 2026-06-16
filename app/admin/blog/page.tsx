@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import AdminNav from '@/components/AdminNav';
 
 interface BlogArticle {
   slug: string;
@@ -58,6 +59,8 @@ export default function AdminBlogPage() {
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-8">
       <div className="mx-auto max-w-4xl">
+        <AdminNav />
+
         <div className="mb-8 flex items-center justify-between">
           <h1
             className="text-2xl font-bold"
@@ -143,10 +146,10 @@ export default function AdminBlogPage() {
 
         <div className="mt-8">
           <Link
-            href="/"
+            href="/admin"
             className="text-sm text-gray-500 hover:text-[#88B8FF]"
           >
-            ← Back to site
+            ← Admin home
           </Link>
         </div>
       </div>

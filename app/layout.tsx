@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Rubik, Bowlby_One } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import SiteAnalyticsProvider from "@/components/SiteAnalyticsProvider";
 import JsonLdDefaults from "@/components/JsonLdDefaults";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import {
@@ -89,6 +90,7 @@ export default function RootLayout({
           `}
         </Script>
         <GoogleAnalytics />
+        <SiteAnalyticsProvider />
         <Navbar />
         {children}
         <Analytics />

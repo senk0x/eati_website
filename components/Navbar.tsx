@@ -69,6 +69,7 @@ export default function Navbar() {
           {/* App Store button - min 44px touch target on mobile */}
           <a
             href="https://apps.apple.com/app/apple-store/id6758241088?pt=127995771&ct=Official%20Website&mt=8"
+            data-eati-app-store="navbar"
             target="_blank"
             rel="noopener noreferrer"
             className="flex min-h-[44px] min-w-0 shrink-0 items-center justify-center gap-1.5 rounded-full border-2 border-eati-ink bg-eati-ink px-3 py-2.5 text-white transition-all hover:bg-white hover:text-eati-ink sm:gap-2 sm:px-4 md:h-11 md:min-h-0 md:min-w-0 md:px-5"

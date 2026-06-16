@@ -89,6 +89,7 @@ export default function EatiCTA({
     >
       <a
         href={storeHref}
+        data-eati-app-store={`cta_${contextType}_${placementId ?? topic.slice(0, 20)}`}
         target="_blank"
         rel="noopener noreferrer"
         onClick={onClick}

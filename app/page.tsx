@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import HeroSection from "@/components/HeroSection";
+import HeroAbTest from "@/components/HeroAbTest";
 import StatsSection from "@/components/StatsSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import StartNowSection from "@/components/StartNowSection";
@@ -44,7 +44,7 @@ export default function Home() {
       <div className="pt-20 sm:pt-24 md:pt-28" />
 
       <main className="space-y-2 sm:space-y-4 md:space-y-6">
-        <HeroSection />
+        <HeroAbTest />
         <StatsSection />
         <FeaturesSection />
         <ReviewsSection />
