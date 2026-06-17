@@ -97,7 +97,7 @@ export default function HeroSectionV2() {
               <a
                 href={storeHref}
                 data-eati-app-store="hero_download_cta"
-                className="hero-download-cta group inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-full border border-white/15 bg-[#0A0B10] px-8 py-3.5 text-base font-semibold text-white shadow-[0_10px_28px_rgba(10,11,16,0.32)] md:px-10 md:text-lg"
+                className="hero-download-cta group inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-full border-2 border-white bg-[#131313] px-8 py-3.5 text-base font-semibold text-white md:px-10 md:text-lg"
               >
                 <svg
                   className="h-5 w-5 shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 md:h-[1.35rem] md:w-[1.35rem]"
