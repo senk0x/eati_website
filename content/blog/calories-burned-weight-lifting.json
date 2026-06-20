@@ -1,0 +1,48 @@
+{
+  "slug": "calories-burned-weight-lifting",
+  "title": "Calories Burned Weight Lifting (By Session Type and Intensity)",
+  "introduction": "Weight lifting burns calories during and after training, while helping preserve muscle in a calorie deficit. Here are practical calorie-burn estimates by session style and body weight.",
+  "sections": [
+    {
+      "heading": "🏋️ Quick Answer: Calories Burned Weight Lifting (60 Minutes)",
+      "content": "| Body Weight | Light Session | Moderate Session | Vigorous Session |\n| --- | --- | --- | --- |\n| 120 lb (54 kg) | 140-200 kcal | 200-280 kcal | 280-380 kcal |\n| 150 lb (68 kg) | 170-240 kcal | 240-340 kcal | 340-460 kcal |\n| 180 lb (82 kg) | 200-290 kcal | 290-400 kcal | 400-540 kcal |\n| 210 lb (95 kg) | 240-340 kcal | 340-470 kcal | 470-630 kcal |\n\nRun your personalized estimate in the [Calorie Burn Calculator](/tools/calorie-burn-calculator)."
+    },
+    {
+      "heading": "What Changes Lifting Calorie Burn?",
+      "content": "| Variable | Effect on Burn |\n| --- | --- |\n| Total volume (sets x reps x load) | More volume, higher burn |\n| Rest duration | Shorter rests raise density |\n| Compound lifts | Usually higher energy demand |\n| Training style | Circuits and supersets can increase burn |\n\nTwo 60-minute workouts can differ greatly depending on structure."
+    },
+    {
+      "heading": "Why Lifting Is Still Essential in Fat Loss",
+      "content": "Even if cardio burns more per minute, lifting is critical for body composition:\n\n• Preserves lean mass in deficit\n• Supports strength and metabolic health\n• Improves long-term weight maintenance\n\nThe best fat-loss plan includes both resistance training and cardio."
+    },
+    {
+      "heading": "How to Pair Lifting With Nutrition",
+      "content": "| Goal | Recommendation |\n| --- | --- |\n| Preserve muscle | Keep protein high daily |\n| Sustain training | Avoid excessively large deficits |\n| Improve adherence | Track meals + workouts together |\n\nUse Eati to keep intake aligned with your training volume and recovery needs."
+    }
+  ],
+  "midArticleCta": "Estimate your weight-lifting calorie burn, then use Eati to track protein and total calories so your training supports fat loss.",
+  "conclusion": "Weight lifting burns meaningful calories and, more importantly, helps protect muscle while losing fat. Use the calculator for realistic numbers and Eati for daily nutrition tracking that supports performance and results.",
+  "coverImage": "",
+  "metaTitle": "Calories Burned Weight Lifting: 60-Minute Burn Estimates",
+  "metaDescription": "Find calories burned weight lifting by body weight and session intensity, plus tips for combining strength training with fat-loss nutrition.",
+  "targetKeyword": "calories burned weight lifting",
+  "publishedAt": "2026-06-20T15:00:00.000Z",
+  "published": true,
+  "topicCluster": "calories-burned",
+  "emoji": "🏋️",
+  "relatedSlugs": [
+    "calories-burned-during-hiit",
+    "calories-burned-doing-push-ups",
+    "calories-burned-on-treadmill"
+  ],
+  "faqs": [
+    {
+      "question": "Does weight lifting burn more calories than cardio?",
+      "answer": "Cardio often burns more calories per minute, but lifting provides major body-composition benefits by preserving muscle and strength."
+    },
+    {
+      "question": "Should I count lifting calories in my deficit?",
+      "answer": "Yes as an estimate, but avoid over-crediting. Use trend data and adjust intake based on weekly progress."
+    }
+  ]
+}

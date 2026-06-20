@@ -1,0 +1,48 @@
+{
+  "slug": "calories-burned-on-treadmill",
+  "title": "Calories Burned on Treadmill (Walking, Running, and Incline Chart)",
+  "introduction": "Treadmill workouts are easy to standardize, which makes calorie tracking easier. Here is a practical treadmill calorie-burn chart for walking, jogging, and incline sessions.",
+  "sections": [
+    {
+      "heading": "🏃‍♂️ Quick Answer: Treadmill Calories Burned in 30 Minutes",
+      "content": "| Body Weight | Walk 3.0 mph | Walk Incline 6% | Jog 5.0 mph | Run 6.5 mph |\n| --- | --- | --- | --- | --- |\n| 120 lb (54 kg) | 90-120 kcal | 150-210 kcal | 200-280 kcal | 260-360 kcal |\n| 150 lb (68 kg) | 110-150 kcal | 190-260 kcal | 250-340 kcal | 320-450 kcal |\n| 180 lb (82 kg) | 130-180 kcal | 220-310 kcal | 290-400 kcal | 380-520 kcal |\n| 210 lb (95 kg) | 150-210 kcal | 260-360 kcal | 340-460 kcal | 430-600 kcal |\n\nUse the [Calorie Burn Calculator](/tools/calorie-burn-calculator) for your exact treadmill settings."
+    },
+    {
+      "heading": "How Incline Changes Treadmill Burn",
+      "content": "| Incline | Approx Burn Increase vs Flat |\n| --- | --- |\n| 1-2% | +5-12% |\n| 3-5% | +15-30% |\n| 6-10% | +30-60% |\n\nIncline walking is a strong low-impact option for increasing burn."
+    },
+    {
+      "heading": "Treadmill Fat-Loss Session Examples",
+      "content": "| Session Type | Structure | Who It Fits |\n| --- | --- | --- |\n| Steady walk | 30-45 min at 3.0-3.5 mph | Beginners |\n| Incline walk | 25-40 min with 3-8% incline | Low-impact fat loss |\n| Run intervals | 1 min hard / 2 min easy x 10 | Intermediate/advanced |\n\nChoose the format you can sustain weekly."
+    },
+    {
+      "heading": "Track Beyond the Machine Display",
+      "content": "Treadmills can over- or under-estimate calories.\n\n• Use your body weight + duration for estimates\n• Track weekly body-weight trend\n• Keep nutrition consistent in Eati\n\nReliable trends beat one-session estimates."
+    }
+  ],
+  "midArticleCta": "Use the Calorie Burn Calculator for your treadmill settings, then track intake in Eati so treadmill sessions support real progress.",
+  "conclusion": "Treadmills are excellent for repeatable calorie-burn sessions. Use realistic intensity, include incline strategically, and pair training with daily nutrition tracking in Eati.",
+  "coverImage": "",
+  "metaTitle": "Calories Burned on Treadmill: Walking, Running & Incline Table",
+  "metaDescription": "Find calories burned on treadmill by speed, incline, and body weight with practical 30-minute burn charts for fat-loss planning.",
+  "targetKeyword": "calories burned on treadmill",
+  "publishedAt": "2026-06-20T15:30:00.000Z",
+  "published": true,
+  "topicCluster": "calories-burned",
+  "emoji": "🏃‍♂️",
+  "relatedSlugs": [
+    "calories-burned-walking-uphill",
+    "calories-burned-running-5k",
+    "calories-burned-walking-60-minutes"
+  ],
+  "faqs": [
+    {
+      "question": "Are treadmill calorie numbers accurate?",
+      "answer": "They are approximate. Accuracy improves when your body weight is updated and intensity assumptions are realistic."
+    },
+    {
+      "question": "Is incline walking better than jogging for fat loss?",
+      "answer": "Both can be effective. Incline walking may be easier on joints and often improves consistency for many people."
+    }
+  ]
+}

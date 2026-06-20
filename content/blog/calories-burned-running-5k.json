@@ -1,0 +1,48 @@
+{
+  "slug": "calories-burned-running-5k",
+  "title": "Calories Burned Running 5K (By Pace and Body Weight)",
+  "introduction": "Running a 5K is a popular cardio benchmark. Your calorie burn depends mostly on body weight and pace. Here are realistic 5K calorie ranges to help you plan training and weight loss.",
+  "sections": [
+    {
+      "heading": "🏃 Quick Answer: Calories Burned Running 5K",
+      "content": "| Body Weight | Easy Pace (10:30-12:00/mi) | Moderate Pace (8:30-10:00/mi) | Fast Pace (<8:00/mi) |\n| --- | --- | --- | --- |\n| 120 lb (54 kg) | 220-290 kcal | 260-330 kcal | 300-380 kcal |\n| 150 lb (68 kg) | 280-360 kcal | 330-420 kcal | 380-480 kcal |\n| 180 lb (82 kg) | 330-430 kcal | 390-500 kcal | 450-580 kcal |\n| 210 lb (95 kg) | 390-500 kcal | 460-590 kcal | 530-680 kcal |\n\nRun your exact estimate with the [Calorie Burn Calculator](/tools/calorie-burn-calculator)."
+    },
+    {
+      "heading": "How Pace Affects 5K Burn",
+      "content": "Faster pace increases intensity and often total burn per minute, but shorter duration may narrow total difference.\n\n| 5K Finish Time | Typical Effort | Burn Trend |\n| --- | --- | --- |\n| 35-40 min | Easy/moderate | Lower per minute, longer duration |\n| 28-34 min | Moderate/hard | Strong balance of time + intensity |\n| <27 min | Hard effort | Highest per-minute burn |\n\nFor fat loss, consistency matters more than occasional all-out efforts."
+    },
+    {
+      "heading": "5K Running for Fat Loss",
+      "content": "A useful approach:\n\n• 2-4 runs per week\n• 1 easy long run, 1 tempo or interval session\n• Strength training to preserve muscle\n• Food tracking to maintain deficit\n\nRunning helps, but nutrition drives the final weekly energy balance."
+    },
+    {
+      "heading": "Avoid Common 5K Calorie Burn Mistakes",
+      "content": "| Mistake | Better Approach |\n| --- | --- |\n| Trusting one watch number | Cross-check with trend data |\n| Eating back all run calories | Eat back only part if needed |\n| Ignoring recovery | Schedule easy days and sleep |\n\nUse Eati to track intake and prevent post-run calories from erasing your deficit."
+    }
+  ],
+  "midArticleCta": "Estimate your personal 5K calorie burn, then use Eati to align meal intake with your running goals.",
+  "conclusion": "A 5K can burn substantial calories and improve cardio fitness, but results depend on consistency and nutrition. Use the calculator for realistic estimates and Eati for daily tracking that turns training into measurable fat-loss progress.",
+  "coverImage": "",
+  "metaTitle": "Calories Burned Running 5K: Pace and Weight Breakdown",
+  "metaDescription": "See calories burned running a 5K by pace and body weight. Practical 5K burn charts and tips for weight-loss planning.",
+  "targetKeyword": "calories burned running 5k",
+  "publishedAt": "2026-06-20T14:30:00.000Z",
+  "published": true,
+  "topicCluster": "calories-burned",
+  "emoji": "🏃",
+  "relatedSlugs": [
+    "calories-burned-jump-rope",
+    "calories-burned-cycling-30-minutes",
+    "calories-burned-during-hiit"
+  ],
+  "faqs": [
+    {
+      "question": "Do beginners burn more calories running a 5K?",
+      "answer": "Beginners may burn similar or slightly more due to lower running efficiency, but consistency and total training volume matter more over time."
+    },
+    {
+      "question": "Can I lose weight by running 5K three times per week?",
+      "answer": "Yes, if your overall weekly calorie intake remains in a deficit. Running helps increase output, but nutrition controls net balance."
+    }
+  ]
+}

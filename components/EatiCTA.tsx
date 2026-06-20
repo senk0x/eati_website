@@ -96,6 +96,9 @@ export default function EatiCTA({
         className="group block"
         aria-label="Download Eati on the App Store"
       >
+        <div className="px-4 pt-4 text-center text-sm font-semibold text-white md:px-6">
+          Track your calories smarter in the Eati app
+        </div>
         <div className="relative aspect-[4331/2688] w-full">
           <Image
             src={CTA_IMAGE_SRC}

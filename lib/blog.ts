@@ -27,11 +27,86 @@ export interface BlogArticle {
   publishedAt: string;
   published: boolean;
   relatedSlugs?: string[];
+  /** Optional cluster used for topic navigation and related-article grouping */
+  topicCluster?: string;
+  /** Optional emoji used as visual cover fallback in cards and article headers */
+  emoji?: string;
   /** Optional FAQ for long-tail keywords and FAQ schema */
   faqs?: BlogFAQ[];
 }
 
 const BLOG_DIR = path.join(process.cwd(), 'content', 'blog');
+
+const CLUSTER_LABELS: Record<string, string> = {
+  'calories-burned': 'Calories Burned',
+  'calorie-deficit': 'Calorie Deficit',
+  'calorie-tracking': 'Calorie Tracking',
+  'high-protein-recipes': 'High-Protein Recipes',
+  'weight-loss-guides': 'Weight Loss Guides',
+};
+
+const CLUSTER_EMOJIS: Record<string, string> = {
+  'calories-burned': '🔥',
+  'calorie-deficit': '📉',
+  'calorie-tracking': '🧾',
+  'high-protein-recipes': '🍽️',
+  'weight-loss-guides': '🎯',
+};
+
+function inferTopicCluster(article: BlogArticle): string {
+  if (article.topicCluster?.trim()) return article.topicCluster.trim().toLowerCase();
+
+  const haystack = `${article.slug} ${article.title} ${article.targetKeyword}`.toLowerCase();
+
+  if (
+    haystack.includes('calories burned') ||
+    haystack.includes('calorie burn') ||
+    haystack.includes('walking') ||
+    haystack.includes('running') ||
+    haystack.includes('cycling') ||
+    haystack.includes('swimming') ||
+    haystack.includes('treadmill') ||
+    haystack.includes('hiit') ||
+    haystack.includes('jump rope') ||
+    haystack.includes('rowing')
+  ) {
+    return 'calories-burned';
+  }
+
+  if (haystack.includes('calorie deficit')) return 'calorie-deficit';
+
+  if (
+    haystack.includes('track calories') ||
+    haystack.includes('calorie tracker') ||
+    haystack.includes('counting calories')
+  ) {
+    return 'calorie-tracking';
+  }
+
+  if (haystack.includes('recipe') || haystack.includes('high protein')) {
+    return 'high-protein-recipes';
+  }
+
+  return 'weight-loss-guides';
+}
+
+function inferEmoji(article: BlogArticle, cluster: string): string {
+  if (article.emoji?.trim()) return article.emoji.trim();
+  return CLUSTER_EMOJIS[cluster] || '📝';
+}
+
+export function normalizeArticle(article: BlogArticle): BlogArticle {
+  const topicCluster = inferTopicCluster(article);
+  return {
+    ...article,
+    topicCluster,
+    emoji: inferEmoji(article, topicCluster),
+  };
+}
+
+export function getClusterLabel(cluster: string): string {
+  return CLUSTER_LABELS[cluster] || 'General';
+}
 
 function ensureBlogDir() {
   if (!fs.existsSync(BLOG_DIR)) {
@@ -49,7 +124,7 @@ export function getAllArticles(): BlogArticle[] {
     try {
       const content = fs.readFileSync(path.join(BLOG_DIR, file), 'utf-8');
       const article = JSON.parse(content) as BlogArticle;
-      articles.push(article);
+      articles.push(normalizeArticle(article));
     } catch (e) {
       console.error(`Failed to parse ${file}:`, e);
     }
@@ -74,7 +149,7 @@ export function getArticleBySlug(slug: string): BlogArticle | null {
 
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(content) as BlogArticle;
+    return normalizeArticle(JSON.parse(content) as BlogArticle);
   } catch (e) {
     console.error(`Failed to read article ${slug}:`, e);
     return null;
@@ -105,18 +180,33 @@ export function getRelatedArticles(currentSlug: string, limit = 3): BlogArticle[
 
   const published = getPublishedArticles().filter((a) => a.slug !== currentSlug);
 
-  if (current.relatedSlugs && current.relatedSlugs.length > 0) {
-    const related = current.relatedSlugs
-      .map((slug) => published.find((a) => a.slug === slug))
-      .filter(Boolean) as BlogArticle[];
-    if (related.length >= limit) {
-      return related.slice(0, limit);
-    }
-    const remaining = published.filter((a) => !current.relatedSlugs!.includes(a.slug));
-    return [...related, ...remaining].slice(0, limit);
-  }
+  const sameCluster = published.filter(
+    (a) => a.topicCluster && current.topicCluster && a.topicCluster === current.topicCluster
+  );
+  const relatedBySlug = current.relatedSlugs?.length
+    ? current.relatedSlugs
+        .map((slug) => published.find((a) => a.slug === slug))
+        .filter(Boolean) as BlogArticle[]
+    : [];
 
-  return published.slice(0, limit);
+  const used = new Set<string>();
+  const picked: BlogArticle[] = [];
+  const tryAdd = (items: BlogArticle[]) => {
+    for (const item of items) {
+      if (picked.length >= limit) break;
+      if (used.has(item.slug)) continue;
+      used.add(item.slug);
+      picked.push(item);
+    }
+  };
+
+  // Requirement: related articles should come from same topic cluster when available.
+  tryAdd(relatedBySlug.filter((a) => sameCluster.some((s) => s.slug === a.slug)));
+  tryAdd(sameCluster);
+  tryAdd(relatedBySlug);
+  tryAdd(published);
+
+  return picked.slice(0, limit);
 }
 
 export function generateTableOfContents(sections: BlogSection[]): { id: string; title: string }[] {

@@ -50,8 +50,10 @@ export function parseContentWithLinks(text: string): TextSegment[] {
 
   // Priority: explicit markdown links we author in content, like:
   //   [View detailed recipe](/blog/some-recipe-slug)
+  //   [Calorie Burn Calculator](/tools/calorie-burn-calculator)
   //   [View full recipe](https://example.com/some-recipe)
-  const markdownLinkRegex = /\[([^\]]+?)\]\((https?:\/\/[^\s)]+|\/blog\/[a-z0-9-]+)\)/gi;
+  const markdownLinkRegex =
+    /\[([^\]]+?)\]\((https?:\/\/[^\s)]+|\/(?:blog|tools|foods)\/[a-z0-9-]+)\)/gi;
   let markdownLinkMatch: RegExpExecArray | null;
   while ((markdownLinkMatch = markdownLinkRegex.exec(text)) !== null) {
     matches.push({

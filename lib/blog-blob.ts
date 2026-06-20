@@ -8,7 +8,7 @@
  * Vercel adds BLOB_READ_WRITE_TOKEN automatically.
  */
 
-import { getArticleBySlug, getPublishedArticles, getRelatedArticles, saveArticle, deleteArticle, BlogArticle } from './blog';
+import { getArticleBySlug, getPublishedArticles, saveArticle, deleteArticle, BlogArticle, normalizeArticle } from './blog';
 
 const BLOB_PREFIX = 'articles/';
 
@@ -58,7 +58,7 @@ async function fetchBlobArticle(slug: string): Promise<BlogArticle | null> {
     if (!blobs.length) return null;
     const res = await fetch(blobs[0].url, { cache: 'no-store' });
     if (!res.ok) return null;
-    return (await res.json()) as BlogArticle;
+    return normalizeArticle((await res.json()) as BlogArticle);
   } catch {
     return null;
   }
@@ -73,7 +73,7 @@ async function fetchAllBlobArticles(): Promise<BlogArticle[]> {
       jsonBlobs.map(async (b) => {
         try {
           const res = await fetch(b.url, { cache: 'no-store' });
-          return res.ok ? ((await res.json()) as BlogArticle) : null;
+          return res.ok ? normalizeArticle((await res.json()) as BlogArticle) : null;
         } catch {
           return null;
         }
@@ -123,14 +123,30 @@ export async function getRelatedArticlesHybrid(
   const all = await getPublishedArticlesHybrid();
   const others = all.filter((a) => a.slug !== currentSlug);
 
-  if (current.relatedSlugs?.length) {
-    const related = current.relatedSlugs
-      .map((s) => others.find((a) => a.slug === s))
-      .filter(Boolean) as BlogArticle[];
-    if (related.length >= limit) return related.slice(0, limit);
-    const rest = others.filter((a) => !current.relatedSlugs!.includes(a.slug));
-    return [...related, ...rest].slice(0, limit);
-  }
+  const sameCluster = others.filter(
+    (a) => a.topicCluster && current.topicCluster && a.topicCluster === current.topicCluster
+  );
+  const relatedBySlug = current.relatedSlugs?.length
+    ? current.relatedSlugs
+        .map((s) => others.find((a) => a.slug === s))
+        .filter(Boolean) as BlogArticle[]
+    : [];
 
-  return others.slice(0, limit);
+  const used = new Set<string>();
+  const picked: BlogArticle[] = [];
+  const tryAdd = (items: BlogArticle[]) => {
+    for (const item of items) {
+      if (picked.length >= limit) break;
+      if (used.has(item.slug)) continue;
+      used.add(item.slug);
+      picked.push(item);
+    }
+  };
+
+  tryAdd(relatedBySlug.filter((a) => sameCluster.some((s) => s.slug === a.slug)));
+  tryAdd(sameCluster);
+  tryAdd(relatedBySlug);
+  tryAdd(others);
+
+  return picked.slice(0, limit);
 }

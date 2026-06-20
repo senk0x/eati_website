@@ -1,0 +1,48 @@
+{
+  "slug": "calories-burned-swimming",
+  "title": "Calories Burned Swimming (By Stroke, Intensity, and Body Weight)",
+  "introduction": "Swimming can burn significant calories while being joint-friendly. Your burn depends heavily on stroke choice and intensity. Here are practical estimates to guide your training and fat-loss plan.",
+  "sections": [
+    {
+      "heading": "🏊 Quick Answer: Swimming Calorie Burn Per 30 Minutes",
+      "content": "| Stroke / Intensity | 150 lb (68 kg) | 180 lb (82 kg) | 210 lb (95 kg) |\n| --- | --- | --- | --- |\n| Leisure freestyle | 180-240 kcal | 220-290 kcal | 250-340 kcal |\n| Moderate laps | 240-330 kcal | 290-390 kcal | 340-450 kcal |\n| Vigorous freestyle | 330-430 kcal | 390-520 kcal | 450-600 kcal |\n| Butterfly / hard sets | 380-500 kcal | 460-610 kcal | 530-700 kcal |\n\nUse the [Calorie Burn Calculator](/tools/calorie-burn-calculator) to estimate your exact burn."
+    },
+    {
+      "heading": "Why Swimming Burn Varies So Much",
+      "content": "| Factor | Burn Impact |\n| --- | --- |\n| Stroke technique | Better technique can improve efficiency |\n| Rest intervals | More rest lowers average burn |\n| Water temperature | Cooler water may increase energy use |\n| Session structure | Intervals often increase total burn |\n\nTwo swimmers doing 30 minutes can have very different calorie totals."
+    },
+    {
+      "heading": "How to Increase Calories Burned Swimming",
+      "content": "Try this progression:\n\n• Add short high-effort sets (e.g., 8 x 50m)\n• Reduce rest gradually\n• Alternate strokes to recruit more muscle\n• Track total active swim time\n\nStructured sessions are usually more effective than casual unplanned laps."
+    },
+    {
+      "heading": "Using Swimming for Weight Loss",
+      "content": "Swimming supports fat loss when paired with intake control.\n\n| Key Action | Why It Matters |\n| --- | --- |\n| Estimate burn realistically | Avoid over-crediting workouts |\n| Keep protein intake high | Supports muscle retention |\n| Track intake daily | Prevents post-swim overeating |\n\nTrack meals and workouts in Eati so your pool sessions translate into real progress."
+    }
+  ],
+  "midArticleCta": "Use the Calorie Burn Calculator for your stroke and intensity, then track intake in Eati to keep your weekly deficit consistent.",
+  "conclusion": "Swimming can be an excellent calorie-burning workout, especially with structured intervals and consistent effort. Estimate your burn realistically, then combine that with meal tracking in Eati for better fat-loss outcomes.",
+  "coverImage": "",
+  "metaTitle": "Calories Burned Swimming: Stroke-by-Stroke Burn Chart",
+  "metaDescription": "Find calories burned swimming by stroke, intensity, and body weight. Practical swimming burn tables for fat-loss and training planning.",
+  "targetKeyword": "calories burned swimming",
+  "publishedAt": "2026-06-20T14:20:00.000Z",
+  "published": true,
+  "topicCluster": "calories-burned",
+  "emoji": "🏊",
+  "relatedSlugs": [
+    "calories-burned-cycling-30-minutes",
+    "calories-burned-running-5k",
+    "calories-burned-rowing"
+  ],
+  "faqs": [
+    {
+      "question": "Does swimming burn more calories than running?",
+      "answer": "It depends on intensity, duration, and body weight. Vigorous swimming can rival running, but moderate running often burns more per minute for many people."
+    },
+    {
+      "question": "Why am I so hungry after swimming?",
+      "answer": "High energy output and water temperature effects can increase appetite. Planning post-workout meals helps keep your calorie deficit on track."
+    }
+  ]
+}

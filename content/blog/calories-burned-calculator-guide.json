@@ -1,0 +1,52 @@
+{
+  "slug": "calories-burned-calculator-guide",
+  "title": "Calories Burned Calculator Guide (How to Estimate Exercise Burn Accurately)",
+  "introduction": "Want a fast, realistic estimate of calories burned from walking, cardio, and gym workouts? This guide explains the calorie burn formula, when estimates are accurate, and how to use the number for fat loss without overestimating your workouts.",
+  "sections": [
+    {
+      "heading": "🔥 Quick Formula: How Calories Burned Is Calculated",
+      "content": "Most tools use MET-based math:\n\nCalories burned = MET x body weight (kg) x duration (hours)\n\n| Activity Intensity | MET | 60 kg (132 lb) | 75 kg (165 lb) | 90 kg (198 lb) |\n| --- | --- | --- | --- | --- |\n| Light walking | 3.0 | 180 kcal/hr | 225 kcal/hr | 270 kcal/hr |\n| Brisk walking | 4.3 | 258 kcal/hr | 323 kcal/hr | 387 kcal/hr |\n| Running (moderate) | 9.8 | 588 kcal/hr | 735 kcal/hr | 882 kcal/hr |\n| HIIT (hard effort) | 10.0 | 600 kcal/hr | 750 kcal/hr | 900 kcal/hr |\n\nUse the [Calorie Burn Calculator](/tools/calorie-burn-calculator) to skip the math and get a personalized estimate."
+    },
+    {
+      "heading": "What Makes Calorie Burn Estimates More or Less Accurate?",
+      "content": "| Factor | Why It Matters | What to Do |\n| --- | --- | --- |\n| Body weight | Heavier body mass burns more at the same pace | Keep your weight updated weekly |\n| Intensity | Speed, incline, resistance, and rest intervals change burn | Choose realistic effort, not best-case effort |\n| Duration | Longer sessions raise total burn linearly | Track active minutes, not total gym time |\n| Fitness level | Better efficiency can reduce burn at same output | Recheck estimates every 4-6 weeks |\n| Device bias | Watches can overestimate in intervals and lifting | Validate with weekly scale + waist trend |\n\nIf your fat loss stalls, trust trend data over single-workout calorie numbers."
+    },
+    {
+      "heading": "How to Use Calories Burned for Weight Loss",
+      "content": "Use exercise calories as a bonus, not a free pass to overeat.\n\nA practical setup:\n1) Set your base deficit from daily maintenance calories.\n2) Add workouts for consistency and health.\n3) Avoid eating back 100% of burned calories; many people use 50-70%.\n\n| Weekly Goal | Typical Daily Deficit | Exercise Support |\n| --- | --- | --- |\n| Slow cut | 250-350 kcal/day | 3-4 workouts/week |\n| Moderate cut | 350-550 kcal/day | 4-5 workouts/week |\n| Aggressive cut | 550-700 kcal/day | Careful recovery + high protein |\n\nTrack intake and activity in the Eati app so your plan is based on real numbers instead of guesswork."
+    },
+    {
+      "heading": "Best Practices to Avoid Overestimating Burn",
+      "content": "Use these rules to keep your estimate honest:\n\n• Log only active work time\n• Use average pace, not your fastest interval\n• Include rest days in weekly planning\n• Recalculate after weight changes\n• Watch 14-day trends in body weight and waist\n\nNeed a simple system? Start with the [Calorie Burn Calculator](/tools/calorie-burn-calculator), then log meals and workouts in Eati daily."
+    }
+  ],
+  "midArticleCta": "Use the Calorie Burn Calculator to get your personalized burn estimate, then track your meals and workouts in the Eati app to stay in your target deficit.",
+  "conclusion": "A calories-burned estimate is powerful when you use it correctly: realistic intensity, consistent tracking, and weekly trend reviews. Calculate your numbers with the calculator, then use Eati to turn those numbers into a plan you can actually follow.",
+  "coverImage": "",
+  "metaTitle": "Calories Burned Calculator Guide: Formula, Tables & Accuracy Tips",
+  "metaDescription": "Learn how calories burned is calculated, see practical burn tables by activity, and use better estimates for fat loss with the Calorie Burn Calculator.",
+  "targetKeyword": "calories burned calculator guide",
+  "publishedAt": "2026-06-20T13:10:00.000Z",
+  "published": true,
+  "topicCluster": "calories-burned",
+  "emoji": "🔥",
+  "relatedSlugs": [
+    "calories-burned-walking-10000-steps",
+    "calories-burned-running-5k",
+    "calories-burned-during-hiit"
+  ],
+  "faqs": [
+    {
+      "question": "Are calorie burn calculators accurate?",
+      "answer": "They are estimates, not exact measurements. They are most useful when you use consistent inputs and compare trends over multiple weeks."
+    },
+    {
+      "question": "Should I eat back all calories burned from exercise?",
+      "answer": "Most people avoid eating back 100% because wearables and MET tables can overestimate. A common starting point is eating back 50-70%."
+    },
+    {
+      "question": "How often should I update my weight in the calculator?",
+      "answer": "Update at least once per week. Calorie burn changes with body weight, fitness, and training intensity."
+    }
+  ]
+}

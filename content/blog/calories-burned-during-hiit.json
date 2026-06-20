@@ -1,0 +1,48 @@
+{
+  "slug": "calories-burned-during-hiit",
+  "title": "Calories Burned During HIIT (Intervals, Session Length, and Estimates)",
+  "introduction": "HIIT can produce high calorie burn in short sessions, but estimates vary widely by work-to-rest ratio and exercise choice. This guide gives realistic HIIT calorie ranges and practical planning tips.",
+  "sections": [
+    {
+      "heading": "⚡ Quick Answer: Calories Burned During HIIT",
+      "content": "| Body Weight | 15 Minutes | 20 Minutes | 30 Minutes |\n| --- | --- | --- | --- |\n| 120 lb (54 kg) | 140-220 kcal | 180-290 kcal | 270-430 kcal |\n| 150 lb (68 kg) | 170-270 kcal | 220-360 kcal | 330-540 kcal |\n| 180 lb (82 kg) | 210-320 kcal | 270-430 kcal | 400-650 kcal |\n| 210 lb (95 kg) | 240-380 kcal | 320-500 kcal | 470-760 kcal |\n\nGet a personalized estimate with the [Calorie Burn Calculator](/tools/calorie-burn-calculator)."
+    },
+    {
+      "heading": "Why HIIT Burn Numbers Vary So Much",
+      "content": "| Variable | Burn Impact |\n| --- | --- |\n| Work interval intensity | Biggest driver of calorie burn |\n| Work-to-rest ratio | More work density increases total burn |\n| Movement selection | Full-body moves usually burn more |\n| Session quality | Technique breakdown lowers effective output |\n\nA hard, well-structured 20-minute HIIT session often outperforms an unstructured 40-minute workout."
+    },
+    {
+      "heading": "Sample HIIT Structures",
+      "content": "| Protocol | Example | Best For |\n| --- | --- | --- |\n| 30/30 | 30 sec work, 30 sec rest x 15-20 rounds | Beginners/intermediate |\n| 40/20 | 40 sec work, 20 sec rest x 12-16 rounds | Intermediate |\n| Tabata | 20 sec work, 10 sec rest x 8 rounds | Advanced bursts |\n\nPick the format you can repeat 2-4 times per week with good recovery."
+    },
+    {
+      "heading": "Use HIIT Without Burning Out",
+      "content": "Best practice:\n\n• Limit all-out HIIT frequency\n• Alternate with lower-intensity cardio days\n• Keep protein high and sleep consistent\n• Track intake in Eati so hard sessions support your deficit\n\nFat loss comes from the full weekly system, not one intense workout."
+    }
+  ],
+  "midArticleCta": "Estimate your HIIT calorie burn with the calculator and track food in Eati so your intensity turns into measurable fat-loss results.",
+  "conclusion": "HIIT can burn many calories in little time, but only if intensity and recovery are managed well. Use realistic burn estimates, structure your intervals, and track nutrition in Eati for sustainable progress.",
+  "coverImage": "",
+  "metaTitle": "Calories Burned During HIIT: Session and Intensity Estimates",
+  "metaDescription": "Find calories burned during HIIT by body weight and session length, plus practical interval structures for fat-loss training.",
+  "targetKeyword": "calories burned during hiit",
+  "publishedAt": "2026-06-20T15:40:00.000Z",
+  "published": true,
+  "topicCluster": "calories-burned",
+  "emoji": "⚡",
+  "relatedSlugs": [
+    "calories-burned-jump-rope",
+    "calories-burned-weight-lifting",
+    "calories-burned-running-5k"
+  ],
+  "faqs": [
+    {
+      "question": "Does HIIT burn calories after the workout?",
+      "answer": "Yes, HIIT can increase post-exercise oxygen consumption (EPOC), though the total afterburn varies and is usually smaller than many marketing claims."
+    },
+    {
+      "question": "How many HIIT sessions per week are ideal?",
+      "answer": "Most people do well with 2-4 sessions per week, balanced with recovery and lower-intensity training."
+    }
+  ]
+}

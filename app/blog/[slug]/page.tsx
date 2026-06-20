@@ -210,14 +210,22 @@ export default async function BlogPostPage({ params }: PageProps) {
           </header>
 
           {/* Cover Image */}
-          {article.coverImage && (
+          {(article.coverImage || article.emoji) && (
             <div className="relative mb-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#E7F0FF]">
-              <img
-                src={article.coverImage}
-                alt={`${article.title} — featured image for this nutrition and weight loss article on Eati`}
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="eager"
-              />
+              {article.coverImage ? (
+                <img
+                  src={article.coverImage}
+                  alt={`${article.title} — featured image for this nutrition and weight loss article on Eati`}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center text-7xl">
+                  <span role="img" aria-label={`${article.title} topic icon`}>
+                    {article.emoji}
+                  </span>
+                </div>
+              )}
             </div>
           )}
 
@@ -365,6 +373,10 @@ export default async function BlogPostPage({ params }: PageProps) {
               </h2>
               <p className="mb-4 text-base leading-relaxed text-gray-700">
                 Use our{' '}
+                <Link href="/tools/calorie-burn-calculator" className="text-[#88B8FF] hover:underline">
+                  calorie burn calculator
+                </Link>
+                ,{' '}
                 <Link href="/tools/calorie-calculator" className="text-[#88B8FF] hover:underline">
                   calorie calculator
                 </Link>
@@ -409,8 +421,10 @@ export default async function BlogPostPage({ params }: PageProps) {
                         loading="lazy"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-3xl text-[#88B8FF]">
-                        📝
+                      <div className="flex h-full w-full items-center justify-center text-4xl">
+                        <span role="img" aria-label={`${related.title} topic icon`}>
+                          {related.emoji || '📝'}
+                        </span>
                       </div>
                     )}
                   </div>
