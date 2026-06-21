@@ -39,6 +39,12 @@ const BLOG_DIR = path.join(process.cwd(), 'content', 'blog');
 
 const CLUSTER_LABELS: Record<string, string> = {
   'calories-burned': 'Calories Burned',
+  'ozempic-glp1': 'Ozempic & GLP-1 Weight Loss',
+  'weight-loss-problems': 'Weight Loss Problems',
+  'belly-fat': 'Belly Fat',
+  'weight-loss-demographic': 'Weight Loss by Demographic',
+  'app-comparisons': 'App Comparisons',
+  'ai-nutrition': 'AI Nutrition & Food Logging',
   'calorie-deficit': 'Calorie Deficit',
   'calorie-tracking': 'Calorie Tracking',
   'high-protein-recipes': 'High-Protein Recipes',
@@ -47,6 +53,12 @@ const CLUSTER_LABELS: Record<string, string> = {
 
 const CLUSTER_EMOJIS: Record<string, string> = {
   'calories-burned': '🔥',
+  'ozempic-glp1': '💉',
+  'weight-loss-problems': '🧠',
+  'belly-fat': '🫄',
+  'weight-loss-demographic': '👥',
+  'app-comparisons': '📱',
+  'ai-nutrition': '🤖',
   'calorie-deficit': '📉',
   'calorie-tracking': '🧾',
   'high-protein-recipes': '🍽️',
@@ -57,6 +69,79 @@ function inferTopicCluster(article: BlogArticle): string {
   if (article.topicCluster?.trim()) return article.topicCluster.trim().toLowerCase();
 
   const haystack = `${article.slug} ${article.title} ${article.targetKeyword}`.toLowerCase();
+
+  if (
+    haystack.includes('belly fat') ||
+    haystack.includes('visceral fat') ||
+    haystack.includes('subcutaneous fat')
+  ) {
+    return 'belly-fat';
+  }
+
+  if (
+    haystack.includes('women over 40') ||
+    haystack.includes('women over 50') ||
+    haystack.includes('men over 40') ||
+    haystack.includes('menopause') ||
+    haystack.includes('busy professional') ||
+    haystack.includes('college student') ||
+    haystack.includes('weight loss for parent') ||
+    haystack.includes('weight loss for senior') ||
+    haystack.includes('workouts for women') ||
+    haystack.includes('fat loss plan for men')
+  ) {
+    return 'weight-loss-demographic';
+  }
+
+  if (
+    haystack.includes('vs') ||
+    haystack.includes('alternative') ||
+    haystack.includes('best weight loss app') ||
+    haystack.includes('best calorie counter') ||
+    haystack.includes('best app for') ||
+    haystack.includes('myfitnesspal') ||
+    haystack.includes('lose it') ||
+    haystack.includes('cronometer') ||
+    haystack.includes('macrofactor')
+  ) {
+    return 'app-comparisons';
+  }
+
+  if (
+    haystack.includes('ai food') ||
+    haystack.includes('ai nutrition') ||
+    haystack.includes('ai calorie') ||
+    haystack.includes('voice food') ||
+    haystack.includes('voice logging') ||
+    haystack.includes('barcode scanning') ||
+    haystack.includes('future of')
+  ) {
+    return 'ai-nutrition';
+  }
+
+  if (
+    haystack.includes('not losing weight') ||
+    haystack.includes('weight plateau') ||
+    haystack.includes('stop losing weight') ||
+    haystack.includes('weight fluctuat') ||
+    haystack.includes('belly fat') ||
+    haystack.includes('hungry all the time') ||
+    haystack.includes('tired on a diet')
+  ) {
+    return 'weight-loss-problems';
+  }
+
+  if (
+    haystack.includes('ozempic') ||
+    haystack.includes('wegovy') ||
+    haystack.includes('mounjaro') ||
+    haystack.includes('glp-1') ||
+    haystack.includes('glp1') ||
+    haystack.includes('semaglutide') ||
+    haystack.includes('tirzepatide')
+  ) {
+    return 'ozempic-glp1';
+  }
 
   if (
     haystack.includes('calories burned') ||

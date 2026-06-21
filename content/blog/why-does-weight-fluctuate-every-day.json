@@ -1,0 +1,40 @@
+{
+  "slug": "why-does-weight-fluctuate-every-day",
+  "title": "Why Does Weight Fluctuate Every Day? (Scale Variability Explained)",
+  "introduction": "Daily weight fluctuation is normal and often unrelated to fat gain or fat loss. This guide explains why body weight changes every day and how to track progress without panic.",
+  "sections": [
+    {
+      "heading": "⚖️ Why Daily Scale Weight Changes So Much",
+      "content": "| Fluctuation Driver | Typical Effect |\n| --- | --- |\n| Sodium and carb intake | Water retention increase |\n| Workout inflammation | Temporary water gain |\n| Digestion and bowel timing | Content weight changes |\n| Menstrual cycle / hormones | Fluid shifts over days |\n| Sleep and stress | Water retention variability |\n\nDay-to-day change can be several pounds without fat change."
+    },
+    {
+      "heading": "How to Track Weight Correctly for Fat Loss",
+      "content": "Best method:\n\n• Weigh daily under same conditions\n• Use 7-day moving average\n• Compare weekly averages, not single numbers\n\nRelated reads:\n• [why do i weigh more after exercise](/blog/why-do-i-weigh-more-after-exercise)\n• [why did i stop losing weight](/blog/why-did-i-stop-losing-weight)"
+    },
+    {
+      "heading": "When Fluctuation Is a Real Problem",
+      "content": "If your weekly average trends up for multiple weeks, intake may exceed target. Recheck with [calorie calculator](/tools/calorie-calculator) and [meal log calculator](/tools/meal-log-calculator).\n\nText CTA: Use Eati to pair daily weight with food, sodium, and training logs so fluctuation patterns become predictable."
+    }
+  ],
+  "midArticleCta": "Track your daily weigh-ins and intake in Eati to understand weight fluctuation patterns and avoid false alarms.",
+  "conclusion": "Daily weight fluctuation is normal and expected. Trust weekly averages and trend data, not one noisy scale reading.",
+  "coverImage": "",
+  "metaTitle": "Why Does Weight Fluctuate Every Day? Daily Scale Changes Explained",
+  "metaDescription": "Learn why body weight fluctuates daily and how to track fat-loss progress using weekly averages instead of single weigh-ins.",
+  "targetKeyword": "why does weight fluctuate every day",
+  "publishedAt": "2026-06-21T09:40:00.000Z",
+  "published": true,
+  "topicCluster": "weight-loss-problems",
+  "emoji": "⚖️",
+  "relatedSlugs": [
+    "why-do-i-weigh-more-after-exercise",
+    "why-am-i-losing-inches-but-not-weight",
+    "common-weight-loss-problems-and-how-to-fix-them"
+  ],
+  "faqs": [
+    {
+      "question": "How much can body weight fluctuate in one day?",
+      "answer": "For many people, one-day fluctuation of 1-5 pounds can happen due to fluid, glycogen, sodium, and digestion changes."
+    }
+  ]
+}

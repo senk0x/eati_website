@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { parseContentWithLinks } from '@/lib/internal-links';
+import { parseBoldSegments } from '@/lib/rich-text';
 
 interface LinkedTextProps {
   text: string;
@@ -11,7 +12,7 @@ export default function LinkedText({ text, className }: LinkedTextProps) {
 
   return (
     <>
-      {segments.map((segment, index) => {
+      {segments.flatMap((segment, index) => {
         if (segment.type === 'link' && segment.href) {
           const isExternal = segment.href.startsWith('http');
 
@@ -39,7 +40,25 @@ export default function LinkedText({ text, className }: LinkedTextProps) {
             </Link>
           );
         }
-        return <span key={index}>{segment.content}</span>;
+
+        return parseBoldSegments(segment.content).map((part, partIndex) => {
+          if (part.type === 'bold') {
+            return (
+              <strong
+                key={`${index}-${partIndex}`}
+                className="font-semibold text-eati-ink"
+              >
+                {part.content}
+              </strong>
+            );
+          }
+
+          return (
+            <span key={`${index}-${partIndex}`} className={className}>
+              {part.content}
+            </span>
+          );
+        });
       })}
     </>
   );

@@ -1,0 +1,44 @@
+{
+  "slug": "ozempic-vs-mounjaro",
+  "title": "Ozempic vs Mounjaro for Weight Loss: GLP-1 vs Dual Agonist Comparison",
+  "introduction": "Ozempic (semaglutide) and Mounjaro (tirzepatide) are both powerful medications in weight management conversations. This guide compares mechanism, expected outcomes, and practical planning.",
+  "sections": [
+    {
+      "heading": "🧬 Mechanism Difference: Why This Comparison Matters",
+      "content": "| Medication | Pathway | Core Effect |\n| --- | --- | --- |\n| Ozempic | GLP-1 agonist | Appetite reduction, satiety support |\n| Mounjaro | GIP + GLP-1 agonist | Multi-pathway appetite/metabolic effect |\n\nMechanism differences may influence average outcomes, but adherence remains the strongest predictor for an individual."
+    },
+    {
+      "heading": "Expected Weight-Loss Trend",
+      "content": "Population-level data often shows strong weight-loss potential for both medications, with variability between individuals.\n\n| Factor | Why It Changes Outcomes |\n| --- | --- |\n| Dose escalation tolerance | Determines therapeutic consistency |\n| Side-effect management | Affects adherence |\n| Calorie/protein structure | Drives body-composition quality |\n\nUse the [protein calculator](/tools/protein-calculator) and [macro calculator](/tools/macro-goal-calculator) to build nutrition guardrails."
+    },
+    {
+      "heading": "Side Effects, Cost, and Access",
+      "content": "In real life, choice is often constrained by:\n\n• Insurance approval\n• Out-of-pocket cost\n• Local availability\n• Clinician preference and safety profile\n\nRead [ozempic side effects explained](/blog/ozempic-side-effects-explained) for GI risk management principles that apply to GLP-1 care."
+    },
+    {
+      "heading": "Action Plan If You Are Choosing Between Them",
+      "content": "Bring objective data to your clinician:\n\n• Current calorie intake trend\n• Protein average\n• Weekly activity level\n\nText CTA: Log one full week in Eati before your appointment so medication decisions are paired with real behavior data."
+    }
+  ],
+  "midArticleCta": "Track calories and protein in Eati while evaluating Ozempic vs Mounjaro to make evidence-based decisions with your clinician.",
+  "conclusion": "Ozempic and Mounjaro are both serious medical options with meaningful potential. The best choice is personalized and works best alongside consistent nutrition and training habits.",
+  "coverImage": "",
+  "metaTitle": "Ozempic vs Mounjaro for Weight Loss: Key Differences and Results",
+  "metaDescription": "Compare Ozempic vs Mounjaro for weight loss, including mechanism, expected outcomes, side effects, and practical decision factors.",
+  "targetKeyword": "ozempic vs mounjaro",
+  "publishedAt": "2026-06-21T07:40:00.000Z",
+  "published": true,
+  "topicCluster": "ozempic-glp1",
+  "emoji": "🧬",
+  "relatedSlugs": [
+    "ozempic-vs-wegovy",
+    "how-much-weight-can-you-lose-on-ozempic",
+    "complete-guide-to-ozempic-for-weight-loss"
+  ],
+  "faqs": [
+    {
+      "question": "Does Mounjaro always cause more weight loss than Ozempic?",
+      "answer": "Not always at the individual level. Average trial differences exist, but personal response, adherence, side effects, and dosing consistency are decisive."
+    }
+  ]
+}

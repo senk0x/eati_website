@@ -1,0 +1,40 @@
+{
+  "slug": "why-did-i-stop-losing-weight",
+  "title": "Why Did I Stop Losing Weight? (Plateau Causes and Fixes)",
+  "introduction": "If you are asking, \"why did I stop losing weight,\" you are likely in a normal fat-loss plateau phase. This guide explains the top reasons weight loss stalls and gives a practical plan to restart progress.",
+  "sections": [
+    {
+      "heading": "📌 Why Weight Loss Plateaus Happen",
+      "content": "| Plateau Cause | What Changes | How It Feels |\n| --- | --- | --- |\n| Metabolic adaptation | Lower body mass needs fewer calories | Same eating, slower results |\n| Tracking drift | Uncounted calories increase over time | \"I eat the same\" but trend is flat |\n| Lower NEAT | Less daily movement while dieting | Deficit shrinks silently |\n| Water retention | Stress, sodium, cycle, training effects | Scale stuck despite fat loss |\n\nPlateaus are common and usually fixable."
+    },
+    {
+      "heading": "The 14-Day Plateau Audit",
+      "content": "Run this exact audit:\n\n1) Use the [TDEE calculator](/tools/tdee-calculator)\n2) Reconfirm targets with the [calorie deficit calculator](/tools/calorie-deficit-calculator)\n3) Track all meals with the [meal log calculator](/tools/meal-log-calculator)\n4) Track steps and sleep\n5) Compare 7-day averages\n\nRelated article: [why am i not losing weight in a calorie deficit](/blog/why-am-i-not-losing-weight-in-a-calorie-deficit)."
+    },
+    {
+      "heading": "How to Break a Weight Loss Plateau",
+      "content": "Best sequence:\n\n• Tighten logging first\n• Increase daily steps by 1,500-2,500\n• Keep protein high with the [protein calculator](/tools/protein-calculator)\n• If needed, reduce intake by 100-150 calories\n\nText CTA: Use Eati to compare your planned vs actual calories every day so plateau causes become obvious fast."
+    }
+  ],
+  "midArticleCta": "Track your next 14 days in Eati to find exactly why your weight loss plateau started.",
+  "conclusion": "A weight loss plateau is usually a math and behavior issue, not a personal failure. Recalculate, re-measure, and adjust one variable at a time to restart steady fat loss.",
+  "coverImage": "",
+  "metaTitle": "Why Did I Stop Losing Weight? Plateau Fix Strategy",
+  "metaDescription": "Weight loss plateau? Learn why progress stalls and how to break a plateau with calorie, activity, and tracking adjustments.",
+  "targetKeyword": "why did i stop losing weight",
+  "publishedAt": "2026-06-21T08:50:00.000Z",
+  "published": true,
+  "topicCluster": "weight-loss-problems",
+  "emoji": "📌",
+  "relatedSlugs": [
+    "why-am-i-not-losing-weight-in-a-calorie-deficit",
+    "why-does-weight-fluctuate-every-day",
+    "common-weight-loss-problems-and-how-to-fix-them"
+  ],
+  "faqs": [
+    {
+      "question": "How long should a weight-loss plateau last before I change my plan?",
+      "answer": "If your 7-day average is flat for about 2-4 weeks despite consistent tracking, it is usually time to adjust calories, movement, or both."
+    }
+  ]
+}

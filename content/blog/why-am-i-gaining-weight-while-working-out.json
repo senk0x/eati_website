@@ -1,0 +1,40 @@
+{
+  "slug": "why-am-i-gaining-weight-while-working-out",
+  "title": "Why Am I Gaining Weight While Working Out? (Real Reasons Explained)",
+  "introduction": "Gaining weight while exercising is one of the most confusing fitness problems. In many cases, this is temporary and not fat gain. This article explains the real reasons and what to track.",
+  "sections": [
+    {
+      "heading": "🏋️ Why the Scale Can Rise After Starting Workouts",
+      "content": "| Reason | Mechanism | Duration |\n| --- | --- | --- |\n| Glycogen storage | Muscles store carbs + water | Days to weeks |\n| Inflammation from training | Tissue repair retains water | 24-72 hours/session |\n| Increased appetite | Extra intake cancels deficit | Ongoing |\n| Muscle gain + fat loss overlap | Body recomposition | Weeks to months |\n\nScale increase does not automatically mean fat gain."
+    },
+    {
+      "heading": "How to Verify If You Are Actually Gaining Fat",
+      "content": "Track these together:\n\n• 7-day body-weight average\n• Waist and hip measurements\n• Progress photos\n• Intake accuracy using [meal log calculator](/tools/meal-log-calculator)\n\nAlso read: [why am i losing inches but not weight](/blog/why-am-i-losing-inches-but-not-weight)."
+    },
+    {
+      "heading": "Fixes If Weight Gain Is Real",
+      "content": "If trend confirms fat gain:\n\n1) Recalculate with [calorie calculator](/tools/calorie-calculator)\n2) Set deficit with [calorie deficit calculator](/tools/calorie-deficit-calculator)\n3) Keep protein high via [protein calculator](/tools/protein-calculator)\n4) Maintain training, avoid panic cuts\n\nText CTA: Use Eati to track both workouts and calories so \"working out\" actually creates net fat loss."
+    }
+  ],
+  "midArticleCta": "Use Eati to separate temporary exercise-related water gain from true fat gain.",
+  "conclusion": "Weight gain while working out is often water, glycogen, or recomposition, not immediate fat gain. Use trend-based tracking before changing your plan.",
+  "coverImage": "",
+  "metaTitle": "Why Am I Gaining Weight While Working Out? Causes and Fixes",
+  "metaDescription": "Learn why weight can increase after starting workouts, how to distinguish water gain from fat gain, and how to fix stalled fat loss.",
+  "targetKeyword": "why am i gaining weight while working out",
+  "publishedAt": "2026-06-21T08:55:00.000Z",
+  "published": true,
+  "topicCluster": "weight-loss-problems",
+  "emoji": "🏋️",
+  "relatedSlugs": [
+    "why-do-i-weigh-more-after-exercise",
+    "why-am-i-losing-inches-but-not-weight",
+    "common-weight-loss-problems-and-how-to-fix-them"
+  ],
+  "faqs": [
+    {
+      "question": "Can working out cause temporary weight gain?",
+      "answer": "Yes. Exercise can increase water retention and glycogen storage, especially when training volume or intensity increases."
+    }
+  ]
+}

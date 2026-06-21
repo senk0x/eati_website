@@ -1,0 +1,44 @@
+{
+  "slug": "ozempic-side-effects-explained",
+  "title": "Ozempic Side Effects Explained: What Is Common, What Needs Medical Attention",
+  "introduction": "Side effects are one of the biggest reasons people quit early. This guide explains common Ozempic side effects, practical management strategies, and when to contact your clinician urgently.",
+  "sections": [
+    {
+      "heading": "⚠️ Common Side Effects and Typical Timing",
+      "content": "| Side Effect | How Common | Practical Note |\n| --- | --- | --- |\n| Nausea | Common | Often improves with slower eating and smaller meals |\n| Fullness / reduced appetite | Common | Expected pharmacologic effect |\n| Constipation | Common | Hydration + fiber strategy helps |\n| Diarrhea | Common | Monitor hydration and meal composition |\n\nSymptoms often appear during dose escalation phases."
+    },
+    {
+      "heading": "How to Reduce GI Symptoms",
+      "content": "Practical steps:\n\n• Eat smaller portions\n• Prioritize lean protein first\n• Avoid very high-fat meals during adjustment\n• Stay hydrated\n\nUse [foods to eat while taking ozempic](/blog/foods-to-eat-while-taking-ozempic) and [foods to avoid on ozempic](/blog/foods-to-avoid-on-ozempic) for structured meal choices."
+    },
+    {
+      "heading": "Red Flags That Require Prompt Medical Advice",
+      "content": "Seek professional care if symptoms are severe, persistent, or concerning (for example severe abdominal pain, dehydration risk, or inability to keep fluids down). Do not self-adjust medication without clinical guidance."
+    },
+    {
+      "heading": "Text CTA: Track Symptoms with Intake Data",
+      "content": "Text CTA: Log meals and symptom notes in Eati each day. Patterns (meal size, fat content, timing) often reveal why symptoms spike and help your clinician adjust your plan."
+    }
+  ],
+  "midArticleCta": "Use Eati to track food and symptom patterns while on Ozempic so side-effect management becomes data-driven.",
+  "conclusion": "Most side effects can be managed with meal structure, hydration, and dose-guided progression, but severe symptoms should always be reviewed by a clinician. Tracking your intake makes side-effect troubleshooting much easier.",
+  "coverImage": "",
+  "metaTitle": "Ozempic Side Effects Explained: Common Symptoms and Red Flags",
+  "metaDescription": "Understand common Ozempic side effects, practical management tips, and warning signs that require medical attention.",
+  "targetKeyword": "ozempic side effects explained",
+  "publishedAt": "2026-06-21T07:50:00.000Z",
+  "published": true,
+  "topicCluster": "ozempic-glp1",
+  "emoji": "⚠️",
+  "relatedSlugs": [
+    "foods-to-eat-while-taking-ozempic",
+    "foods-to-avoid-on-ozempic",
+    "complete-guide-to-ozempic-for-weight-loss"
+  ],
+  "faqs": [
+    {
+      "question": "Do Ozempic side effects go away?",
+      "answer": "For many people, GI side effects improve over time, especially with slower eating, smaller meals, and clinician-guided dose progression."
+    }
+  ]
+}

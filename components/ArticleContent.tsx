@@ -1,4 +1,5 @@
 import LinkedText from '@/components/LinkedText';
+import { parseTextElements } from '@/lib/rich-text';
 
 type Block =
   | { type: 'text'; content: string }
@@ -31,7 +32,6 @@ function parseBlocks(content: string): Block[] {
 
   const flushText = () => {
     if (textBuffer.length === 0) return;
-    // Trim trailing empty lines from the buffer
     while (textBuffer.length && textBuffer[textBuffer.length - 1].trim() === '') {
       textBuffer.pop();
     }
@@ -110,14 +110,62 @@ export default function ArticleContent({ content, className }: ArticleContentPro
           );
         }
 
+        const elements = parseTextElements(block.content);
+
         return (
-          <p
-            key={index}
-            className="text-base leading-relaxed text-gray-700"
-            style={{ whiteSpace: 'pre-line' }}
-          >
-            <LinkedText text={block.content} />
-          </p>
+          <div key={index} className="space-y-4">
+            {elements.map((element, elementIndex) => {
+              switch (element.type) {
+                case 'subheading':
+                  return (
+                    <h4
+                      key={elementIndex}
+                      className="text-lg font-semibold text-eati-ink first:mt-0"
+                    >
+                      <LinkedText text={element.content} />
+                    </h4>
+                  );
+                case 'paragraph':
+                  return (
+                    <p
+                      key={elementIndex}
+                      className="text-base leading-relaxed text-gray-700"
+                      style={{ whiteSpace: 'pre-line' }}
+                    >
+                      <LinkedText text={element.content} />
+                    </p>
+                  );
+                case 'ul':
+                  return (
+                    <ul
+                      key={elementIndex}
+                      className="list-disc space-y-1.5 pl-6 text-base leading-relaxed text-gray-700"
+                    >
+                      {element.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>
+                          <LinkedText text={item} />
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                case 'ol':
+                  return (
+                    <ol
+                      key={elementIndex}
+                      className="list-decimal space-y-1.5 pl-6 text-base leading-relaxed text-gray-700"
+                    >
+                      {element.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>
+                          <LinkedText text={item} />
+                        </li>
+                      ))}
+                    </ol>
+                  );
+                default:
+                  return null;
+              }
+            })}
+          </div>
         );
       })}
     </div>
