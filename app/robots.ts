@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/', '/api/admin/'],
+        disallow: ['/admin/', '/api/admin/', '/api/referral/', '/referral-program/dashboard'],
       },
       // AI search crawlers — explicitly allowed for inference/search features
       { userAgent: 'GPTBot', allow: '/' },
