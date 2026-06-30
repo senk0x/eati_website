@@ -16,11 +16,71 @@ export function eatiAppStoreUrl(campaignTag: string): string {
   return u.toString();
 }
 
+/** Screaming Frog / SERP length targets. */
+export const SEO_TITLE_MAX = 60;
+export const SEO_DESCRIPTION_MAX = 155;
+export const SEO_ALT_MAX = 100;
+
 /** Default marketing title/description (root layout + fallbacks). */
 export const DEFAULT_SITE_TITLE =
   "Eati — AI Calorie Tracker App | Fat Loss & Macro Logging";
 export const DEFAULT_SITE_DESCRIPTION =
-  "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. The fat loss and meal-planning app for iOS — stay consistent without tedious logging.";
+  "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. Fat loss app for iOS — stay consistent without tedious logging.";
+
+/** Trim and cap copy for title tags, meta descriptions, and image alt text. */
+export function truncateSeoText(text: string, maxLen: number): string {
+  const trimmed = text.trim().replace(/\s+/g, " ");
+  if (trimmed.length <= maxLen) return trimmed;
+  const cut = trimmed.slice(0, maxLen - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  const base = lastSpace > maxLen * 0.55 ? cut.slice(0, lastSpace) : cut;
+  return `${base.trimEnd()}…`;
+}
+
+export function normalizeSeoTitle(title: string): string {
+  let t = title.replace(/\s*\|\s*Eati\s*$/i, "").trim();
+  const hasBrand = /\bEati\b/i.test(t);
+  if (!hasBrand) {
+    const branded = `${t} | Eati`;
+    if (branded.length <= SEO_TITLE_MAX) return branded;
+  }
+  if (t.length <= SEO_TITLE_MAX) return t;
+  return truncateSeoText(t, SEO_TITLE_MAX);
+}
+
+export function normalizeSeoDescription(description: string): string {
+  return truncateSeoText(description, SEO_DESCRIPTION_MAX);
+}
+
+export function normalizeImageAlt(alt: string): string {
+  if (!alt.trim()) return alt;
+  return truncateSeoText(alt, SEO_ALT_MAX);
+}
+
+/** Programmatic food detail pages — keep titles within SERP limits. */
+export function foodPageTitle(name: string): string {
+  const suffix = " Calories & Macros | Eati";
+  const maxNameLen = SEO_TITLE_MAX - suffix.length;
+  const shortName =
+    name.length > maxNameLen
+      ? truncateSeoText(name, maxNameLen).replace(/…$/, "").trim()
+      : name;
+  return `${shortName}${suffix}`;
+}
+
+export function foodPageDescription(
+  name: string,
+  macros: {
+    caloriesPer100g: number;
+    proteinPer100g: number;
+    carbsPer100g: number;
+    fatPer100g: number;
+  }
+): string {
+  return normalizeSeoDescription(
+    `${name}: ${macros.caloriesPer100g} kcal, ${macros.proteinPer100g}g protein, ${macros.carbsPer100g}g carbs, ${macros.fatPer100g}g fat per 100g. Meal planning with Eati.`
+  );
+}
 
 /** Branded 1200×630 share art (Telegram, Facebook, Twitter, etc.). */
 export const BRAND_OG_SHARE_IMAGE_PATH = "/images/og-share.png";
@@ -33,7 +93,7 @@ export const OG_IMAGE_SIZE = { width: 1200, height: 630 } as const;
 /** Actual pixel size of `BRAND_OG_SHARE_IMAGE_PATH` (public static art). */
 export const BRAND_OG_IMAGE_SIZE = { width: 1024, height: 635 } as const;
 export const DEFAULT_OG_IMAGE_ALT =
-  "Eati — track your calories in seconds: chat-style meal log with macros and totals on iPhone";
+  "Eati calorie tracker — chat-style meal log with macros on iPhone";
 
 /** Dynamic blog post OG image (see `generateImageMetadata` id `default`; uses article cover when set). */
 export function blogPostOgImagePath(slug: string): string {
@@ -92,13 +152,16 @@ export function buildPageMetadata({
   ogImageAlt = DEFAULT_OG_IMAGE_ALT,
 }: BuildMetadataInput): Metadata {
   const url = absoluteUrl(path);
+  const seoTitle = normalizeSeoTitle(title);
+  const seoDescription = normalizeSeoDescription(description);
+  const seoOgAlt = normalizeImageAlt(ogImageAlt);
   const imageDims =
     ogImagePath === BRAND_OG_SHARE_IMAGE_PATH ? BRAND_OG_IMAGE_SIZE : OG_IMAGE_SIZE;
   const ogImages = [
     {
       url: ogImagePath,
       ...imageDims,
-      alt: ogImageAlt,
+      alt: seoOgAlt,
       type: "image/png" as const,
     },
   ];
@@ -106,13 +169,13 @@ export function buildPageMetadata({
     ogImagePath === DEFAULT_OG_IMAGE_PATH ? DEFAULT_TWITTER_IMAGE_PATH : ogImagePath;
 
   return {
-    title,
-    description,
+    title: { absolute: seoTitle },
+    description: seoDescription,
     ...(keywords?.length ? { keywords } : {}),
     alternates: { canonical: url },
     openGraph: {
-      title,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       url,
       type,
       siteName: "Eati",
@@ -128,12 +191,12 @@ export function buildPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       images: {
         url: twitterImagePath,
         ...(twitterImagePath === BRAND_OG_SHARE_IMAGE_PATH ? BRAND_OG_IMAGE_SIZE : imageDims),
-        alt: ogImageAlt,
+        alt: seoOgAlt,
       },
     },
   };

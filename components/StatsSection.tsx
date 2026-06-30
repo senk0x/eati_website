@@ -31,8 +31,9 @@ function StatBadge({
         <Image
           src="/images/laurel.svg"
           alt=""
-          fill
-          className="stats-laurel object-contain"
+          width={176}
+          height={176}
+          className="stats-laurel h-full w-full object-contain"
           sizes="(max-width: 640px) 72px, (max-width: 1024px) 112px, 176px"
         />
       </div>
@@ -56,8 +57,9 @@ function StatBadge({
         <Image
           src="/images/laurel.svg"
           alt=""
-          fill
-          className="stats-laurel object-contain"
+          width={176}
+          height={176}
+          className="stats-laurel h-full w-full object-contain"
           sizes="(max-width: 640px) 72px, (max-width: 1024px) 112px, 176px"
         />
       </div>
@@ -69,7 +71,7 @@ export default function StatsSection() {
   return (
     <section className="px-4 py-4 sm:px-5 sm:py-5 md:px-6 md:py-8" aria-labelledby="stats-heading">
       <h2 id="stats-heading" className="sr-only">
-        Social proof: Eati as a top-rated weight loss and calorie tracking tool
+        Eati social proof and App Store rating
       </h2>
       <div className="mx-auto max-w-7xl overflow-visible">
         <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16">

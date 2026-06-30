@@ -73,9 +73,10 @@ export default function HeroSectionV2() {
             <Image
               src="/images/Frame 101563.svg"
               alt=""
-              fill
+              width={1440}
+              height={800}
               priority
-              className="object-cover object-right"
+              className="h-full w-full object-cover object-right"
               aria-hidden
             />
           </div>

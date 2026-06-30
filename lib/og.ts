@@ -78,17 +78,17 @@ export const TOOL_OG_VISUAL: Record<ToolOgSlug, string> = {
 };
 
 export function toolOgAlt(slug: ToolOgSlug): string {
-  return `${TOOL_OG_TITLE[slug]} — free Eati nutrition & weight loss tool`;
+  return `${TOOL_OG_TITLE[slug]} — free Eati nutrition tool`;
 }
 
 export const OG_HOME_ALT =
-  "Eati — track your calories in seconds: chat-style meal log with macros and totals on iPhone";
+  "Eati calorie tracker — chat-style meal log with macros on iPhone";
 
 export const OG_TOOLS_INDEX_ALT =
-  "Eati free fitness calculators — TDEE, macros, BMI, body fat, calories, and more";
+  "Eati free fitness calculators — TDEE, macros, BMI, and calories";
 
 export const OG_BLOG_INDEX_ALT =
-  "Eati nutrition blog — calorie tracking, weight loss guides, high-protein recipes, and macro tips";
+  "Eati nutrition blog — calorie tracking and weight loss guides";
 
 export const OG_FOODS_INDEX_ALT =
-  "Eati food nutrition database — calories, protein, carbs, and fat per 100g for common foods";
+  "Eati food database — calories, protein, carbs, and fat per 100g";

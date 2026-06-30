@@ -1,13 +1,6 @@
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
-import { buildPageMetadata } from '@/lib/seo';
-
-export const metadata: Metadata = buildPageMetadata({
-  title: 'Contact Us | Eati',
-  description: 'Have questions about Eati or want to share feedback? Reach out and we\'ll get back to you.',
-  path: '/contact',
-});
 
 export default function ContactPage() {
   return (

@@ -5,12 +5,12 @@ import Footer from '@/components/Footer';
 import { getPublishedArticlesHybrid } from '@/lib/blog-blob';
 import { getClusterLabel } from '@/lib/blog';
 import { OG_BLOG_INDEX_ALT, OG_BLOG_INDEX_PATH } from '@/lib/og';
-import { buildPageMetadata } from '@/lib/seo';
+import { buildPageMetadata, normalizeImageAlt } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Nutrition Blog | AI Calorie Tracker Tips & Weight Loss Guides',
   description:
-    'Practical guides on calorie tracking, high-protein meals, macro splits, and sustainable fat loss from Eati — plus links to free TDEE, macro, and calorie calculators.',
+    'Calorie tracking, high-protein meals, macro splits, and fat loss guides from Eati — plus free TDEE, macro, and calorie calculators.',
   path: '/blog',
   ogImagePath: OG_BLOG_INDEX_PATH,
   ogImageAlt: OG_BLOG_INDEX_ALT,
@@ -95,9 +95,10 @@ export default async function BlogPage() {
                           {article.coverImage ? (
                             <Image
                               src={article.coverImage}
-                              alt={`${article.title} — blog cover: nutrition, calories, and healthy eating tips`}
-                              fill
-                              className="object-cover"
+                              alt={normalizeImageAlt(`${article.title} — Eati blog cover`)}
+                              width={640}
+                              height={360}
+                              className="h-full w-full object-cover"
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                           ) : (

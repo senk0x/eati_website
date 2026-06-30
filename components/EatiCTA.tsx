@@ -102,11 +102,12 @@ export default function EatiCTA({
         <div className="relative aspect-[4331/2688] w-full">
           <Image
             src={CTA_IMAGE_SRC}
-            alt="Get your free AI coach now. Download Eati."
-            fill
+            alt="Download Eati — free AI calorie coach"
+            width={4331}
+            height={2688}
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 960px"
-            className="object-cover object-center transition-transform duration-300 group-hover:scale-[1.01]"
+            className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.01]"
           />
         </div>
         <span className="sr-only">{buttonLabel}</span>

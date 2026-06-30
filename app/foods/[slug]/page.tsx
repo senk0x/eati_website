@@ -5,7 +5,14 @@ import Footer from '@/components/Footer';
 import EatiCTA from '@/components/EatiCTA';
 import FoodPortionCalculator from '@/components/FoodPortionCalculator';
 import { getFoodBySlug, getAllFoodSlugs, getRelatedFoods } from '@/lib/foods';
-import { foodDetailOgImagePath, SITE_URL, buildPageMetadata } from '@/lib/seo';
+import {
+  foodPageDescription,
+  foodPageTitle,
+  foodDetailOgImagePath,
+  SITE_URL,
+  buildPageMetadata,
+  normalizeImageAlt,
+} from '@/lib/seo';
 
 const sectionClass = 'mb-10';
 const h2Class = 'mb-3 text-xl font-semibold md:text-2xl';
@@ -23,11 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!food) return { title: 'Food Not Found' };
   const name = food.name;
   return buildPageMetadata({
-    title: `${name} Calories & Macros | Nutrition per 100g`,
-    description: `${name} nutrition: ${food.caloriesPer100g} kcal per 100g, ${food.proteinPer100g}g protein, ${food.carbsPer100g}g carbs, ${food.fatPer100g}g fat. Serving ideas for meal planning and fat loss with Eati.`,
+    title: foodPageTitle(name),
+    description: foodPageDescription(name, food),
     path: `/foods/${slug}`,
     ogImagePath: foodDetailOgImagePath(slug),
-    ogImageAlt: `${name} nutrition facts — calories and macros per 100g on Eati`,
+    ogImageAlt: normalizeImageAlt(`${name} nutrition — calories and macros per 100g`),
     keywords: [
       `${name.toLowerCase()} calories`,
       `calories in ${name.toLowerCase()}`,

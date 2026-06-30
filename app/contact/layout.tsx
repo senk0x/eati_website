@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact Eati | AI Calorie Tracker & Nutrition Tools",
   description:
-    "Contact the Eati team for app support, press, partnerships, or calculator feedback. We reply to questions about the AI calorie tracker, macros, and weight loss features.",
+    "Contact Eati for app support, press, partnerships, or calculator feedback. Questions about the AI calorie tracker, macros, and weight loss.",
   path: "/contact",
   keywords: ["contact Eati", "AI calorie tracker support", "nutrition app help"],
 });

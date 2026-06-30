@@ -14,7 +14,7 @@ import ArticleContent from '@/components/ArticleContent';
 import EatiCTA from '@/components/EatiCTA';
 import RecipeMacroCalculator from '@/components/RecipeMacroCalculator';
 import { blogTopicFromArticle } from '@/lib/eati-cta-copy';
-import { SITE_URL, blogPostOgImagePath, buildPageMetadata, BRAND_OG_SHARE_IMAGE_PATH, absoluteUrl } from '@/lib/seo';
+import { SITE_URL, blogPostOgImagePath, buildPageMetadata, BRAND_OG_SHARE_IMAGE_PATH, absoluteUrl, normalizeImageAlt } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -82,7 +82,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     publishedTime: article.publishedAt,
     modifiedTime: article.publishedAt,
     ogImagePath: blogPostOgImagePath(slug),
-    ogImageAlt: `${title} — featured Open Graph image for this Eati blog article on nutrition, calories, and healthy weight loss`,
+    ogImageAlt: normalizeImageAlt(`${title} — Eati nutrition blog`),
   });
 }
 
@@ -215,7 +215,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               {article.coverImage ? (
                 <img
                   src={article.coverImage}
-                  alt={`${article.title} — featured image for this nutrition and weight loss article on Eati`}
+                  alt={normalizeImageAlt(`${article.title} — Eati blog cover`)}
+                  width={1200}
+                  height={675}
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="eager"
                 />
@@ -288,7 +290,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                         {/* Use plain <img> so externally hosted photos (including redirecting URLs) always display */}
                         <img
                           src={photoUrl}
-                          alt={`${article.title}: ${section.heading} — illustration for this section`}
+                          alt={normalizeImageAlt(`${section.heading} — ${article.title}`)}
+                          width={1200}
+                          height={675}
                           className="h-full w-full object-cover"
                           loading="lazy"
                         />
@@ -416,7 +420,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                     {related.coverImage ? (
                       <img
                         src={related.coverImage}
-                        alt={`${related.title} — related nutrition article on Eati`}
+                        alt={normalizeImageAlt(`${related.title} — Eati blog`)}
+                        width={640}
+                        height={360}
                         className="absolute inset-0 h-full w-full object-cover"
                         loading="lazy"
                       />

@@ -54,7 +54,7 @@ export default function ReviewsSection() {
               <div className="relative mb-4 h-16 w-16 overflow-hidden rounded-full md:h-20 md:w-20">
                 <Image
                   src={review.avatar}
-                  alt={`${review.name}, Eati user — AI calorie tracker review and weight loss progress`}
+                  alt={`${review.name} — Eati user review`}
                   width={80}
                   height={80}
                   className="h-full w-full object-cover"

@@ -43,7 +43,7 @@ export default function Navbar() {
           >
             <Image
               src="/images/logo-text.svg"
-              alt="Eati wordmark — meal planner and macro tracker"
+              alt="Eati — AI calorie tracker logo"
               width={84}
               height={40}
               className="h-9 w-auto object-contain object-left md:h-10"

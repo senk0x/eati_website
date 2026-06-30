@@ -8,7 +8,7 @@ export default function FeaturesSection() {
     >
       <div className="mx-auto max-w-7xl space-y-10 md:space-y-12">
         <h2 id="features-heading" className="sr-only">
-          Eati app features: data logging, personalized AI nutrition approach, progress, and motivation
+          Eati app features
         </h2>
 
         {/* Feature 1 - Log your data */}
@@ -31,9 +31,10 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[560px] aspect-[580/418] overflow-visible">
               <Image
                 src="/images/logbg.svg"
-                alt="Eati logging interface background with fixed phone frame"
-                fill
-                className="object-contain"
+                alt="Eati meal logging interface background"
+                width={580}
+                height={418}
+                className="h-full w-full object-contain"
                 loading="lazy"
                 sizes="(max-width: 768px) 92vw, 560px"
               />
@@ -41,7 +42,7 @@ export default function FeaturesSection() {
                 <div className="feature-log-message-slot feature-log-message-slot-1">
                   <Image
                     src="/images/logmess1.svg"
-                    alt="Meal logging card with macro breakdown"
+                    alt="Meal logging card with macros"
                     width={397}
                     height={219}
                     className="feature-log-frame feature-log-frame-1 is-first h-auto w-full"
@@ -66,7 +67,7 @@ export default function FeaturesSection() {
                 >
                   <Image
                     src="/images/logmess3.svg"
-                    alt="Photo-based meal logging card with nutrition estimate"
+                    alt="Photo meal logging with nutrition estimate"
                     width={437}
                     height={269}
                     className="feature-log-frame feature-log-frame-3 h-auto w-full"
@@ -88,7 +89,7 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[560px]">
               <Image
                 src="/images/approach.svg"
-                alt="Personalized AI nutrition approach with custom meal plans, advice, and recommendations"
+                alt="Personalized AI nutrition and meal plans"
                 width={580}
                 height={418}
                 className="h-auto w-full"
@@ -130,7 +131,7 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[560px]">
               <Image
                 src="/images/progress.svg"
-                alt="Progress tracking for weight loss and muscle gain with actionable nutrition and training data"
+                alt="Progress tracking for weight loss and muscle gain"
                 width={580}
                 height={418}
                 className="h-auto w-full"
@@ -150,7 +151,7 @@ export default function FeaturesSection() {
             <div className="relative w-full max-w-[560px]">
               <Image
                 src="/images/motivation.svg"
-                alt="Smart reminders, home widgets, and gamification that keep healthy habits consistent"
+                alt="Reminders, widgets, and gamification for habits"
                 width={580}
                 height={418}
                 className="h-auto w-full"

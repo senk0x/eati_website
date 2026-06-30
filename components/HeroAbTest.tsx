@@ -34,7 +34,9 @@ function HeroAbSkeleton() {
 }
 
 export default function HeroAbTest() {
-  const [variant, setVariant] = useState<HeroAbVariant | null>(null);
+  const [variant, setVariant] = useState<HeroAbVariant>(
+    () => readHeroAbVariantClient() ?? "interactive"
+  );
 
   useEffect(() => {
     const existing = readHeroAbVariantClient();
@@ -49,10 +51,6 @@ export default function HeroAbTest() {
     trackAnalyticsEvent("hero_ab_impression", { variant: assigned });
     setVariant(assigned);
   }, []);
-
-  if (!variant) {
-    return <HeroAbSkeleton />;
-  }
 
   if (variant === "visual") {
     return <HeroSectionV2 />;
