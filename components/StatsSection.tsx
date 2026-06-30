@@ -30,7 +30,7 @@ function StatBadge({
       >
         <Image
           src="/images/laurel.svg"
-          alt=""
+          alt="Decorative laurel wreath"
           width={176}
           height={176}
           className="stats-laurel h-full w-full object-contain"
@@ -56,7 +56,7 @@ function StatBadge({
       >
         <Image
           src="/images/laurel.svg"
-          alt=""
+          alt="Decorative laurel wreath"
           width={176}
           height={176}
           className="stats-laurel h-full w-full object-contain"

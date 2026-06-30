@@ -156,7 +156,9 @@ export default function BodyFatAnalytics() {
             <div className="mt-2">
               <img
                 src={frontPreview}
-                alt="Front-view photo uploaded for AI body fat percentage estimate — Eati free body composition tool"
+                alt="Front body photo for body fat estimate"
+                width={320}
+                height={160}
                 className="max-h-40 rounded-xl border border-[#E3ECF7] object-contain"
               />
             </div>
@@ -179,7 +181,9 @@ export default function BodyFatAnalytics() {
             <div className="mt-2">
               <img
                 src={sidePreview}
-                alt="Side-view photo uploaded for AI body fat analysis — optional second image for the Eati body fat analyzer"
+                alt="Side body photo for body fat estimate"
+                width={320}
+                height={160}
                 className="max-h-40 rounded-xl border border-[#E3ECF7] object-contain"
               />
             </div>

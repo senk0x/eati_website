@@ -46,15 +46,15 @@ export default function StartNowSection() {
           background: "linear-gradient(180deg, #7CF1CA 0%, #EFCD44 100%)",
         }}
       >
-        <Image
-          src="/images/Frame 101569.svg"
-          alt=""
-          width={1129}
-          height={280}
-          aria-hidden
-          className="h-full w-full object-cover object-center"
-          sizes="(max-width: 768px) 100vw, 1129px"
-        />
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <Image
+            src="/images/Frame 101569.svg"
+            alt="Decorative confetti pattern"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 1129px"
+          />
+        </div>
 
         <div className="relative z-10 flex h-full flex-col items-center px-4 pb-0 pt-5 md:px-6 md:pt-7">
           <div className="inline-flex flex-col items-center">

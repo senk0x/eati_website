@@ -157,6 +157,7 @@ export default async function SharePage({
     <div className="min-h-screen bg-[#F7F9FB]">
       <div className="pt-24 sm:pt-28 md:pt-32" />
       <main className="mx-auto w-full max-w-7xl px-4 pb-14 sm:px-6 md:px-8">
+        <h2 className="sr-only">Shared fitness progress summary</h2>
         <section className="rounded-[34px] border border-[#EAF0F7] bg-white/95 p-4 shadow-[0_22px_70px_rgba(33,51,80,0.10)] backdrop-blur-sm sm:p-6 md:p-8">
           <div className="grid items-stretch gap-6 md:grid-cols-[1fr_360px] lg:grid-cols-[1fr_430px]">
             <div className="flex flex-col justify-between rounded-[26px] border border-[#EDF1F6] bg-white p-5 sm:p-6 md:p-8">
@@ -255,6 +256,8 @@ export default async function SharePage({
                   <img
                     src={previewImage}
                     alt="Shared progress preview"
+                    width={1080}
+                    height={1920}
                     className="h-full w-full rounded-[24px] object-contain shadow-lg"
                   />
                 </div>
@@ -266,6 +269,8 @@ export default async function SharePage({
                   <img
                     src={previewImage}
                     alt="Shared progress preview"
+                    width={1080}
+                    height={1920}
                     className="h-full w-full object-contain"
                   />
                 </div>

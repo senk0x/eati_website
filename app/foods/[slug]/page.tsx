@@ -12,6 +12,7 @@ import {
   SITE_URL,
   buildPageMetadata,
   normalizeImageAlt,
+  normalizePageHeading,
 } from '@/lib/seo';
 
 const sectionClass = 'mb-10';
@@ -317,7 +318,7 @@ export default async function FoodPage({ params }: Props) {
           <h1
             className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
           >
-            Nutrition Facts for {name}
+            {normalizePageHeading(`Nutrition Facts for ${name}`)}
           </h1>
 
           {/* Added: richer unique content for SEO + usefulness */}

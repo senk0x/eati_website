@@ -18,10 +18,20 @@ export default function ReferralProgramPage() {
       <main className="px-4 pb-8 md:px-6 md:pb-12">
         <div className="mx-auto max-w-3xl">
           <h1 className="mb-4 text-2xl font-semibold md:text-3xl">Get Started with Eati</h1>
-          <p className="mb-8 text-sm text-gray-600 md:text-base">
+          <p className="mb-6 text-sm text-gray-600 md:text-base">
             Join our referral program and become an Eati partner. Share your audience profiles below and we&apos;ll
             reach out to set everything up.
           </p>
+
+          <section className="mb-8 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-5 md:p-6">
+            <h2 className="mb-3 text-lg font-semibold text-eati-ink">How the referral program works</h2>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-gray-600 md:text-base">
+              <li>Apply with your social profiles and audience details.</li>
+              <li>Receive a unique promo code once approved.</li>
+              <li>Share Eati with your audience and track activations in your dashboard.</li>
+              <li>Earn rewards when referred users subscribe to Eati.</li>
+            </ol>
+          </section>
 
           <ReferralProgramForm />
         </div>

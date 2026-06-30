@@ -14,7 +14,7 @@ import ArticleContent from '@/components/ArticleContent';
 import EatiCTA from '@/components/EatiCTA';
 import RecipeMacroCalculator from '@/components/RecipeMacroCalculator';
 import { blogTopicFromArticle } from '@/lib/eati-cta-copy';
-import { SITE_URL, blogPostOgImagePath, buildPageMetadata, BRAND_OG_SHARE_IMAGE_PATH, absoluteUrl, normalizeImageAlt } from '@/lib/seo';
+import { SITE_URL, blogPostOgImagePath, buildPageMetadata, BRAND_OG_SHARE_IMAGE_PATH, absoluteUrl, normalizeImageAlt, normalizePageHeading } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -200,7 +200,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <h1
               className="font-eati-heading mb-4 text-3xl font-bold md:text-4xl"
             >
-              {article.title}
+              {normalizePageHeading(article.metaTitle || article.title)}
             </h1>
             <p
               className="text-lg text-gray-700"

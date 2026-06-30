@@ -20,10 +20,11 @@ export function eatiAppStoreUrl(campaignTag: string): string {
 export const SEO_TITLE_MAX = 60;
 export const SEO_DESCRIPTION_MAX = 155;
 export const SEO_ALT_MAX = 100;
+export const SEO_H1_MAX = 70;
 
 /** Default marketing title/description (root layout + fallbacks). */
 export const DEFAULT_SITE_TITLE =
-  "Eati — AI Calorie Tracker App | Fat Loss & Macro Logging";
+  "Eati - AI Calorie Tracker App | Fat Loss & Macro Logging";
 export const DEFAULT_SITE_DESCRIPTION =
   "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. Fat loss app for iOS — stay consistent without tedious logging.";
 
@@ -38,7 +39,7 @@ export function truncateSeoText(text: string, maxLen: number): string {
 }
 
 export function normalizeSeoTitle(title: string): string {
-  let t = title.replace(/\s*\|\s*Eati\s*$/i, "").trim();
+  let t = title.replace(/\s*\|\s*Eati\s*$/i, "").trim().replace(/—/g, "-");
   const hasBrand = /\bEati\b/i.test(t);
   if (!hasBrand) {
     const branded = `${t} | Eati`;
@@ -55,6 +56,10 @@ export function normalizeSeoDescription(description: string): string {
 export function normalizeImageAlt(alt: string): string {
   if (!alt.trim()) return alt;
   return truncateSeoText(alt, SEO_ALT_MAX);
+}
+
+export function normalizePageHeading(text: string): string {
+  return truncateSeoText(text, SEO_H1_MAX);
 }
 
 /** Programmatic food detail pages — keep titles within SERP limits. */

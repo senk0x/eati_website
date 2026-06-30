@@ -279,11 +279,10 @@ export default function HeroSection() {
           <div className="absolute inset-0 overflow-hidden">
             <Image
               src="/images/Frame 101563.svg"
-              alt=""
-              width={1440}
-              height={800}
+              alt="Decorative blue wave pattern"
+              fill
               priority
-              className="h-full w-full object-cover object-right"
+              className="object-cover object-right"
               aria-hidden
             />
           </div>

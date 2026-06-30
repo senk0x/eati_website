@@ -72,11 +72,10 @@ export default function HeroSectionV2() {
           <div className="absolute inset-0 overflow-hidden">
             <Image
               src="/images/Frame 101563.svg"
-              alt=""
-              width={1440}
-              height={800}
+              alt="Decorative blue wave pattern"
+              fill
               priority
-              className="h-full w-full object-cover object-right"
+              className="object-cover object-right"
               aria-hidden
             />
           </div>
@@ -136,7 +135,7 @@ export default function HeroSectionV2() {
                 <Image
                   key={activeMessage.src}
                   src={activeMessage.src}
-                  alt=""
+                  alt="Eati app meal logging example"
                   width={640}
                   height={820}
                   className="hero-phone-bubble-enter h-auto w-full object-contain"
