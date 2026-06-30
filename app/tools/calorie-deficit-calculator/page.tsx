@@ -125,7 +125,7 @@ export default function CalorieDeficitCalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Who Should Use This Tool?
+                Who Should Use the Deficit Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Anyone planning to lose weight in a controlled way can use this calorie deficit
@@ -138,7 +138,7 @@ export default function CalorieDeficitCalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Is This Calculation Accurate?
+                How Accurate Is the Deficit Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 TDEE and weekly loss are estimates. Actual weight change depends on adherence,
@@ -156,7 +156,7 @@ export default function CalorieDeficitCalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Related Tools
+                More Deficit and Weight Loss Tools
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Get your maintenance first with the{' '}

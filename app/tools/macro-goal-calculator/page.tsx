@@ -123,7 +123,7 @@ export default function MacroGoalCalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Who Should Use This Tool?
+                Who Should Use the Macro Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Anyone who wants to plan protein, carbs, and fat — for fat loss, maintenance, or
@@ -139,7 +139,7 @@ export default function MacroGoalCalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Is This Calculation Accurate?
+                How Accurate Is the Macro Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Macro targets are based on common evidence-based ranges (e.g. protein by body
@@ -154,7 +154,7 @@ export default function MacroGoalCalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Related Tools
+                More Macro and Nutrition Tools
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Set your calorie target first with the{' '}

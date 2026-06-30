@@ -315,7 +315,7 @@ export default function CalorieBurnCalculator() {
       {results && (
         <div className="mt-8">
           <h2 className="mb-4 text-xl font-semibold md:text-2xl">
-            Your results
+            Your calorie burn results
           </h2>
           <p className="mb-4 text-sm text-gray-600">
             For <strong>{results.activityLabel}</strong> over {results.durationMinutes} minutes. Based on MET × weight (kg) × time (hours).

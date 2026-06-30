@@ -395,7 +395,7 @@ export default function BodyFatCalculator() {
       {results && (
         <div className="mt-8">
           <h2 className="mb-4 text-xl font-semibold md:text-2xl">
-            Your results
+            Your body fat calculator results
           </h2>
           <p className="mb-4 text-sm text-gray-600">
             Estimated using the U.S. Navy body fat formula. All measurements were converted to metric for calculation.

@@ -276,14 +276,14 @@ export default function HeroSection() {
           style={{ backgroundColor: "#88B8FF" }}
         >
           {/* Pattern background */}
-          <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden" aria-hidden>
             <Image
               src="/images/Frame 101563.svg"
               alt="Decorative blue wave pattern"
-              fill
+              width={1440}
+              height={800}
               priority
-              className="object-cover object-right"
-              aria-hidden
+              className="h-full w-full object-cover object-right"
             />
           </div>
 

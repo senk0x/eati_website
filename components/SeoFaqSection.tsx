@@ -9,12 +9,12 @@ export interface FaqItem {
 
 interface SeoFaqSectionProps {
   faqs: FaqItem[];
-  title?: string;
+  title: string;
   className?: string;
 }
 
-export function SeoFaqSection({ faqs, title = 'Frequently Asked Questions', className = '' }: SeoFaqSectionProps) {
-  if (!faqs.length) return null;
+export function SeoFaqSection({ faqs, title, className = '' }: SeoFaqSectionProps) {
+  if (!faqs.length || !title?.trim()) return null;
 
   const faqSchema = {
     '@context': 'https://schema.org',

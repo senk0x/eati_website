@@ -128,7 +128,7 @@ export default function IdealBodyWeightCalculatorPage() {
 
             <section className={sectionClass}>
               <h2 className={h2Class}>
-                Who Should Use This Tool?
+                Who Should Use the IBW Calculator?
               </h2>
               <p className={pClass}>
                 Anyone curious about a height-based healthy weight range can use this ideal body

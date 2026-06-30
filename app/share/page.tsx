@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { SITE_URL, eatiAppStoreUrl, OG_IMAGE_SIZE } from "@/lib/seo";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { SITE_URL, eatiAppStoreUrl, OG_IMAGE_SIZE, buildPageMetadata, normalizeSeoTitle } from '@/lib/seo';
 
 type SearchParamsInput = Record<string, string | string[] | undefined>;
 
@@ -55,7 +55,7 @@ export async function generateMetadata({
   const name = pickFirst(params.n, "Eati User");
   const imageUrl = pickFirst(params.img);
 
-  const title = `${name}'s Progress | Eati`;
+  const title = normalizeSeoTitle(`${name}'s Eati Progress Snapshot`);
   const description =
     "Check out this Eati progress snapshot. See weekly results and track your own progress with Eati.";
 
@@ -64,14 +64,16 @@ export async function generateMetadata({
     ? imageUrl
     : `${SITE_URL}/share/opengraph-image`;
 
-  return {
+  const pageMeta = buildPageMetadata({
     title,
     description,
+    path: "/share",
+  });
+
+  return {
+    ...pageMeta,
     openGraph: {
-      title,
-      description,
-      type: "website",
-      siteName: "Eati",
+      ...pageMeta.openGraph,
       images: [
         {
           url: ogImageUrl,
@@ -82,9 +84,7 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: "summary_large_image",
-      title,
-      description,
+      ...pageMeta.twitter,
       images: [ogImageUrl],
     },
     robots: { index: false, follow: false },
@@ -239,10 +239,11 @@ export default async function SharePage({
                   <div className="relative aspect-[4331/2688] w-full">
                     <Image
                       src="/images/Frame%20101639.svg"
-                      alt="Get your free AI coach now. Download Eati."
-                      fill
+                      alt="Download Eati free AI calorie coach"
+                      width={4331}
+                      height={2688}
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 960px"
-                      className="object-cover object-center transition-transform duration-300 group-hover:scale-[1.01]"
+                      className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.01]"
                     />
                   </div>
                 </a>

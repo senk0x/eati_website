@@ -502,7 +502,7 @@ export default async function FoodPage({ params }: Props) {
 
           <section className={sectionClass}>
             <h2 className={h2Class}>
-              Related Tools
+              Related tools for {name}
             </h2>
             <p className={pClass}>
               Log {name.toLowerCase()} and other foods in the{' '}

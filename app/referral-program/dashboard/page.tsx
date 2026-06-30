@@ -5,7 +5,7 @@ import ReferralDashboard from '@/components/ReferralDashboard';
 import { buildPageMetadata } from '@/lib/seo';
 
 const pageMetadata = buildPageMetadata({
-  title: 'Referral Dashboard',
+  title: 'Eati Referral Dashboard | Track Promo Code Stats',
   description: 'Track your Eati promo code activations and subscription payments.',
   path: '/referral-program/dashboard',
 });

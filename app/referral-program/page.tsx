@@ -4,7 +4,7 @@ import ReferralProgramForm from '@/components/ReferralProgramForm';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Get Started with Eati',
+  title: 'Eati Referral Program | Join as Influencer Partner',
   description:
     'Join the Eati referral program. Apply as an influencer, share your promo code, and track activations and purchases.',
   path: '/referral-program',

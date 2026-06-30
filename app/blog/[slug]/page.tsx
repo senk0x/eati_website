@@ -240,7 +240,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <h2
                 className="mb-3 text-base font-semibold"
               >
-                Table of Contents
+                {normalizePageHeading(`In this ${article.title} guide`)}
               </h2>
               <ol className="space-y-2">
                 {toc.map((item, index) => (
@@ -326,7 +326,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Conclusion */}
             <section>
-              <h2 className="mb-3 text-xl font-semibold md:text-2xl">Conclusion</h2>
+              <h2 className="mb-3 text-xl font-semibold md:text-2xl">
+                {normalizePageHeading(`${article.title} summary`)}
+              </h2>
               <p className="text-base leading-relaxed text-gray-700">
                 <LinkedText text={article.conclusion} />
               </p>
@@ -336,7 +338,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {article.faqs && article.faqs.length > 0 && (
               <section className="mt-10 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:p-8">
                 <h2 className="mb-5 text-xl font-semibold md:text-2xl">
-                  Frequently Asked Questions
+                  {normalizePageHeading(`${article.metaTitle || article.title} FAQ`)}
                 </h2>
                 <div className="space-y-3">
                   {article.faqs.map((faq, i) => (
@@ -345,7 +347,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                       className="group overflow-hidden rounded-xl border border-[#E3ECF7] bg-white transition-colors open:border-[#88B8FF]"
                     >
                       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-base font-semibold text-eati-ink hover:bg-[#F7FAFF] [&::-webkit-details-marker]:hidden">
-                        <h3 className="m-0 text-base font-semibold">{faq.question}</h3>
+                        <span className="m-0 text-base font-semibold">{faq.question}</span>
                         <svg
                           className="h-5 w-5 flex-shrink-0 text-[#88B8FF] transition-transform duration-200 group-open:rotate-180"
                           viewBox="0 0 20 20"
@@ -407,7 +409,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <h2
               className="font-eati-heading mb-6 text-2xl font-bold"
             >
-              Related Articles
+              {normalizePageHeading(`More articles like ${article.title}`)}
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
               {relatedArticles.map((related) => (

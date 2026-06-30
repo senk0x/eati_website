@@ -232,7 +232,7 @@ export default function CalorieCalculatorPage() {
               </p>
             </section>
 
-            <SeoFaqSection faqs={CALORIE_FAQS} className="mb-10" />
+            <SeoFaqSection faqs={CALORIE_FAQS} title="Calorie Calculator FAQ" className="mb-10" />
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">

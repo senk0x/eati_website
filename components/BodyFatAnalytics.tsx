@@ -132,7 +132,7 @@ export default function BodyFatAnalytics() {
     <div>
       <div className="space-y-6 rounded-2xl border border-[#E3ECF7] bg-[#F7FAFF] p-6 md:rounded-3xl md:p-8">
         <div>
-          <h3 className={labelClass}>Photo guidelines</h3>
+          <h2 className={labelClass}>Photo guidelines for body fat analysis</h2>
           <ul className="list-inside list-disc space-y-1 text-sm text-gray-600">
             {GUIDELINES.map((g) => (
               <li key={g}>{g}</li>
@@ -209,7 +209,7 @@ export default function BodyFatAnalytics() {
       {result && (
         <div className="mt-8">
           <h2 className="mb-4 text-xl font-semibold md:text-2xl">
-            Your results
+            Your body fat photo results
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <ResultCard

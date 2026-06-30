@@ -18,6 +18,9 @@ export function eatiAppStoreUrl(campaignTag: string): string {
 
 /** Screaming Frog / SERP length targets. */
 export const SEO_TITLE_MAX = 60;
+export const SEO_TITLE_MIN = 30;
+/** Approximate max width before Google truncates (~561px in SF). */
+export const SEO_TITLE_PIXEL_MAX = 561;
 export const SEO_DESCRIPTION_MAX = 155;
 export const SEO_ALT_MAX = 100;
 export const SEO_H1_MAX = 70;
@@ -26,7 +29,20 @@ export const SEO_H1_MAX = 70;
 export const DEFAULT_SITE_TITLE =
   "Eati - AI Calorie Tracker App | Fat Loss & Macro Logging";
 export const DEFAULT_SITE_DESCRIPTION =
-  "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie & macro calculators. Fat loss app for iOS — stay consistent without tedious logging.";
+  "Log meals in seconds with AI: photo, text, barcode, or voice. Free TDEE, calorie and macro calculators. Fat loss app for iOS without tedious logging.";
+
+/** Rough pixel width for Latin SERP titles (SF uses a similar estimate). */
+export function estimateTitlePixels(title: string): number {
+  let px = 0;
+  for (const ch of title) {
+    if (ch === " " || ch === "|") px += 4;
+    else if (ch === "-" || ch === "—") px += 6;
+    else if (/[WMmw@%]/.test(ch)) px += 12;
+    else if (/[A-Z]/.test(ch)) px += 10;
+    else px += 7;
+  }
+  return px;
+}
 
 /** Trim and cap copy for title tags, meta descriptions, and image alt text. */
 export function truncateSeoText(text: string, maxLen: number): string {
@@ -43,10 +59,24 @@ export function normalizeSeoTitle(title: string): string {
   const hasBrand = /\bEati\b/i.test(t);
   if (!hasBrand) {
     const branded = `${t} | Eati`;
-    if (branded.length <= SEO_TITLE_MAX) return branded;
+    if (branded.length <= SEO_TITLE_MAX && estimateTitlePixels(branded) <= SEO_TITLE_PIXEL_MAX) {
+      t = branded;
+    }
   }
-  if (t.length <= SEO_TITLE_MAX) return t;
-  return truncateSeoText(t, SEO_TITLE_MAX);
+  if (t.length > SEO_TITLE_MAX) {
+    t = truncateSeoText(t, SEO_TITLE_MAX);
+  }
+  while (estimateTitlePixels(t) > SEO_TITLE_PIXEL_MAX && t.length > SEO_TITLE_MIN) {
+    t = truncateSeoText(t, t.length - 4).replace(/…$/, "").trim();
+  }
+  if (t.length < SEO_TITLE_MIN) {
+    const padded = `${t} | Free Nutrition App`;
+    t =
+      padded.length <= SEO_TITLE_MAX && estimateTitlePixels(padded) <= SEO_TITLE_PIXEL_MAX
+        ? padded
+        : truncateSeoText(padded, SEO_TITLE_MAX);
+  }
+  return t;
 }
 
 export function normalizeSeoDescription(description: string): string {

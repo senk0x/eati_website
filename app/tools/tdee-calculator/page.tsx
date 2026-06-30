@@ -159,7 +159,7 @@ export default function TDEECalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Who Should Use This Tool?
+                Who Should Use the TDEE Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Anyone who wants to know their daily calorie burn — for weight loss, muscle gain,
@@ -171,7 +171,7 @@ export default function TDEECalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Is This Calculation Accurate?
+                How Accurate Is the TDEE Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 TDEE and BMR are estimates. The Mifflin–St Jeor equation is well validated for most
@@ -190,7 +190,7 @@ export default function TDEECalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Related Tools
+                More TDEE and Calorie Tools
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 After you have your TDEE, use the{' '}

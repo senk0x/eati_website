@@ -50,8 +50,9 @@ export default function StartNowSection() {
           <Image
             src="/images/Frame 101569.svg"
             alt="Decorative confetti pattern"
-            fill
-            className="object-cover object-center"
+            width={1129}
+            height={280}
+            className="h-full w-full object-cover object-center"
             sizes="(max-width: 768px) 100vw, 1129px"
           />
         </div>

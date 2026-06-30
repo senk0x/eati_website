@@ -163,7 +163,7 @@ export default function BMICalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Who Should Use This Tool?
+                Who Should Use the BMI Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 Adults who want a quick weight-for-height check can use this BMI calculator. It is
@@ -176,7 +176,7 @@ export default function BMICalculatorPage() {
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Is This Calculation Accurate?
+                How Accurate Is the BMI Calculator?
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 The BMI formula is accurate as a math result; the number itself is correct for
@@ -192,11 +192,11 @@ export default function BMICalculatorPage() {
               </p>
             </section>
 
-            <SeoFaqSection faqs={BMI_FAQS} className="mb-10" />
+            <SeoFaqSection faqs={BMI_FAQS} title="BMI Calculator FAQ" className="mb-10" />
 
             <section className="mb-10">
               <h2 className="mb-3 text-xl font-semibold md:text-2xl">
-                Related Tools
+                More BMI and Body Composition Tools
               </h2>
               <p className="text-base leading-relaxed text-gray-600">
                 After checking your BMI, explore the{' '}

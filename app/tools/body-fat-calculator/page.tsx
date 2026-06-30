@@ -131,7 +131,7 @@ export default function BodyFatCalculatorPage() {
 
             <section className={sectionClass}>
               <h2 className={h2Class}>
-                Who Should Use This Tool?
+                Who Should Use the Body Fat Calculator?
               </h2>
               <p className={pClass}>
                 Anyone who wants an estimate of body fat percentage from measurements can use this

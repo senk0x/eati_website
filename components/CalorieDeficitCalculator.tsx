@@ -331,7 +331,7 @@ export default function CalorieDeficitCalculator() {
       {results && (
         <div className="mt-8">
           <h2 className="mb-4 text-xl font-semibold md:text-2xl">
-            Your results
+            Your calorie deficit results
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <CalorieResultCard

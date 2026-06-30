@@ -29,12 +29,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Apply security headers to all routes, including static assets and
-     * generated files (sitemap, robots, OG images) that next.config headers
-     * may not cover consistently on Vercel.
-     */
-    "/((?!_next/static|_next/image).*)",
-  ],
+  matcher: ["/((?!_next/static).*)"],
 };

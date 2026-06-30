@@ -132,7 +132,7 @@ export default function CalorieBurnCalculatorPage() {
 
             <section className={sectionClass}>
               <h2 className={h2Class}>
-                Who Should Use This Tool?
+                Who Should Use the Calorie Burn Calculator?
               </h2>
               <p className={pClass}>
                 Anyone who wants to estimate calories burned by activity can use this calorie

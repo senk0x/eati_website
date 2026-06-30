@@ -130,7 +130,7 @@ export default function ProteinCalculatorPage() {
 
             <section className={sectionClass}>
               <h2 className={h2Class}>
-                Who Should Use This Tool?
+                Who Should Use the Protein Calculator?
               </h2>
               <p className={pClass}>
                 Anyone who wants a daily protein target — for general health, muscle gain, or fat

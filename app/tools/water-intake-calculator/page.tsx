@@ -130,7 +130,7 @@ export default function WaterIntakeCalculatorPage() {
 
             <section className={sectionClass}>
               <h2 className={h2Class}>
-                Who Should Use This Tool?
+                Who Should Use the Water Intake Calculator?
               </h2>
               <p className={pClass}>
                 Anyone who wants a daily fluid target can use this water intake calculator —
