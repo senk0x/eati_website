@@ -418,7 +418,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   href={`/blog/${related.slug}`}
                   className="group flex flex-col overflow-hidden rounded-2xl border border-[#E3ECF7] bg-white transition-shadow hover:shadow-lg"
                 >
-                  <div className="relative aspect-[16/9] w-full bg-[#E7F0FF]">
+                  <div className="relative aspect-[16/9] w-full shrink-0 overflow-hidden bg-[#E7F0FF]">
                     {related.coverImage ? (
                       <img
                         src={related.coverImage}
@@ -436,10 +436,8 @@ export default async function BlogPostPage({ params }: PageProps) {
                       </div>
                     )}
                   </div>
-                  <div className="p-4">
-                    <h3
-                      className="text-base font-semibold group-hover:text-[#88B8FF]"
-                    >
+                  <div className="relative z-10 shrink-0 bg-white p-4">
+                    <h3 className="text-base font-semibold text-eati-ink group-hover:text-[#88B8FF]">
                       {related.title}
                     </h3>
                   </div>

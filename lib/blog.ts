@@ -47,6 +47,7 @@ const CLUSTER_LABELS: Record<string, string> = {
   'ai-nutrition': 'AI Nutrition & Food Logging',
   'calorie-deficit': 'Calorie Deficit',
   'calorie-tracking': 'Calorie Tracking',
+  'protein-guides': 'Protein Guides',
   'high-protein-recipes': 'High-Protein Recipes',
   'weight-loss-guides': 'Weight Loss Guides',
 };
@@ -61,6 +62,7 @@ const CLUSTER_EMOJIS: Record<string, string> = {
   'ai-nutrition': '🤖',
   'calorie-deficit': '📉',
   'calorie-tracking': '🧾',
+  'protein-guides': '🥩',
   'high-protein-recipes': '🍽️',
   'weight-loss-guides': '🎯',
 };
@@ -159,6 +161,15 @@ function inferTopicCluster(article: BlogArticle): string {
   }
 
   if (haystack.includes('calorie deficit')) return 'calorie-deficit';
+
+  if (
+    haystack.includes('how much protein') ||
+    haystack.includes('protein per day') ||
+    haystack.includes('daily protein') ||
+    haystack.includes('protein intake')
+  ) {
+    return 'protein-guides';
+  }
 
   if (
     haystack.includes('track calories') ||

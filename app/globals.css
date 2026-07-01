@@ -35,7 +35,7 @@ body {
 
 /* Responsive: fluid images in content. :where() keeps specificity low so Tailwind
    height/width utilities and Next.js Image sizing are not overridden. */
-:where(img:not(.stats-laurel)),
+:where(img:not(.stats-laurel):not(.object-cover)),
 :where(video),
 :where(iframe) {
   max-width: 100%;
